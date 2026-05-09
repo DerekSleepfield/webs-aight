@@ -10,6 +10,101 @@
 <atom:link href="https://derekwakefield.com/writing.xml" rel="self" type="application/rss+xml"/>
 <description>Assistant Professor of Political Science, Bucknell University</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sat, 09 May 2026 05:11:59 GMT</lastBuildDate>
+<lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello, writing</title>
+  <link>https://derekwakefield.com/posts/2026-05-09-hello-writing.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post on the Writing page. If you can read it on the live site, the listing pipeline is working: a new <code>.qmd</code> file dropped into <code>posts/</code>, pushed, picked up by the Quarto build, and rendered on <code>/writing/</code> with title, date, and description.</p>
+<section id="things-this-post-is-checking" class="level2">
+<h2 class="anchored" data-anchor-id="things-this-post-is-checking">Things this post is checking</h2>
+<p>A handful of formatting features get exercised below so we can see whether the theme renders them cleanly.</p>
+<section id="inline-emphasis" class="level3">
+<h3 class="anchored" data-anchor-id="inline-emphasis">Inline emphasis</h3>
+<p>Italics with <em>single asterisks</em>. Bold with <strong>double asterisks</strong>. A link to <a href="https://quarto.org/docs/websites/website-listings.html">the Quarto docs</a> so we can see how external links style.</p>
+</section>
+<section id="a-callout" class="level3">
+<h3 class="anchored" data-anchor-id="a-callout">A callout</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a Quarto callout. If it shows up as a bordered box with a “Note” label, callouts work.</p>
+</div>
+</div>
+</section>
+<section id="a-code-block" class="level3">
+<h3 class="anchored" data-anchor-id="a-code-block">A code block</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># A quick R block to verify syntax highlighting</span></span>
+<span id="cb1-2">df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"b"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"c"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"d"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"e"</span>))</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(df)</span></code></pre></div></div>
+</section>
+<section id="a-blockquote" class="level3">
+<h3 class="anchored" data-anchor-id="a-blockquote">A blockquote</h3>
+<blockquote class="blockquote">
+<p>Some debts are paid back forward, in installments, to strangers.</p>
+</blockquote>
+</section>
+<section id="a-small-list" class="level3">
+<h3 class="anchored" data-anchor-id="a-small-list">A small list</h3>
+<p>When lists are unavoidable:</p>
+<ul>
+<li>First item, with a <a href="https://example.com">link</a> for kicks</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+<hr>
+<p>If everything above renders cleanly, the writing pipeline is good and we can start moving real essays in.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>meta</category>
+  <guid>https://derekwakefield.com/posts/2026-05-09-hello-writing.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
 </channel>
 </rss>
