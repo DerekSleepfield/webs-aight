@@ -1,0 +1,21 @@
+---
+title: "Mind Palace"
+date: "2026-05-09"
+description: "A self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere."
+categories: [project, visualization, data]
+---
+
+A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.
+
+Download and open locally — no internet connection required after download.
+
+```{=html}
+<p style="margin: 2em 0;">
+<a href="../mind-palace.html" download="mind-palace.html"
+   style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../mind-palace.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+```
