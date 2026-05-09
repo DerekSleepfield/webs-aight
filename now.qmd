@@ -9,14 +9,15 @@ subtitle: "What I'm working on this month."
 
 ## May 2026
 
-[Replace this placeholder with 4–6 sentences. Riff on any of these:]
+**Currently writing.** Co-authored work on *retrospective economic voting and Latino electoral volatility* — the argument that the swings in Latino vote share over the past two decades are partially predictable from a group whose partisan attachments are structurally weaker, making the economy–vote link bigger than for White or Black voters. Three empirical strategies (macropartisanship time series, CES vote-switching, county-level unemployment) are starting to converge. Also continuing to refine the [dissertation work](research.qmd) on Latino independents and economic messaging.
 
-- A paper currently in revision or in review
-- A class you're prepping or in the middle of
-- A talk you gave or are about to give
-- A conference or workshop you're attending
-- A book you're reading
-- One personal note (cats, video games, fantasy/sci-fi, karaoke)
+**Currently building.** *Bobology* — a slowly-accumulating philosophy of small steady voices. The [Bobble Canon's inaugural post](posts/2026-05-09-bobble-canon.qmd) went up this month: five parables, twelve Bobbisms, two codas, a glossary. New canon entries will get appended as they arrive. The project is meant to grow slowly. *("A Bobble could, in principle, work fast. In practice, the hum interferes.")*
+
+**Currently obsessing over.** How AI agents fit into the working stack of a research-active social scientist without flattening the parts that need not to be flattened. Concretely, that means: triaging student final-project submissions into structured forward-memos, drafting per-student feedback at scale, pulling CMAG ad-data analyses through narrow conversation windows, and shoving small writing tasks across the line from "I'll do that someday" to "done by Friday." The honest answer to *where humans should still hold the pen* keeps changing, which is itself the interesting thing.
+
+**Currently teaching.** Bucknell, spring 2026 wrap-up. Reflecting on what to carry forward and what to reshape for the fall.
+
+**Currently outside the academy.** Three cats, fantasy paperbacks, karaoke nights when the calendar permits, the occasional roguelike that costs me a weekend.
 
 *Last updated: May 2026.*
 

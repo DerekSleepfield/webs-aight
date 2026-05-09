@@ -24,6 +24,11 @@ Co-authored. We examine Latino party identification over 34 years using 35 natio
 
 ## Working Papers
 
+### "Bringing Retrospective Voting Back In: Economic Voting and Latino Electoral Volatility"
+*With Tyler Reny, Joshua Dyck, and Bagel Johnson*
+
+Recent Latino electoral behavior has swung significantly — from more GOP support under Bush, to large Democratic margins under Obama, to renewed Republican support under Trump. Theories of group-identity or ideological alignment struggle to explain these patterns. We argue that retrospective economic voting is an under-appreciated driver of this volatility. Given that Latinos have lower SES and weaker partisanship, they are more likely to exhibit economic responsiveness compared to other racial and ethnic groups. We test this argument using three complementary empirical strategies. Compared to White and Black Americans: (1) Latino macropartisanship more closely tracks economic conditions; (2) Latino economic perceptions are more correlated with vote switching toward or away from incumbents; and (3) Latinos are more likely to reward or punish incumbents following changes in local unemployment. We conclude with implications for campaigns, scholars, and American politics.
+
 ### "Who's Targeting Latinos? How Democrats and Republicans Use Latino Identity Cues in Televised Campaign Ads from 2000–2016"
 *With Ali Valenzuela and Chris Flores*
 
@@ -32,8 +37,3 @@ Co-designed coding scheme to identify Latino identity cues in CMAG TV ad data, 2
 ### "Pa'lante: How the Young Lords Articulated a Radical Latino Political Consciousness"
 
 The Young Lords were a radical Puerto Rican group active in New York and Chicago in the 1960s and '70s. By articulating an anti-establishment Latino political consciousness, they often conflicted with other panethnic groups seeking recognition from the U.S. government, businesses, and media. I examine how they tied community-based engagement and self-sufficiency to progressive politics on race, gender, sexuality, and class. I argue their organizational success came from explicitly emphasizing radical ideology while addressing more immediate community concerns — economic opportunity, education, healthcare. Though the organization fell to factionalism, it offers an alternative conception of Latino panethnicity that diverges from the incorporation-oriented identity that eventually became dominant.
-
-### "The Racist Card: Denial of Racism as a Conservative Counter-Strategy"
-*With Rachel Brown-Weinstock*
-
-After decades of keeping racial language implicit, what has allowed candidates like Donald Trump to use explicitly racial language with apparent impunity? We test whether Republican candidates have effectively weaponized the "racist" label and persuaded voters that Democratic racial callouts are disingenuous. As a result, conservative voters can simultaneously support racially conservative rhetoric while rejecting the application of the "racist" label. We test the argument with a survey experiment exposing respondents to this counter-strategy. We argue the implicit-explicit racial appeals theory remains valid, but a central leg — self-monitoring — is not operating among white conservatives. This connects to broader theories of the "long Southern strategy" and colorblind racism: future studies of racialized political appeals must be grounded in the actual experiences and values of conservatives, who reject the "racist" label whether genuinely or strategically.
