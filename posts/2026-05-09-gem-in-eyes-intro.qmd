@@ -3,5 +3,9 @@ title: "Gem in Eyes — an introduction"
 date: "2026-05-09"
 description: "A small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye."
 categories: [game, gem-in-eyes, bobble]
-href: ../gem-in-eyes-intro.html
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=../gem-in-eyes-intro.html">
 ---
+
+[Open the introduction →](../gem-in-eyes-intro.html)
