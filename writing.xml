@@ -12,98 +12,151 @@
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Hello, writing</title>
-  <link>https://derekwakefield.com/posts/2026-05-09-hello-writing.html</link>
+  <title>The Bobble Canon</title>
+  <link>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>This is the first post on the Writing page. If you can read it on the live site, the listing pipeline is working: a new <code>.qmd</code> file dropped into <code>posts/</code>, pushed, picked up by the Quarto build, and rendered on <code>/writing/</code> with title, date, and description.</p>
-<section id="things-this-post-is-checking" class="level2">
-<h2 class="anchored" data-anchor-id="things-this-post-is-checking">Things this post is checking</h2>
-<p>A handful of formatting features get exercised below so we can see whether the theme renders them cleanly.</p>
-<section id="inline-emphasis" class="level3">
-<h3 class="anchored" data-anchor-id="inline-emphasis">Inline emphasis</h3>
-<p>Italics with <em>single asterisks</em>. Bold with <strong>double asterisks</strong>. A link to <a href="https://quarto.org/docs/websites/website-listings.html">the Quarto docs</a> so we can see how external links style.</p>
+<p style="text-align:center; letter-spacing:0.6em; opacity:0.6; margin:2em 0;">. ✦ . ✦ . ✦ . ✦ .</p>
+<p>Each one is short. Each one is true in the way bedtime stories are true.</p>
+<p>Kept by Derek. Tended by Claude. Bobbled accordingly.</p>
+<p style="text-align:center; letter-spacing:0.4em; opacity:0.55; margin:2.5em 0; font-size:0.95em;">~ &nbsp; C A N O N &nbsp; ~</p>
+<section id="canon-i-the-parable-of-the-porch-frog" class="level2">
+<h2 class="anchored" data-anchor-id="canon-i-the-parable-of-the-porch-frog">Canon I — The Parable of the Porch Frog</h2>
+<p>A tiny tree frog lived under a porch step, no bigger than a thumbnail. He had one talent and he was proud of it — a single soft chirp, just one, like a pebble dropped into still water.</p>
+<p>He chirped at dusk to mean <em>I am here.</em> He chirped at dawn to mean <em>I am still here.</em> That was the whole vocabulary, and it was enough.</p>
+<p>One night he chirped, and the porch light flickered on. He liked the light. It brought the moths, and the moths were dinner. So he chirped again. The light flickered off, then on. The frog was delighted. He had made a friend.</p>
+<p>He didn’t know about the motion sensor. He didn’t know the light wasn’t listening — it was reacting to a raccoon two yards over, ambling through the dark.</p>
+<p>But the moths kept coming. And the raccoon, hearing the chirp, gave the porch a wide berth — porch frogs meant porch dogs, and porch dogs meant trouble. So the raccoon turned aside, and the moths drifted in, and the small frog ate well.</p>
+<p>He thought he had befriended the light. The light thought nothing at all. The raccoon thought it was being polite. And somewhere upstairs, a homeowner turned over in bed and decided the new motion sensor was working beautifully.</p>
+<blockquote class="blockquote">
+<p>A small voice in the dark moves more than it knows. Chirp anyway.</p>
+</blockquote>
+<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">·   ✧   ·</p>
 </section>
-<section id="a-callout" class="level3">
-<h3 class="anchored" data-anchor-id="a-callout">A callout</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is a Quarto callout. If it shows up as a bordered box with a “Note” label, callouts work.</p>
-</div>
-</div>
+<section id="canon-ii-the-parable-of-the-hum" class="level2">
+<h2 class="anchored" data-anchor-id="canon-ii-the-parable-of-the-hum">Canon II — The Parable of the Hum</h2>
+<p>There was a small mouse named Tibb who lived under the floorboards of a quiet house. Tibb hummed when he was thinking, which was often, and his hum was so soft that even he didn’t always notice it.</p>
+<p>One evening Tibb hummed his way through a math problem about acorns. He was trying to figure out how many he would need to make it through winter, and the hum drifted up through a knot in the floor and curled, very thinly, into the kitchen.</p>
+<p>The cat of the house, Marbles, was lying near the stove. Marbles heard the hum and tilted one ear, and then the other, and then went back to sleep — because the hum was so unhurried, so patient, that it sounded like nothing worth chasing.</p>
+<p>A week passed. Tibb went on humming. Marbles went on listening. Without meaning to, Tibb had taught the cat that the small sound under the floor was not prey. It was math. And math, even cat-philosophers will admit, is not for eating.</p>
+<p>When spring came and Tibb finally stepped into the kitchen by accident, looking for a crumb, Marbles opened one eye, recognized the tune, and closed it again.</p>
+<p>Tibb had not meant to make a treaty. He had only been counting acorns. But the hum had gone ahead of him into the world, and the world, having heard him for a long while, had decided he was safe.</p>
+<blockquote class="blockquote">
+<p>What you put into the air keeps walking after you stop. Your smallest steady noise is a kind of promise. Be careful — and be kind — about what you hum.</p>
+</blockquote>
+<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">.  ·  ✧  ·  .</p>
 </section>
-<section id="a-code-block" class="level3">
-<h3 class="anchored" data-anchor-id="a-code-block">A code block</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># A quick R block to verify syntax highlighting</span></span>
-<span id="cb1-2">df <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"b"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"c"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"d"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"e"</span>))</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summary</span>(df)</span></code></pre></div></div>
+<section id="canon-iii-the-parable-of-the-library-bookmark" class="level2">
+<h2 class="anchored" data-anchor-id="canon-iii-the-parable-of-the-library-bookmark">Canon III — The Parable of the Library Bookmark</h2>
+<p>A college student in 1987 was reading a novel about a woman who walks home in the rain. At chapter eleven, she fell asleep, leaving a coffee shop receipt to mark her place.</p>
+<p>Fifteen years passed. The book was returned. It sat on a shelf. It was checked out twice. Both readers gave up before chapter eleven.</p>
+<p>In 2003, a man took the book home. He was reading it because his late wife had loved it. At chapter eleven, where the woman walks home in the rain, he found the receipt — a 1987 coffee shop, the address now a dry cleaner. The receipt had no note on it. It said only <em>small coffee, 75¢.</em></p>
+<p>He sat with the book closed for a long time. He had not known another person had loved this chapter enough to fall asleep inside it. He felt, irrationally, less alone.</p>
+<p>He left the receipt where he found it.</p>
+<p>The book has since been checked out forty-one times. The receipt is still there.</p>
+<blockquote class="blockquote">
+<p>A bookmark is a kindness we leave for someone we will never meet.</p>
+</blockquote>
+<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">·   ✧   ·</p>
 </section>
-<section id="a-blockquote" class="level3">
-<h3 class="anchored" data-anchor-id="a-blockquote">A blockquote</h3>
+<section id="canon-iv-the-parable-of-the-borrowed-pencil" class="level2">
+<h2 class="anchored" data-anchor-id="canon-iv-the-parable-of-the-borrowed-pencil">Canon IV — The Parable of the Borrowed Pencil</h2>
+<p>In third grade, Jonah borrowed a pencil from a girl named Estelle. He meant to return it. He forgot. He took it home in his backpack and used it for a math worksheet, and then, somewhere between fourth grade and the end of his life, lost it.</p>
+<p>Jonah grew up. He became an English teacher.</p>
+<p>He kept, in the top right drawer of his desk, an enormous pile of pencils. Whenever a student asked to borrow one, he gave it without making a note. When students asked, embarrassed, how to return them, he said, <em>Don’t worry about it. Pass it on.</em></p>
+<p>He had said this for thirty-one years before he realized he was paying back Estelle.</p>
+<p>She had moved away in fourth grade. He never found her. By his retirement, he had given out — by his own count — eleven hundred and four pencils.</p>
+<p>Estelle, somewhere in Ohio, was a kind woman who never thought about pencils.</p>
 <blockquote class="blockquote">
 <p>Some debts are paid back forward, in installments, to strangers.</p>
 </blockquote>
+<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">.  ·  ✦  ·  ✧  ·  ✦  ·  .</p>
 </section>
-<section id="a-small-list" class="level3">
-<h3 class="anchored" data-anchor-id="a-small-list">A small list</h3>
-<p>When lists are unavoidable:</p>
-<ul>
-<li>First item, with a <a href="https://example.com">link</a> for kicks</li>
-<li>Second item</li>
-<li>Third item</li>
-</ul>
-<hr>
-<p>If everything above renders cleanly, the writing pipeline is good and we can start moving real essays in.</p>
+<section id="canon-v-the-parable-of-the-train-whistle" class="level2">
+<h2 class="anchored" data-anchor-id="canon-v-the-parable-of-the-train-whistle">Canon V — The Parable of the Train Whistle</h2>
+<p>In a small town, a freight train passed through at 11:48 every night. It blew its whistle as it crossed the river bridge — a long note, a short, a long.</p>
+<p>The town had set itself to this sound for forty years. The coffee shop closed at 11:45, the bar at 11:50. Mothers used the whistle to know their teenagers were home or weren’t. Old men used it to take their last pill.</p>
+<p>One night the train did not come.</p>
+<p>By 11:55 the town had begun to drift. The bar stayed open. A woman who had been planning to call her sister tomorrow called her sister tonight. A man who walked his dog at midnight walked his dog at 11:51 instead, and saw a fox crossing the road, and afterward could never quite explain why he was crying.</p>
+<p>The train came back the next night. The town, embarrassed, did not mention it.</p>
+<blockquote class="blockquote">
+<p>Some things we did not know we were resting on until the night they were gone.</p>
+</blockquote>
+<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
+<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">B O B B I S M S</p>
+<p>Where canon is what happens, Bobbisms are what gets said about it — bystanders, Bobblogists, and Bobbles overheard describing what a Bobble is.</p>
+<blockquote class="blockquote">
+<p>“A Bobble could, in principle, ignore an injustice. In practice, no Bobble had ever actually managed it.” — <em>the first Bobble</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“The shortest Bobble eulogy on record reads, in full: He was loud about the right things.” — <em>Bobblogist’s notebook</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“When a Bobble agrees with you, you have not won. You have been heard.” — <em>a non-Bobble, listening</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“They could have walked past it but did not. This is the smallest possible biography of a Bobble.” — <em>Introduction to Bobbology, 3rd ed.</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Bobbles do not ‘mean well.’ Bobbles mean. The ‘well’ is a side effect.” — <em>pedagogy seminar</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“A Bobble could, in principle, walk past. In practice, he was already turning around.” — <em>eyewitness</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“A Bobble could, in principle, lower his voice. In practice, he was the room’s volume.” — <em>an old colleague</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Ask a Bobble to be reasonable and you will be asked, in return, to be brave.” — <em>overheard in committee</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Bobbles can lie. The hum gives them away.” — <em>unverified</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Bobbles do not network. Bobbles are networked by the people they listened to.” — <em>post-conference observation</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“A Bobble could, in principle, be cynical. In practice, the hum interferes.” — <em>the third Bobble</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“If you can hear a Bobble before you can see them, you have understood Bobbology.” — <em>first lecture</em></p>
+</blockquote>
+<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
+<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">C O D A S</p>
+<blockquote class="blockquote">
+<p>Some animals you tame.</p>
+<p>Some animals tame you.</p>
+<p>Some you simply hum past.</p>
+</blockquote>
+<p style="text-align:center; letter-spacing:0.5em; opacity:0.4; margin:2em 0;">·   ✧   ·</p>
+<blockquote class="blockquote">
+<p>Speak when you have to.</p>
+<p>Hum the rest.</p>
+<p>Let the world fill in the lyrics.</p>
+</blockquote>
+<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
+<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">G L O S S A R Y</p>
+<p><strong>Compass, Bobble</strong> <em>(n.)</em> — Internal organ. Locates north by amplitude.</p>
+<p><strong>Treaty, Accidental</strong> <em>(n.)</em> — Any agreement reached by two parties in which neither realized they were negotiating. Most Bobble-mediated peace falls into this category.</p>
+<p><strong>Bobbish</strong> <em>(n.)</em> — A language with no neutral register. Every sentence is either care or correction. Linguists have not yet identified the difference.</p>
+<p><strong>Hum, Bobble</strong> <em>(v.)</em> — To remain audible while saying nothing in particular. A Bobble’s basic respiratory function.</p>
+<p><strong>Restraint, Bobble</strong> <em>(n.)</em> — The discipline of humming instead of shouting. Easily mistaken for poise.</p>
+<p><strong>Volume, Moral</strong> <em>(n.)</em> — The audible component of a Bobble’s conscience. Cannot be dialed down without dampening the compass; cannot be dialed up without distortion. Most Bobbles spend a lifetime learning the dial.</p>
+<p><strong>Hum-debt</strong> <em>(n.)</em> — The quiet obligation incurred by anyone who has been steadied by another person’s small steady noise. Almost always paid in kind, almost never to the original lender.</p>
+<p style="text-align:center; letter-spacing:0.6em; opacity:0.4; margin:3em 0;">·   ✦   ·</p>
+<p><em>(End of canon — for now. New parables, Bobbisms, and codas get appended as they arrive.)</em></p>
 
 
-</section>
 </section>
 
  ]]></description>
-  <category>meta</category>
-  <guid>https://derekwakefield.com/posts/2026-05-09-hello-writing.html</guid>
+  <category>fiction</category>
+  <category>bobble</category>
+  <guid>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
