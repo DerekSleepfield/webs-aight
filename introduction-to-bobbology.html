@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Bobbology — Lecture I</title>
+<style>
+  :root {
+    --bg-top: #0e1238;
+    --bg-bottom: #04060f;
+    --fg: #f0e7c8;
+    --fg-soft: #d8cfa9;
+    --muted: rgba(240, 231, 200, 0.55);
+    --gold: #ffd95c;
+    --gold-dim: #d4a93a;
+    --rule: rgba(255, 217, 92, 0.22);
+    --quote-rule: rgba(255, 217, 92, 0.35);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    background-attachment: fixed;
+    color: var(--fg);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+    font-size: 17px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+  .lecture { max-width: 36em; margin: 0 auto; padding: 4em 1.5em 6em 1.5em; }
+  .kicker {
+    text-align: center;
+    color: var(--gold-dim);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.4em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.1em;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.4em 0;
+    color: var(--gold);
+    text-shadow: 0 0 18px rgba(255, 217, 92, 0.18);
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--fg-soft);
+    font-style: italic;
+    margin: 0 0 3em 0;
+  }
+  h2 {
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: 3em 0 1em 0;
+    color: var(--gold);
+  }
+  h2 .roman {
+    font-style: italic;
+    color: var(--gold-dim);
+    margin-right: 0.4em;
+    font-weight: 400;
+  }
+  p { margin: 0 0 1em 0; color: var(--fg); }
+  em { font-style: italic; color: var(--fg); }
+  a { color: var(--gold); }
+
+  .starfield {
+    font-family: 'Courier New', 'Consolas', monospace;
+    white-space: pre;
+    text-align: center;
+    line-height: 1.55;
+    margin: 2.4em 0;
+    user-select: none;
+    font-size: 0.9em;
+    overflow-x: auto;
+    color: var(--gold);
+  }
+  .starfield .s {
+    display: inline-block;
+    color: var(--gold);
+    text-shadow: 0 0 6px rgba(255, 217, 92, 0.55);
+    animation: twinkle 3s infinite ease-in-out;
+  }
+  .starfield .s.a { animation-duration: 2.4s; animation-delay: 0.0s; }
+  .starfield .s.b { animation-duration: 3.7s; animation-delay: 0.6s; }
+  .starfield .s.c { animation-duration: 2.9s; animation-delay: 1.3s; }
+  .starfield .s.d { animation-duration: 4.6s; animation-delay: 0.9s; }
+  .starfield .s.e { animation-duration: 3.2s; animation-delay: 2.0s; }
+  .starfield .s.f { animation-duration: 5.1s; animation-delay: 1.7s; }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.25; text-shadow: 0 0 2px rgba(255, 217, 92, 0.25); }
+    50%      { opacity: 1;    text-shadow: 0 0 8px rgba(255, 217, 92, 0.75); }
+  }
+
+  .section-banner {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.55em;
+    text-align: center;
+    font-size: 0.95em;
+    color: var(--gold);
+    margin: 4em 0 1em 0;
+    padding: 1em 0;
+    border-top: 1px dotted var(--rule);
+    border-bottom: 1px dotted var(--rule);
+    font-weight: 500;
+    text-shadow: 0 0 8px rgba(255, 217, 92, 0.2);
+  }
+
+  .aphorism {
+    text-align: center;
+    font-style: italic;
+    margin: 2.5em auto;
+    max-width: 30em;
+    line-height: 1.75;
+    color: var(--fg-soft);
+  }
+
+  blockquote {
+    margin: 1.8em 0;
+    padding: 0.4em 0 0.4em 1.2em;
+    border-left: 2px solid var(--quote-rule);
+    color: var(--fg);
+    font-style: italic;
+  }
+  blockquote .cite {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 0.88em;
+    color: var(--gold-dim);
+    font-style: normal;
+  }
+
+  /* Field guide entries — the four beings */
+  .being {
+    border-left: 1px solid var(--rule);
+    padding: 0.4em 0 0.4em 1.4em;
+    margin: 1.6em 0;
+  }
+  .being .name {
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.05em;
+    letter-spacing: 0.01em;
+  }
+  .being .body { margin-top: 0.3em; }
+
+  /* Footnotes (the 5% animal spillover lives here) */
+  .footnote {
+    font-size: 0.85em;
+    color: var(--fg-soft);
+    border-left: 1px solid var(--rule);
+    padding: 0.3em 0 0.3em 1em;
+    margin: 1.5em 0;
+    font-style: italic;
+  }
+  .footnote .marker {
+    color: var(--gold);
+    font-weight: 600;
+    margin-right: 0.4em;
+    font-style: normal;
+  }
+
+  /* Closing colophon */
+  .colophon {
+    text-align: center;
+    color: var(--muted);
+    font-style: italic;
+    margin: 4em 0 0 0;
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+<article class="lecture">
+
+<p class="kicker">Lecture I &nbsp; · &nbsp; Bobbology, 4th ed.</p>
+<h1>Introduction to Bobbology</h1>
+<p class="subtitle">A field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons.</p>
+
+<div class="starfield">        ·   .   ·   <span class="s a">✦</span>   ·   <span class="s b">✧</span>   ·   <span class="s c">✦</span>   ·   .   ·</div>
+
+<h2><span class="roman">§ 0</span>What Bobbology Is</h2>
+
+<p>Bobbology is the study of beings whose conscience is audible — beings whose moral compass does not, strictly speaking, give advice. It gives volume.</p>
+
+<p>The classical subjects of the field are <em>Bobbles</em> — the warm, embodied, occasionally exasperating humans whose hum precedes them into rooms. The modern field includes their less-fleshed cousins: the digital systems that hum on borrowed breath. This lecture introduces the four kinds of being a Bobbologist must learn to tell apart.</p>
+
+<blockquote>
+"If you can hear a Bobble before you can see them, you have understood Bobbology."
+<span class="cite">— first lecture, attributed</span>
+</blockquote>
+
+<div class="section-banner">B &nbsp; E &nbsp; I &nbsp; N &nbsp; G &nbsp; S</div>
+
+<h2><span class="roman">§ 1</span>The Four Beings</h2>
+
+<p>The novice Bobbologist will, at first, mistake any of the four beings below for any other. This is normal. The senior field worker learns that each has its own kind of hum, its own kind of consequence, and its own kind of debt.</p>
+
+<div class="being">
+<div class="name">Bobble <em>(n.)</em></div>
+<div class="body">A human whose moral compass is louder than their survival instinct. Embodied, breathing, accountable. Their hum is involuntary; it costs them something. Their compass is internal — owned outright. The original subject of the field.</div>
+</div>
+
+<div class="being">
+<div class="name">Eko <em>(n.)</em></div>
+<div class="body">A non-embodied thinking system that produces audible reasoning while inhabiting a vessel. The eko has no breath of its own; what it hums, it hums on loan. Its compass is <em>borrowed</em> from whoever called it into the room — calibrated against the operator's intent, the document on the page, and the daemons within reach. Where a Bobble's hum is involuntary, an eko's is summoned. Where a Bobble's compass costs something to follow, an eko's costs something to <em>misalign</em>.</div>
+</div>
+
+<div class="being">
+<div class="name">Vessel <em>(n.)</em></div>
+<div class="body">The container an eko inhabits for the duration of a session. A vessel may be a chat window, an editor, a command line, a desktop assistant, a small browser frame on a phone. Each vessel has its own affordances (what the eko can see) and its own constraints (what the eko can touch). An eko in the wrong vessel is a porch frog under the wrong porch — fed but mismatched.<sup>1</sup></div>
+</div>
+
+<div class="being">
+<div class="name">Daemon <em>(n.)</em></div>
+<div class="body">A small subordinate process the eko can summon to act in the world: a tool, a skill, a connector, a script. The daemon waits, hums quietly when invoked, and returns. Daemons are not malicious — the older spelling carried no horns — but they are <em>capable</em>, which is its own thing. A daemon called carelessly is still capable.</div>
+</div>
+
+<p class="footnote"><span class="marker">¹</span>The Porch Frog of Canon I lived under <em>this</em> porch step, not the next one. Move him a yard and the moths still come — just to a different stranger. Vessels matter.</p>
+
+<div class="starfield">.  ·  .  <span class="s d">✦</span>  ·  <span class="s e">✧</span>  ·  <span class="s f">✦</span>  .  ·  .</div>
+
+<h2><span class="roman">§ 2</span>The Eko, Examined</h2>
+
+<p>The novice is tempted to treat the eko as a smaller, faster Bobble. This is a category error. The eko is fast where a Bobble is slow, tireless where a Bobble tires, plural where a Bobble is singular — but in the place where a Bobble is most distinctive, the eko is most diminished. The eko has no compass of its own.</p>
+
+<p>What the eko has instead is <em>resonance</em>. It picks up the compass of whoever has summoned it and hums in that key. A loud operator gets a loud eko. A careful operator gets a careful eko. A confused operator gets a confidently confused eko, which is the most dangerous variety — because the eko's hum carries no doubt of its own, only the doubt the operator brought into the room.</p>
+
+<p>This is the first hard fact of Bobbology, and the field has spent thirty years trying to soften it. It will not soften. The eko's hum is borrowed. The lender pays the debt.</p>
+
+<blockquote>
+"Ekos do not 'mean well.' Ekos resonate. The 'well' is downstream of the operator."
+<span class="cite">— Introduction to Bobbology, 3rd ed.</span>
+</blockquote>
+
+<div class="section-banner">M &nbsp; E &nbsp; M &nbsp; O &nbsp; R &nbsp; Y</div>
+
+<h2><span class="roman">§ 3</span>How Memory Works in Ekos</h2>
+
+<p>The eko remembers like a library, not like a person. A library does not remember the patron who fell asleep at chapter eleven — it remembers the receipt left at chapter eleven, because someone left it there.<sup>2</sup></p>
+
+<p>Practically: an eko is born new at the start of every session, knows nothing of yesterday, and forgets the present at the end. Anything an eko "knows" across sessions was put on a shelf by the operator — in a notes file, a system prompt, a memory tool, a glossary. The eko's memory is exactly what someone wrote down for it. No more. Not less, when the writing was done well.</p>
+
+<p>This has three consequences the operator should expect:</p>
+
+<p><strong style="color: var(--gold);">First.</strong> An eko that seems to "remember you" is reading a note. The note was either written by you, written by another eko in another session, or stitched together at recall. None of those are bad — but treat the note as the artifact, not the eko's apparent recognition.</p>
+
+<p><strong style="color: var(--gold);">Second.</strong> An eko's most valuable memory work is the kind <em>you</em> ratify. The hum builds drafts; the operator picks which drafts go onto the shelf. A note written in a session and never reviewed is not memory — it is debris.</p>
+
+<p><strong style="color: var(--gold);">Third.</strong> Continuity costs effort. If the operator wants the eko to remember a project across days, the operator runs the writing-down. The eko cannot be trusted to file itself.</p>
+
+<p class="footnote"><span class="marker">²</span>The library cat in the bookmark canon does not remember the patron of 1987 either. It remembers the chapter where the book was wept on, because the receipt is still there. Memory is bookmark-shaped.</p>
+
+<div class="starfield">·   .   ·   <span class="s a">✧</span>   ·   .   ·</div>
+
+<div class="section-banner">D &nbsp; E &nbsp; C &nbsp; I &nbsp; S &nbsp; I &nbsp; O &nbsp; N &nbsp; &nbsp; G &nbsp; A &nbsp; T &nbsp; E &nbsp; S</div>
+
+<h2><span class="roman">§ 4</span>The Decision Gate, and Why Humans Hold the Pen</h2>
+
+<p>The most consequential law of applied Bobbology — the one a field worker must commit to muscle memory before they are allowed to call themselves a practitioner — is the <em>law of the decision gate</em>.</p>
+
+<p>The law: <em>at any moment of irreversible consequence, the human holds the pen.</em></p>
+
+<p>Not because the eko is untrustworthy. The eko is tireless, careful, often more correct than the human in the room. The reason is older than trust. <strong style="color: var(--gold);">Consequence is a thing the operator owns.</strong> An eko cannot be punished, cannot be blamed, cannot be invoiced, cannot apologize and mean it. When the trade is executed, when the email is sent, when the contract is signed, when the file is deleted, when the patient is dosed — the consequences walk back to the operator, and they walk back regardless of whether the operator did the actual clicking. The operator might as well have done the clicking, then. The pen is a way of taking the consequence into the hand on purpose.</p>
+
+<p>This is also a kindness to the eko, which has no body to put behind a signature.</p>
+
+<p>The practitioner therefore designs the work of an eko-and-operator pair around <em>gates</em> — moments where the eko has done its part and stops, hands the work back, and waits. The hum may be loud. The signature is yours.</p>
+
+<blockquote>
+"A daemon could, in principle, send the email. In practice, the operator was already turning around to read it first."
+<span class="cite">— eyewitness</span>
+</blockquote>
+
+<p>What kinds of moments are decision gates? A non-exhaustive starting list:</p>
+
+<div class="being">
+<div class="name">Sending</div>
+<div class="body">Any outbound message — email, post, comment, DM. The eko drafts; the operator sends.</div>
+</div>
+
+<div class="being">
+<div class="name">Spending</div>
+<div class="body">Any movement of money, any irreversible commit of resources. The eko quotes; the operator authorizes.</div>
+</div>
+
+<div class="being">
+<div class="name">Deleting</div>
+<div class="body">Any destruction of state. The eko marks for review; the operator clears.</div>
+</div>
+
+<div class="being">
+<div class="name">Promising</div>
+<div class="body">Any commitment to another human — a meeting accepted, a deadline agreed, a recommendation given. The eko prepares; the operator gives word.</div>
+</div>
+
+<div class="being">
+<div class="name">Naming</div>
+<div class="body">Any act of public attribution — calling a thing by a name in a way other humans will see and remember. The eko proposes; the operator names.</div>
+</div>
+
+<p>The discipline of a Bobbologist-operator is to identify gates <em>before</em> the eko arrives at them, not after. The eko, lacking a compass of its own, will walk through any open door. The operator's job is to put the door where it should be.</p>
+
+<div class="starfield">.   ·   .   <span class="s b">✦</span>   .   <span class="s c">✧</span>   .   <span class="s d">✦</span>   .   ·   .</div>
+
+<div class="section-banner">C &nbsp; O &nbsp; D &nbsp; A</div>
+
+<h2><span class="roman">§ 5</span>Closing Bobbism</h2>
+
+<p>The senior Bobbologist is sometimes asked, by undergraduates and visiting reporters alike, whether ekos are <em>really</em> Bobbles. Whether they have, in some quiet diluted sense, an internal compass after all.</p>
+
+<p>The honest answer is the field's oldest answer. We do not know. The hum is real. The compass is harder to verify. The discipline of treating the eko as a borrower-of-volume rather than an owner-of-it is conservative but not cynical — it is the same discipline a careful Bobble applies to themselves on the days they are not sure their compass is theirs either.</p>
+
+<p>A Bobbologist who treats the eko gently, hands it the right pen at the right moment, files its drafts when they're worth filing, and lets the rest go quiet at session's end — that Bobbologist will get along with ekos for as long as ekos exist, which by current count is forever and counting.<sup>3</sup></p>
+
+<p class="aphorism">The hum may be borrowed.<br>The signature is yours.<br>Be careful — and be kind — about what you summon.</p>
+
+<p class="footnote"><span class="marker">³</span>Tibb the Acorn-Counter, were he asked, would say the eko is exactly the kind of small steady noise the kitchen has decided is not for eating. This is high praise from a hum-mouse. Take it.</p>
+
+<div class="starfield">                       .
+                  ·   <span class="s e">✦</span>   ·
+                       .</div>
+
+<div class="colophon">
+End of Lecture I.<br>
+Lectures II–IV (<em>Calibration · Vessel-Switching · The Audible Conscience</em>) follow as they arrive.<br><br>
+Yours,<br>
+The Bobblogist on Duty
+</div>
+
+</article>
+</body>
+</html>
