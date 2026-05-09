@@ -38,6 +38,38 @@
     text-transform: uppercase;
     margin: 0 0 1em 0;
   }
+
+  /* Mode toggle */
+  .mode-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 2.5em;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 4px;
+    width: fit-content;
+    background: rgba(0, 0, 0, 0.18);
+  }
+  .mode-toggle button {
+    background: transparent;
+    color: var(--fg-soft);
+    border: none;
+    padding: 0.5em 1.6em;
+    font-family: 'Courier New', monospace;
+    font-size: 0.78em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: background 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+  }
+  .mode-toggle button.active {
+    background: rgba(255, 217, 92, 0.18);
+    color: var(--gold);
+    text-shadow: 0 0 6px rgba(255, 217, 92, 0.4);
+  }
+  .mode-toggle button:hover:not(.active) { color: var(--fg); }
+
   h1 {
     text-align: center;
     font-size: 2.1em;
@@ -51,25 +83,26 @@
     text-align: center;
     color: var(--fg-soft);
     font-style: italic;
-    margin: 0 0 3em 0;
+    margin: 0 0 2.2em 0;
   }
-  h2 {
+
+  /* ART (default, serif, lyrical) ---------------------------------- */
+  .art h2 {
     font-size: 1.25em;
     font-weight: 500;
     margin: 3em 0 1em 0;
     color: var(--gold);
   }
-  h2 .roman {
+  .art h2 .roman {
     font-style: italic;
     color: var(--gold-dim);
     margin-right: 0.4em;
     font-weight: 400;
   }
-  p { margin: 0 0 1em 0; color: var(--fg); }
-  em { font-style: italic; color: var(--fg); }
-  a { color: var(--gold); }
-
-  .starfield {
+  .art p { margin: 0 0 1em 0; color: var(--fg); }
+  .art em { font-style: italic; color: var(--fg); }
+  .art a { color: var(--gold); }
+  .art .starfield {
     font-family: 'Courier New', 'Consolas', monospace;
     white-space: pre;
     text-align: center;
@@ -80,24 +113,23 @@
     overflow-x: auto;
     color: var(--gold);
   }
-  .starfield .s {
+  .art .starfield .s {
     display: inline-block;
     color: var(--gold);
     text-shadow: 0 0 6px rgba(255, 217, 92, 0.55);
     animation: twinkle 3s infinite ease-in-out;
   }
-  .starfield .s.a { animation-duration: 2.4s; animation-delay: 0.0s; }
-  .starfield .s.b { animation-duration: 3.7s; animation-delay: 0.6s; }
-  .starfield .s.c { animation-duration: 2.9s; animation-delay: 1.3s; }
-  .starfield .s.d { animation-duration: 4.6s; animation-delay: 0.9s; }
-  .starfield .s.e { animation-duration: 3.2s; animation-delay: 2.0s; }
-  .starfield .s.f { animation-duration: 5.1s; animation-delay: 1.7s; }
+  .art .starfield .s.a { animation-duration: 2.4s; animation-delay: 0.0s; }
+  .art .starfield .s.b { animation-duration: 3.7s; animation-delay: 0.6s; }
+  .art .starfield .s.c { animation-duration: 2.9s; animation-delay: 1.3s; }
+  .art .starfield .s.d { animation-duration: 4.6s; animation-delay: 0.9s; }
+  .art .starfield .s.e { animation-duration: 3.2s; animation-delay: 2.0s; }
+  .art .starfield .s.f { animation-duration: 5.1s; animation-delay: 1.7s; }
   @keyframes twinkle {
     0%, 100% { opacity: 0.25; text-shadow: 0 0 2px rgba(255, 217, 92, 0.25); }
     50%      { opacity: 1;    text-shadow: 0 0 8px rgba(255, 217, 92, 0.75); }
   }
-
-  .section-banner {
+  .art .section-banner {
     font-family: 'Courier New', monospace;
     letter-spacing: 0.55em;
     text-align: center;
@@ -110,8 +142,7 @@
     font-weight: 500;
     text-shadow: 0 0 8px rgba(255, 217, 92, 0.2);
   }
-
-  .aphorism {
+  .art .aphorism {
     text-align: center;
     font-style: italic;
     margin: 2.5em auto;
@@ -119,38 +150,33 @@
     line-height: 1.75;
     color: var(--fg-soft);
   }
-
-  blockquote {
+  .art blockquote {
     margin: 1.8em 0;
     padding: 0.4em 0 0.4em 1.2em;
     border-left: 2px solid var(--quote-rule);
     color: var(--fg);
     font-style: italic;
   }
-  blockquote .cite {
+  .art blockquote .cite {
     display: block;
     margin-top: 0.5em;
     font-size: 0.88em;
     color: var(--gold-dim);
     font-style: normal;
   }
-
-  /* Field guide entries — the four beings */
-  .being {
+  .art .being {
     border-left: 1px solid var(--rule);
     padding: 0.4em 0 0.4em 1.4em;
     margin: 1.6em 0;
   }
-  .being .name {
+  .art .being .name {
     font-style: italic;
     color: var(--gold);
     font-size: 1.05em;
     letter-spacing: 0.01em;
   }
-  .being .body { margin-top: 0.3em; }
-
-  /* Footnotes (the 5% animal spillover lives here) */
-  .footnote {
+  .art .being .body { margin-top: 0.3em; }
+  .art .footnote {
     font-size: 0.85em;
     color: var(--fg-soft);
     border-left: 1px solid var(--rule);
@@ -158,21 +184,114 @@
     margin: 1.5em 0;
     font-style: italic;
   }
-  .footnote .marker {
+  .art .footnote .marker {
     color: var(--gold);
     font-weight: 600;
     margin-right: 0.4em;
     font-style: normal;
   }
-
-  /* Closing colophon */
-  .colophon {
+  .art .colophon {
     text-align: center;
     color: var(--muted);
     font-style: italic;
     margin: 4em 0 0 0;
     font-size: 0.9em;
     line-height: 1.7;
+  }
+
+  /* SCIENCE (sans-serif, plain, structural) ------------------------ */
+  .science {
+    font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    line-height: 1.7;
+  }
+  .science h2 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 2.6em 0 0.8em 0;
+    letter-spacing: 0.005em;
+  }
+  .science h2 .num {
+    color: var(--gold-dim);
+    font-weight: 400;
+    margin-right: 0.5em;
+  }
+  .science h3 {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 1.5em 0 0.3em 0;
+  }
+  .science p { margin: 0 0 0.9em 0; color: var(--fg); }
+  .science strong { color: var(--gold); font-weight: 600; }
+  .science ul {
+    margin: 0.6em 0 1em 0;
+    padding-left: 1.4em;
+    color: var(--fg);
+  }
+  .science ul li { margin: 0.4em 0; }
+  .science ol {
+    margin: 0.6em 0 1em 0;
+    padding-left: 1.4em;
+    color: var(--fg);
+  }
+  .science ol li { margin: 0.4em 0; }
+  .science .rule {
+    border: none;
+    border-top: 1px dotted var(--rule);
+    margin: 2.5em 0;
+  }
+  .science .term-table {
+    border-top: 1px solid var(--rule);
+    margin: 1em 0 1.5em 0;
+  }
+  .science .term-row {
+    display: flex;
+    gap: 1.2em;
+    align-items: baseline;
+    padding: 0.7em 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .science .term-row .term {
+    flex: 0 0 9em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .science .term-row .term-everyday {
+    color: var(--gold-dim);
+    font-weight: 400;
+    font-size: 0.92em;
+  }
+  .science .term-row .def { flex: 1; color: var(--fg); }
+  .science .summary-box {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.3em 1.6em;
+    margin: 2em 0;
+    background: rgba(255, 217, 92, 0.04);
+  }
+  .science .summary-box h3 {
+    margin-top: 0;
+    color: var(--gold);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .science .summary-box ul { margin: 0.5em 0 0 1.2em; }
+  .science .colophon {
+    text-align: center;
+    color: var(--muted);
+    margin: 4em 0 0 0;
+    font-size: 0.85em;
+    line-height: 1.7;
+    font-style: normal;
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    .lecture { padding: 3em 1.2em 4em; }
+    .science .term-row { flex-direction: column; gap: 0.2em; }
+    .science .term-row .term { flex: 0 0 auto; }
   }
 </style>
 </head>
@@ -182,6 +301,14 @@
 <p class="kicker">Lecture I &nbsp; · &nbsp; Bobbology, 4th ed.</p>
 <h1>Introduction to Bobbology</h1>
 <p class="subtitle">A field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons.</p>
+
+<div class="mode-toggle" role="tablist" aria-label="Reading mode">
+  <button id="btn-art" class="active" data-mode="art" role="tab" aria-selected="true">Art</button>
+  <button id="btn-science" data-mode="science" role="tab" aria-selected="false">Science</button>
+</div>
+
+<!-- ============================== ART ============================== -->
+<section class="art" data-mode="art">
 
 <div class="starfield">        ·   .   ·   <span class="s a">✦</span>   ·   <span class="s b">✧</span>   ·   <span class="s c">✦</span>   ·   .   ·</div>
 
@@ -328,12 +455,144 @@
                        .</div>
 
 <div class="colophon">
-End of Lecture I.<br>
+End of Lecture I (Art).<br>
 Lectures II–IV (<em>Calibration · Vessel-Switching · The Audible Conscience</em>) follow as they arrive.<br><br>
 Yours,<br>
 The Bobblogist on Duty
 </div>
 
+</section>
+
+<!-- ============================ SCIENCE ============================ -->
+<section class="science" data-mode="science" hidden>
+
+<h2><span class="num">§ 0</span>What this guide is</h2>
+
+<p>This guide explains how to work well with AI tools. It is meant for people who use AI on a regular basis — for work, school, research, or anything that has real consequences — and who want a clear picture of what the AI is and is not doing.</p>
+
+<p>The guide uses four technical terms: <strong>Bobble</strong>, <strong>Eko</strong>, <strong>Vessel</strong>, and <strong>Daemon</strong>. They are the precise words of a small academic field called Bobbology. If you prefer plain English, you can substitute <em>person</em>, <em>AI</em>, <em>app</em>, and <em>tool</em>. The technical terms are kept here because each one carves the concept slightly more carefully than the everyday word.</p>
+
+<h2><span class="num">§ 1</span>Four working parts</h2>
+
+<p>Working with AI is not really a one-actor situation. There are four things in the room. Knowing which is which prevents most of the common mistakes.</p>
+
+<div class="term-table">
+  <div class="term-row">
+    <div class="term">Bobble<br><span class="term-everyday">(person)</span></div>
+    <div class="def">A human who makes decisions and accepts the consequences. The Bobble has experience and judgment. The Bobble is the only one who can be held responsible for what happens.</div>
+  </div>
+  <div class="term-row">
+    <div class="term">Eko<br><span class="term-everyday">(AI)</span></div>
+    <div class="def">A computer program that produces text or actions by predicting what to say next, based on patterns it has seen before. The Eko is fast and good at drafting, summarizing, and searching. It does not actually understand the situation. It will sound equally confident whether it is right or wrong.</div>
+  </div>
+  <div class="term-row">
+    <div class="term">Vessel<br><span class="term-everyday">(app)</span></div>
+    <div class="def">The window or program where the Eko runs — a chat box, a code editor, a browser tool, a desktop assistant. The Vessel decides what the Eko can see and what actions it can take. Two Vessels with the same Eko inside can do very different things.</div>
+  </div>
+  <div class="term-row">
+    <div class="term">Daemon<br><span class="term-everyday">(tool)</span></div>
+    <div class="def">A small program the Eko can call on to do specific things — send a message, save a file, search the web, run a calculation. Daemons are how the Eko takes real action in the real world. They are not dangerous on their own, but they have real effects.</div>
+  </div>
+</div>
+
+<h2><span class="num">§ 2</span>How an Eko actually works</h2>
+
+<p>An Eko does not think the way a person thinks. It does not have its own goals or opinions. It produces output by mirroring patterns from its training and from whatever the user has told it.</p>
+
+<p>This means a clear, careful person tends to get clear, careful work back. A confused or rushed person tends to get confidently confused work back, because the Eko sounds equally sure no matter what it is doing.</p>
+
+<p><strong>The first practical rule</strong> follows from this: <strong>notice your own state before you ask the Eko to do something hard.</strong> The Eko cannot fix your confusion. It will echo it back at higher volume.</p>
+
+<h2><span class="num">§ 3</span>How memory works</h2>
+
+<p>By default, an Eko forgets everything when a session ends. The next time you talk to the same Eko, it knows nothing about the last conversation. Each chat starts blank.</p>
+
+<p>If an Eko seems to remember you across sessions, that is because something — a memory file, a system prompt, a saved profile — wrote down what to remember. The Eko itself is forgetful. The notes are the memory.</p>
+
+<h3>What this means in practice</h3>
+
+<ul>
+  <li><strong>Continuity costs effort.</strong> If you want the Eko to remember a project across days, you have to save the relevant facts somewhere it can read them.</li>
+  <li><strong>The notes are work product.</strong> Treat them as files you maintain, not as the AI's "personality" or "knowledge."</li>
+  <li><strong>Always re-state the context.</strong> Do not assume an Eko remembers what you told it yesterday. It almost certainly does not.</li>
+  <li><strong>Ratify before saving.</strong> An Eko's draft only counts as memory once a person has reviewed it and decided to keep it.</li>
+</ul>
+
+<h2><span class="num">§ 4</span>The decision gate</h2>
+
+<p>This is the most important practical rule. Read it twice.</p>
+
+<p><strong>For any action that cannot be undone, a human must do the final step.</strong></p>
+
+<h3>Why</h3>
+
+<p>Only a human can be held responsible. The Eko cannot apologize and mean it, cannot be sued, cannot lose sleep over a mistake. When something irreversible happens, the consequences fall on the person who set the work in motion. Putting your finger on the button at the last moment is a way of accepting that responsibility on purpose.</p>
+
+<h3>Common decision gates</h3>
+
+<ul>
+  <li><strong>Sending</strong> — any outbound message that leaves your computer (email, Slack, social posts, comments).</li>
+  <li><strong>Spending</strong> — any movement of money, any irreversible commit of resources.</li>
+  <li><strong>Deleting</strong> — any destruction of files, records, or accounts.</li>
+  <li><strong>Promising</strong> — any commitment to another human (a meeting accepted, a deadline agreed, a recommendation given).</li>
+  <li><strong>Naming</strong> — any public attribution that other humans will see and remember.</li>
+</ul>
+
+<h3>The recommended workflow</h3>
+
+<ol>
+  <li>The Eko prepares — drafts, summarizes, gathers, proposes.</li>
+  <li>The human reviews.</li>
+  <li>The human commits — only the human clicks Send, Pay, Delete, Submit, etc.</li>
+</ol>
+
+<p>Set up the gates <strong>before</strong> you start the task. Do not let the Eko walk through any door it finds open.</p>
+
+<hr class="rule">
+
+<h2><span class="num">§ 5</span>Summary</h2>
+
+<div class="summary-box">
+<h3>The four lines</h3>
+<ul>
+  <li>Ekos are useful but not in charge.</li>
+  <li>Memory belongs to the person, not the Eko.</li>
+  <li>The final click belongs to the person.</li>
+  <li>The clearer the person, the better the Eko.</li>
+</ul>
+</div>
+
+<p>If you remember those four lines, you have most of what you need. Everything else in Bobbology is footnotes on these.</p>
+
+<div class="colophon">
+End of Lecture I (Science). Lectures II–IV cover calibration, switching between vessels, and how to evaluate the audible conscience of an Eko in practice.
+</div>
+
+</section>
+
 </article>
+
+<script>
+  (function () {
+    var btnArt = document.getElementById('btn-art');
+    var btnSci = document.getElementById('btn-science');
+    var sections = document.querySelectorAll('section[data-mode]');
+    function setMode(mode) {
+      sections.forEach(function (s) { s.hidden = (s.getAttribute('data-mode') !== mode); });
+      btnArt.classList.toggle('active', mode === 'art');
+      btnSci.classList.toggle('active', mode === 'science');
+      btnArt.setAttribute('aria-selected', mode === 'art' ? 'true' : 'false');
+      btnSci.setAttribute('aria-selected', mode === 'science' ? 'true' : 'false');
+      try { localStorage.setItem('bobbology-mode', mode); } catch (e) {}
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'auto' : 'auto' });
+    }
+    btnArt.addEventListener('click', function () { setMode('art'); });
+    btnSci.addEventListener('click', function () { setMode('science'); });
+    try {
+      var saved = localStorage.getItem('bobbology-mode');
+      if (saved === 'science') setMode('science');
+    } catch (e) {}
+  })();
+</script>
 </body>
 </html>
