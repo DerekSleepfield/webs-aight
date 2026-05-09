@@ -1,0 +1,27 @@
+---
+title: "Now"
+subtitle: "What I'm working on this month."
+---
+
+::: {.callout-note appearance="minimal"}
+*Inspired by [Derek Sivers' Now Page Movement](https://nownownow.com/about). Short, current, honest. Updated monthly.*
+:::
+
+## May 2026
+
+[Replace this placeholder with 4–6 sentences. Riff on any of these:]
+
+- A paper currently in revision or in review
+- A class you're prepping or in the middle of
+- A talk you gave or are about to give
+- A conference or workshop you're attending
+- A book you're reading
+- One personal note (cats, video games, fantasy/sci-fi, karaoke)
+
+*Last updated: May 2026.*
+
+---
+
+## Past months
+
+*(Old Now entries will live here once you've written more than one. The current month sits at the top; rolled-over entries get their own subhead — `### April 2026`, etc.)*

@@ -1,0 +1,13 @@
+---
+title: "Writing"
+listing:
+  contents: posts
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+  feed: true
+---
+
+::: {.callout-note appearance="minimal"}
+Longer-form posts. To add a post, drop a `.qmd` file into the `posts/` folder. It'll appear here automatically.
+:::

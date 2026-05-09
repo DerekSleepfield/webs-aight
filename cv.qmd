@@ -1,0 +1,9 @@
+---
+title: "Curriculum Vitae"
+---
+
+[Download CV (PDF)](assets/cv.pdf)
+
+::: {.callout-note}
+**Placeholder.** Drop your current CV PDF into `assets/cv.pdf` (overwriting the placeholder) and the link above will serve it. If you'd like the CV rendered as on-page HTML — which is what makes it Google-indexable — paste the contents into this file and I'll format it.
+:::

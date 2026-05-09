@@ -1,0 +1,48 @@
+---
+title: "Teaching"
+---
+
+## Recognition
+
+**University Teaching Award.** Received as Head Teaching Assistant for *Introduction to American Politics* (Princeton, Spring 2020) under Professor Paul Frymer. The class transitioned from in-person to remote midway through the semester at the start of the COVID pandemic. I maintained the same pedagogy and emphasis on participation, and found that students were hungry for the kind of community and academic discourse the pandemic had cut off.
+
+**Best of Access, Diversity, and Inclusion (BADI) Award.** Received in 2021 for co-founding *Students of Color and Allies* at Princeton in 2019, with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye, and for related advocacy in the Politics Department on issues of access, diversity, and inclusion.
+
+## Courses
+
+### Introduction to Data Analysis in R *(Undergraduate)*
+**Emory University, Instructor of Record (Spring 2024, Spring 2025)**
+
+The basics of data analysis and how to apply those skills toward research objectives. Topics: the structure of data, R coding using `dplyr` and `ggplot`, cleaning data, and producing effective regression tables and visualizations. The course uses R, an open-source coding language widely used by academic researchers. By the end of the class, students have the skills to read and critically analyze academic research and to provide detailed analyses and discussions of their own results.
+
+### Latinx Politics *(Undergraduate)*
+**Emory University, Instructor (Fall 2023, co-instructed with Professor Bernard Fraga)**
+
+The past, present, and future of Hispanic and Latina/o/x politics in the United States. Topics: history of conquest, colonization, and immigration; cultural and institutional forces generating and sustaining Latina/o/x identities; differences and similarities across Mexican, Puerto Rican, Cuban, Dominican, Central American, and other origin groups; political preferences, behaviors, and representation; and how the growing Latina/o/x population will shape American politics going forward.
+
+### The American Presidency *(Undergraduate)*
+**Princeton University, Teaching Assistant (Fall 2022, Dr. Lauren Wright)**
+
+Personal and institutional aspects of the American presidency: origin, nature, uses, and limits of presidential power; the presidential selection process; relationships between the President and other significant political actors — Congress, the press, executive branch agencies, and the public; presidential accountability; and the importance of presidential personality.
+
+### Qualitative Methods *(Graduate)*
+**Princeton University, Teaching Assistant (Spring 2021, Professor Layna Mosley)**
+
+The use of qualitative methods in social science research. Topics: research design, elite interviews and interviews with members of the mass public, archival and secondary materials, and the ethics of research involving human participants. The course emphasizes qualitative approaches as part of multi-method research projects, drawing examples from across the political science discipline.
+
+### Introduction to American Politics *(Undergraduate)*
+**Princeton University, Head Teaching Assistant**
+
+- *Fall 2020* — Dr. Sarah Staszak
+- *Spring 2020* — Professor Paul Frymer (received University Teaching Award)
+
+The institutions and political processes of American government and democracy: the Constitution and American political tradition, federalism, political institutions, elections and representation, interest groups and social movements, civil rights and liberties, and the politics of public policy. The course frequently engages with real-world elections and current examples.
+
+### Junior Research Workshop *(Undergraduate)*
+**Princeton University, Teaching Assistant (Fall 2019)**
+
+A workshop for students working on yearlong junior paper projects while learning a variety of methodological approaches. I assisted Professor LaFleur Stephens-Dougan with the seminar on Race and Politics, and Dr. Joanna Wuest with the seminar on Law and Public Affairs.
+
+::: {.callout-note}
+**Bucknell courses coming soon.** Once the next syllabus is finalized I'll add it here. *(Edit this section, Derek — placeholder for current Bucknell teaching.)*
+:::

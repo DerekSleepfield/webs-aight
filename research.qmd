@@ -1,0 +1,39 @@
+---
+title: "Research"
+---
+
+## Dissertation
+
+**"Misengaged, Not Disengaged: How Campaigns Reach Latino Voters with Economic Messaging"**
+
+Given partisan polarization on immigration, Latino voters have been assumed to trend Democratic in their overall vote choice. However, between a quarter and a third of Latino voters consistently support Republicans — including those who use inflammatory rhetoric about immigrants. Latino independents, meanwhile, remain one of the lowest-participating groups in American elections. The continued non-partisan status of Latino independents suggests that further immigration messaging is unlikely to persuade them. Issue polls consistently show that economic concerns (jobs, taxes, inflation) and social-service spending (healthcare, education) are most important to Latinos overall. In my dissertation I explore the potential for these economic and social-service messages to persuade and engage Latino voters.
+
+I argue that campaign rhetoric on economics and social services could appeal to Latinos because they have been relatively underexposed to such messaging. Using television ads collected by CMAG/Kantar Media (via the Wisconsin Advertising Project and the Wesleyan Media Project), I find that Democratic campaigns tend to emphasize immigration in their Spanish-language ads while neglecting economic and social-service topics. Republican Spanish-language ads cover a wider topical range — including economics, social services, and even pro-immigrant stances. While Democrats retain a roughly 5-to-1 Spanish-language ad-volume advantage, Republicans use a wider topical range.
+
+## Publications
+
+### "It's the Economy: The Effect of Economic Policy Appeals on Latino Independents"
+*Political Behavior* (2025). [rdcu.be/d7JV7](https://rdcu.be/d7JV7)
+
+Three online survey experiments with large samples of Latino Democrats, Republicans, and independents. Respondents were exposed to economic and immigration messages from either party. Latino partisans aligned with their parties' views — including on immigration. For out-party and independent evaluations, however, undocumented-immigration messaging was more polarizing than persuasive. Economic messaging produced more positive persuasive effects, especially among independents. Latino partisans align with their parties; Latino independents likely remain amenable to economic messages from either side.
+
+### "Partisan Change with Generational Turnover: Latino Party Identification from 1989 to 2023"
+*Journal of Race and Ethnic Politics* (2025). [doi.org/10.1017/rep.2025.31](https://doi.org/10.1017/rep.2025.31)
+
+Co-authored. We examine Latino party identification over 34 years using 35 national surveys (n > 103,000) plus Census-based post-stratified weights. From 2000–2012, a slight overall increase in Democratic identification was driven by foreign-born Latinos. After 2012: declining Democratic identification overall, greater Republican identification among foreign-born and older native-born Latinos, and accelerating Independent identification among native-born Millennial and Gen Z Latinos. Generational turnover and differences by nativity challenge prevailing theories of Latino partisan change over time.
+
+## Working Papers
+
+### "Who's Targeting Latinos? How Democrats and Republicans Use Latino Identity Cues in Televised Campaign Ads from 2000–2016"
+*With Ali Valenzuela and Chris Flores*
+
+Co-designed coding scheme to identify Latino identity cues in CMAG TV ad data, 2000–2016. In areas with more Latinos, both parties have over time increased their use of symbolic cues (Spanish messaging, Latino characters). On immigration the parties have diverged: Democrats use pro-immigrant Spanish-language messaging in majority-Latino areas; Republicans use anti-immigrant English-language messaging in low-Latino areas. Both parties are likely to keep pursuing Latino votes through non-immigration identity cues, even as they polarize on immigration itself.
+
+### "Pa'lante: How the Young Lords Articulated a Radical Latino Political Consciousness"
+
+The Young Lords were a radical Puerto Rican group active in New York and Chicago in the 1960s and '70s. By articulating an anti-establishment Latino political consciousness, they often conflicted with other panethnic groups seeking recognition from the U.S. government, businesses, and media. I examine how they tied community-based engagement and self-sufficiency to progressive politics on race, gender, sexuality, and class. I argue their organizational success came from explicitly emphasizing radical ideology while addressing more immediate community concerns — economic opportunity, education, healthcare. Though the organization fell to factionalism, it offers an alternative conception of Latino panethnicity that diverges from the incorporation-oriented identity that eventually became dominant.
+
+### "The Racist Card: Denial of Racism as a Conservative Counter-Strategy"
+*With Rachel Brown-Weinstock*
+
+After decades of keeping racial language implicit, what has allowed candidates like Donald Trump to use explicitly racial language with apparent impunity? We test whether Republican candidates have effectively weaponized the "racist" label and persuaded voters that Democratic racial callouts are disingenuous. As a result, conservative voters can simultaneously support racially conservative rhetoric while rejecting the application of the "racist" label. We test the argument with a survey experiment exposing respondents to this counter-strategy. We argue the implicit-explicit racial appeals theory remains valid, but a central leg — self-monitoring — is not operating among white conservatives. This connects to broader theories of the "long Southern strategy" and colorblind racism: future studies of racialized political appeals must be grounded in the actual experiences and values of conservatives, who reject the "racist" label whether genuinely or strategically.

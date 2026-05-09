@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Derek Wakefield"
+  description: "Assistant Professor of Political Science, Bucknell University"
+  site-url: https://derekwakefield.com
+  open-graph: true
+  twitter-card: true
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Service"
+        href: service.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Now"
+        href: now.qmd
+      - text: "Writing"
+        href: writing.qmd
+  page-footer:
+    left: "© 2026 Derek Wakefield"
+    right:
+      - icon: envelope
+        href: mailto:dw043@bucknell.edu
+      - icon: github
+        href: https://github.com/DerekSleepfield
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-location: right
+    fig-cap-location: bottom
+    code-link: true
+    smooth-scroll: true
+    link-external-newwindow: true

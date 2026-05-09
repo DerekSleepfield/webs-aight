@@ -1,0 +1,12 @@
+# Quarto build output
+/.quarto/
+_site/
+_freeze/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*~
+*.swp
