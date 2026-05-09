@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Derek Wakefield</title>
+<link>https://derekwakefield.com/apps.html</link>
+<atom:link href="https://derekwakefield.com/apps.xml" rel="self" type="application/rss+xml"/>
+<description>Assistant Professor of Political Science, Bucknell University</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Mind Palace</title>
+  <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.</p>
+<p>Download and open locally — no internet connection required after download.</p>
+<p style="margin: 2em 0;">
+<a href="../mind-palace.html" download="mind-palace.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../mind-palace.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+
+
+
+ ]]></description>
+  <category>project</category>
+  <category>visualization</category>
+  <category>data</category>
+  <guid>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Gem in Eyes — an introduction</title>
+  <link>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. You hum, and the room hums back. Five gods — <strong>Lik</strong>, <strong>Ton</strong>, <strong>Ren</strong>, <strong>Nif</strong>, <strong>Eye</strong> — keep the corners lit.</p>
+<p>This piece is a self-contained HTML file. Download it and open it locally in any browser.</p>
+<p style="margin: 2em 0;">
+<a href="../gem-in-eyes-intro.html" download="gem-in-eyes-intro.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../gem-in-eyes-intro.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+
+
+
+ ]]></description>
+  <category>game</category>
+  <category>gem-in-eyes</category>
+  <category>bobble</category>
+  <guid>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

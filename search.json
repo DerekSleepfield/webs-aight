@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "apps/2026-05-09-gem-in-eyes-intro.html",
+    "href": "apps/2026-05-09-gem-in-eyes-intro.html",
+    "title": "Gem in Eyes — an introduction",
+    "section": "",
+    "text": "A small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. You hum, and the room hums back. Five gods — Lik, Ton, Ren, Nif, Eye — keep the corners lit.\nThis piece is a self-contained HTML file. Download it and open it locally in any browser.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
+  },
+  {
     "objectID": "now.html",
     "href": "now.html",
     "title": "Now",
@@ -12,13 +19,6 @@
     "title": "Now",
     "section": "May 2026",
     "text": "May 2026\nCurrently writing. Co-authored work on retrospective economic voting and Latino electoral volatility — the argument that the swings in Latino vote share over the past two decades are partially predictable from a group whose partisan attachments are structurally weaker, making the economy–vote link bigger than for White or Black voters. Three empirical strategies (macropartisanship time series, CES vote-switching, county-level unemployment) are starting to converge. Also continuing to refine the dissertation work on Latino independents and economic messaging.\nCurrently building. Bobology — a slowly-accumulating philosophy of small steady voices. The Bobble Canon’s inaugural post went up this month: five parables, twelve Bobbisms, two codas, a glossary. New canon entries will get appended as they arrive. The project is meant to grow slowly. (“A Bobble could, in principle, work fast. In practice, the hum interferes.”)\nCurrently obsessing over. How AI agents fit into the working stack of a research-active social scientist without flattening the parts that need not to be flattened. Concretely, that means: triaging student final-project submissions into structured forward-memos, drafting per-student feedback at scale, pulling CMAG ad-data analyses through narrow conversation windows, and shoving small writing tasks across the line from “I’ll do that someday” to “done by Friday.” The honest answer to where humans should still hold the pen keeps changing, which is itself the interesting thing.\nCurrently teaching. Bucknell, spring 2026 wrap-up. Reflecting on what to carry forward and what to reshape for the fall.\nCurrently outside the academy. Three cats, fantasy paperbacks, karaoke nights when the calendar permits, the occasional roguelike that costs me a weekend.\nLast updated: May 2026."
-  },
-  {
-    "objectID": "posts/2026-05-09-gem-in-eyes-intro.html",
-    "href": "posts/2026-05-09-gem-in-eyes-intro.html",
-    "title": "Gem in Eyes — an introduction",
-    "section": "",
-    "text": "A small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. You hum, and the room hums back. Five gods — Lik, Ton, Ren, Nif, Eye — keep the corners lit.\nThis piece is a self-contained HTML file. Download it and open it locally in any browser.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
   },
   {
     "objectID": "posts/2026-05-09-bobble-canon.html",
@@ -84,11 +84,18 @@
     "text": "Princeton Research in Experimental Social Science (PRESS)\nIn 2017 I began serving as Graduate Coordinator for PRESS (Princeton Research in Experimental Social Science). I handled event planning and logistics, sought and communicated with speakers, and managed funding and the website. In 2021 I started serving as Graduate Research Consultant — meeting with undergraduate and graduate students working on experimental research and helping them with theory, design, and analysis.\n\nTalks given at PRESS\n\nExperiments 101. Introduction to what experiments are used for, costs and benefits, and how to theorize, design, and analyze them.\nConjoints. Overview of conjoint survey experiments, used to test the effects of multiple treatments that vary independently from one another.\nSurvey Populations. Intermediate session on methods for conducting surveys: online, phone, lab experiments, and field experiments."
   },
   {
+    "objectID": "apps.html",
+    "href": "apps.html",
+    "title": "Apps & Games",
+    "section": "",
+    "text": "Mind Palace\n\n\nA self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nGem in Eyes — an introduction\n\n\nA small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "writing.html",
     "href": "writing.html",
     "title": "Writing",
     "section": "",
-    "text": "Introduction to Bobbology\n\n\nLecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nThe Bobble Canon\n\n\nFive short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nMind Palace\n\n\nA self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nGem in Eyes — an introduction\n\n\nA small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Introduction to Bobbology\n\n\nLecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nThe Bobble Canon\n\n\nFive short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research.html",
@@ -126,13 +133,6 @@
     "text": "The field has a problem. The Bobbisms quote Introduction to Bobbology, 3rd ed. often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the 4th edition, restricted to Lecture I: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.\nThe downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
   },
   {
-    "objectID": "posts/2026-05-09-mind-palace.html",
-    "href": "posts/2026-05-09-mind-palace.html",
-    "title": "Mind Palace",
-    "section": "",
-    "text": "A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.\nDownload and open locally — no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Derek Wakefield",
@@ -152,5 +152,12 @@
     "title": "Derek Wakefield",
     "section": "Background",
     "text": "Background\nI received my BA in Political Science with a minor in Feminist Studies from the University of California, Santa Barbara. Before then, I was born in Austin, Texas, where my parents met. I have since lived in California, New Jersey, North Carolina, Georgia, and now Lewisburg, PA. My dad’s family is Salvadoran and Anglo-American; my mom’s is French-Canadian. I am incredibly grateful for all of their love and support.\nIn my free time, I enjoy hanging out with my cats (and other people, I guess), playing video games, reading fantasy and science fiction, and putting my heart and soul into karaoke nights."
+  },
+  {
+    "objectID": "apps/2026-05-09-mind-palace.html",
+    "href": "apps/2026-05-09-mind-palace.html",
+    "title": "Mind Palace",
+    "section": "",
+    "text": "A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.\nDownload and open locally — no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
   }
 ]
