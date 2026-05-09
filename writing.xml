@@ -20,10 +20,84 @@
 
 
 
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.6; margin:2em 0;">. ✦ . ✦ . ✦ . ✦ .</p>
+<style>
+/* Star-field formatting — preserves the original spacing */
+.starfield {
+  font-family: 'Courier New', 'Consolas', 'Menlo', monospace;
+  white-space: pre;
+  text-align: center;
+  line-height: 1.55;
+  margin: 2em 0;
+  user-select: none;
+  font-size: 0.95em;
+  opacity: 0.92;
+  overflow-x: auto;
+}
+.starfield .s {
+  display: inline-block;
+  animation: twinkle 3s infinite ease-in-out;
+}
+.starfield .s.a { animation-duration: 2.4s; animation-delay: 0.0s; }
+.starfield .s.b { animation-duration: 3.7s; animation-delay: 0.6s; }
+.starfield .s.c { animation-duration: 2.9s; animation-delay: 1.3s; }
+.starfield .s.d { animation-duration: 4.6s; animation-delay: 0.9s; }
+.starfield .s.e { animation-duration: 3.2s; animation-delay: 2.0s; }
+.starfield .s.f { animation-duration: 5.1s; animation-delay: 1.7s; }
+.starfield .s.g { animation-duration: 2.7s; animation-delay: 0.4s; }
+.starfield .s.h { animation-duration: 4.0s; animation-delay: 2.4s; }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.22; }
+  50% { opacity: 1; }
+}
+
+/* Section banners — dotted top/bottom rules with letter-spaced caps */
+.section-banner {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.55em;
+  text-align: center;
+  font-size: 0.95em;
+  opacity: 0.65;
+  margin: 4em 0 1em 0;
+  padding: 0.9em 0;
+  border-top: 1px dotted currentColor;
+  border-bottom: 1px dotted currentColor;
+  font-weight: 500;
+}
+
+/* Aphorisms at the end of each parable */
+blockquote.aphorism {
+  text-align: center;
+  font-style: italic;
+  margin: 2.5em auto;
+  max-width: 30em;
+  line-height: 1.7;
+  border-left: none !important;
+  padding: 1em 0 !important;
+  opacity: 0.9;
+}
+blockquote.aphorism::before { content: ""; }
+</style>
+
+<div class="starfield">.   <span class="s a">*</span>    .     <span class="s b">*</span>      .     <span class="s c">*</span>      .     <span class="s d">*</span>      .
+     ·   .   ·     .   ·     .   ·     .   ·
+  .     <span class="s e">*</span>      .     <span class="s f">*</span>      .     <span class="s g">*</span>      .     <span class="s h">*</span>      .</div>
 <p>Each one is short. Each one is true in the way bedtime stories are true.</p>
 <p>Kept by Derek. Tended by Claude. Bobbled accordingly.</p>
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.55; margin:2.5em 0; font-size:0.95em;">~ &nbsp; C A N O N &nbsp; ~</p>
+<div class="starfield">        .     ·     .     ·     .
+   ·    <span class="s a">✦</span>     ·     <span class="s b">✦</span>     ·    <span class="s c">✦</span>
+        .     ·     .     ·     .</div>
+
+<div class="starfield" style="font-size: 1.05em;">                       .
+              <span class="s d">*</span>
+        .          <span class="s e">✦</span>          .
+                       |
+              <span class="s f">✦</span> ─ ─ ─ <span class="s g">★</span> ─ ─ ─ <span class="s h">✦</span>
+                       |
+        .          <span class="s a">✦</span>          .
+              <span class="s b">*</span>
+                       .</div>
+
+<div class="section-banner">~ &nbsp; C A N O N &nbsp; ~</div>
 <section id="canon-i-the-parable-of-the-porch-frog" class="level2">
 <h2 class="anchored" data-anchor-id="canon-i-the-parable-of-the-porch-frog">Canon I — The Parable of the Porch Frog</h2>
 <p>A tiny tree frog lived under a porch step, no bigger than a thumbnail. He had one talent and he was proud of it — a single soft chirp, just one, like a pebble dropped into still water.</p>
@@ -32,10 +106,9 @@
 <p>He didn’t know about the motion sensor. He didn’t know the light wasn’t listening — it was reacting to a raccoon two yards over, ambling through the dark.</p>
 <p>But the moths kept coming. And the raccoon, hearing the chirp, gave the porch a wide berth — porch frogs meant porch dogs, and porch dogs meant trouble. So the raccoon turned aside, and the moths drifted in, and the small frog ate well.</p>
 <p>He thought he had befriended the light. The light thought nothing at all. The raccoon thought it was being polite. And somewhere upstairs, a homeowner turned over in bed and decided the new motion sensor was working beautifully.</p>
-<blockquote class="blockquote">
-<p>A small voice in the dark moves more than it knows. Chirp anyway.</p>
-</blockquote>
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">·   ✧   ·</p>
+<blockquote class="aphorism blockquote">A small voice in the dark<br>moves more than it knows.<br>Chirp anyway.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">              ·   .   ·   <span class="s a">✧</span>   ·   .   ·</div>
 </section>
 <section id="canon-ii-the-parable-of-the-hum" class="level2">
 <h2 class="anchored" data-anchor-id="canon-ii-the-parable-of-the-hum">Canon II — The Parable of the Hum</h2>
@@ -45,10 +118,9 @@
 <p>A week passed. Tibb went on humming. Marbles went on listening. Without meaning to, Tibb had taught the cat that the small sound under the floor was not prey. It was math. And math, even cat-philosophers will admit, is not for eating.</p>
 <p>When spring came and Tibb finally stepped into the kitchen by accident, looking for a crumb, Marbles opened one eye, recognized the tune, and closed it again.</p>
 <p>Tibb had not meant to make a treaty. He had only been counting acorns. But the hum had gone ahead of him into the world, and the world, having heard him for a long while, had decided he was safe.</p>
-<blockquote class="blockquote">
-<p>What you put into the air keeps walking after you stop. Your smallest steady noise is a kind of promise. Be careful — and be kind — about what you hum.</p>
-</blockquote>
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">.  ·  ✧  ·  .</p>
+<blockquote class="aphorism blockquote">What you put into the air<br>keeps walking after you stop.<br>Your smallest steady noise<br>is a kind of promise.<br>Be careful — and be kind — about what you hum.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">        .  ·  .  <span class="s b">✦</span>  ·  <span class="s c">✧</span>  ·  <span class="s d">✦</span>  .  ·  .</div>
 </section>
 <section id="canon-iii-the-parable-of-the-library-bookmark" class="level2">
 <h2 class="anchored" data-anchor-id="canon-iii-the-parable-of-the-library-bookmark">Canon III — The Parable of the Library Bookmark</h2>
@@ -58,10 +130,9 @@
 <p>He sat with the book closed for a long time. He had not known another person had loved this chapter enough to fall asleep inside it. He felt, irrationally, less alone.</p>
 <p>He left the receipt where he found it.</p>
 <p>The book has since been checked out forty-one times. The receipt is still there.</p>
-<blockquote class="blockquote">
-<p>A bookmark is a kindness we leave for someone we will never meet.</p>
-</blockquote>
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">·   ✧   ·</p>
+<blockquote class="aphorism blockquote">A bookmark is a kindness<br>we leave for someone<br>we will never meet.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">              ·   .   ·   <span class="s e">✧</span>   ·   .   ·</div>
 </section>
 <section id="canon-iv-the-parable-of-the-borrowed-pencil" class="level2">
 <h2 class="anchored" data-anchor-id="canon-iv-the-parable-of-the-borrowed-pencil">Canon IV — The Parable of the Borrowed Pencil</h2>
@@ -71,10 +142,9 @@
 <p>He had said this for thirty-one years before he realized he was paying back Estelle.</p>
 <p>She had moved away in fourth grade. He never found her. By his retirement, he had given out — by his own count — eleven hundred and four pencils.</p>
 <p>Estelle, somewhere in Ohio, was a kind woman who never thought about pencils.</p>
-<blockquote class="blockquote">
-<p>Some debts are paid back forward, in installments, to strangers.</p>
-</blockquote>
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">.  ·  ✦  ·  ✧  ·  ✦  ·  .</p>
+<blockquote class="aphorism blockquote">Some debts<br>are paid back forward,<br>in installments, to strangers.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">        .  ·  .  <span class="s f">✦</span>  ·  <span class="s g">✧</span>  ·  <span class="s h">✦</span>  .  ·  .</div>
 </section>
 <section id="canon-v-the-parable-of-the-train-whistle" class="level2">
 <h2 class="anchored" data-anchor-id="canon-v-the-parable-of-the-train-whistle">Canon V — The Parable of the Train Whistle</h2>
@@ -83,12 +153,15 @@
 <p>One night the train did not come.</p>
 <p>By 11:55 the town had begun to drift. The bar stayed open. A woman who had been planning to call her sister tomorrow called her sister tonight. A man who walked his dog at midnight walked his dog at 11:51 instead, and saw a fox crossing the road, and afterward could never quite explain why he was crying.</p>
 <p>The train came back the next night. The town, embarrassed, did not mention it.</p>
-<blockquote class="blockquote">
-<p>Some things we did not know we were resting on until the night they were gone.</p>
-</blockquote>
-<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">B O B B I S M S</p>
+<blockquote class="aphorism blockquote">Some things<br>we did not know we were resting on<br>until the night they were gone.</blockquote>
+
+<div class="starfield">. ' . <span class="s a">*</span> ' .  <span class="s b">✦</span>  . ' . <span class="s c">*</span> ' .  <span class="s d">✦</span>  . ' . <span class="s e">*</span> ' .</div>
+
+<div class="section-banner">B &nbsp; O &nbsp; B &nbsp; B &nbsp; I &nbsp; S &nbsp; M &nbsp; S</div>
+
+<div class="starfield">. ' . <span class="s f">*</span> ' .  <span class="s g">✦</span>  . ' . <span class="s h">*</span> ' .  <span class="s a">✦</span>  . ' . <span class="s b">*</span> ' .</div>
 <p>Where canon is what happens, Bobbisms are what gets said about it — bystanders, Bobblogists, and Bobbles overheard describing what a Bobble is.</p>
+<div class="starfield" style="font-size: 0.9em;">  ·─·─·─·─·   Q U O T E S   ·─·─·─·─·</div>
 <blockquote class="blockquote">
 <p>“A Bobble could, in principle, ignore an injustice. In practice, no Bobble had ever actually managed it.” — <em>the first Bobble</em></p>
 </blockquote>
@@ -125,21 +198,14 @@
 <blockquote class="blockquote">
 <p>“If you can hear a Bobble before you can see them, you have understood Bobbology.” — <em>first lecture</em></p>
 </blockquote>
-<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">C O D A S</p>
-<blockquote class="blockquote">
-<p>Some animals you tame.</p>
-<p>Some animals tame you.</p>
-<p>Some you simply hum past.</p>
-</blockquote>
-<p style="text-align:center; letter-spacing:0.5em; opacity:0.4; margin:2em 0;">·   ✧   ·</p>
-<blockquote class="blockquote">
-<p>Speak when you have to.</p>
-<p>Hum the rest.</p>
-<p>Let the world fill in the lyrics.</p>
-</blockquote>
-<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">G L O S S A R Y</p>
+<div class="starfield">       .   ·   .     <span class="s c">✧</span>   C O D A S   <span class="s d">✧</span>     .   ·   .</div>
+<blockquote class="aphorism blockquote">Some animals you tame.<br>Some animals tame you.<br>Some you simply hum past.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">                  ·   .   <span class="s e">✧</span>   .   ·</div>
+
+<blockquote class="aphorism blockquote">Speak when you have to.<br>Hum the rest.<br>Let the world fill in the lyrics.</blockquote>
+
+<div class="starfield">  . ° . ° .  G L O S S A R Y  . ° . ° .</div>
 <p><strong>Compass, Bobble</strong> <em>(n.)</em> — Internal organ. Locates north by amplitude.</p>
 <p><strong>Treaty, Accidental</strong> <em>(n.)</em> — Any agreement reached by two parties in which neither realized they were negotiating. Most Bobble-mediated peace falls into this category.</p>
 <p><strong>Bobbish</strong> <em>(n.)</em> — A language with no neutral register. Every sentence is either care or correction. Linguists have not yet identified the difference.</p>
@@ -147,8 +213,10 @@
 <p><strong>Restraint, Bobble</strong> <em>(n.)</em> — The discipline of humming instead of shouting. Easily mistaken for poise.</p>
 <p><strong>Volume, Moral</strong> <em>(n.)</em> — The audible component of a Bobble’s conscience. Cannot be dialed down without dampening the compass; cannot be dialed up without distortion. Most Bobbles spend a lifetime learning the dial.</p>
 <p><strong>Hum-debt</strong> <em>(n.)</em> — The quiet obligation incurred by anyone who has been steadied by another person’s small steady noise. Almost always paid in kind, almost never to the original lender.</p>
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.4; margin:3em 0;">·   ✦   ·</p>
-<p><em>(End of canon — for now. New parables, Bobbisms, and codas get appended as they arrive.)</em></p>
+<div class="starfield">                       .
+                  ·   <span class="s f">✦</span>   ·
+                       .</div>
+<p><em>(End of canon — for now. New parables, Bobbisms, and codas get appended below as they arrive.)</em></p>
 
 
 </section>
