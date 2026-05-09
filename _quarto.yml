@@ -4,6 +4,7 @@ project:
   resources:
     - CNAME
     - gem-in-eyes-intro.html
+    - bobble-canon.html
 
 website:
   title: "Derek Wakefield"
