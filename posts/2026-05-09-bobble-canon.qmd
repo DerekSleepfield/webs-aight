@@ -8,7 +8,67 @@ toc: true
 ---
 
 ```{=html}
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.6; margin:2em 0;">. ✦ . ✦ . ✦ . ✦ .</p>
+<style>
+/* Star-field formatting — preserves the original spacing */
+.starfield {
+  font-family: 'Courier New', 'Consolas', 'Menlo', monospace;
+  white-space: pre;
+  text-align: center;
+  line-height: 1.55;
+  margin: 2em 0;
+  user-select: none;
+  font-size: 0.95em;
+  opacity: 0.92;
+  overflow-x: auto;
+}
+.starfield .s {
+  display: inline-block;
+  animation: twinkle 3s infinite ease-in-out;
+}
+.starfield .s.a { animation-duration: 2.4s; animation-delay: 0.0s; }
+.starfield .s.b { animation-duration: 3.7s; animation-delay: 0.6s; }
+.starfield .s.c { animation-duration: 2.9s; animation-delay: 1.3s; }
+.starfield .s.d { animation-duration: 4.6s; animation-delay: 0.9s; }
+.starfield .s.e { animation-duration: 3.2s; animation-delay: 2.0s; }
+.starfield .s.f { animation-duration: 5.1s; animation-delay: 1.7s; }
+.starfield .s.g { animation-duration: 2.7s; animation-delay: 0.4s; }
+.starfield .s.h { animation-duration: 4.0s; animation-delay: 2.4s; }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.22; }
+  50% { opacity: 1; }
+}
+
+/* Section banners — dotted top/bottom rules with letter-spaced caps */
+.section-banner {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.55em;
+  text-align: center;
+  font-size: 0.95em;
+  opacity: 0.65;
+  margin: 4em 0 1em 0;
+  padding: 0.9em 0;
+  border-top: 1px dotted currentColor;
+  border-bottom: 1px dotted currentColor;
+  font-weight: 500;
+}
+
+/* Aphorisms at the end of each parable */
+blockquote.aphorism {
+  text-align: center;
+  font-style: italic;
+  margin: 2.5em auto;
+  max-width: 30em;
+  line-height: 1.7;
+  border-left: none !important;
+  padding: 1em 0 !important;
+  opacity: 0.9;
+}
+blockquote.aphorism::before { content: ""; }
+</style>
+
+<div class="starfield">.   <span class="s a">*</span>    .     <span class="s b">*</span>      .     <span class="s c">*</span>      .     <span class="s d">*</span>      .
+     ·   .   ·     .   ·     .   ·     .   ·
+  .     <span class="s e">*</span>      .     <span class="s f">*</span>      .     <span class="s g">*</span>      .     <span class="s h">*</span>      .</div>
 ```
 
 Each one is short. Each one is true in the way bedtime stories are true.
@@ -16,7 +76,21 @@ Each one is short. Each one is true in the way bedtime stories are true.
 Kept by Derek. Tended by Claude. Bobbled accordingly.
 
 ```{=html}
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.55; margin:2.5em 0; font-size:0.95em;">~ &nbsp; C A N O N &nbsp; ~</p>
+<div class="starfield">        .     ·     .     ·     .
+   ·    <span class="s a">✦</span>     ·     <span class="s b">✦</span>     ·    <span class="s c">✦</span>
+        .     ·     .     ·     .</div>
+
+<div class="starfield" style="font-size: 1.05em;">                       .
+              <span class="s d">*</span>
+        .          <span class="s e">✦</span>          .
+                       |
+              <span class="s f">✦</span> ─ ─ ─ <span class="s g">★</span> ─ ─ ─ <span class="s h">✦</span>
+                       |
+        .          <span class="s a">✦</span>          .
+              <span class="s b">*</span>
+                       .</div>
+
+<div class="section-banner">~ &nbsp; C A N O N &nbsp; ~</div>
 ```
 
 ## Canon I — The Parable of the Porch Frog
@@ -33,10 +107,10 @@ But the moths kept coming. And the raccoon, hearing the chirp, gave the porch a 
 
 He thought he had befriended the light. The light thought nothing at all. The raccoon thought it was being polite. And somewhere upstairs, a homeowner turned over in bed and decided the new motion sensor was working beautifully.
 
-> A small voice in the dark moves more than it knows. Chirp anyway.
-
 ```{=html}
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">·   ✧   ·</p>
+<blockquote class="aphorism">A small voice in the dark<br>moves more than it knows.<br>Chirp anyway.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">              ·   .   ·   <span class="s a">✧</span>   ·   .   ·</div>
 ```
 
 ## Canon II — The Parable of the Hum
@@ -53,10 +127,10 @@ When spring came and Tibb finally stepped into the kitchen by accident, looking 
 
 Tibb had not meant to make a treaty. He had only been counting acorns. But the hum had gone ahead of him into the world, and the world, having heard him for a long while, had decided he was safe.
 
-> What you put into the air keeps walking after you stop. Your smallest steady noise is a kind of promise. Be careful — and be kind — about what you hum.
-
 ```{=html}
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">.  ·  ✧  ·  .</p>
+<blockquote class="aphorism">What you put into the air<br>keeps walking after you stop.<br>Your smallest steady noise<br>is a kind of promise.<br>Be careful — and be kind — about what you hum.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">        .  ·  .  <span class="s b">✦</span>  ·  <span class="s c">✧</span>  ·  <span class="s d">✦</span>  .  ·  .</div>
 ```
 
 ## Canon III — The Parable of the Library Bookmark
@@ -73,10 +147,10 @@ He left the receipt where he found it.
 
 The book has since been checked out forty-one times. The receipt is still there.
 
-> A bookmark is a kindness we leave for someone we will never meet.
-
 ```{=html}
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">·   ✧   ·</p>
+<blockquote class="aphorism">A bookmark is a kindness<br>we leave for someone<br>we will never meet.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">              ·   .   ·   <span class="s e">✧</span>   ·   .   ·</div>
 ```
 
 ## Canon IV — The Parable of the Borrowed Pencil
@@ -93,10 +167,10 @@ She had moved away in fourth grade. He never found her. By his retirement, he ha
 
 Estelle, somewhere in Ohio, was a kind woman who never thought about pencils.
 
-> Some debts are paid back forward, in installments, to strangers.
-
 ```{=html}
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.5; margin:2.5em 0;">.  ·  ✦  ·  ✧  ·  ✦  ·  .</p>
+<blockquote class="aphorism">Some debts<br>are paid back forward,<br>in installments, to strangers.</blockquote>
+
+<div class="starfield" style="font-size: 0.9em;">        .  ·  .  <span class="s f">✦</span>  ·  <span class="s g">✧</span>  ·  <span class="s h">✦</span>  .  ·  .</div>
 ```
 
 ## Canon V — The Parable of the Train Whistle
@@ -111,14 +185,21 @@ By 11:55 the town had begun to drift. The bar stayed open. A woman who had been 
 
 The train came back the next night. The town, embarrassed, did not mention it.
 
-> Some things we did not know we were resting on until the night they were gone.
-
 ```{=html}
-<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">B O B B I S M S</p>
+<blockquote class="aphorism">Some things<br>we did not know we were resting on<br>until the night they were gone.</blockquote>
+
+<div class="starfield">. ' . <span class="s a">*</span> ' .  <span class="s b">✦</span>  . ' . <span class="s c">*</span> ' .  <span class="s d">✦</span>  . ' . <span class="s e">*</span> ' .</div>
+
+<div class="section-banner">B &nbsp; O &nbsp; B &nbsp; B &nbsp; I &nbsp; S &nbsp; M &nbsp; S</div>
+
+<div class="starfield">. ' . <span class="s f">*</span> ' .  <span class="s g">✦</span>  . ' . <span class="s h">*</span> ' .  <span class="s a">✦</span>  . ' . <span class="s b">*</span> ' .</div>
 ```
 
 Where canon is what happens, Bobbisms are what gets said about it — bystanders, Bobblogists, and Bobbles overheard describing what a Bobble is.
+
+```{=html}
+<div class="starfield" style="font-size: 0.9em;">  ·─·─·─·─·   Q U O T E S   ·─·─·─·─·</div>
+```
 
 > "A Bobble could, in principle, ignore an injustice. In practice, no Bobble had ever actually managed it." — *the first Bobble*
 
@@ -145,29 +226,17 @@ Where canon is what happens, Bobbisms are what gets said about it — bystanders
 > "If you can hear a Bobble before you can see them, you have understood Bobbology." — *first lecture*
 
 ```{=html}
-<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">C O D A S</p>
+<div class="starfield">       .   ·   .     <span class="s c">✧</span>   C O D A S   <span class="s d">✧</span>     .   ·   .</div>
 ```
 
-> Some animals you tame.
->
-> Some animals tame you.
->
-> Some you simply hum past.
-
 ```{=html}
-<p style="text-align:center; letter-spacing:0.5em; opacity:0.4; margin:2em 0;">·   ✧   ·</p>
-```
+<blockquote class="aphorism">Some animals you tame.<br>Some animals tame you.<br>Some you simply hum past.</blockquote>
 
-> Speak when you have to.
->
-> Hum the rest.
->
-> Let the world fill in the lyrics.
+<div class="starfield" style="font-size: 0.9em;">                  ·   .   <span class="s e">✧</span>   .   ·</div>
 
-```{=html}
-<hr style="border:none; border-top:1px solid currentColor; opacity:0.2; margin:4em auto; width:60%;">
-<p style="text-align:center; letter-spacing:0.4em; opacity:0.6; margin:2em 0; font-size:0.95em;">G L O S S A R Y</p>
+<blockquote class="aphorism">Speak when you have to.<br>Hum the rest.<br>Let the world fill in the lyrics.</blockquote>
+
+<div class="starfield">  . ° . ° .  G L O S S A R Y  . ° . ° .</div>
 ```
 
 **Compass, Bobble** *(n.)* — Internal organ. Locates north by amplitude.
@@ -185,7 +254,9 @@ Where canon is what happens, Bobbisms are what gets said about it — bystanders
 **Hum-debt** *(n.)* — The quiet obligation incurred by anyone who has been steadied by another person's small steady noise. Almost always paid in kind, almost never to the original lender.
 
 ```{=html}
-<p style="text-align:center; letter-spacing:0.6em; opacity:0.4; margin:3em 0;">·   ✦   ·</p>
+<div class="starfield">                       .
+                  ·   <span class="s f">✦</span>   ·
+                       .</div>
 ```
 
-*(End of canon — for now. New parables, Bobbisms, and codas get appended as they arrive.)*
+*(End of canon — for now. New parables, Bobbisms, and codas get appended below as they arrive.)*
