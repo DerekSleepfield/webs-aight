@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - CNAME
+    - gem-in-eyes-intro.html
 
 website:
   title: "Derek Wakefield"
