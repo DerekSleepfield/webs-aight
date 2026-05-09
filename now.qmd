@@ -20,9 +20,3 @@ subtitle: "What I'm working on this month."
 **Currently outside the academy.** Three cats, fantasy paperbacks, karaoke nights when the calendar permits, the occasional roguelike that costs me a weekend.
 
 *Last updated: May 2026.*
-
----
-
-## Past months
-
-*(Old Now entries will live here once you've written more than one. The current month sits at the top; rolled-over entries get their own subhead — `### April 2026`, etc.)*
