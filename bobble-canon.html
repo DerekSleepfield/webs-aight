@@ -5,31 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Bobble Canon</title>
 <style>
+  /* Night-sky palette: indigo → black background, cream text, golden-yellow stars */
   :root {
-    --bg: #faf8f3;
-    --fg: #1f1d1a;
-    --muted: rgba(31, 29, 26, 0.55);
-    --accent: #2c5aa0;
-    --rule: rgba(31, 29, 26, 0.18);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14110d;
-      --fg: #efe9dd;
-      --muted: rgba(239, 233, 221, 0.55);
-      --accent: #9ec1ff;
-      --rule: rgba(239, 233, 221, 0.18);
-    }
+    --bg-top: #0e1238;       /* deep indigo */
+    --bg-bottom: #04060f;    /* near-black */
+    --fg: #f0e7c8;           /* warm cream */
+    --fg-soft: #d8cfa9;      /* dimmer cream */
+    --muted: rgba(240, 231, 200, 0.55);
+    --gold: #ffd95c;         /* twinkling-star yellow */
+    --gold-dim: #d4a93a;     /* aged-gold accent */
+    --rule: rgba(255, 217, 92, 0.22);
+    --quote-rule: rgba(255, 217, 92, 0.35);
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
     padding: 0;
-    background: var(--bg);
+    background: linear-gradient(to bottom, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    background-attachment: fixed;
     color: var(--fg);
     font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.75;
+    min-height: 100vh;
   }
   .canon {
     max-width: 36em;
@@ -38,42 +36,46 @@
   }
   h1 {
     text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-size: 2.2em;
+    font-weight: 500;
+    letter-spacing: -0.005em;
     margin: 0 0 0.4em 0;
+    color: var(--gold);
+    text-shadow: 0 0 18px rgba(255, 217, 92, 0.18);
   }
   .subtitle {
     text-align: center;
-    color: var(--muted);
+    color: var(--fg-soft);
     font-style: italic;
     margin: 0 0 3em 0;
   }
   h2 {
-    font-size: 1.3em;
-    font-weight: 600;
-    letter-spacing: -0.005em;
+    font-size: 1.25em;
+    font-weight: 500;
+    letter-spacing: 0.005em;
     margin: 3em 0 1em 0;
+    color: var(--gold);
   }
-  p { margin: 0 0 1em 0; }
-  em { font-style: italic; }
-  a { color: var(--accent); }
+  p { margin: 0 0 1em 0; color: var(--fg); }
+  em { font-style: italic; color: var(--fg); }
+  a { color: var(--gold); }
 
-  /* Star fields */
+  /* Star fields — golden, twinkling */
   .starfield {
     font-family: 'Courier New', 'Consolas', 'Menlo', monospace;
     white-space: pre;
     text-align: center;
     line-height: 1.55;
-    margin: 2.2em 0;
+    margin: 2.4em 0;
     user-select: none;
     font-size: 0.9em;
-    opacity: 0.92;
     overflow-x: auto;
-    color: var(--fg);
+    color: var(--gold);
   }
   .starfield .s {
     display: inline-block;
+    color: var(--gold);
+    text-shadow: 0 0 6px rgba(255, 217, 92, 0.55);
     animation: twinkle 3s infinite ease-in-out;
   }
   .starfield .s.a { animation-duration: 2.4s; animation-delay: 0.0s; }
@@ -85,56 +87,47 @@
   .starfield .s.g { animation-duration: 2.7s; animation-delay: 0.4s; }
   .starfield .s.h { animation-duration: 4.0s; animation-delay: 2.4s; }
   @keyframes twinkle {
-    0%, 100% { opacity: 0.22; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 0.25; text-shadow: 0 0 2px rgba(255, 217, 92, 0.25); }
+    50%      { opacity: 1;    text-shadow: 0 0 8px rgba(255, 217, 92, 0.75); }
   }
 
-  /* Section banners */
+  /* Section banners — gold caps with dotted gold rules */
   .section-banner {
     font-family: 'Courier New', monospace;
     letter-spacing: 0.55em;
     text-align: center;
     font-size: 0.95em;
-    color: var(--muted);
+    color: var(--gold);
     margin: 4em 0 1em 0;
-    padding: 0.9em 0;
+    padding: 1em 0;
     border-top: 1px dotted var(--rule);
     border-bottom: 1px dotted var(--rule);
     font-weight: 500;
+    text-shadow: 0 0 8px rgba(255, 217, 92, 0.2);
   }
 
-  /* Aphorisms */
+  /* Aphorisms — cream italic, soft */
   .aphorism {
     text-align: center;
     font-style: italic;
     margin: 2.5em auto;
     max-width: 30em;
-    line-height: 1.7;
-    color: var(--fg);
-    opacity: 0.9;
+    line-height: 1.75;
+    color: var(--fg-soft);
   }
 
-  /* Quotes (Bobbisms) */
+  /* Bobbisms / blockquotes — gold left rule */
   blockquote {
     margin: 1.5em 0;
     padding: 0.4em 0 0.4em 1.2em;
-    border-left: 2px solid var(--rule);
+    border-left: 2px solid var(--quote-rule);
     color: var(--fg);
   }
-  blockquote em { color: var(--muted); }
+  blockquote em { color: var(--gold-dim); }
 
   /* Glossary */
-  .glossary p { margin: 0.8em 0; }
-  .glossary strong { letter-spacing: 0.01em; }
-
-  /* Closing */
-  .closing-note {
-    text-align: center;
-    color: var(--muted);
-    font-style: italic;
-    margin: 3em 0 0 0;
-    font-size: 0.9em;
-  }
+  .glossary p { margin: 0.9em 0; color: var(--fg); }
+  .glossary strong { color: var(--gold); letter-spacing: 0.01em; }
 </style>
 </head>
 <body>
