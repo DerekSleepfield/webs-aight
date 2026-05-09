@@ -10,6 +10,21 @@ title: "Teaching"
 
 ## Courses
 
+### Quantitative Methods *(Undergraduate)* — POL 296
+**Bucknell University, Instructor of Record (Spring 2026)**
+
+Foundations of data analysis for political science research. Students learn R using `dplyr` and `ggplot2` — importing, tidying, transforming, joining, and visualizing data — alongside research design and quantitative methods. Across four problem sets and a semester-long research project, students move from exploratory analysis to producing a literature review, research design, and pre-analysis plan on a topic of their own choosing. By the end of the class, students can read, critique, and produce empirical political science.
+
+### Race, Ethnicity, and American Politics *(Undergraduate)* — POLS-246
+**Bucknell University, Instructor of Record (Fall 2025)**
+
+Why our identities matter (or don't) for our politics. The course examines the processes that create, cultivate, politicize, and activate identities across race, ethnicity, gender, sexuality, and religion. Topics span Black, Latino, Asian American, MENA, Indigenous, and LGBTQ+ politics; intersectionality and racial triangulation; racial capitalism; whiteness and white backlash; and constructivist theories of identity. Students complete weekly reading memos, a research paper with peer review, and a group presentation.
+
+### Introduction to American Politics *(Undergraduate)* — POLS-140
+**Bucknell University, Instructor of Record (Fall 2025)**
+
+American government and politics with a focus on the contemporary United States. Topics: the Constitution, federalism, the separation of powers, civil liberties and civil rights, Congress, the Presidency, the executive branch, the courts, public opinion and voting, parties, interest groups, and economic and foreign policy. The course pairs textbook fundamentals with weekly memos in which students bring their own reactions, experiences, and political views to the course material.
+
 ### Introduction to Data Analysis in R *(Undergraduate)*
 **Emory University, Instructor of Record (Spring 2024, Spring 2025)**
 
