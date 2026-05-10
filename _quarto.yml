@@ -8,6 +8,8 @@ project:
     - introduction-to-bobbology.html
     - mind-palace.html
     - feedback.html
+    - feedback-bubble.html
+    - citation_timeline.html
 
 website:
   title: "Derek Wakefield"
@@ -45,6 +47,7 @@ website:
 
 format:
   html:
+    include-after-body: feedback-bubble.html
     theme:
       light: cosmo
       dark: darkly

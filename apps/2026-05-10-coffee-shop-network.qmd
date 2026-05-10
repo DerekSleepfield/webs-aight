@@ -1,0 +1,80 @@
+---
+title: "The Coffee Shop"
+description: "An imaginary coffee shop with 7,000 chairs, every chair a sociologist or political scientist, every conversation a citation. 1980 → 2025. Scroll down through time."
+date: 2026-05-10
+author: "Derek Wakefield"
+categories: ["network analysis", "sociology", "political science", "genealogy"]
+format:
+  html:
+    page-layout: full
+    toc: false
+---
+
+> *A small voice in the dark moves more than it knows. Chirp anyway.*
+
+Imagine a coffee shop that opened in **1980** and never closed.
+
+Every chair is a sociologist or political scientist. Some have been there since the doors opened — Coleman in one corner, Putnam at the bar, Massey by the window watching people walk past. Others arrived later — Mendelberg ordered her first espresso in the mid-90s and has been here ever since. The newest baristas just clocked in last year.
+
+The shop has 7,000 chairs and they're all full.
+
+Most conversations are *citations* — someone overhearing what someone else said and writing it down. But some conversations are something rarer: the kind where one scholar trains another, where a sentence in 1983 ends up shaping a sentence in 2018 because the second person learned how to think from the first.
+
+This page is a map of those conversations.
+
+---
+
+## What you're looking at
+
+- **7,000 dots.** Each dot is an author who published in a flagship sociology or political-science journal between 1980 and 2025.
+- **Vertical position = the year of their first publication.** 1980 at the top, 2025 at the bottom. Scroll down to walk forward through time.
+- **Color = field & tier.** Reds for sociology, blues for political science. Darker = top-flight journal.
+- **Lines connecting dots = mentor → mentee edges.** Two kinds:
+  - **Bold purple lines** are Wikipedia-verified advisor/student pairs from the top-500 authors' biographies. These are gold-standard data.
+  - **Thin gray lines** are inferred via co-authorship asymmetry (Sinatra et al. 2016 *Science*) — pairs with a ≥5-year first-publication gap who co-authored together in the junior's early career window.
+- **Big black-outlined dots are "heads of school"** with 25+ descendants in the graph. There are 84 of them.
+
+Click any dot to isolate that scholar's intellectual lineage — mentors in purple flowing up, mentees in green flowing down. The decade sidebar on the right summarizes who was training whom in each ten-year slice.
+
+::: {.callout-note}
+The interaction lives in the embedded viz below. If you want a wider canvas, [open it in a new tab](/citation_timeline.html).
+:::
+
+---
+
+## A note on missingness
+
+This isn't the whole coffee shop. A few caveats baked in:
+
+- **Anglophone journals only.** Bourdieu doesn't have a chair here. Habermas doesn't either.
+- **Co-authorship inference misses solo influence.** Coleman, Granovetter, and Tilly — three of the heaviest hitters in the room — have famous *solo* papers that trained whole generations through reading, not co-writing. Their footprint here looks smaller than their actual influence.
+- **Recent students are sparse.** Famous mentors like Mendelberg have 40+ named PhD students on their CVs, but many of those advisees haven't yet accumulated enough citations to land in the top-7000 universe. They'll show up in this graph in 5–10 years as their work compounds.
+
+The viz makes this gap *visible* rather than hiding it. Click any famous-but-childless author and you'll see the citation-vs-genealogy callout explaining why.
+
+---
+
+## The viz
+
+<iframe src="/citation_timeline.html"
+        style="width: 100%; height: 1100px; border: 1px solid #ddd; border-radius: 8px;"
+        title="Coffee-shop network: sociology & political science genealogy, 1980-2025"
+        loading="lazy"></iframe>
+
+---
+
+## Method, briefly
+
+| stage | source | tool |
+|---|---|---|
+| Authors + citations + journals | OpenAlex Works API | curated 87-journal whitelist, top-cited works 1980-2025 |
+| Inferred mentor edges | OpenAlex co-author pairs in same whitelist | Sinatra-style asymmetry rule (≥5yr first-pub gap, early-career joint paper) |
+| Verified mentor edges | Wikipedia infobox fields (`doctoral_students`, `doctoral_advisor`, `notable_students`) on top-500 authors | parse + match to OpenAlex universe |
+| CV-verified edges (rolling) | Direct CV scrapes for non-Wikipedia authors | regex on "DISSERTATION ADVISING" / "PhD Students" sections, role-tagged (chair / cochair / committee) |
+| Layout | width-weighted DFS tree rooted at earliest-mentor per component; Y = first publication year; tilt-fold for over-wide subtrees | Python + NetworkX + Plotly Scattergl |
+
+The whole pipeline is resumable. Every time I sit at the coffee shop I add a few more chairs.
+
+---
+
+*Built with Claude. Re-framed as a coffee shop because the actual phrase "co-authorship-asymmetry-inferred mentorship network" makes most people stop reading at "co-".*
