@@ -374,6 +374,68 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<!--
+  Bobble feedback bubble.
+  Included site-wide via _quarto.yml -> format.html.include-after-body.
+  Floating bottom-right chirp link to /feedback.html.
+-->
+<a class="bob-chirp" href="./feedback.html" aria-label="leave a chirp">
+  <span class="bob-chirp-mark">✦</span>
+  <span class="bob-chirp-label">chirp</span>
+</a>
+<style>
+  .bob-chirp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #faf8f3;
+    border: 1px solid #d8d2c2;
+    border-radius: 30px;
+    padding: 9px 16px 9px 13px;
+    box-shadow: 0 4px 14px rgba(60, 40, 10, 0.18);
+    font-family: "Iowan Old Style", "Palatino", Georgia, serif;
+    font-size: 14px;
+    color: #2a2a2a;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  }
+  .bob-chirp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(60, 40, 10, 0.26);
+    background: #fffaf0;
+    text-decoration: none !important;
+  }
+  .bob-chirp:focus-visible {
+    outline: 2px solid #7f3fbf;
+    outline-offset: 3px;
+  }
+  .bob-chirp-mark {
+    color: #7f3fbf;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .bob-chirp-label {
+    letter-spacing: 0.04em;
+  }
+  /* Dim slightly on print */
+  @media print {
+    .bob-chirp { display: none; }
+  }
+  /* Mobile tweak */
+  @media (max-width: 480px) {
+    .bob-chirp {
+      bottom: 14px;
+      right: 14px;
+      padding: 7px 13px 7px 11px;
+      font-size: 13px;
+    }
+    .bob-chirp-mark { font-size: 14px; }
+  }
+</style>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

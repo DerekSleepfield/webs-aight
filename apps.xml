@@ -10,7 +10,130 @@
 <atom:link href="https://derekwakefield.com/apps.xml" rel="self" type="application/rss+xml"/>
 <description>Assistant Professor of Political Science, Bucknell University</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 10 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Coffee Shop</title>
+  <dc:creator>Derek Wakefield</dc:creator>
+  <link>https://derekwakefield.com/apps/2026-05-10-coffee-shop-network.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<blockquote class="blockquote">
+<p><em>A small voice in the dark moves more than it knows. Chirp anyway.</em></p>
+</blockquote>
+<p>Imagine a coffee shop that opened in <strong>1980</strong> and never closed.</p>
+<p>Every chair is a sociologist or political scientist. Some have been there since the doors opened — Coleman in one corner, Putnam at the bar, Massey by the window watching people walk past. Others arrived later — Mendelberg ordered her first espresso in the mid-90s and has been here ever since. The newest baristas just clocked in last year.</p>
+<p>The shop has 7,000 chairs and they’re all full.</p>
+<p>Most conversations are <em>citations</em> — someone overhearing what someone else said and writing it down. But some conversations are something rarer: the kind where one scholar trains another, where a sentence in 1983 ends up shaping a sentence in 2018 because the second person learned how to think from the first.</p>
+<p>This page is a map of those conversations.</p>
+<hr>
+<section id="what-youre-looking-at" class="level2">
+<h2 class="anchored" data-anchor-id="what-youre-looking-at">What you’re looking at</h2>
+<ul>
+<li><strong>7,000 dots.</strong> Each dot is an author who published in a flagship sociology or political-science journal between 1980 and 2025.</li>
+<li><strong>Vertical position = the year of their first publication.</strong> 1980 at the top, 2025 at the bottom. Scroll down to walk forward through time.</li>
+<li><strong>Color = field &amp; tier.</strong> Reds for sociology, blues for political science. Darker = top-flight journal.</li>
+<li><strong>Lines connecting dots = mentor → mentee edges.</strong> Two kinds:
+<ul>
+<li><strong>Bold purple lines</strong> are Wikipedia-verified advisor/student pairs from the top-500 authors’ biographies. These are gold-standard data.</li>
+<li><strong>Thin gray lines</strong> are inferred via co-authorship asymmetry (Sinatra et al.&nbsp;2016 <em>Science</em>) — pairs with a ≥5-year first-publication gap who co-authored together in the junior’s early career window.</li>
+</ul></li>
+<li><strong>Big black-outlined dots are “heads of school”</strong> with 25+ descendants in the graph. There are 84 of them.</li>
+</ul>
+<p>Click any dot to isolate that scholar’s intellectual lineage — mentors in purple flowing up, mentees in green flowing down. The decade sidebar on the right summarizes who was training whom in each ten-year slice.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The interaction lives in the embedded viz below. If you want a wider canvas, <a href="../citation_timeline.html">open it in a new tab</a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="a-note-on-missingness" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-missingness">A note on missingness</h2>
+<p>This isn’t the whole coffee shop. A few caveats baked in:</p>
+<ul>
+<li><strong>Anglophone journals only.</strong> Bourdieu doesn’t have a chair here. Habermas doesn’t either.</li>
+<li><strong>Co-authorship inference misses solo influence.</strong> Coleman, Granovetter, and Tilly — three of the heaviest hitters in the room — have famous <em>solo</em> papers that trained whole generations through reading, not co-writing. Their footprint here looks smaller than their actual influence.</li>
+<li><strong>Recent students are sparse.</strong> Famous mentors like Mendelberg have 40+ named PhD students on their CVs, but many of those advisees haven’t yet accumulated enough citations to land in the top-7000 universe. They’ll show up in this graph in 5–10 years as their work compounds.</li>
+</ul>
+<p>The viz makes this gap <em>visible</em> rather than hiding it. Click any famous-but-childless author and you’ll see the citation-vs-genealogy callout explaining why.</p>
+<hr>
+</section>
+<section id="the-viz" class="level2">
+<h2 class="anchored" data-anchor-id="the-viz">The viz</h2>
+<iframe src="../citation_timeline.html" style="width: 100%; height: 1100px; border: 1px solid #ddd; border-radius: 8px;" title="Coffee-shop network: sociology &amp; political science genealogy, 1980-2025" loading="lazy">
+</iframe>
+<hr>
+</section>
+<section id="method-briefly" class="level2">
+<h2 class="anchored" data-anchor-id="method-briefly">Method, briefly</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>stage</th>
+<th>source</th>
+<th>tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Authors + citations + journals</td>
+<td>OpenAlex Works API</td>
+<td>curated 87-journal whitelist, top-cited works 1980-2025</td>
+</tr>
+<tr class="even">
+<td>Inferred mentor edges</td>
+<td>OpenAlex co-author pairs in same whitelist</td>
+<td>Sinatra-style asymmetry rule (≥5yr first-pub gap, early-career joint paper)</td>
+</tr>
+<tr class="odd">
+<td>Verified mentor edges</td>
+<td>Wikipedia infobox fields (<code>doctoral_students</code>, <code>doctoral_advisor</code>, <code>notable_students</code>) on top-500 authors</td>
+<td>parse + match to OpenAlex universe</td>
+</tr>
+<tr class="even">
+<td>CV-verified edges (rolling)</td>
+<td>Direct CV scrapes for non-Wikipedia authors</td>
+<td>regex on “DISSERTATION ADVISING” / “PhD Students” sections, role-tagged (chair / cochair / committee)</td>
+</tr>
+<tr class="odd">
+<td>Layout</td>
+<td>width-weighted DFS tree rooted at earliest-mentor per component; Y = first publication year; tilt-fold for over-wide subtrees</td>
+<td>Python + NetworkX + Plotly Scattergl</td>
+</tr>
+</tbody>
+</table>
+<p>The whole pipeline is resumable. Every time I sit at the coffee shop I add a few more chairs.</p>
+<hr>
+<p><em>Built with Claude. Re-framed as a coffee shop because the actual phrase “co-authorship-asymmetry-inferred mentorship network” makes most people stop reading at “co-”.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>network analysis</category>
+  <category>sociology</category>
+  <category>political science</category>
+  <category>genealogy</category>
+  <guid>https://derekwakefield.com/apps/2026-05-10-coffee-shop-network.html</guid>
+  <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Mind Palace</title>
   <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>

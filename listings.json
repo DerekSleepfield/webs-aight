@@ -1,16 +1,17 @@
 [
   {
-    "listing": "/apps.html",
-    "items": [
-      "/apps/2026-05-09-mind-palace.html",
-      "/apps/2026-05-09-gem-in-eyes-intro.html"
-    ]
-  },
-  {
     "listing": "/writing.html",
     "items": [
       "/posts/2026-05-09-introduction-to-bobbology.html",
       "/posts/2026-05-09-bobble-canon.html"
+    ]
+  },
+  {
+    "listing": "/apps.html",
+    "items": [
+      "/apps/2026-05-10-coffee-shop-network.html",
+      "/apps/2026-05-09-mind-palace.html",
+      "/apps/2026-05-09-gem-in-eyes-intro.html"
     ]
   }
 ]
