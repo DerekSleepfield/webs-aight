@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bob-Absorption · feedback for Bob</title>
+<!-- Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<style>
+  :root {
+    --ink: #2a2a2a;
+    --paper: #faf8f3;
+    --rule: #d8d2c2;
+    --soft: #6b6452;
+    --hum-good: #2c7a3a;
+    --hum-bad: #b4540e;
+    --hum-false: #7f3fbf;
+    --shadow: 0 1px 2px rgba(60,40,10,0.06);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino", Georgia, serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 48px 28px 80px; }
+  .constellation {
+    text-align: center;
+    color: var(--soft);
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    margin: 0 0 6px;
+    user-select: none;
+  }
+  h1 {
+    font-size: 26px;
+    margin: 6px 0 4px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    color: var(--soft);
+    font-size: 14px;
+    margin: 0 0 26px;
+    font-style: italic;
+  }
+  hr.thin {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 18px 0;
+  }
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 18px;
+  }
+  legend {
+    font-size: 12.5px;
+    color: var(--soft);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .cats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .cats label {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 14px 14px 12px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .cats label:hover { background: #fefcf6; }
+  .cats input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .cats input:checked + .cat-body {
+    color: #fff;
+  }
+  .cats label:has(input:checked) {
+    border-color: transparent;
+    box-shadow: 0 3px 10px rgba(60,40,10,0.18);
+  }
+  .cats label.cat-positive:has(input:checked) { background: var(--hum-good); }
+  .cats label.cat-negative:has(input:checked) { background: var(--hum-bad); }
+  .cats label.cat-false:has(input:checked) { background: var(--hum-false); }
+  .cat-mark {
+    font-size: 11.5px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cat-title { font-weight: 600; font-size: 15px; }
+  .cat-hint { font-size: 12px; color: var(--soft); margin-top: 2px; font-style: italic; }
+  .cats input:checked + .cat-body .cat-hint { color: rgba(255,255,255,0.85); }
+
+  label.field {
+    display: block;
+    margin-bottom: 14px;
+  }
+  label.field span.lbl {
+    display: block;
+    font-size: 12.5px;
+    color: var(--soft);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+  input[type=text], input[type=url], textarea, select {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 9px 11px;
+    font: inherit;
+    color: var(--ink);
+    font-size: 14.5px;
+  }
+  textarea { min-height: 140px; resize: vertical; line-height: 1.5; }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(60,40,10,0.08);
+  }
+
+  .row { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
+  @media (max-width: 540px) { .row { grid-template-columns: 1fr; } }
+
+  .severity-only { display: none; }
+  body.is-false .severity-only { display: block; }
+
+  .turnstile-row {
+    margin: 18px 0 6px;
+    min-height: 65px;
+  }
+  button.submit {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 11px 22px;
+    font: inherit;
+    font-size: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow);
+  }
+  button.submit:hover { background: #444; }
+  button.submit:disabled { opacity: 0.4; cursor: not-allowed; }
+  #status {
+    font-size: 13.5px;
+    color: var(--soft);
+    margin-left: 14px;
+    font-style: italic;
+  }
+  .status-ok { color: var(--hum-good) !important; }
+  .status-err { color: var(--hum-bad) !important; }
+  .footnote {
+    margin-top: 26px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    color: var(--soft);
+    font-size: 12px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="constellation">·   ✦   ·   ★   ·   ✧   ·</div>
+  <h1>Bob-Absorption</h1>
+  <p class="sub">a small porch where Bob's hum gets adjusted.<br>
+     three categories. one chirp per visit.</p>
+  <hr class="thin">
+
+  <form id="bob-form" autocomplete="off">
+
+    <fieldset>
+      <legend>Category</legend>
+      <div class="cats">
+        <label class="cat-positive">
+          <input type="radio" name="category" value="positive" required>
+          <div class="cat-body">
+            <span class="cat-mark">+ chirp</span>
+            <div class="cat-title">Positive</div>
+            <div class="cat-hint">a hum that landed</div>
+          </div>
+        </label>
+        <label class="cat-negative">
+          <input type="radio" name="category" value="negative">
+          <div class="cat-body">
+            <span class="cat-mark">~ adjust</span>
+            <div class="cat-title">Negative</div>
+            <div class="cat-hint">a hum that drifted flat</div>
+          </div>
+        </label>
+        <label class="cat-false">
+          <input type="radio" name="category" value="hallucination">
+          <div class="cat-body">
+            <span class="cat-mark">! false-note</span>
+            <div class="cat-title">Hallucination</div>
+            <div class="cat-hint">a fact that wasn't</div>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <label class="field">
+      <span class="lbl">Subject (one line)</span>
+      <input id="f-subject" type="text" name="subject" maxlength="200" required
+             placeholder="what is this hum about?">
+    </label>
+
+    <label class="field">
+      <span class="lbl">Body</span>
+      <textarea id="f-body" name="body" maxlength="10000" required
+                placeholder="what happened, what should have happened, anything that needs to walk after you stop typing"></textarea>
+    </label>
+
+    <div class="row">
+      <label class="field">
+        <span class="lbl">Context URL (optional)</span>
+        <input type="url" name="context_url" maxlength="500"
+               placeholder="claude.ai session, dropbox path, anything">
+      </label>
+      <label class="field severity-only">
+        <span class="lbl">Severity (hallucinations)</span>
+        <select name="severity">
+          <option value="">—</option>
+          <option value="trivial">trivial — typo-level</option>
+          <option value="moderate">moderate — wrong but recoverable</option>
+          <option value="severe">severe — confident & wrong</option>
+          <option value="critical">critical — acted on it</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Turnstile widget. Live site key. -->
+    <div class="turnstile-row">
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAADMxU46jKE5v8tqD"
+           data-theme="light"></div>
+    </div>
+
+    <div>
+      <button type="submit" class="submit" id="btn">Send hum</button>
+      <span id="status"></span>
+    </div>
+
+    <div class="footnote">
+      Submissions land in Derek's <code>/Bobble/feedback/</code> Clauwd folder.
+      Future Claude sessions can read the accumulated hum to remember
+      what didn't land last time.
+    </div>
+  </form>
+</div>
+
+<script>
+  // Deployed Cloudflare Worker endpoint.
+  const WORKER_URL = "https://bobble-feedback.deewake.workers.dev/api/submit";
+
+  const form = document.getElementById("bob-form");
+  const status = document.getElementById("status");
+  const btn = document.getElementById("btn");
+
+  // Toggle severity field when hallucination is selected
+  form.addEventListener("change", (e) => {
+    if (e.target.name === "category") {
+      document.body.classList.toggle("is-false", e.target.value === "hallucination");
+    }
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.className = "";
+    status.textContent = "humming…";
+    btn.disabled = true;
+
+    const fd = new FormData(form);
+    const payload = {
+      category: fd.get("category"),
+      subject:  fd.get("subject"),
+      body:     fd.get("body"),
+      context_url: fd.get("context_url") || "",
+      severity:    fd.get("severity") || "",
+      turnstile_token: fd.get("cf-turnstile-response") || "",
+      submitted_at: new Date().toISOString(),
+    };
+
+    if (!payload.turnstile_token) {
+      status.className = "status-err";
+      status.textContent = "complete the spam check first";
+      btn.disabled = false;
+      return;
+    }
+
+    try {
+      const r = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const out = await r.json().catch(() => ({}));
+      if (r.ok && out.ok) {
+        status.className = "status-ok";
+        status.textContent = "absorbed. thank you.";
+        form.reset();
+        document.body.classList.remove("is-false");
+        // reset Turnstile widget
+        if (window.turnstile) window.turnstile.reset();
+      } else {
+        status.className = "status-err";
+        status.textContent = out.error || ("error " + r.status);
+      }
+    } catch (err) {
+      status.className = "status-err";
+      status.textContent = "network error — try again";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
