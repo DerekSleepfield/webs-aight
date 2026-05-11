@@ -19,7 +19,6 @@
 
 
 
-
 <p>Seven visual directions for derekwakefield.com, each anchored to a different parable or piece of the canon. Trimmed from an earlier set of ten — these are the survivors headed for a Style toggle on the live site.</p>
 <p>Open locally — no internet required after the page loads, since each mockup is inlined.</p>
 <p style="margin: 2em 0;">
@@ -69,7 +68,6 @@
 
 
 
-
 <p>A WarPips-inspired isometric auto-battler. Pick a banner — Tonric Concord, Wildfire Ascension, or Renkindled Mist — and deploy soldiers, miners, snipers, tanks, mechs, helicopters, and airplanes into a destructible battlefield. Anti-air units engage AIR; ground units stay in their lane. Cover blocks 50% of incoming damage, but every prop on the field is destructible. Projectiles track their targets. Each unit type has its own idle animation.</p>
 <p>Built on top of the <em>Gem in Eyes</em> engine canon. Lore-anchored in the bobology.</p>
 <p>Download and open locally — no internet required.</p>
@@ -106,7 +104,6 @@
 
 
 
-
 <p>A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.</p>
 <p>Download and open locally — no internet connection required after download.</p>
 <p style="margin: 2em 0;">
@@ -130,7 +127,6 @@
   <title>Gem in Eyes — an introduction</title>
   <link>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</link>
   <description><![CDATA[ 
-
 
 
 
