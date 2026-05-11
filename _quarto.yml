@@ -11,6 +11,7 @@ project:
     - feedback.html
     - feedback-bubble.html
     - citation_timeline.html
+    - design-directions.html
 
 website:
   title: "Derek Wakefield"
