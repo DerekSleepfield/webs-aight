@@ -121,6 +121,95 @@ Note
 </table>
 <p>The whole pipeline is resumable. Every time I sit at the coffee shop I add a few more chairs.</p>
 <hr>
+</section>
+<section id="latest-session-2026-05-10" class="level2">
+<h2 class="anchored" data-anchor-id="latest-session-2026-05-10">Latest session — 2026-05-10</h2>
+<p>A few more chairs, pulled in by hand.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What got added today
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>16 CV-verified mentor → mentee edges</strong>, sourced from CVs, lab pages, and dissertation pages of an initial 17-scholar Latino-politics roster plus three calibration anchors (Mendelberg, Meier, Pérez). Sample edges:</p>
+<ul>
+<li><strong>Tali Mendelberg → Claire Willeck</strong> (chair, Princeton). Diss: <em>Active Civics: How Civic Education Shapes Political Engagement</em>. Won the 2024 APSA E. E. Schattschneider Award. Committee: Mendelberg, Markus Prior, Andy Guess, Rocio Titiunik.</li>
+<li><strong>Efrén Pérez → 5 current PhDs in REPS Lab</strong> at UCLA: Ramona Alhambra, Gustavo A. Mártir Luna, Kasheena G. Rogbeer, Sydney Tran, Tricia Huynh.</li>
+<li><strong>Michael Jones-Correa → Angie Ocampo-Roland</strong> (chair, Penn 2021) — <em>inferred</em>, pending CV verification. The pipeline’s confidence column was built for this.</li>
+</ul>
+<p><strong>One correction worth flagging.</strong> First-pass surface search guessed Jason Casellas as Sam Chapa’s dissertation chair at Houston (overlapping topic, same department, plausible). Her actual chair is <strong>Lydia Tiede</strong>. The verification pass caught it from her dissertation page. This is exactly the failure mode the pipeline’s audit step is designed to catch — topic similarity is not the same as supervision.</p>
+<p><strong>187 dissertation-cited authors</strong> extracted from the Worked Cited section of my dissertation. 12 of the 17 Phase-1 roster members appear in it; 25 cited-3×-or-more authors are Tier-2 promotion candidates (Barreto leads at 8 citations, then Segura at 6, Masuoka and Pérez at 5).</p>
+<p>None of this is in the viz yet — it sits in the rolling CV-verified-edges queue. The next rebuild will route these names through OpenAlex resolution and fold them into the graph. <em>Same coffee shop, a few more chairs.</em></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Expansion crawl — 2026-05-10 (US poli-sci / public-policy universe)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sat down at the coffee shop and counted everyone in the room. The filter: <strong>US-affiliated authors with i10-index ≥ 2 (two or more works each with ten or more citations) publishing in any of 121 OpenAlex topics under the subfields “Political Science and International Relations” + “Public Administration.”</strong></p>
+<p>The crawl pulled <strong>43,953 unique authors</strong>. Three filter tiers, each useful for different things:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Filter tier</th>
+<th>Authors</th>
+<th>What it captures</th>
+<th>What it’s good for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Broad</strong></td>
+<td>43,423</td>
+<td>i10≥2, US, any of 121 poli-sci-adjacent topics, junk institutions removed</td>
+<td>Maximum recall — includes cross-discipline scholars who publish on political topics</td>
+</tr>
+<tr class="even">
+<td><strong>Subfield-proxy</strong></td>
+<td>20,466</td>
+<td>Same, but top topic must be in PoliSci/IR/PoliSci+Soc/PubAdmin subfields</td>
+<td>Reasonable middle — close to the original estimate (~17K)</td>
+</tr>
+<tr class="odd">
+<td><strong>Concept-tight</strong></td>
+<td>9,724</td>
+<td>Same, but top concept must be Politics / Political science / Public administration / IR</td>
+<td>Highest precision — the top 15 by h-index are all actual political scientists</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top of the concept-tight list (sanity check):</strong> Francis Fukuyama, Robert Keohane, Pippa Norris, John C. Campbell, Kenneth J. Meier, Barry Bozeman, B. Guy Peters, Theda Skocpol, Donald P. Moynihan, Robert S. Erikson, Shanto Iyengar, John W. Meyer, Sidney Tarrow, Michael W. Apple. That’s the right neighborhood.</p>
+<p><strong>Top institutions in the concept-tight slice:</strong> Yale (87), Columbia (81), Wisconsin–Madison (76), UNC (73), UT Austin (73), American (71), Georgetown (71), NYU (70), Stanford (69), GW (69), Ohio State (67), Princeton (66), Cornell (66), Duke (65), Penn State (65), UCLA (62), Rutgers (62), Hopkins (61), Vanderbilt (58), Maryland (56), Washington (55), Michigan State (53), George Mason (52), Florida State (51).</p>
+<p><strong>i10-index distribution.</strong> Roughly 53% sit at the 2–5 bar (the entry tier; established but not heavily-cited). 18% are 6–10. 14% are 11–20. 11% are 21–50. The top 1% (418 authors) have i10 &gt; 100 — the field-defining figures the existing viz’s “Wikipedia top-500” layer is built on.</p>
+<p><strong>Caveats baked in.</strong> OpenAlex’s author-disambiguation is uneven — affiliations like “Harvard University Press” attributed to Theda Skocpol or “Dartmouth–Hitchcock Medical Center” to Donald P. Green are merge errors that haven’t been fixed at the source. The pipeline can scrub these by matching against IPEDS / Carnegie institution lists in a post-process pass. Also: 530 records had “junk institutions” (<code>Twitter (United States)</code>, <code>Film Independent</code>, <code>Independent Researcher</code>) — those were dropped at the clean tier.</p>
+<p><strong>What this enables.</strong> The Coffee Shop currently shows ~7,000 dots filtered to a 87-journal flagship whitelist. The 9,724 concept-tight set is <strong>a 38% expansion of the political-science slice</strong> without lowering the journal whitelist — i.e., it surfaces scholars who publish in venues outside the flagship whitelist but still meet the citation-impact bar. Adding the subfield-proxy set (20,466) would roughly triple the political-science nodes. Either expansion is well within the existing layout algorithm’s capacity.</p>
+<p><strong>Not in this graph yet.</strong> This is a candidate pool waiting on the next pipeline rebuild — the names are extracted, the OpenAlex IDs are resolved, but the citation-graph edges from each of these authors to the rest of the universe haven’t been pulled. That’s the next step.</p>
+<p><strong>Flagged for soon, not now.</strong> The non-US universe — UK + Canada + Australia (~half the US count), Continental Europe (~similar magnitude), Latin America (~smaller), East Asia / South Asia / Africa (varied indexing quality). Going global multiplies the count by roughly 2.5–3×.</p>
+</div>
+</div>
+</div>
+<hr>
 <p><em>Built with Claude. Re-framed as a coffee shop because the actual phrase “co-authorship-asymmetry-inferred mentorship network” makes most people stop reading at “co-”.</em></p>
 
 
