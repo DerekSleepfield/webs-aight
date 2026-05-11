@@ -1,0 +1,98 @@
+<!-- derekwakefield.com — design-direction dropdown widget
+     Injected site-wide via `include-after-body` in _quarto.yml.
+     CSS lives in themes.css; this file is just markup + 1 small script. -->
+<div class="dw-theme-switcher" id="dwThemeSwitcher" aria-label="Design direction">
+  <button type="button" class="dw-theme-toggle" id="dwThemeToggle" aria-haspopup="listbox" aria-expanded="false">
+    <span class="dw-swatch" id="dwToggleSwatch" style="background:#cccccc"></span>
+    <span id="dwToggleLabel">Theme</span>
+    <span class="dw-chevron">▾</span>
+  </button>
+  <div class="dw-theme-panel" id="dwThemePanel" role="listbox">
+    <!-- items injected by script for compactness -->
+    <div class="dw-divider"></div>
+    <a class="dw-what" href="/apps/2026-05-11-design-directions.html">What is this? →</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  var THEMES = [
+    { id: "default",          name: "Site default",     tagline: "Cosmo",          swatch: "#ffffff", dark: false },
+    { id: "porch-light",      name: "Porch Light",      tagline: "warm cream",     swatch: "#c9a96e", dark: false },
+    { id: "star-chart",       name: "Star Chart",       tagline: "night sky",      swatch: "#fde487", dark: true  },
+    { id: "bedrock",          name: "Bedrock",          tagline: "geological",     swatch: "#d4a574", dark: true  },
+    { id: "hum",              name: "Hum",              tagline: "soft peach",     swatch: "#8a6b8a", dark: false },
+    { id: "bobblesphere",     name: "Bobblesphere",     tagline: "orbital",        swatch: "#ff9d3c", dark: true  },
+    { id: "library-bookmark", name: "Library Bookmark", tagline: "card catalog",   swatch: "#8b1a1a", dark: false },
+    { id: "mind-palace-map",  name: "Mind Palace Map",  tagline: "antique atlas",  swatch: "#993322", dark: false }
+  ];
+  var STORAGE_KEY = "dw-theme";
+
+  // Inject items above the existing "What is this?" link
+  var panel  = document.getElementById("dwThemePanel");
+  var divider = panel.querySelector(".dw-divider");
+  THEMES.forEach(function (t) {
+    var item = document.createElement("div");
+    item.className = "dw-theme-item";
+    item.setAttribute("data-theme-id", t.id);
+    item.setAttribute("role", "option");
+    item.innerHTML =
+      '<span class="dw-swatch" style="background:' + t.swatch + '"></span>' +
+      '<span class="dw-name">' + t.name + '</span>' +
+      '<span class="dw-tagline">' + t.tagline + '</span>';
+    panel.insertBefore(item, divider);
+  });
+
+  function applyTheme(id) {
+    var t = THEMES.find(function (x) { return x.id === id; }) || THEMES[0];
+    if (t.id === "default") {
+      document.documentElement.removeAttribute("data-theme");
+      document.documentElement.removeAttribute("data-bs-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", t.id);
+      // honor existing dark-mode hooks (e.g. coffee-shop post)
+      if (t.dark) document.documentElement.setAttribute("data-bs-theme", "dark");
+      else        document.documentElement.removeAttribute("data-bs-theme");
+    }
+    // Refresh toggle label + swatch
+    document.getElementById("dwToggleLabel").textContent = t.name;
+    document.getElementById("dwToggleSwatch").style.background = t.swatch;
+    // Mark active in panel
+    panel.querySelectorAll(".dw-theme-item").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-theme-id") === t.id);
+    });
+  }
+
+  // Initial apply from localStorage
+  var initial = "default";
+  try { initial = localStorage.getItem(STORAGE_KEY) || "default"; } catch (e) {}
+  applyTheme(initial);
+
+  // Toggle open/close
+  var btn = document.getElementById("dwThemeToggle");
+  function openPanel() { panel.classList.add("open");  btn.setAttribute("aria-expanded", "true");  }
+  function closePanel() { panel.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (panel.classList.contains("open")) closePanel(); else openPanel();
+  });
+
+  // Click item
+  panel.addEventListener("click", function (e) {
+    var item = e.target.closest(".dw-theme-item");
+    if (!item) return;
+    var id = item.getAttribute("data-theme-id");
+    applyTheme(id);
+    try { localStorage.setItem(STORAGE_KEY, id); } catch (err) {}
+    closePanel();
+  });
+
+  // Close on outside click + ESC
+  document.addEventListener("click", function (e) {
+    if (!document.getElementById("dwThemeSwitcher").contains(e.target)) closePanel();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closePanel();
+  });
+})();
+</script>

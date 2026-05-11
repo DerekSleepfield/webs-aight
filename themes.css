@@ -1,0 +1,188 @@
+/* derekwakefield.com — theme variants for the design-direction dropdown
+ * Activated by setting `data-theme="..."` on <html>.
+ * Default (no attribute) leaves Cosmo untouched. */
+
+/* ────────── shared niceties for all themed states ────────── */
+html[data-theme] body,
+html[data-theme] .navbar,
+html[data-theme] .navbar-brand,
+html[data-theme] .nav-link {
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+/* ────────── 1 · PORCH LIGHT ────────── */
+html[data-theme="porch-light"] {
+  --bs-body-bg: #faf8f3;
+  --bs-body-color: #2a2a2a;
+  --bs-heading-color: #2a2a2a;
+  --bs-primary: #c9a96e;
+  --bs-link-color: #5b5340;
+  --bs-link-hover-color: #c9a96e;
+  --bs-border-color: #e5dec4;
+  --bs-secondary-bg: #fff;
+  --bs-tertiary-bg: #fff;
+  --bs-emphasis-color: #c9a96e;
+}
+html[data-theme="porch-light"] body { background: #faf8f3; color: #2a2a2a; font-family: "Iowan Old Style", "Palatino", Georgia, serif; line-height: 1.65; }
+html[data-theme="porch-light"] h1, html[data-theme="porch-light"] h2, html[data-theme="porch-light"] h3, html[data-theme="porch-light"] h4 { color: #2a2a2a; }
+html[data-theme="porch-light"] .navbar { background-color: #faf8f3 !important; border-bottom: 1px solid #e5dec4; }
+html[data-theme="porch-light"] .navbar .nav-link, html[data-theme="porch-light"] .navbar-brand { color: #5b5340 !important; }
+html[data-theme="porch-light"] .navbar .nav-link:hover, html[data-theme="porch-light"] .navbar-brand:hover { color: #c9a96e !important; }
+html[data-theme="porch-light"] a { color: #5b5340; }
+html[data-theme="porch-light"] a:hover { color: #c9a96e; }
+
+/* ────────── 2 · STAR CHART ────────── */
+html[data-theme="star-chart"] {
+  --bs-body-bg: #0a1428;
+  --bs-body-color: #d8d0b8;
+  --bs-heading-color: #fde487;
+  --bs-primary: #fde487;
+  --bs-link-color: #a89868;
+  --bs-link-hover-color: #fde487;
+  --bs-border-color: #2a3458;
+  --bs-secondary-bg: #112042;
+  --bs-tertiary-bg: #0e1a36;
+  --bs-emphasis-color: #fde487;
+}
+html[data-theme="star-chart"] body { background: radial-gradient(ellipse at 30% 20%, #1a2440 0%, #0a1428 65%) fixed; color: #d8d0b8; font-family: "Crimson Pro", "Crimson Text", Cambria, Georgia, serif; line-height: 1.55; }
+html[data-theme="star-chart"] h1, html[data-theme="star-chart"] h2, html[data-theme="star-chart"] h3, html[data-theme="star-chart"] h4 { color: #fde487; }
+html[data-theme="star-chart"] .navbar { background-color: #0e1a36 !important; border-bottom: 1px solid #2a3458; }
+html[data-theme="star-chart"] .navbar .nav-link, html[data-theme="star-chart"] .navbar-brand { color: #a89868 !important; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.9em; }
+html[data-theme="star-chart"] .navbar .nav-link:hover, html[data-theme="star-chart"] .navbar-brand:hover { color: #fde487 !important; }
+html[data-theme="star-chart"] a { color: #a89868; }
+html[data-theme="star-chart"] a:hover { color: #fde487; }
+
+/* ────────── 3 · BEDROCK ────────── */
+html[data-theme="bedrock"] {
+  --bs-body-bg: #1a2840;
+  --bs-body-color: #e8e2d1;
+  --bs-heading-color: #fff8e8;
+  --bs-primary: #d4a574;
+  --bs-link-color: #d4a574;
+  --bs-link-hover-color: #fff8e8;
+  --bs-border-color: #2c3d5c;
+  --bs-secondary-bg: #223354;
+  --bs-tertiary-bg: #1e2e48;
+  --bs-emphasis-color: #d4a574;
+}
+html[data-theme="bedrock"] body { background: #1a2840; color: #e8e2d1; font-family: Domine, "Cambria", Georgia, serif; line-height: 1.55; }
+html[data-theme="bedrock"] h1, html[data-theme="bedrock"] h2, html[data-theme="bedrock"] h3, html[data-theme="bedrock"] h4 { color: #fff8e8; font-weight: 700; letter-spacing: -0.015em; }
+html[data-theme="bedrock"] .navbar { background-color: #1e2e48 !important; border-bottom: 2px solid #2c3d5c; }
+html[data-theme="bedrock"] .navbar .nav-link, html[data-theme="bedrock"] .navbar-brand { color: #d4a574 !important; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; font-size: 0.85em; }
+html[data-theme="bedrock"] .navbar .nav-link:hover, html[data-theme="bedrock"] .navbar-brand:hover { color: #fff8e8 !important; }
+html[data-theme="bedrock"] a { color: #d4a574; }
+html[data-theme="bedrock"] a:hover { color: #fff8e8; }
+
+/* ────────── 4 · HUM ────────── */
+html[data-theme="hum"] {
+  --bs-body-bg: #f4ebe1;
+  --bs-body-color: #3a2e2e;
+  --bs-heading-color: #3a2e2e;
+  --bs-primary: #8a6b8a;
+  --bs-link-color: #5d4f4f;
+  --bs-link-hover-color: #8a6b8a;
+  --bs-border-color: #e3d4c9;
+  --bs-secondary-bg: #f9f1e8;
+  --bs-tertiary-bg: #f9f1e8;
+  --bs-emphasis-color: #8a6b8a;
+}
+html[data-theme="hum"] body { background: #f4ebe1; color: #3a2e2e; font-family: Cormorant, "Cormorant Garamond", Georgia, serif; line-height: 1.6; font-size: 1.05em; }
+html[data-theme="hum"] h1, html[data-theme="hum"] h2, html[data-theme="hum"] h3, html[data-theme="hum"] h4 { color: #3a2e2e; font-weight: 500; }
+html[data-theme="hum"] .navbar { background-color: #f4ebe1 !important; border-bottom: 1px solid #e3d4c9; }
+html[data-theme="hum"] .navbar .nav-link, html[data-theme="hum"] .navbar-brand { color: #5d4f4f !important; }
+html[data-theme="hum"] .navbar .nav-link:hover, html[data-theme="hum"] .navbar-brand:hover { color: #8a6b8a !important; }
+html[data-theme="hum"] a { color: #5d4f4f; border-bottom: 1px solid transparent; }
+html[data-theme="hum"] a:hover { color: #8a6b8a; border-bottom-color: #8a6b8a; }
+
+/* ────────── 5 · BOBBLESPHERE ────────── */
+html[data-theme="bobblesphere"] {
+  --bs-body-bg: #0f1419;
+  --bs-body-color: #d8cfb4;
+  --bs-heading-color: #fff5d0;
+  --bs-primary: #ff9d3c;
+  --bs-link-color: #ff9d3c;
+  --bs-link-hover-color: #fff5d0;
+  --bs-border-color: #2a3140;
+  --bs-secondary-bg: #161c24;
+  --bs-tertiary-bg: #131820;
+  --bs-emphasis-color: #ff9d3c;
+}
+html[data-theme="bobblesphere"] body { background: #0f1419; color: #d8cfb4; font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.55; }
+html[data-theme="bobblesphere"] h1, html[data-theme="bobblesphere"] h2, html[data-theme="bobblesphere"] h3, html[data-theme="bobblesphere"] h4 { color: #fff5d0; font-weight: 600; letter-spacing: -0.015em; }
+html[data-theme="bobblesphere"] .navbar { background-color: #131820 !important; border-bottom: 1px solid #2a3140; }
+html[data-theme="bobblesphere"] .navbar .nav-link, html[data-theme="bobblesphere"] .navbar-brand { color: #f7eccb !important; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.85em; }
+html[data-theme="bobblesphere"] .navbar .nav-link:hover, html[data-theme="bobblesphere"] .navbar-brand:hover { color: #ff9d3c !important; }
+html[data-theme="bobblesphere"] a { color: #ff9d3c; }
+html[data-theme="bobblesphere"] a:hover { color: #fff5d0; }
+
+/* ────────── 6 · LIBRARY BOOKMARK ────────── */
+html[data-theme="library-bookmark"] {
+  --bs-body-bg: #f9f6ed;
+  --bs-body-color: #2d2519;
+  --bs-heading-color: #2d2519;
+  --bs-primary: #8b1a1a;
+  --bs-link-color: #2d2519;
+  --bs-link-hover-color: #8b1a1a;
+  --bs-border-color: #d4c8a8;
+  --bs-secondary-bg: #fffdf5;
+  --bs-tertiary-bg: #fffdf5;
+  --bs-emphasis-color: #8b1a1a;
+}
+html[data-theme="library-bookmark"] body { background: #f9f6ed; color: #2d2519; font-family: "IBM Plex Mono", "Courier New", monospace; line-height: 1.65; font-size: 0.96em; }
+html[data-theme="library-bookmark"] h1, html[data-theme="library-bookmark"] h2, html[data-theme="library-bookmark"] h3, html[data-theme="library-bookmark"] h4 { color: #2d2519; font-weight: 700; letter-spacing: -0.005em; }
+html[data-theme="library-bookmark"] .navbar { background-color: #f9f6ed !important; border-bottom: 1.5px dashed #2d2519; }
+html[data-theme="library-bookmark"] .navbar .nav-link, html[data-theme="library-bookmark"] .navbar-brand { color: #2d2519 !important; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85em; }
+html[data-theme="library-bookmark"] .navbar .nav-link:hover, html[data-theme="library-bookmark"] .navbar-brand:hover { color: #8b1a1a !important; }
+html[data-theme="library-bookmark"] a { color: #2d2519; }
+html[data-theme="library-bookmark"] a:hover { color: #8b1a1a; }
+
+/* ────────── 7 · MIND PALACE MAP ────────── */
+html[data-theme="mind-palace-map"] {
+  --bs-body-bg: #efe5d0;
+  --bs-body-color: #2a1f0e;
+  --bs-heading-color: #2a1f0e;
+  --bs-primary: #993322;
+  --bs-link-color: #2a1f0e;
+  --bs-link-hover-color: #993322;
+  --bs-border-color: #c4b58c;
+  --bs-secondary-bg: #f5ecd8;
+  --bs-tertiary-bg: #f5ecd8;
+  --bs-emphasis-color: #993322;
+}
+html[data-theme="mind-palace-map"] body { background: #efe5d0; color: #2a1f0e; font-family: "IM Fell English", "Spectral", Georgia, serif; line-height: 1.65; }
+html[data-theme="mind-palace-map"] h1, html[data-theme="mind-palace-map"] h2, html[data-theme="mind-palace-map"] h3, html[data-theme="mind-palace-map"] h4 { color: #2a1f0e; font-variant: small-caps; letter-spacing: 0.04em; }
+html[data-theme="mind-palace-map"] .navbar { background-color: #efe5d0 !important; border-bottom: 1px double #2a1f0e; }
+html[data-theme="mind-palace-map"] .navbar .nav-link, html[data-theme="mind-palace-map"] .navbar-brand { color: #2a1f0e !important; font-variant: small-caps; letter-spacing: 0.08em; }
+html[data-theme="mind-palace-map"] .navbar .nav-link:hover, html[data-theme="mind-palace-map"] .navbar-brand:hover { color: #993322 !important; }
+html[data-theme="mind-palace-map"] a { color: #2a1f0e; }
+html[data-theme="mind-palace-map"] a:hover { color: #993322; }
+
+/* ────────── dropdown widget styling (theme-agnostic) ────────── */
+.dw-theme-switcher { position: fixed; top: 14px; right: 18px; z-index: 1080; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+.dw-theme-switcher button.dw-theme-toggle { background: rgba(255,255,255,0.85); color: #333; border: 1px solid rgba(0,0,0,0.12); border-radius: 14px; padding: 5px 11px 5px 13px; cursor: pointer; line-height: 1.1; backdrop-filter: blur(4px); box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: inline-flex; align-items: center; gap: 6px; font-family: inherit; font-size: inherit; }
+.dw-theme-switcher button.dw-theme-toggle:hover { background: rgba(255,255,255,0.95); }
+.dw-theme-switcher button.dw-theme-toggle .dw-chevron { font-size: 9px; opacity: 0.6; }
+.dw-theme-switcher button.dw-theme-toggle .dw-swatch { width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
+html[data-theme] .dw-theme-switcher button.dw-theme-toggle { background: rgba(255,255,255,0.12); color: var(--bs-body-color, #ddd); border-color: rgba(255,255,255,0.18); backdrop-filter: blur(8px); }
+html[data-theme="porch-light"] .dw-theme-switcher button.dw-theme-toggle,
+html[data-theme="hum"] .dw-theme-switcher button.dw-theme-toggle,
+html[data-theme="library-bookmark"] .dw-theme-switcher button.dw-theme-toggle,
+html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { background: rgba(255,255,255,0.85); color: var(--bs-body-color); border-color: rgba(0,0,0,0.12); }
+
+.dw-theme-panel { display: none; position: absolute; top: 36px; right: 0; min-width: 240px; background: #fff; color: #333; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,0.16); padding: 6px; }
+.dw-theme-panel.open { display: block; }
+.dw-theme-panel .dw-theme-item { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 5px; cursor: pointer; line-height: 1.2; }
+.dw-theme-panel .dw-theme-item:hover { background: rgba(0,0,0,0.05); }
+.dw-theme-panel .dw-theme-item.active { background: rgba(0,0,0,0.08); font-weight: 600; }
+.dw-theme-panel .dw-theme-item .dw-swatch { width: 13px; height: 13px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.18); flex-shrink: 0; }
+.dw-theme-panel .dw-theme-item .dw-name { flex-grow: 1; }
+.dw-theme-panel .dw-theme-item .dw-tagline { font-size: 11px; opacity: 0.55; font-style: italic; margin-left: auto; }
+.dw-theme-panel .dw-divider { height: 1px; background: rgba(0,0,0,0.1); margin: 6px 4px; }
+.dw-theme-panel .dw-what { display: block; padding: 7px 10px; font-size: 12px; color: #555; text-decoration: none; border-radius: 5px; font-style: italic; }
+.dw-theme-panel .dw-what:hover { background: rgba(0,0,0,0.05); color: #222; }
+
+@media (max-width: 600px) {
+  .dw-theme-switcher { top: 10px; right: 12px; }
+  .dw-theme-panel { min-width: 220px; right: 0; }
+  .dw-theme-panel .dw-theme-item .dw-tagline { display: none; }
+}

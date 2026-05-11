@@ -12,6 +12,8 @@ project:
     - feedback-bubble.html
     - citation_timeline.html
     - design-directions.html
+    - theme-switcher.html
+    - themes.css
 
 website:
   title: "Derek Wakefield"
@@ -49,11 +51,13 @@ website:
 
 format:
   html:
-    include-after-body: feedback-bubble.html
-    theme:
-      light: cosmo
-      dark: darkly
-    css: styles.css
+    include-after-body:
+      - feedback-bubble.html
+      - theme-switcher.html
+    theme: cosmo
+    css:
+      - styles.css
+      - themes.css
     toc: true
     toc-location: right
     fig-cap-location: bottom
