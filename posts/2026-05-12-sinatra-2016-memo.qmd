@@ -1,0 +1,25 @@
+---
+title: "Sinatra et al. 2016 — three-page memo"
+date: "2026-05-12"
+description: "A short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization."
+categories: [reading notes, network analysis, methods]
+---
+
+A three-page memo on Sinatra, Wang, Deville, Song, and Barabási's 2016 *Science* paper, *Quantifying the evolution of individual scientific impact*. Covers the Q-model, the random impact rule, and the supplementary-material co-authorship-asymmetry rule that the Coffee Shop project applies to infer mentor → mentee edges.
+
+Open in a new tab, print as a PDF, or download for offline reading.
+
+```{=html}
+<p style="margin: 2em 0;">
+<a href="../sinatra-2016-memo.html"
+   style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ✦ &nbsp; Read the memo
+</a>
+&nbsp;&nbsp;
+<a href="../sinatra-2016-memo.html" download="sinatra-2016-memo.html" style="opacity: 0.7;">or download HTML →</a>
+</p>
+```
+
+## Why this paper is in the project file
+
+The Coffee Shop visualization uses Sinatra et al.'s co-authorship-asymmetry rule to infer mentor → mentee edges from publication data. About 99% of the lines in the live viz trace back to that rule. The memo lays out what the paper actually argues (the Q-model and the random impact rule), where the asymmetry rule lives (the supplementary materials), and where it shows its seams in practice.
