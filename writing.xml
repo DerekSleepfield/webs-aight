@@ -10,7 +10,38 @@
 <atom:link href="https://derekwakefield.com/writing.xml" rel="self" type="application/rss+xml"/>
 <description>Assistant Professor of Political Science, Bucknell University</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 12 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Sinatra et al. 2016 — three-page memo</title>
+  <link>https://derekwakefield.com/posts/2026-05-12-sinatra-2016-memo.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A three-page memo on Sinatra, Wang, Deville, Song, and Barabási’s 2016 <em>Science</em> paper, <em>Quantifying the evolution of individual scientific impact</em>. Covers the Q-model, the random impact rule, and the supplementary-material co-authorship-asymmetry rule that the Coffee Shop project applies to infer mentor → mentee edges.</p>
+<p>Open in a new tab, print as a PDF, or download for offline reading.</p>
+<p style="margin: 2em 0;">
+<a href="../sinatra-2016-memo.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ✦ &nbsp; Read the memo
+</a>
+&nbsp;&nbsp;
+<a href="../sinatra-2016-memo.html" download="sinatra-2016-memo.html" style="opacity: 0.7;">or download HTML →</a>
+</p>
+<section id="why-this-paper-is-in-the-project-file" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-paper-is-in-the-project-file">Why this paper is in the project file</h2>
+<p>The Coffee Shop visualization uses Sinatra et al.’s co-authorship-asymmetry rule to infer mentor → mentee edges from publication data. About 99% of the lines in the live viz trace back to that rule. The memo lays out what the paper actually argues (the Q-model and the random impact rule), where the asymmetry rule lives (the supplementary materials), and where it shows its seams in practice.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>reading notes</category>
+  <category>network analysis</category>
+  <category>methods</category>
+  <guid>https://derekwakefield.com/posts/2026-05-12-sinatra-2016-memo.html</guid>
+  <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Introduction to Bobbology</title>
   <link>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</link>
