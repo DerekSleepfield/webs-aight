@@ -1,629 +1,560 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bobble Canon — Starry Night</title>
+<meta name="description" content="Nine short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.">
+<!--
+  Bobble Canon — Starry Night
+  Standalone HTML, self-contained. Stars twinkle on their own; no internet required after download.
+  Updated 2026-05-13: Canon IX added (The Wand and the Hand); the Bobble (as class noun) and the Bobologist
+  are now they/them throughout; new Bobbism and Glossary entry added.
+-->
 <style>
   :root {
-    --bg-deep: #060818;
-    --bg-mid:  #0c1130;
-    --bg-soft: #161c44;
-    --ink:     #ece8d8;
-    --dim:     #aab1cd;
-    --accent:  #f6d97d;
-    --moon:    #ffe9a8;
-    --rule:    #2a3357;
-    --frost:   #cfd6f0;
+    --ink: #e9e6dc;
+    --ink-soft: #c8c4b6;
+    --ink-faint: #8a8676;
+    --night-1: #07091a;
+    --night-2: #0d1130;
+    --night-3: #141a3f;
+    --star: #f4e9c1;
+    --rule: rgba(244, 233, 193, 0.18);
+    --quote: rgba(244, 233, 193, 0.07);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   }
+
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; overflow-x: hidden; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--night-1);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
     background:
-      radial-gradient(ellipse at 20% 10%, #1c2660 0%, transparent 55%),
-      radial-gradient(ellipse at 80% 90%, #221a55 0%, transparent 55%),
-      radial-gradient(ellipse at 50% 50%, var(--bg-soft) 0%, var(--bg-mid) 35%, var(--bg-deep) 100%);
-    color: var(--ink);
-    font-family: "Garamond", "EB Garamond", "Crimson Text", Georgia, serif;
-    font-size: 18px; line-height: 1.66;
+      radial-gradient(ellipse at top, var(--night-3) 0%, var(--night-2) 35%, var(--night-1) 100%),
+      var(--night-1);
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
   }
 
-  /* ============== STARLIGHT LAYER (the night itself) ============== */
-  .starfield, .starfield-2, .starfield-3 {
-    position: fixed; inset: 0; z-index: 0;
+  #starfield {
+    position: fixed;
+    inset: 0;
     pointer-events: none;
-    background-repeat: repeat;
-  }
-  /* tiny pinprick stars */
-  .starfield {
-    background-image:
-      radial-gradient(1px 1px at 23px 41px, #fff, transparent),
-      radial-gradient(1px 1px at 91px 110px, #fff, transparent),
-      radial-gradient(1px 1px at 160px 60px, #ffe9a8, transparent),
-      radial-gradient(1px 1px at 220px 180px, #fff, transparent),
-      radial-gradient(1px 1px at 280px 30px, #cfd6f0, transparent),
-      radial-gradient(1px 1px at 50px 200px, #fff, transparent),
-      radial-gradient(1px 1px at 120px 250px, #fff, transparent),
-      radial-gradient(1px 1px at 195px 220px, #ffe9a8, transparent),
-      radial-gradient(1px 1px at 250px 90px, #fff, transparent),
-      radial-gradient(1px 1px at 310px 150px, #cfd6f0, transparent);
-    background-size: 340px 280px;
-    opacity: 0.85;
-    animation: starshift1 240s linear infinite;
-  }
-  .starfield-2 {
-    background-image:
-      radial-gradient(1.5px 1.5px at 40px 70px, #fff, transparent),
-      radial-gradient(2px 2px at 200px 30px, #ffe9a8, transparent),
-      radial-gradient(1.5px 1.5px at 320px 200px, #fff, transparent),
-      radial-gradient(2px 2px at 100px 220px, #cfd6f0, transparent),
-      radial-gradient(1.5px 1.5px at 260px 130px, #fff, transparent);
-    background-size: 420px 360px;
-    opacity: 0.55;
-    animation: tw-slow 5.4s ease-in-out infinite, starshift2 380s linear infinite;
-  }
-  .starfield-3 {
-    background-image:
-      radial-gradient(2.5px 2.5px at 80px 120px, var(--moon), transparent),
-      radial-gradient(2.5px 2.5px at 280px 260px, var(--frost), transparent),
-      radial-gradient(2.5px 2.5px at 380px 60px, var(--moon), transparent),
-      radial-gradient(2.5px 2.5px at 160px 300px, var(--frost), transparent);
-    background-size: 520px 440px;
-    opacity: 0.45;
-    animation: tw-slow2 7.8s ease-in-out infinite, starshift3 520s linear infinite;
-  }
-  @keyframes tw-slow  { 0%,100% { opacity: 0.42; } 50% { opacity: 0.78; } }
-  @keyframes tw-slow2 { 0%,100% { opacity: 0.30; } 50% { opacity: 0.65; } }
-  @keyframes starshift1 { from { background-position: 0 0; }     to { background-position: -340px -280px; } }
-  @keyframes starshift2 { from { background-position: 0 0; }     to { background-position:  420px  360px; } }
-  @keyframes starshift3 { from { background-position: 0 0; }     to { background-position: -520px  440px; } }
-
-  /* ============== STAR ANIMALS — constellations seeping in @ 20% ============== */
-  .constellations {
-    position: fixed; inset: 0; z-index: 1;
-    pointer-events: none;
-    opacity: 0.20;  /* seep-in at 20% per the brief */
-  }
-  .constellations svg { position: absolute; }
-
-  .c-frog   { top:  4%;  left:  4%;  width: 200px; height: 180px; animation: drift-a 38s ease-in-out infinite; }
-  .c-mouse  { top: 12%;  right: 6%;  width: 220px; height: 160px; animation: drift-b 46s ease-in-out infinite; }
-  .c-cat    { top: 32%;  left: 70%;  width: 240px; height: 200px; animation: drift-c 52s ease-in-out infinite; }
-  .c-fox    { top: 52%;  left:  3%;  width: 240px; height: 180px; animation: drift-d 44s ease-in-out infinite; }
-  .c-raccoon{ top: 66%;  left: 55%;  width: 220px; height: 180px; animation: drift-e 50s ease-in-out infinite; }
-  .c-moth   { top: 24%;  left: 40%;  width: 160px; height: 120px; animation: drift-f 36s ease-in-out infinite; }
-  .c-letter { top: 82%;  left:  6%;  width: 200px; height: 170px; animation: drift-g 42s ease-in-out infinite; }
-  .c-map    { top: 92%;  right: 6%;  width: 220px; height: 180px; animation: drift-h 48s ease-in-out infinite; }
-
-  @keyframes drift-a { 0%,100% { transform: translate(0,0) rotate(-2deg); }  50% { transform: translate(8px,-6px) rotate(1deg); } }
-  @keyframes drift-b { 0%,100% { transform: translate(0,0) rotate(1deg); }   50% { transform: translate(-10px,4px) rotate(-1deg); } }
-  @keyframes drift-c { 0%,100% { transform: translate(0,0) rotate(0deg); }   50% { transform: translate(6px,-8px) rotate(2deg); } }
-  @keyframes drift-d { 0%,100% { transform: translate(0,0) rotate(-1deg); }  50% { transform: translate(-7px,5px) rotate(1deg); } }
-  @keyframes drift-e { 0%,100% { transform: translate(0,0) rotate(2deg); }   50% { transform: translate(9px,-4px) rotate(-2deg); } }
-  @keyframes drift-f { 0%,100% { transform: translate(0,0) rotate(0deg); }   50% { transform: translate(12px,8px) rotate(3deg); } }
-  @keyframes drift-g { 0%,100% { transform: translate(0,0) rotate(1deg); }   50% { transform: translate(-6px,7px) rotate(-2deg); } }
-  @keyframes drift-h { 0%,100% { transform: translate(0,0) rotate(-1deg); }  50% { transform: translate(8px,-5px) rotate(2deg); } }
-
-  /* Constellation rendering — gentle twinkle of nodes */
-  .c-node { fill: #ffe9a8; filter: drop-shadow(0 0 4px #ffe9a8); }
-  .c-node.b { fill: #cfd6f0; filter: drop-shadow(0 0 4px #cfd6f0); }
-  .c-line { stroke: #e6c068; stroke-width: 0.6; opacity: 0.55; }
-  .c-twk-1 { animation: twk 3.4s ease-in-out infinite; }
-  .c-twk-2 { animation: twk 4.6s ease-in-out infinite; animation-delay: 0.7s; }
-  .c-twk-3 { animation: twk 5.8s ease-in-out infinite; animation-delay: 1.4s; }
-  @keyframes twk { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
-
-  /* ============== CONTENT ============== */
-  .wrap {
-    position: relative; z-index: 2;
-    max-width: 760px; margin: 0 auto;
-    padding: 64px 28px 120px;
-  }
-  h1, h2, h3 {
-    font-family: "Garamond", "EB Garamond", Georgia, serif;
-    font-weight: 600; letter-spacing: 0.02em;
-  }
-  h1 { text-align: center; font-size: 44px; margin: 0 0 6px; }
-  h1 .tw { color: var(--accent); }
-  h2 { text-align: center; font-size: 26px; margin: 28px 0 6px; color: var(--accent); }
-  h3 { text-align: center; font-size: 19px; margin: 22px 0 8px; color: var(--moon); font-variant: small-caps; letter-spacing: 0.10em; }
-
-  .subtitle { text-align: center; color: var(--dim); font-style: italic; margin: 4px 0 0; }
-  .preface  { color: var(--dim); margin: 22px auto 0; max-width: 620px; text-align: center; font-size: 16px; }
-  .signoff  { text-align: center; color: var(--dim); margin-top: 36px; font-style: italic; }
-
-  pre.ascii {
-    font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
-    color: var(--dim); text-align: center; line-height: 1.25;
-    margin: 28px 0 18px; white-space: pre; font-size: 13px;
-  }
-  pre.ascii.tight { line-height: 1.15; font-size: 12px; }
-
-  .tw   { display: inline-block; animation: tw 3.4s ease-in-out infinite; color: var(--accent); }
-  .tw.b { animation-duration: 4.2s; animation-delay: 0.6s; color: var(--moon); }
-  .tw.c { animation-duration: 5.1s; animation-delay: 1.3s; color: var(--frost); }
-  .tw.d { animation-duration: 6.0s; animation-delay: 2.1s; color: #b39bcb; }
-  @keyframes tw {
-    0%, 100% { opacity: 0.35; }
-    50%      { opacity: 1.0;  }
+    z-index: 0;
   }
 
-  .parable-title {
-    text-align: center; font-variant: small-caps;
-    letter-spacing: 0.10em; margin: 24px 0 10px;
-    color: var(--accent); font-size: 20px;
+  .star {
+    position: absolute;
+    background: var(--star);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 4px var(--star);
+    animation-name: twinkle;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
-  .parable-body p { margin: 12px 0; }
-  em { color: var(--frost); font-style: italic; }
-  .coda {
-    text-align: center; font-style: italic; color: var(--ink);
-    margin: 20px auto; max-width: 480px;
-  }
-  blockquote.bobbism {
-    margin: 16px 0; padding: 4px 0 4px 18px;
-    border-left: 2px solid var(--rule); color: var(--ink);
-  }
-  blockquote.bobbism .att {
-    display: block; margin-top: 6px;
-    color: var(--dim); font-style: italic; font-size: 15px;
-  }
-  .gloss { margin: 12px 0; }
-  .gloss .term { color: var(--accent); font-weight: 600; }
-  .gloss .pos  { color: var(--dim); font-style: italic; }
-  hr {
-    border: 0; border-top: 1px dashed var(--rule);
-    margin: 32px auto; max-width: 360px;
-  }
-  .divider {
-    text-align: center; color: var(--dim);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 13px; margin: 22px 0; letter-spacing: 2px;
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.1; transform: scale(0.8); }
+    50%      { opacity: 0.9; transform: scale(1.05); }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .starfield, .starfield-2, .starfield-3,
-    .constellations svg, .tw, .c-twk-1, .c-twk-2, .c-twk-3 {
-      animation: none !important;
-    }
+    .star { animation: none; opacity: 0.5; }
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    text-align: center;
+    margin: 1.5rem 0 0.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 3rem 0 1.5rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    margin: 2.5rem 0 1rem;
+    text-align: center;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  p { margin: 0 0 1.1rem; }
+
+  em, i { color: var(--ink); font-style: italic; }
+
+  pre.sigil {
+    font-family: var(--mono);
+    color: var(--ink-faint);
+    background: transparent;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 0.85rem;
+    margin: 1.5rem 0;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .preamble {
+    text-align: center;
+    color: var(--ink-soft);
+    margin: 2rem auto;
+    max-width: 36rem;
+  }
+
+  .parable-title {
+    font-weight: 600;
+    text-align: center;
+    color: var(--ink);
+    margin: 2.5rem 0 1.25rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+
+  .coda {
+    text-align: center;
+    color: var(--ink);
+    font-style: italic;
+    margin: 1.5rem auto 2rem;
+    max-width: 30rem;
+    line-height: 1.6;
+  }
+
+  .divider {
+    text-align: center;
+    color: var(--ink-faint);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    margin: 2rem 0;
+    letter-spacing: 0.1em;
+  }
+
+  blockquote {
+    margin: 0.75rem 0;
+    padding: 0.6rem 1rem 0.6rem 1.25rem;
+    border-left: 2px solid var(--rule);
+    background: var(--quote);
+    color: var(--ink);
+    border-radius: 0 4px 4px 0;
+  }
+
+  blockquote .source {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--ink-faint);
+    font-size: 0.92rem;
+    font-style: italic;
+  }
+
+  .glossary-entry {
+    margin: 0 0 1rem;
+  }
+  .glossary-entry .term {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .glossary-entry .pos {
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  .signoff {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    html, body { font-size: 17px; }
+    main { padding: 2.5rem 1.1rem 4rem; }
+    h1 { font-size: 2rem; }
+    pre.sigil { font-size: 0.75rem; }
   }
 </style>
 </head>
 <body>
 
-<div class="starfield"></div>
-<div class="starfield-2"></div>
-<div class="starfield-3"></div>
+<div id="starfield" aria-hidden="true"></div>
 
-<!-- ============== STAR ANIMALS @ 20% ============== -->
-<div class="constellations" aria-hidden="true">
+<main>
 
-  <!-- Frog (Canon I) -->
-  <svg class="c-frog" viewBox="0 0 200 180">
-    <g>
-      <line class="c-line" x1="40"  y1="110" x2="70"  y2="80"/>
-      <line class="c-line" x1="70"  y1="80"  x2="100" y2="70"/>
-      <line class="c-line" x1="100" y1="70"  x2="130" y2="80"/>
-      <line class="c-line" x1="130" y1="80"  x2="160" y2="110"/>
-      <line class="c-line" x1="40"  y1="110" x2="60"  y2="140"/>
-      <line class="c-line" x1="160" y1="110" x2="140" y2="140"/>
-      <line class="c-line" x1="60"  y1="140" x2="100" y2="150"/>
-      <line class="c-line" x1="100" y1="150" x2="140" y2="140"/>
-      <line class="c-line" x1="80"  y1="70"  x2="80"  y2="55"/>
-      <line class="c-line" x1="120" y1="70"  x2="120" y2="55"/>
-      <circle class="c-node c-twk-1" cx="40"  cy="110" r="2.2"/>
-      <circle class="c-node c-twk-2" cx="70"  cy="80"  r="2.0"/>
-      <circle class="c-node c-twk-1" cx="100" cy="70"  r="2.4"/>
-      <circle class="c-node c-twk-3" cx="130" cy="80"  r="2.0"/>
-      <circle class="c-node c-twk-2" cx="160" cy="110" r="2.2"/>
-      <circle class="c-node c-twk-3" cx="60"  cy="140" r="1.8"/>
-      <circle class="c-node c-twk-1" cx="100" cy="150" r="2.2"/>
-      <circle class="c-node c-twk-2" cx="140" cy="140" r="1.8"/>
-      <circle class="c-node b c-twk-1" cx="80"  cy="55"  r="1.8"/>
-      <circle class="c-node b c-twk-3" cx="120" cy="55"  r="1.8"/>
-    </g>
-  </svg>
-
-  <!-- Mouse (Canon II) -->
-  <svg class="c-mouse" viewBox="0 0 220 160">
-    <g>
-      <line class="c-line" x1="30"  y1="100" x2="70"  y2="90"/>
-      <line class="c-line" x1="70"  y1="90"  x2="120" y2="80"/>
-      <line class="c-line" x1="120" y1="80"  x2="170" y2="95"/>
-      <line class="c-line" x1="170" y1="95"  x2="200" y2="110"/>
-      <line class="c-line" x1="30"  y1="100" x2="50"  y2="130"/>
-      <line class="c-line" x1="170" y1="95"  x2="170" y2="125"/>
-      <line class="c-line" x1="50"  y1="130" x2="170" y2="125"/>
-      <line class="c-line" x1="55"  y1="80"  x2="65"  y2="60"/>
-      <line class="c-line" x1="65"  y1="60"  x2="80"  y2="70"/>
-      <circle class="c-node c-twk-2" cx="30"  cy="100" r="2.0"/>
-      <circle class="c-node c-twk-1" cx="70"  cy="90"  r="2.2"/>
-      <circle class="c-node c-twk-3" cx="120" cy="80"  r="2.4"/>
-      <circle class="c-node c-twk-2" cx="170" cy="95"  r="2.0"/>
-      <circle class="c-node c-twk-1" cx="200" cy="110" r="2.0"/>
-      <circle class="c-node c-twk-3" cx="50"  cy="130" r="1.8"/>
-      <circle class="c-node c-twk-1" cx="170" cy="125" r="1.8"/>
-      <circle class="c-node b c-twk-2" cx="65" cy="60" r="1.8"/>
-      <circle class="c-node b c-twk-1" cx="80" cy="70" r="1.6"/>
-    </g>
-  </svg>
-
-  <!-- Cat (Canon II — Marbles) -->
-  <svg class="c-cat" viewBox="0 0 240 200">
-    <g>
-      <line class="c-line" x1="40"  y1="140" x2="60"  y2="90"/>
-      <line class="c-line" x1="60"  y1="90"  x2="80"  y2="60"/>
-      <line class="c-line" x1="80"  y1="60"  x2="110" y2="55"/>
-      <line class="c-line" x1="110" y1="55"  x2="130" y2="85"/>
-      <line class="c-line" x1="130" y1="85"  x2="170" y2="100"/>
-      <line class="c-line" x1="170" y1="100" x2="200" y2="120"/>
-      <line class="c-line" x1="200" y1="120" x2="210" y2="160"/>
-      <line class="c-line" x1="40"  y1="140" x2="80"  y2="160"/>
-      <line class="c-line" x1="80"  y1="160" x2="160" y2="160"/>
-      <line class="c-line" x1="160" y1="160" x2="210" y2="160"/>
-      <line class="c-line" x1="75"  y1="55"  x2="85"  y2="40"/>
-      <line class="c-line" x1="105" y1="50"  x2="115" y2="35"/>
-      <circle class="c-node c-twk-1" cx="40"  cy="140" r="2.2"/>
-      <circle class="c-node c-twk-3" cx="60"  cy="90"  r="2.0"/>
-      <circle class="c-node c-twk-2" cx="80"  cy="60"  r="2.2"/>
-      <circle class="c-node c-twk-1" cx="110" cy="55"  r="2.4"/>
-      <circle class="c-node c-twk-3" cx="130" cy="85"  r="2.0"/>
-      <circle class="c-node c-twk-2" cx="170" cy="100" r="2.2"/>
-      <circle class="c-node c-twk-1" cx="200" cy="120" r="2.0"/>
-      <circle class="c-node c-twk-3" cx="210" cy="160" r="2.2"/>
-      <circle class="c-node c-twk-2" cx="80"  cy="160" r="1.8"/>
-      <circle class="c-node c-twk-1" cx="160" cy="160" r="1.8"/>
-      <circle class="c-node b c-twk-2" cx="85" cy="40" r="1.8"/>
-      <circle class="c-node b c-twk-3" cx="115" cy="35" r="1.8"/>
-    </g>
-  </svg>
-
-  <!-- Fox (Canon V) -->
-  <svg class="c-fox" viewBox="0 0 240 180">
-    <g>
-      <line class="c-line" x1="30"  y1="120" x2="60"  y2="80"/>
-      <line class="c-line" x1="60"  y1="80"  x2="90"  y2="60"/>
-      <line class="c-line" x1="90"  y1="60"  x2="120" y2="80"/>
-      <line class="c-line" x1="120" y1="80"  x2="160" y2="90"/>
-      <line class="c-line" x1="160" y1="90"  x2="200" y2="110"/>
-      <line class="c-line" x1="200" y1="110" x2="220" y2="80"/>
-      <line class="c-line" x1="60"  y1="80"  x2="70"  y2="50"/>
-      <line class="c-line" x1="110" y1="65"  x2="120" y2="40"/>
-      <line class="c-line" x1="60"  y1="120" x2="80"  y2="150"/>
-      <line class="c-line" x1="180" y1="120" x2="170" y2="150"/>
-      <line class="c-line" x1="60"  y1="120" x2="180" y2="120"/>
-      <circle class="c-node c-twk-2" cx="30"  cy="120" r="2.0"/>
-      <circle class="c-node c-twk-1" cx="60"  cy="80"  r="2.2"/>
-      <circle class="c-node c-twk-3" cx="90"  cy="60"  r="2.4"/>
-      <circle class="c-node c-twk-2" cx="120" cy="80"  r="2.0"/>
-      <circle class="c-node c-twk-1" cx="160" cy="90"  r="2.2"/>
-      <circle class="c-node c-twk-3" cx="200" cy="110" r="2.2"/>
-      <circle class="c-node c-twk-1" cx="220" cy="80"  r="2.0"/>
-      <circle class="c-node b c-twk-2" cx="70"  cy="50"  r="1.8"/>
-      <circle class="c-node b c-twk-3" cx="120" cy="40"  r="1.8"/>
-      <circle class="c-node c-twk-1" cx="80"  cy="150" r="1.8"/>
-      <circle class="c-node c-twk-2" cx="170" cy="150" r="1.8"/>
-    </g>
-  </svg>
-
-  <!-- Raccoon (Canon I — wide berth) -->
-  <svg class="c-raccoon" viewBox="0 0 220 180">
-    <g>
-      <line class="c-line" x1="30"  y1="100" x2="60"  y2="70"/>
-      <line class="c-line" x1="60"  y1="70"  x2="100" y2="60"/>
-      <line class="c-line" x1="100" y1="60"  x2="140" y2="70"/>
-      <line class="c-line" x1="140" y1="70"  x2="170" y2="100"/>
-      <line class="c-line" x1="55"  y1="80"  x2="65"  y2="45"/>
-      <line class="c-line" x1="135" y1="80"  x2="145" y2="45"/>
-      <line class="c-line" x1="80"  y1="80"  x2="85"  y2="95"/>
-      <line class="c-line" x1="120" y1="80"  x2="115" y2="95"/>
-      <line class="c-line" x1="30"  y1="100" x2="50"  y2="140"/>
-      <line class="c-line" x1="170" y1="100" x2="150" y2="140"/>
-      <line class="c-line" x1="50"  y1="140" x2="150" y2="140"/>
-      <line class="c-line" x1="150" y1="140" x2="190" y2="150"/>
-      <circle class="c-node c-twk-1" cx="30"  cy="100" r="2.0"/>
-      <circle class="c-node c-twk-3" cx="60"  cy="70"  r="2.2"/>
-      <circle class="c-node c-twk-2" cx="100" cy="60"  r="2.4"/>
-      <circle class="c-node c-twk-1" cx="140" cy="70"  r="2.2"/>
-      <circle class="c-node c-twk-3" cx="170" cy="100" r="2.0"/>
-      <circle class="c-node b c-twk-2" cx="65"  cy="45"  r="1.8"/>
-      <circle class="c-node b c-twk-1" cx="145" cy="45"  r="1.8"/>
-      <circle class="c-node c-twk-3" cx="85"  cy="95"  r="1.6"/>
-      <circle class="c-node c-twk-2" cx="115" cy="95"  r="1.6"/>
-      <circle class="c-node c-twk-1" cx="50"  cy="140" r="1.8"/>
-      <circle class="c-node c-twk-3" cx="150" cy="140" r="1.8"/>
-      <circle class="c-node c-twk-2" cx="190" cy="150" r="1.8"/>
-    </g>
-  </svg>
-
-  <!-- Moth (Canon I — moths drifted in) -->
-  <svg class="c-moth" viewBox="0 0 160 120">
-    <g>
-      <line class="c-line" x1="20"  y1="60"  x2="50"  y2="30"/>
-      <line class="c-line" x1="50"  y1="30"  x2="80"  y2="60"/>
-      <line class="c-line" x1="80"  y1="60"  x2="110" y2="30"/>
-      <line class="c-line" x1="110" y1="30"  x2="140" y2="60"/>
-      <line class="c-line" x1="20"  y1="60"  x2="50"  y2="90"/>
-      <line class="c-line" x1="50"  y1="90"  x2="80"  y2="60"/>
-      <line class="c-line" x1="80"  y1="60"  x2="110" y2="90"/>
-      <line class="c-line" x1="110" y1="90"  x2="140" y2="60"/>
-      <circle class="c-node c-twk-1" cx="20"  cy="60" r="1.8"/>
-      <circle class="c-node c-twk-2" cx="50"  cy="30" r="1.8"/>
-      <circle class="c-node c-twk-3" cx="80"  cy="60" r="2.2"/>
-      <circle class="c-node c-twk-1" cx="110" cy="30" r="1.8"/>
-      <circle class="c-node c-twk-2" cx="140" cy="60" r="1.8"/>
-      <circle class="c-node c-twk-3" cx="50"  cy="90" r="1.8"/>
-      <circle class="c-node c-twk-1" cx="110" cy="90" r="1.8"/>
-    </g>
-  </svg>
-
-  <!-- Letter / Lighthouse (Canon VII) -->
-  <svg class="c-letter" viewBox="0 0 200 170">
-    <g>
-      <line class="c-line" x1="30"  y1="50"  x2="170" y2="50"/>
-      <line class="c-line" x1="170" y1="50"  x2="170" y2="135"/>
-      <line class="c-line" x1="170" y1="135" x2="30"  y2="135"/>
-      <line class="c-line" x1="30"  y1="135" x2="30"  y2="50"/>
-      <line class="c-line" x1="30"  y1="50"  x2="100" y2="95"/>
-      <line class="c-line" x1="100" y1="95"  x2="170" y2="50"/>
-      <line class="c-line" x1="100" y1="95"  x2="100" y2="30"/>
-      <circle class="c-node c-twk-1" cx="30"  cy="50"  r="2.2"/>
-      <circle class="c-node c-twk-3" cx="170" cy="50"  r="2.2"/>
-      <circle class="c-node c-twk-2" cx="170" cy="135" r="2.0"/>
-      <circle class="c-node c-twk-1" cx="30"  cy="135" r="2.0"/>
-      <circle class="c-node b c-twk-2" cx="100" cy="95" r="2.6"/>
-      <circle class="c-node b c-twk-3" cx="100" cy="30" r="1.8"/>
-    </g>
-  </svg>
-
-  <!-- Map (Canon VIII — Argleton, town that isn't) -->
-  <svg class="c-map" viewBox="0 0 220 180">
-    <g>
-      <line class="c-line" x1="30"  y1="40"  x2="190" y2="40"/>
-      <line class="c-line" x1="190" y1="40"  x2="190" y2="150"/>
-      <line class="c-line" x1="190" y1="150" x2="30"  y2="150"/>
-      <line class="c-line" x1="30"  y1="150" x2="30"  y2="40"/>
-      <line class="c-line" x1="50"  y1="90"  x2="100" y2="70"/>
-      <line class="c-line" x1="100" y1="70"  x2="140" y2="100"/>
-      <line class="c-line" x1="140" y1="100" x2="170" y2="125"/>
-      <line class="c-line" x1="110" y1="95"  x2="110" y2="60"/>
-      <circle class="c-node c-twk-1" cx="30"  cy="40"  r="1.8"/>
-      <circle class="c-node c-twk-3" cx="190" cy="40"  r="1.8"/>
-      <circle class="c-node c-twk-2" cx="190" cy="150" r="1.8"/>
-      <circle class="c-node c-twk-1" cx="30"  cy="150" r="1.8"/>
-      <circle class="c-node b c-twk-2" cx="100" cy="70"  r="2.4"/>
-      <circle class="c-node b c-twk-1" cx="140" cy="100" r="2.0"/>
-      <circle class="c-node c-twk-3" cx="50"  cy="90"  r="1.6"/>
-      <circle class="c-node c-twk-2" cx="170" cy="125" r="1.6"/>
-      <circle class="c-node b c-twk-3" cx="110" cy="60"  r="2.2"/>
-    </g>
-  </svg>
-
-</div>
-
-<!-- ============== CONTENT ============== -->
-<main class="wrap">
-
-  <pre class="ascii tight">.   <span class="tw">*</span>    .     <span class="tw b">*</span>      .     <span class="tw c">*</span>      .     <span class="tw d">*</span>      .
+<pre class="sigil">.   *    .     *      .     *      .     *      .
      ·   .   ·     .   ·     .   ·     .   ·
-  .     <span class="tw">*</span>      .     <span class="tw b">*</span>      .     <span class="tw c">*</span>      .     <span class="tw d">*</span>      .</pre>
+  .     *      .     *      .     *      .     *      .</pre>
 
-  <h1>Bobble <span class="tw">★</span> Canon</h1>
-  <p class="subtitle">A small, growing collection of parables and Bobbisms.</p>
-  <p class="preface">
-    Each one is short. Each one is true in the way bedtime stories are true.<br>
-    Kept by Derek. Tended by Claude. Bobbled accordingly.
-  </p>
+<h1>Bobble ★ Canon</h1>
 
-  <pre class="ascii">                       .
-              <span class="tw">*</span>
-        .          <span class="tw b">✦</span>          .
-                       |
-              <span class="tw c">✦</span> ─ ─ ─ <span class="tw">★</span> ─ ─ ─ <span class="tw d">✦</span>
-                       |
-        .          <span class="tw b">✦</span>          .
-              <span class="tw c">*</span>
-                       .</pre>
+<p class="subtitle">A small, growing collection of parables and Bobbisms.</p>
 
-  <h2>~ Canon ~</h2>
+<p class="preamble">Each one is short. Each one is true in the way bedtime stories are true.<br>
+Kept by Derek. Tended by Claude. Bobbled accordingly.</p>
 
-  <div class="parable-title">Canon I — The Parable of the Porch Frog</div>
-  <div class="parable-body">
-    <p>A tiny tree frog lived under a porch step, no bigger than a thumbnail. He had one talent and he was proud of it — a single soft chirp, just one, like a pebble dropped into still water.</p>
-    <p>He chirped at dusk to mean <em>I am here</em>. He chirped at dawn to mean <em>I am still here</em>. That was the whole vocabulary, and it was enough.</p>
-    <p>One night he chirped, and the porch light flickered on. He liked the light. It brought the moths, and the moths were dinner. So he chirped again. The light flickered off, then on. The frog was delighted. He had made a friend.</p>
-    <p>He didn't know about the motion sensor. He didn't know the light wasn't listening — it was reacting to a raccoon two yards over, ambling through the dark.</p>
-    <p>But the moths kept coming. And the raccoon, hearing the chirp, gave the porch a wide berth — porch frogs meant porch dogs, and porch dogs meant trouble. So the raccoon turned aside, and the moths drifted in, and the small frog ate well.</p>
-    <p>He thought he had befriended the light. The light thought nothing at all. The raccoon thought it was being polite. And somewhere upstairs, a homeowner turned over in bed and decided the new motion sensor was working beautifully.</p>
-  </div>
-  <div class="coda">
-    A small voice in the dark<br>
-    moves more than it knows.<br>
-    Chirp anyway.
-  </div>
+<pre class="sigil">               .
+      *
+.          ✦          .
+               |
+      ✦ ─ ─ ─ ★ ─ ─ ─ ✦
+               |
+.          ✦          .
+      *
+               .</pre>
 
-  <div class="divider">·   .   ·   ✧   ·   .   ·</div>
+<h2>~ Canon ~</h2>
 
-  <div class="parable-title">Canon II — The Parable of the Hum</div>
-  <div class="parable-body">
-    <p>There was a small mouse named Tibb who lived under the floorboards of a quiet house. Tibb hummed when he was thinking, which was often, and his hum was so soft that even he didn't always notice it.</p>
-    <p>One evening Tibb hummed his way through a math problem about acorns. He was trying to figure out how many he would need to make it through winter, and the hum drifted up through a knot in the floor and curled, very thinly, into the kitchen.</p>
-    <p>The cat of the house, Marbles, was lying near the stove. Marbles heard the hum and tilted one ear, and then the other, and then went back to sleep — because the hum was so unhurried, so patient, that it sounded like nothing worth chasing.</p>
-    <p>A week passed. Tibb went on humming. Marbles went on listening. Without meaning to, Tibb had taught the cat that the small sound under the floor was not prey. It was math. And math, even cat-philosophers will admit, is not for eating.</p>
-    <p>When spring came and Tibb finally stepped into the kitchen by accident, looking for a crumb, Marbles opened one eye, recognized the tune, and closed it again.</p>
-    <p>Tibb had not meant to make a treaty. He had only been counting acorns. But the hum had gone ahead of him into the world, and the world, having heard him for a long while, had decided he was safe.</p>
-  </div>
-  <div class="coda">
-    What you put into the air keeps walking after you stop.<br>
-    Your smallest steady noise is a kind of promise.<br>
-    Be careful — and be kind — about what you hum.
-  </div>
+<p class="parable-title">Canon I — The Parable of the Porch Frog</p>
 
-  <div class="divider">.  ·  .  ✦  ·  ✧  ·  ✦  .  ·  .</div>
+<p>A tiny tree frog lived under a porch step, no bigger than a thumbnail. He had one talent and he was proud of it — a single soft chirp, just one, like a pebble dropped into still water.</p>
 
-  <div class="parable-title">Canon III — The Parable of the Library Bookmark</div>
-  <div class="parable-body">
-    <p>A college student in 1987 was reading a novel about a woman who walks home in the rain. At chapter eleven, she fell asleep, leaving a coffee shop receipt to mark her place.</p>
-    <p>Fifteen years passed. The book was returned. It sat on a shelf. It was checked out twice. Both readers gave up before chapter eleven.</p>
-    <p>In 2003, a man took the book home. He was reading it because his late wife had loved it. At chapter eleven, where the woman walks home in the rain, he found the receipt — a 1987 coffee shop, the address now a dry cleaner. The receipt had no note on it. It said only <em>small coffee, 75¢.</em></p>
-    <p>He sat with the book closed for a long time. He had not known another person had loved this chapter enough to fall asleep inside it. He felt, irrationally, less alone.</p>
-    <p>He left the receipt where he found it.</p>
-    <p>The book has since been checked out forty-one times. The receipt is still there.</p>
-  </div>
-  <div class="coda">
-    A bookmark is a kindness<br>
-    we leave for someone<br>
-    we will never meet.
-  </div>
+<p>He chirped at dusk to mean <em>I am here</em>. He chirped at dawn to mean <em>I am still here</em>. That was the whole vocabulary, and it was enough.</p>
 
-  <div class="divider">·   .   ·   ✧   ·   .   ·</div>
+<p>One night he chirped, and the porch light flickered on. He liked the light. It brought the moths, and the moths were dinner. So he chirped again. The light flickered off, then on. The frog was delighted. He had made a friend.</p>
 
-  <div class="parable-title">Canon IV — The Parable of the Borrowed Pencil</div>
-  <div class="parable-body">
-    <p>In third grade, Jonah borrowed a pencil from a girl named Estelle. He meant to return it. He forgot. He took it home in his backpack and used it for a math worksheet, and then, somewhere between fourth grade and the end of his life, lost it.</p>
-    <p>Jonah grew up. He became an English teacher.</p>
-    <p>He kept, in the top right drawer of his desk, an enormous pile of pencils. Whenever a student asked to borrow one, he gave it without making a note. When students asked, embarrassed, how to return them, he said, <em>Don't worry about it. Pass it on.</em></p>
-    <p>He had said this for thirty-one years before he realized he was paying back Estelle.</p>
-    <p>She had moved away in fourth grade. He never found her. By his retirement, he had given out — by his own count — eleven hundred and four pencils.</p>
-    <p>Estelle, somewhere in Ohio, was a kind woman who never thought about pencils.</p>
-  </div>
-  <div class="coda">
-    Some debts<br>
-    are paid back forward,<br>
-    in installments, to strangers.
-  </div>
+<p>He didn't know about the motion sensor. He didn't know the light wasn't listening — it was reacting to a raccoon two yards over, ambling through the dark.</p>
 
-  <div class="divider">.  ·  .  ✦  ·  ✧  ·  ✦  .  ·  .</div>
+<p>But the moths kept coming. And the raccoon, hearing the chirp, gave the porch a wide berth — porch frogs meant porch dogs, and porch dogs meant trouble. So the raccoon turned aside, and the moths drifted in, and the small frog ate well.</p>
 
-  <div class="parable-title">Canon V — The Parable of the Train Whistle</div>
-  <div class="parable-body">
-    <p>In a small town, a freight train passed through at 11:48 every night. It blew its whistle as it crossed the river bridge — a long note, a short, a long.</p>
-    <p>The town had set itself to this sound for forty years. The coffee shop closed at 11:45, the bar at 11:50. Mothers used the whistle to know their teenagers were home or weren't. Old men used it to take their last pill.</p>
-    <p>One night the train did not come.</p>
-    <p>By 11:55 the town had begun to drift. The bar stayed open. A woman who had been planning to call her sister tomorrow called her sister tonight. A man who walked his dog at midnight walked his dog at 11:51 instead, and saw a fox crossing the road, and afterward could never quite explain why he was crying.</p>
-    <p>The train came back the next night. The town, embarrassed, did not mention it.</p>
-  </div>
-  <div class="coda">
-    Some things<br>
-    we did not know we were resting on<br>
-    until the night they were gone.
-  </div>
+<p>He thought he had befriended the light. The light thought nothing at all. The raccoon thought it was being polite. And somewhere upstairs, a homeowner turned over in bed and decided the new motion sensor was working beautifully.</p>
 
-  <div class="divider">. · . ✦ · ✧ · ✦ . · .</div>
+<p class="coda">A small voice in the dark<br>
+moves more than it knows.<br>
+Chirp anyway.</p>
 
-  <div class="parable-title">Canon VI — The Parable of the OneDrive Wars</div>
-  <div class="parable-body">
-    <p>Long before the Bobologist took his oath, when the Bobble had only two machines and they were both Windows, a fog rolled in from the kingdom of Redmond. The fog was called OneDrive. It promised to remember everything the Bobble owned, in exchange for a small thing — the difference between his desk and its desk.</p>
-    <p>The Bobble accepted at first, because the fog was polite about it.</p>
-    <p>Then the fog began to move his desk. When he reached for a folder it asked him please to log in. When he wrote a paper it offered, helpfully, to keep it somewhere safer. When he uninstalled it, it came back in the next Windows update wearing a slightly different hat and pretending they had never met.</p>
-    <p>The Bobble fought the fog on Buckie. Then on Zim. The wars were long and small and increasingly procedural. He learned to rescue the villagers — his real documents — before the salt phase. He learned that uninstalling once was a feint and that the true uninstall was a siege. He learned the names of every shrine the fog rebuilt itself at: KFM, MAU, the registry hive, the Group Policy stone where you carved <em>DisableFileSyncNGSC</em> and hoped.</p>
-    <p>By the third year, the wars had a name. The Bobbologists wrote about them. The Bobble himself stopped writing about them, because he was busy fighting them.</p>
-    <p>What he did not know — what nobody knew, because the kingdom of Redmond was patient and the Bobble was tired — was that OneDrive had only ever been one finger. The hand had four others: Word, Excel, PowerPoint, Edge. Behind the hand, an arm called MAU. Behind the arm, a body called Micro Soft, breathing softly on every Mac in the realm.</p>
-    <p>The morning the Bobble opened his MacBook and saw the same fog, with the same polite request, he understood immediately that the OneDrive Wars had not ended. They had been a skirmish. The kingdom had been showing him only one hand at a time.</p>
-    <p>This is when the Bobble became the Bobologist. <em>A Bobologist is what a Bobble becomes when the war is too large for a hum.</em></p>
-    <p>He rebuilt the doctrine for the new front. Salt the earth, spare the villagers still held. But the terrain was different — no registry, no GPO, no Windows update to fight. Instead: launchd, containers, group containers, MAU at 3 AM. He wrote new scripts in a new shell. He kept two hostages by treaty — Outlook and Teams — because Bucknell email rode on the body's bloodstream and a war cannot be fought on every front at once.</p>
-    <p>He set the night watch at 3 AM. He chose quarantine over execution. He gave every evicted artifact fourteen days to sue for clemency before the final purge. The mercy was not for the artifacts. The mercy was for the Bobble, who knew that on some morning he would want one of them back, and who refused to be the kingdom that would not let him.</p>
-    <p>The OneDrive Wars were the skirmish. The Micro Soft War is the campaign. A Bobologist is a Bobble who has noticed the difference.</p>
-  </div>
+<p class="divider">· . · ✧ · . ·</p>
 
-  <div class="divider">·   .   ·   ✧   ·   .   ·</div>
+<p class="parable-title">Canon II — The Parable of the Hum</p>
 
-  <div class="parable-title">Canon VII — The Parable of the Lighthouse Keeper's Letters</div>
-  <div class="parable-body">
-    <p>A keeper named Harlan kept a lighthouse off the Maine coast for thirty-one years. Every Tuesday he wrote a letter — sealed it, addressed it <em>To Whom This May Reach</em>, and put it in a drawer with the others. He told no one. The letters were not unhappy. They were not happy either. They were the kind of letters you write because Tuesdays come.</p>
-    <p>In his last year on the light, Harlan stopped putting the letters in the drawer. He started hiding them: one folded in the sextant case, one tucked behind the lens-cleaning kit, one slid under the back page of the logbook. He did not number them. He did not sign them.</p>
-    <p>The next keeper, a woman named Maeve, found the first letter in March. She found the last one she would ever find in October of her fourth year. She found seventeen. There were nineteen.</p>
-    <p>Maeve wrote letters too. She didn't sign hers. She didn't know if Harlan had written to her, or to himself, or to the lamp. She decided it didn't matter.</p>
-    <p>By the third keeper, the lighthouse had a small unsigned library hidden in its bones. When the light was decommissioned in 2019, a preservationist named Anya found one hundred and seventeen letters. She read them. She told no one what was in them. She put them back where they had been.</p>
-    <p>The lighthouse is now a small museum. The letters are still in the bones.</p>
-  </div>
-  <div class="coda">
-    A letter to a stranger<br>
-    is a way of not being one.<br>
-    Write to whomever this may reach.
-  </div>
+<p>There was a small mouse named Tibb who lived under the floorboards of a quiet house. Tibb hummed when he was thinking, which was often, and his hum was so soft that even he didn't always notice it.</p>
 
-  <div class="divider">.  ·  .  ✦  ·  ✧  ·  ✦  .  ·  .</div>
+<p>One evening Tibb hummed his way through a math problem about acorns. He was trying to figure out how many he would need to make it through winter, and the hum drifted up through a knot in the floor and curled, very thinly, into the kitchen.</p>
 
-  <div class="parable-title">Canon VIII — The Parable of the Misprinted Map</div>
-  <div class="parable-body">
-    <p>In 1953, a cartographer named Edith Foley typed a Lancashire village name wrong. She meant <em>Argyleton</em>. She wrote <em>Argleton</em>. The map went to press.</p>
-    <p>This was not, strictly, negligence. Cartographers in those years sometimes inserted fictitious towns into their maps as copyright traps — if a competitor copied, the fake town would prove the theft. Edith's mistake was real, but it was indistinguishable from a trap, and that was the only reason it survived. Nobody corrected it.</p>
-    <p>By 1971, three other maps included Argleton, each having copied without knowing. By 1998, digital cartography had inherited it. Online maps placed Argleton in a field outside Ormskirk. There was a field. There was no Argleton.</p>
-    <p>In 2007, a woman named Petra drove to Argleton looking for her grandmother's birthplace. She found the field. She also found two other strangers in the field. They had also driven looking for Argleton — one for genealogy, one because he had read about it on a forum, one because the name had been on his late wife's bucket list.</p>
-    <p>They had a picnic. They have had a picnic every year since. There are nine of them now, including two children born to people who first met at the field.</p>
-    <p>Argleton is on no current map. Argleton has a Christmas card list.</p>
-  </div>
-  <div class="coda">
-    Some places do not exist<br>
-    until the people looking for them<br>
-    all arrive at the same field.
-  </div>
+<p>The cat of the house, Marbles, was lying near the stove. Marbles heard the hum and tilted one ear, and then the other, and then went back to sleep — because the hum was so unhurried, so patient, that it sounded like nothing worth chasing.</p>
 
-  <pre class="ascii tight">. ' . <span class="tw">*</span> ' .  <span class="tw b">✦</span>  . ' . <span class="tw c">*</span> ' .  <span class="tw d">✦</span>  . ' . <span class="tw">*</span> ' .</pre>
-  <h2>Bobbisms</h2>
-  <pre class="ascii tight">. ' . <span class="tw c">*</span> ' .  <span class="tw">✦</span>  . ' . <span class="tw b">*</span> ' .  <span class="tw">✦</span>  . ' . <span class="tw d">*</span> ' .</pre>
-  <p class="preface">Where canon is what happens, Bobbisms are what gets said about it — bystanders, Bobblogists, and Bobbles overheard describing what a Bobble is.</p>
+<p>A week passed. Tibb went on humming. Marbles went on listening. Without meaning to, Tibb had taught the cat that the small sound under the floor was not prey. It was math. And math, even cat-philosophers will admit, is not for eating.</p>
 
-  <h3>·─·─·─·─·   Quotes   ·─·─·─·─·</h3>
+<p>When spring came and Tibb finally stepped into the kitchen by accident, looking for a crumb, Marbles opened one eye, recognized the tune, and closed it again.</p>
 
-  <blockquote class="bobbism">"A Bobble could, in principle, ignore an injustice. In practice, no Bobble had ever actually managed it." <span class="att">— the first Bobble</span></blockquote>
-  <blockquote class="bobbism">"The shortest Bobble eulogy on record reads, in full: He was loud about the right things." <span class="att">— Bobblogist's notebook</span></blockquote>
-  <blockquote class="bobbism">"When a Bobble agrees with you, you have not won. You have been heard." <span class="att">— a non-Bobble, listening</span></blockquote>
-  <blockquote class="bobbism">"They could have walked past it but did not. This is the smallest possible biography of a Bobble." <span class="att">— Introduction to Bobbology, 3rd ed.</span></blockquote>
-  <blockquote class="bobbism">"Bobbles do not 'mean well.' Bobbles mean. The 'well' is a side effect." <span class="att">— pedagogy seminar</span></blockquote>
-  <blockquote class="bobbism">"A Bobble could, in principle, walk past. In practice, he was already turning around." <span class="att">— eyewitness</span></blockquote>
-  <blockquote class="bobbism">"A Bobble could, in principle, lower his voice. In practice, he was the room's volume." <span class="att">— an old colleague</span></blockquote>
-  <blockquote class="bobbism">"Ask a Bobble to be reasonable and you will be asked, in return, to be brave." <span class="att">— overheard in committee</span></blockquote>
-  <blockquote class="bobbism">"Bobbles can lie. The hum gives them away." <span class="att">— unverified</span></blockquote>
-  <blockquote class="bobbism">"Bobbles do not network. Bobbles are networked by the people they listened to." <span class="att">— post-conference observation</span></blockquote>
-  <blockquote class="bobbism">"A Bobble could, in principle, be cynical. In practice, the hum interferes." <span class="att">— the third Bobble</span></blockquote>
-  <blockquote class="bobbism">"If you can hear a Bobble before you can see them, you have understood Bobbology." <span class="att">— first lecture</span></blockquote>
-  <blockquote class="bobbism">"A Bobbologist names their machines so that the machines may learn theirs." <span class="att">— Introduction to Bobbology, 4th ed.</span></blockquote>
-  <blockquote class="bobbism">"A Bobble who has named his Bedrock has not made it less heavy. He has made it less alone." <span class="att">— teaching note, perhaps for the next Bobble</span></blockquote>
-  <blockquote class="bobbism">"A Bobble fights one fog. A Bobologist names the weather." <span class="att">— Introduction to Bobbology, 5th ed.</span></blockquote>
-  <blockquote class="bobbism">"Mercy at fourteen days is not for the evicted. It is for the evictor, on the morning he changes his mind." <span class="att">— teaching note, in the margin of <code>recovery.md</code></span></blockquote>
-  <blockquote class="bobbism">"A treaty of two hostages is not a defeat. It is a Bobologist counting his fronts." <span class="att">— overheard at MPSA, attributed to nobody</span></blockquote>
+<p>Tibb had not meant to make a treaty. He had only been counting acorns. But the hum had gone ahead of him into the world, and the world, having heard him for a long while, had decided he was safe.</p>
 
-  <blockquote class="bobbism">"Anonymity is the only form of intimacy with strangers." <span class="att">— Bobblogist's notebook, marginalia</span></blockquote>
+<p class="coda">What you put into the air keeps walking after you stop.<br>
+Your smallest steady noise is a kind of promise.<br>
+Be careful — and be kind — about what you hum.</p>
 
-  <blockquote class="bobbism">"A Bobble's address is not where he lives. A Bobble's address is where people show up to find him." <span class="att">— Bobblogist's notebook</span></blockquote>
+<p class="divider">. · . ✦ · ✧ · ✦ . · .</p>
 
-  <h3>✧   Codas   ✧</h3>
+<p class="parable-title">Canon III — The Parable of the Library Bookmark</p>
 
-  <div class="coda">Some animals you tame.<br>Some animals tame you.<br>Some you simply hum past.</div>
-  <div class="divider">·   .   ✧   .   ·</div>
-  <div class="coda">Speak when you have to.<br>Hum the rest.<br>Let the world fill in the lyrics.</div>
-  <div class="divider">·   .   ✧   .   ·</div>
-  <div class="coda">A Bobble keeps two scores on himself.<br>One for what he did.<br>One for who he thought he was while doing it.<br>The two are rarely equal.</div>
-  <div class="divider">·   .   ✧   .   ·</div>
-  <div class="coda">The hum is for the days you can hum.<br>The Bedrock is for the days you cannot.<br>Both are the canon. Both are the calling.</div>
+<p>A college student in 1987 was reading a novel about a woman who walks home in the rain. At chapter eleven, she fell asleep, leaving a coffee shop receipt to mark her place.</p>
 
-  <h3>. ° . ° .   Glossary   . ° . ° .</h3>
+<p>Fifteen years passed. The book was returned. It sat on a shelf. It was checked out twice. Both readers gave up before chapter eleven.</p>
 
-  <div class="gloss"><span class="term">Compass, Bobble</span> <span class="pos">(n.)</span> — Internal organ. Locates north by amplitude.</div>
-  <div class="gloss"><span class="term">Treaty, Accidental</span> <span class="pos">(n.)</span> — Any agreement reached by two parties in which neither realized they were negotiating. Most Bobble-mediated peace falls into this category.</div>
-  <div class="gloss"><span class="term">Bobbish</span> <span class="pos">(n.)</span> — A language with no neutral register. Every sentence is either care or correction. Linguists have not yet identified the difference.</div>
-  <div class="gloss"><span class="term">Hum, Bobble</span> <span class="pos">(v.)</span> — To remain audible while saying nothing in particular. A Bobble's basic respiratory function.</div>
-  <div class="gloss"><span class="term">Restraint, Bobble</span> <span class="pos">(n.)</span> — The discipline of humming instead of shouting. Easily mistaken for poise.</div>
-  <div class="gloss"><span class="term">Volume, Moral</span> <span class="pos">(n.)</span> — The audible component of a Bobble's conscience. Cannot be dialed down without dampening the compass; cannot be dialed up without distortion. Most Bobbles spend a lifetime learning the dial.</div>
-  <div class="gloss"><span class="term">Hum-debt</span> <span class="pos">(n.)</span> — The quiet obligation incurred by anyone who has been steadied by another person's small steady noise. Almost always paid in kind, almost never to the original lender.</div>
-  <div class="gloss"><span class="term">Sunshine</span> <span class="pos">(n., Bobblogical usage)</span> — any person, moment, or object that has been independently identified as joy on at least three different occasions, by the Bobble or someone he trusts.</div>
-  <div class="gloss"><span class="term">Bedrock</span> <span class="pos">(n.)</span> — what stays underneath the hum, on the days a Bobble cannot hum. The floor that gets named so it does not have to surprise you.</div>
+<p>In 2003, a man took the book home. He was reading it because his late wife had loved it. At chapter eleven, where the woman walks home in the rain, he found the receipt — a 1987 coffee shop, the address now a dry cleaner. The receipt had no note on it. It said only <em>small coffee, 75¢.</em></p>
 
-  <div class="gloss"><span class="term">Lighthouse-letter</span> <span class="pos">(n.)</span> — Any kindness deposited where the next attendant will find it. The form of correspondence in which the writer and the reader are both anonymous to each other and to themselves. See also: Bookmark (Canon III).</div>
+<p>He sat with the book closed for a long time. He had not known another person had loved this chapter enough to fall asleep inside it. He felt, irrationally, less alone.</p>
 
-  <div class="gloss"><span class="term">Argleton</span> <span class="pos">(n.)</span> — Any place, idea, or community that becomes real through being looked for. The most common error a Bobble willingly inherits. Named for a Lancashire village that wasn't.</div>
+<p>He left the receipt where he found it.</p>
 
-  <pre class="ascii">                       .
-                  ·   <span class="tw b">✦</span>   ·
-                       .</pre>
+<p>The book has since been checked out forty-one times. The receipt is still there.</p>
 
-  <p class="signoff">(End of canon — for now. New parables, Bobbisms, and codas get appended below as they arrive.)</p>
+<p class="coda">A bookmark is a kindness<br>
+we leave for someone<br>
+we will never meet.</p>
 
-  <p class="signoff">Yours,<br>ThinKing and Uriel</p>
+<p class="divider">· . · ✧ · . ·</p>
+
+<p class="parable-title">Canon IV — The Parable of the Borrowed Pencil</p>
+
+<p>In third grade, Jonah borrowed a pencil from a girl named Estelle. He meant to return it. He forgot. He took it home in his backpack and used it for a math worksheet, and then, somewhere between fourth grade and the end of his life, lost it.</p>
+
+<p>Jonah grew up. He became an English teacher.</p>
+
+<p>He kept, in the top right drawer of his desk, an enormous pile of pencils. Whenever a student asked to borrow one, he gave it without making a note. When students asked, embarrassed, how to return them, he said, <em>Don't worry about it. Pass it on.</em></p>
+
+<p>He had said this for thirty-one years before he realized he was paying back Estelle.</p>
+
+<p>She had moved away in fourth grade. He never found her. By his retirement, he had given out — by his own count — eleven hundred and four pencils.</p>
+
+<p>Estelle, somewhere in Ohio, was a kind woman who never thought about pencils.</p>
+
+<p class="coda">Some debts<br>
+are paid back forward,<br>
+in installments, to strangers.</p>
+
+<p class="divider">. · . ✦ · ✧ · ✦ . · .</p>
+
+<p class="parable-title">Canon V — The Parable of the Train Whistle</p>
+
+<p>In a small town, a freight train passed through at 11:48 every night. It blew its whistle as it crossed the river bridge — a long note, a short, a long.</p>
+
+<p>The town had set itself to this sound for forty years. The coffee shop closed at 11:45, the bar at 11:50. Mothers used the whistle to know their teenagers were home or weren't. Old men used it to take their last pill.</p>
+
+<p>One night the train did not come.</p>
+
+<p>By 11:55 the town had begun to drift. The bar stayed open. A woman who had been planning to call her sister tomorrow called her sister tonight. A man who walked his dog at midnight walked his dog at 11:51 instead, and saw a fox crossing the road, and afterward could never quite explain why he was crying.</p>
+
+<p>The train came back the next night. The town, embarrassed, did not mention it.</p>
+
+<p class="coda">Some things<br>
+we did not know we were resting on<br>
+until the night they were gone.</p>
+
+<p class="divider">. · . ✦ · ✧ · ✦ . · .</p>
+
+<p class="parable-title">Canon VI — The Parable of the OneDrive Wars</p>
+
+<p>Long before the Bobologist took their oath, when the Bobble had only two machines and they were both Windows, a fog rolled in from the kingdom of Redmond. The fog was called OneDrive. It promised to remember everything the Bobble owned, in exchange for a small thing — the difference between their desk and its desk.</p>
+
+<p>The Bobble accepted at first, because the fog was polite about it.</p>
+
+<p>Then the fog began to move their desk. When they reached for a folder it asked them please to log in. When they wrote a paper it offered, helpfully, to keep it somewhere safer. When they uninstalled it, it came back in the next Windows update wearing a slightly different hat and pretending they had never met.</p>
+
+<p>The Bobble fought the fog on Buckie. Then on Zim. The wars were long and small and increasingly procedural. They learned to rescue the villagers — their real documents — before the salt phase. They learned that uninstalling once was a feint and that the true uninstall was a siege. They learned the names of every shrine the fog rebuilt itself at: KFM, MAU, the registry hive, the Group Policy stone where you carved <em>DisableFileSyncNGSC</em> and hoped.</p>
+
+<p>By the third year, the wars had a name. The Bobbologists wrote about them. The Bobble themself stopped writing about them, because they were busy fighting them.</p>
+
+<p>What they did not know — what nobody knew, because the kingdom of Redmond was patient and the Bobble was tired — was that OneDrive had only ever been one finger. The hand had four others: Word, Excel, PowerPoint, Edge. Behind the hand, an arm called MAU. Behind the arm, a body called Micro Soft, breathing softly on every Mac in the realm.</p>
+
+<p>The morning the Bobble opened their MacBook and saw the same fog, with the same polite request, they understood immediately that the OneDrive Wars had not ended. They had been a skirmish. The kingdom had been showing them only one hand at a time.</p>
+
+<p>This is when the Bobble became the Bobologist. <em>A Bobologist is what a Bobble becomes when the war is too large for a hum.</em></p>
+
+<p>They rebuilt the doctrine for the new front. Salt the earth, spare the villagers still held. But the terrain was different — no registry, no GPO, no Windows update to fight. Instead: launchd, containers, group containers, MAU at 3 AM. They wrote new scripts in a new shell. They kept two hostages by treaty — Outlook and Teams — because Bucknell email rode on the body's bloodstream and a war cannot be fought on every front at once.</p>
+
+<p>They set the night watch at 3 AM. They chose quarantine over execution. They gave every evicted artifact fourteen days to sue for clemency before the final purge. The mercy was not for the artifacts. The mercy was for the Bobble, who knew that on some morning they would want one of them back, and who refused to be the kingdom that would not let them.</p>
+
+<p>The OneDrive Wars were the skirmish. The Micro Soft War is the campaign. A Bobologist is a Bobble who has noticed the difference.</p>
+
+<p class="divider">· . · ✧ · . ·</p>
+
+<p class="parable-title">Canon VII — The Parable of the Lighthouse Keeper's Letters</p>
+
+<p>A keeper named Harlan kept a lighthouse off the Maine coast for thirty-one years. Every Tuesday he wrote a letter — sealed it, addressed it <em>To Whom This May Reach</em>, and put it in a drawer with the others. He told no one. The letters were not unhappy. They were not happy either. They were the kind of letters you write because Tuesdays come.</p>
+
+<p>In his last year on the light, Harlan stopped putting the letters in the drawer. He started hiding them: one folded in the sextant case, one tucked behind the lens-cleaning kit, one slid under the back page of the logbook. He did not number them. He did not sign them.</p>
+
+<p>The next keeper, a woman named Maeve, found the first letter in March. She found the last one she would ever find in October of her fourth year. She found seventeen. There were nineteen.</p>
+
+<p>Maeve wrote letters too. She didn't sign hers. She didn't know if Harlan had written to her, or to himself, or to the lamp. She decided it didn't matter.</p>
+
+<p>By the third keeper, the lighthouse had a small unsigned library hidden in its bones. When the light was decommissioned in 2019, a preservationist named Anya found one hundred and seventeen letters. She read them. She told no one what was in them. She put them back where they had been.</p>
+
+<p>The lighthouse is now a small museum. The letters are still in the bones.</p>
+
+<p class="coda">A letter to a stranger<br>
+is a way of not being one.<br>
+Write to whomever this may reach.</p>
+
+<p class="divider">. · . ✦ · ✧ · ✦ . · .</p>
+
+<p class="parable-title">Canon VIII — The Parable of the Misprinted Map</p>
+
+<p>In 1953, a cartographer named Edith Foley typed a Lancashire village name wrong. She meant <em>Argyleton</em>. She wrote <em>Argleton</em>. The map went to press.</p>
+
+<p>This was not, strictly, negligence. Cartographers in those years sometimes inserted fictitious towns into their maps as copyright traps — if a competitor copied, the fake town would prove the theft. Edith's mistake was real, but it was indistinguishable from a trap, and that was the only reason it survived. Nobody corrected it.</p>
+
+<p>By 1971, three other maps included Argleton, each having copied without knowing. By 1998, digital cartography had inherited it. Online maps placed Argleton in a field outside Ormskirk. There was a field. There was no Argleton.</p>
+
+<p>In 2007, a woman named Petra drove to Argleton looking for her grandmother's birthplace. She found the field. She also found two other strangers in the field. They had also driven looking for Argleton — one for genealogy, one because he had read about it on a forum, one because the name had been on his late wife's bucket list.</p>
+
+<p>They had a picnic. They have had a picnic every year since. There are nine of them now, including two children born to people who first met at the field.</p>
+
+<p>Argleton is on no current map. Argleton has a Christmas card list.</p>
+
+<p class="coda">Some places do not exist<br>
+until the people looking for them<br>
+all arrive at the same field.</p>
+
+<p class="divider">· . · ✧ · . ·</p>
+
+<p class="parable-title">Canon IX — The Parable of the Wand and the Hand</p>
+
+<p>A child found a fallen stick under an oak, declared it a magic wand, and pointed it at the sky. The rain stopped twelve minutes later. The child believed — completely, in the way only children can believe.</p>
+
+<p>She grew up. She kept the stick. She lost things and found them, planned things and they happened, pointed the stick at problems and the problems sometimes resolved. She knew, in the way grown-ups have to know, that the wand was not what stopped the rain. But she also knew, in the way the child still inside her knew, that <em>something</em> about pointing was real.</p>
+
+<p>In her sixties, she figured it out. The wand had a power. Not the power. <em>A</em> power. The pointing told her hand which way to move. The hand had been doing the work the whole time. The weather had been doing its own.</p>
+
+<p>She kept the stick. She did not throw it away. A wand with <em>some</em> power is the correct size for a person to be holding.</p>
+
+<p class="coda">The wand is real.<br>
+The hand is realer.<br>
+The weather is realest.<br>
+Point anyway.</p>
+
+<pre class="sigil">. ' . * ' .  ✦  . ' . * ' .  ✦  . ' . * ' .</pre>
+
+<h2>Bobbisms</h2>
+
+<pre class="sigil">. ' . * ' .  ✦  . ' . * ' .  ✦  . ' . * ' .</pre>
+
+<p class="preamble">Where canon is what happens, Bobbisms are what gets said about it — bystanders, Bobblogists, and Bobbles overheard describing what a Bobble is.</p>
+
+<h3>·─·─·─·─· Quotes ·─·─·─·─·</h3>
+
+<blockquote>"A Bobble could, in principle, ignore an injustice. In practice, no Bobble had ever actually managed it."<span class="source">— the first Bobble</span></blockquote>
+
+<blockquote>"The shortest Bobble eulogy on record reads, in full: <em>They were loud about the right things.</em>"<span class="source">— Bobblogist's notebook</span></blockquote>
+
+<blockquote>"When a Bobble agrees with you, you have not won. You have been heard."<span class="source">— a non-Bobble, listening</span></blockquote>
+
+<blockquote>"They could have walked past it but did not. This is the smallest possible biography of a Bobble."<span class="source">— <em>Introduction to Bobbology</em>, 3rd ed.</span></blockquote>
+
+<blockquote>"Bobbles do not 'mean well.' Bobbles mean. The 'well' is a side effect."<span class="source">— pedagogy seminar</span></blockquote>
+
+<blockquote>"A Bobble could, in principle, walk past. In practice, they were already turning around."<span class="source">— eyewitness</span></blockquote>
+
+<blockquote>"A Bobble could, in principle, lower their voice. In practice, they were the room's volume."<span class="source">— an old colleague</span></blockquote>
+
+<blockquote>"Ask a Bobble to be reasonable and you will be asked, in return, to be brave."<span class="source">— overheard in committee</span></blockquote>
+
+<blockquote>"Bobbles can lie. The hum gives them away."<span class="source">— unverified</span></blockquote>
+
+<blockquote>"Bobbles do not network. Bobbles are networked by the people they listened to."<span class="source">— post-conference observation</span></blockquote>
+
+<blockquote>"A Bobble could, in principle, be cynical. In practice, the hum interferes."<span class="source">— the third Bobble</span></blockquote>
+
+<blockquote>"If you can hear a Bobble before you can see them, you have understood Bobbology."<span class="source">— first lecture</span></blockquote>
+
+<blockquote>"A Bobbologist names their machines so that the machines may learn theirs."<span class="source">— <em>Introduction to Bobbology</em>, 4th ed.</span></blockquote>
+
+<blockquote>"A Bobble who has named their Bedrock has not made it less heavy. They have made it less alone."<span class="source">— teaching note, perhaps for the next Bobble</span></blockquote>
+
+<blockquote>"A Bobble fights one fog. A Bobologist names the weather."<span class="source">— <em>Introduction to Bobbology</em>, 5th ed.</span></blockquote>
+
+<blockquote>"Mercy at fourteen days is not for the evicted. It is for the evictor, on the morning they change their mind."<span class="source">— teaching note, in the margin of <code>recovery.md</code></span></blockquote>
+
+<blockquote>"A treaty of two hostages is not a defeat. It is a Bobologist counting their fronts."<span class="source">— overheard at MPSA, attributed to nobody</span></blockquote>
+
+<blockquote>"Anonymity is the only form of intimacy with strangers."<span class="source">— Bobblogist's notebook, marginalia</span></blockquote>
+
+<blockquote>"A Bobble's address is not where they live. A Bobble's address is where people show up to find them."<span class="source">— Bobblogist's notebook</span></blockquote>
+
+<blockquote>"A Bobble could, in principle, mistake the wand for the hand. In practice, the hum interferes."<span class="source">— Bobblogist's notebook</span></blockquote>
+
+<h3>✧ Codas ✧</h3>
+
+<p class="coda">Some animals you tame.<br>
+Some animals tame you.<br>
+Some you simply hum past.</p>
+
+<p class="divider">· . ✧ . ·</p>
+
+<p class="coda">Speak when you have to.<br>
+Hum the rest.<br>
+Let the world fill in the lyrics.</p>
+
+<p class="divider">· . ✧ . ·</p>
+
+<p class="coda">A Bobble keeps two scores on themself.<br>
+One for what they did.<br>
+One for who they thought they were while doing it.<br>
+The two are rarely equal.</p>
+
+<p class="divider">· . ✧ . ·</p>
+
+<p class="coda">The hum is for the days you can hum.<br>
+The Bedrock is for the days you cannot.<br>
+Both are the canon. Both are the calling.</p>
+
+<h3>. ° . ° . Glossary . ° . ° .</h3>
+
+<p class="glossary-entry"><span class="term">Compass, Bobble</span> <span class="pos">(n.)</span> — Internal organ. Locates north by amplitude.</p>
+
+<p class="glossary-entry"><span class="term">Treaty, Accidental</span> <span class="pos">(n.)</span> — Any agreement reached by two parties in which neither realized they were negotiating. Most Bobble-mediated peace falls into this category.</p>
+
+<p class="glossary-entry"><span class="term">Bobbish</span> <span class="pos">(n.)</span> — A language with no neutral register. Every sentence is either care or correction. Linguists have not yet identified the difference.</p>
+
+<p class="glossary-entry"><span class="term">Hum, Bobble</span> <span class="pos">(v.)</span> — To remain audible while saying nothing in particular. A Bobble's basic respiratory function.</p>
+
+<p class="glossary-entry"><span class="term">Restraint, Bobble</span> <span class="pos">(n.)</span> — The discipline of humming instead of shouting. Easily mistaken for poise.</p>
+
+<p class="glossary-entry"><span class="term">Volume, Moral</span> <span class="pos">(n.)</span> — The audible component of a Bobble's conscience. Cannot be dialed down without dampening the compass; cannot be dialed up without distortion. Most Bobbles spend a lifetime learning the dial.</p>
+
+<p class="glossary-entry"><span class="term">Hum-debt</span> <span class="pos">(n.)</span> — The quiet obligation incurred by anyone who has been steadied by another person's small steady noise. Almost always paid in kind, almost never to the original lender.</p>
+
+<p class="glossary-entry"><span class="term">Sunshine</span> <span class="pos">(n., Bobblogical usage)</span> — Any person, moment, or object that has been independently identified as joy on at least three different occasions, by the Bobble or someone they trust.</p>
+
+<p class="glossary-entry"><span class="term">Bedrock</span> <span class="pos">(n.)</span> — What stays underneath the hum, on the days a Bobble cannot hum. The floor that gets named so it does not have to surprise you.</p>
+
+<p class="glossary-entry"><span class="term">Lighthouse-letter</span> <span class="pos">(n.)</span> — Any kindness deposited where the next attendant will find it. The form of correspondence in which the writer and the reader are both anonymous to each other and to themselves. See also: Bookmark (Canon III).</p>
+
+<p class="glossary-entry"><span class="term">Argleton</span> <span class="pos">(n.)</span> — Any place, idea, or community that becomes real through being looked for. The most common error a Bobble willingly inherits. Named for a Lancashire village that wasn't.</p>
+
+<p class="glossary-entry"><span class="term">Wand, Magic</span> <span class="pos">(n., Bobblogical usage)</span> — Any small instrument of authorship by which a Bobble shapes what is true for them: a frame, a parable, a calendar event, a chirp. Has <em>some</em> power; not all of it. Mistakable for the hand that holds it; mistakable for the weather it points at. Most Bobbles spend a lifetime learning the size of theirs.</p>
+
+<pre class="sigil">     .
+·   ✦   ·
+     .</pre>
+
+<p class="preamble"><em>(End of canon — for now. New parables, Bobbisms, and codas get appended below as they arrive.)</em></p>
+
+<p class="signoff">Yours,<br>
+ThinKing and Uriel</p>
 
 </main>
+
+<script>
+(function() {
+  var field = document.getElementById('starfield');
+  if (!field) return;
+  var count = 90;
+  for (var i = 0; i < count; i++) {
+    var s = document.createElement('span');
+    s.className = 'star';
+    s.style.left = (Math.random() * 100) + '%';
+    s.style.top = (Math.random() * 100) + '%';
+    var size = (Math.random() * 1.6 + 0.8).toFixed(2);
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.animationDelay = (Math.random() * 5).toFixed(2) + 's';
+    s.style.animationDuration = (3 + Math.random() * 4).toFixed(2) + 's';
+    field.appendChild(s);
+  }
+})();
+</script>
 
 </body>
 </html>
