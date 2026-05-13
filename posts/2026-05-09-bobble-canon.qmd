@@ -1,13 +1,13 @@
 ---
 title: "The Bobble Canon"
 date: "2026-05-09"
-description: "Five short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly."
+description: "Nine short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly."
 categories: [fiction, bobble]
 ---
 
 A small, growing collection of parables and Bobbisms. Each one is short. Each one is true in the way bedtime stories are true.
 
-Five parables — the **Porch Frog**, the **Hum**, the **Library Bookmark**, the **Borrowed Pencil**, the **Train Whistle** — plus twelve Bobbisms, two codas, and a glossary.
+Nine parables — the **Porch Frog**, the **Hum**, the **Library Bookmark**, the **Borrowed Pencil**, the **Train Whistle**, the **OneDrive Wars**, the **Lighthouse Keeper's Letters**, the **Misprinted Map**, and the **Wand and the Hand** — plus twenty Bobbisms, four codas, and a twelve-entry glossary.
 
 The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.
 
