@@ -3,31 +3,10 @@ title: "Wor Gems"
 date: "2026-05-10"
 description: "A WarPips-style auto-battler set 300 years after Gem in Eyes. Three factions, seven units, destructible cover, projectile combat. Pure HTML."
 categories: [project, game, visualization]
+path: /wor-gems.html
 ---
 
-A WarPips-inspired isometric auto-battler. Pick a banner — Tonric Concord, Wildfire Ascension, or Renkindled Mist — and deploy soldiers, miners, snipers, tanks, mechs, helicopters, and airplanes into a destructible battlefield. Anti-air units engage AIR; ground units stay in their lane. Cover blocks 50% of incoming damage, but every prop on the field is destructible. Projectiles track their targets. Each unit type has its own idle animation.
-
-Built on top of the *Gem in Eyes* engine canon. Lore-anchored in the bobology.
-
-Download and open locally — no internet required.
-
 ```{=html}
-<p style="margin: 2em 0;">
-<a href="../wor-gems.html" download="wor-gems.html"
-   style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../wor-gems.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
+<p>Redirecting to <a href="/wor-gems.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/wor-gems.html");</script>
 ```
-
-**Controls:** `Q W E R T Y U` deploy units · click cards to deploy · units auto-engage at range · seek cover when fighting · AA-flagged units engage AIR.
-
-**Factions:**
-
-- **Tonric Concord** — heavy, durable, arrives. HP +15%, SPD −15%.
-- **Wildfire Ascension** — glass cannon. ATK +20%, SPD +25%, HP −15%.
-- **Renkindled Mist** — long-shot, sustain. RNG +10%, COST −5%.
-
-Balance vetted against 10,000 AI-vs-AI matches; faction winrates landed at 50% / 41% / 59%.

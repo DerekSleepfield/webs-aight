@@ -3,19 +3,10 @@ title: "Introduction to Bobbology"
 date: "2026-05-09"
 description: "Lecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate."
 categories: [bobble, bobbology, ai]
+path: /introduction-to-bobbology.html
 ---
 
-The field has a problem. The Bobbisms quote *Introduction to Bobbology, 3rd ed.* often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the **4th** edition, restricted to **Lecture I**: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.
-
-The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.
-
 ```{=html}
-<p style="margin: 2em 0;">
-<a href="../introduction-to-bobbology.html" download="introduction-to-bobbology.html"
-   style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../introduction-to-bobbology.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
+<p>Redirecting to <a href="/introduction-to-bobbology.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/introduction-to-bobbology.html");</script>
 ```

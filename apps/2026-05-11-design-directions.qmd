@@ -3,29 +3,10 @@ title: "Seven design directions"
 date: "2026-05-11"
 description: "Seven mockups for the site's visual style, each named after a piece of the Bobble canon. The shortlist headed for the Style toggle."
 categories: [design, mockups, bobbology]
+path: /design-directions.html
 ---
 
-Seven visual directions for derekwakefield.com, each anchored to a different parable or piece of the canon. Trimmed from an earlier set of ten — these are the survivors headed for a Style toggle on the live site.
-
-Open locally — no internet required after the page loads, since each mockup is inlined.
-
 ```{=html}
-<p style="margin: 2em 0;">
-<a href="../design-directions.html"
-   style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ✦ &nbsp; Open the comparison board
-</a>
-&nbsp;&nbsp;
-<a href="../design-directions.html" download="design-directions.html" style="opacity: 0.7;">or download HTML →</a>
-</p>
+<p>Redirecting to <a href="/design-directions.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/design-directions.html");</script>
 ```
-
-The seven directions:
-
-- **Porch Light** — small voice, on a porch, with one bulb above the door
-- **Star Chart** — deep night, scholarly astrolabe, nav as constellation
-- **Bedrock** — heavy slab serif, geological strata, gravity-anchored
-- **Hum** — soft peach, dusty plum, continuous low-volume wave
-- **Bobblesphere** — orbital rings, radial nav, sections as planets
-- **Library Bookmark** — card catalog, dotted dividers, archival quiet
-- **Mind Palace Map** — antique cartography, compass rose, framed scholarly plate
