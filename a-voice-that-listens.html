@@ -247,9 +247,81 @@
     font-size: 12px;
     color: var(--accent);
   }
+
+  /* intensity ladder — driven by data-intensity on body */
+
+  /* level 1: straight text only */
+  body[data-intensity="1"] .art,
+  body[data-intensity="1"] .drifter,
+  body[data-intensity="1"] .starfield,
+  body[data-intensity="1"] .gem,
+  body[data-intensity="1"] .header-art { display: none !important; }
+
+  /* level 2: faint, compact ASCII motifs; no animation */
+  body[data-intensity="2"] .art      { opacity: 0.18; font-size: 9px; }
+  body[data-intensity="2"] .drifter,
+  body[data-intensity="2"] .starfield,
+  body[data-intensity="2"] .gem      { display: none !important; }
+  body[data-intensity="2"] .header-art { opacity: 0.30; }
+
+  /* level 3: full ASCII motifs; still no animation */
+  body[data-intensity="3"] .art      { opacity: 0.32; }
+  body[data-intensity="3"] .drifter,
+  body[data-intensity="3"] .starfield,
+  body[data-intensity="3"] .gem      { display: none !important; }
+
+  /* level 4: art + starfield + a few drifters (current default) */
+  body[data-intensity="4"] .gem,
+  body[data-intensity="4"] .drifter.extra { display: none !important; }
+
+  /* level 5: cosmic — art + extra drifters + gems + brighter starfield */
+  body[data-intensity="5"] .art      { opacity: 0.40; }
+  body[data-intensity="5"] .starfield { opacity: 1; filter: brightness(1.20) saturate(1.15); }
+  body[data-intensity="5"] .drifter  { opacity: 0.32; }
+  body[data-intensity="5"] .gem,
+  body[data-intensity="5"] .drifter.extra { display: block; }
+
+  /* gems — visible only at level 5 */
+  .gem {
+    position: fixed;
+    z-index: 2;
+    pointer-events: none;
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    font-size: 20px;
+    display: none;
+    will-change: opacity, transform;
+    animation: twinkle 4s ease-in-out infinite;
+  }
+  .g1 { top: 16%; left: 6%;  color: var(--accent);      animation-delay: 0s;   }
+  .g2 { top: 28%; right: 9%; color: var(--accent-cool); animation-delay: 0.6s; font-size: 24px; }
+  .g3 { top: 44%; left: 11%; color: var(--accent-warm); animation-delay: 1.2s; }
+  .g4 { top: 56%; right: 7%; color: var(--accent);      animation-delay: 1.8s; font-size: 22px; }
+  .g5 { top: 71%; left: 5%;  color: var(--accent-cool); animation-delay: 2.4s; }
+  .g6 { top: 84%; right: 10%; color: var(--accent-warm); animation-delay: 3s;  font-size: 26px; }
+  .g7 { top: 92%; left: 13%; color: var(--accent);      animation-delay: 3.6s; font-size: 18px; }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.22; transform: scale(0.85) rotate(0deg); }
+    50%      { opacity: 0.85; transform: scale(1.20) rotate(8deg); }
+  }
+
+  /* extra drifters — appear only at level 5 */
+  .drifter.extra { display: none; }
+  .d9  { top: 5%;  left: -140px; animation: driftRight 70s linear infinite; animation-delay: -8s;  color: var(--accent-cool); }
+  .d10 { top: 40%; right: -160px; animation: driftLeft 65s linear infinite; animation-delay: -45s; color: var(--accent); }
+  .d11 { top: 67%; right: -140px; animation: driftLeft 75s linear infinite; animation-delay: -15s; color: var(--accent-warm); }
+  .d12 { top: 80%; left: -160px; animation: driftRight 80s linear infinite; animation-delay: -50s; color: var(--accent-cool); }
+
+  /* intensity toggle — slightly more compact than the long/short one */
+  .intensity-toggle button {
+    padding: 6px 14px;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+  }
+  .intensity-toggle-wrap { margin-top: -4px; }
 </style>
 </head>
-<body>
+<body data-intensity="4">
 
 <div class="starfield"></div>
 
@@ -261,6 +333,19 @@
 <div class="drifter d6">✦ . ✧ . ✦</div>
 <div class="drifter d7">(°ᴥ°)</div>
 <div class="drifter d8">. ✧ ─── ✦ .</div>
+
+<div class="drifter extra d9">≋(◔ᴥ◔)≋</div>
+<div class="drifter extra d10">. ◆ . ✦ .</div>
+<div class="drifter extra d11">{&gt;‿&lt;}</div>
+<div class="drifter extra d12">~∼(•~•)~∼</div>
+
+<div class="gem g1">◆</div>
+<div class="gem g2">❖</div>
+<div class="gem g3">✦</div>
+<div class="gem g4">⬡</div>
+<div class="gem g5">◇</div>
+<div class="gem g6">✧</div>
+<div class="gem g7">⬢</div>
 
 <main>
 
@@ -280,6 +365,17 @@
   </div>
 </div>
 <p class="toggle-meta" id="toggle-meta">V10 · 10 sections · 2026-05-08</p>
+
+<div class="toggle-wrap intensity-toggle-wrap">
+  <div class="toggle intensity-toggle" role="tablist" aria-label="Visual intensity">
+    <button class="i-btn" data-intensity="1" role="tab" aria-selected="false">1 · Text</button>
+    <button class="i-btn" data-intensity="2" role="tab" aria-selected="false">2 · Some</button>
+    <button class="i-btn" data-intensity="3" role="tab" aria-selected="false">3 · Lots</button>
+    <button class="i-btn active" data-intensity="4" role="tab" aria-selected="true">4 · Animated</button>
+    <button class="i-btn" data-intensity="5" role="tab" aria-selected="false">5 · Cosmic</button>
+  </div>
+</div>
+<p class="toggle-meta intensity-meta" id="intensity-meta">ASCII art + a few animations drifting behind</p>
 
 <!-- ================= LONG VERSION (V10) ================= -->
 <div id="long-version" class="version active" role="tabpanel">
@@ -775,6 +871,38 @@
     try { saved = localStorage.getItem(STORE_KEY); } catch (e) { saved = null; }
     if (saved === 'short') show('short');
     else show('long');
+  })();
+
+  (function(){
+    var STORE_KEY_I = 'voicelistens_intensity_v1';
+    var META_I = {
+      '1': 'Straight text — nothing in the margins',
+      '2': 'Faint ASCII motifs, no animation',
+      '3': 'Full ASCII motifs, no animation',
+      '4': 'ASCII + a few animations drifting behind',
+      '5': 'Full ASCII + animals + bright gems + starlight'
+    };
+    var iBtns = document.querySelectorAll('.i-btn');
+    var iMeta = document.getElementById('intensity-meta');
+
+    function setIntensity(level) {
+      document.body.setAttribute('data-intensity', level);
+      iBtns.forEach(function(b){
+        var on = b.dataset.intensity === level;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      if (iMeta) iMeta.textContent = META_I[level] || '';
+      try { localStorage.setItem(STORE_KEY_I, level); } catch (e) { /* ignore */ }
+    }
+
+    iBtns.forEach(function(b){
+      b.addEventListener('click', function(){ setIntensity(b.dataset.intensity); });
+    });
+
+    var saved = null;
+    try { saved = localStorage.getItem(STORE_KEY_I); } catch (e) { saved = null; }
+    setIntensity((saved && META_I[saved]) ? saved : '4');
   })();
 </script>
 
