@@ -35,88 +35,18 @@
     "text": "Background\nI received my BA in Political Science with a minor in Feminist Studies from the University of California, Santa Barbara. Before then, I was born in Austin, Texas, where my parents met. I have since lived in California, New Jersey, North Carolina, Georgia, and now Lewisburg, PA. My dad’s family is Salvadoran and Anglo-American; my mom’s is French-Canadian. I am incredibly grateful for all of their love and support.\nIn my free time, I enjoy hanging out with my cats (and other people, I guess), playing video games, reading fantasy and science fiction, and putting my heart and soul into karaoke nights."
   },
   {
-    "objectID": "posts/2026-05-12-sinatra-2016-memo.html",
-    "href": "posts/2026-05-12-sinatra-2016-memo.html",
-    "title": "Sinatra et al. 2016 — three-page memo",
+    "objectID": "posts/2026-05-09-bobble-canon.html",
+    "href": "posts/2026-05-09-bobble-canon.html",
+    "title": "The Bobble Canon",
     "section": "",
-    "text": "A three-page memo on Sinatra, Wang, Deville, Song, and Barabási’s 2016 Science paper, Quantifying the evolution of individual scientific impact. Covers the Q-model, the random impact rule, and the supplementary-material co-authorship-asymmetry rule that the Coffee Shop project applies to infer mentor → mentee edges.\nOpen in a new tab, print as a PDF, or download for offline reading.\n✦   Read the memo\n\n  \nor download HTML →"
+    "text": "A small, growing collection of parables and Bobbisms. Each one is short. Each one is true in the way bedtime stories are true.\nFive parables — the Porch Frog, the Hum, the Library Bookmark, the Borrowed Pencil, the Train Whistle — plus twelve Bobbisms, two codas, and a glossary.\nThe downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
   },
   {
-    "objectID": "posts/2026-05-12-sinatra-2016-memo.html#why-this-paper-is-in-the-project-file",
-    "href": "posts/2026-05-12-sinatra-2016-memo.html#why-this-paper-is-in-the-project-file",
-    "title": "Sinatra et al. 2016 — three-page memo",
-    "section": "Why this paper is in the project file",
-    "text": "Why this paper is in the project file\nThe Coffee Shop visualization uses Sinatra et al.’s co-authorship-asymmetry rule to infer mentor → mentee edges from publication data. About 99% of the lines in the live viz trace back to that rule. The memo lays out what the paper actually argues (the Q-model and the random impact rule), where the asymmetry rule lives (the supplementary materials), and where it shows its seams in practice."
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
+    "objectID": "posts/2026-05-09-introduction-to-bobbology.html",
+    "href": "posts/2026-05-09-introduction-to-bobbology.html",
+    "title": "Introduction to Bobbology",
     "section": "",
-    "text": "University Teaching Award. Received as Head Teaching Assistant for Introduction to American Politics (Princeton, Spring 2020) under Professor Paul Frymer. The class transitioned from in-person to remote midway through the semester at the start of the COVID pandemic. I maintained the same pedagogy and emphasis on participation, and found that students were hungry for the kind of community and academic discourse the pandemic had cut off.\nBest of Access, Diversity, and Inclusion (BADI) Award. Received in 2021 for co-founding Students of Color and Allies at Princeton in 2019, with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye, and for related advocacy in the Politics Department on issues of access, diversity, and inclusion."
-  },
-  {
-    "objectID": "teaching.html#recognition",
-    "href": "teaching.html#recognition",
-    "title": "Teaching",
-    "section": "",
-    "text": "University Teaching Award. Received as Head Teaching Assistant for Introduction to American Politics (Princeton, Spring 2020) under Professor Paul Frymer. The class transitioned from in-person to remote midway through the semester at the start of the COVID pandemic. I maintained the same pedagogy and emphasis on participation, and found that students were hungry for the kind of community and academic discourse the pandemic had cut off.\nBest of Access, Diversity, and Inclusion (BADI) Award. Received in 2021 for co-founding Students of Color and Allies at Princeton in 2019, with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye, and for related advocacy in the Politics Department on issues of access, diversity, and inclusion."
-  },
-  {
-    "objectID": "teaching.html#courses",
-    "href": "teaching.html#courses",
-    "title": "Teaching",
-    "section": "Courses",
-    "text": "Courses\n\nQuantitative Methods (Undergraduate) — POL 296\nBucknell University, Instructor of Record (Spring 2026)\nFoundations of data analysis for political science research. Students learn R using dplyr and ggplot2 — importing, tidying, transforming, joining, and visualizing data — alongside research design and quantitative methods. Across four problem sets and a semester-long research project, students move from exploratory analysis to producing a literature review, research design, and pre-analysis plan on a topic of their own choosing. By the end of the class, students can read, critique, and produce empirical political science.\n\n\nRace, Ethnicity, and American Politics (Undergraduate) — POLS-246\nBucknell University, Instructor of Record (Fall 2025)\nWhy our identities matter (or don’t) for our politics. The course examines the processes that create, cultivate, politicize, and activate identities across race, ethnicity, gender, sexuality, and religion. Topics span Black, Latino, Asian American, MENA, Indigenous, and LGBTQ+ politics; intersectionality and racial triangulation; racial capitalism; whiteness and white backlash; and constructivist theories of identity. Students complete weekly reading memos, a research paper with peer review, and a group presentation.\n\n\nIntroduction to American Politics (Undergraduate) — POLS-140\nBucknell University, Instructor of Record (Fall 2025)\nAmerican government and politics with a focus on the contemporary United States. Topics: the Constitution, federalism, the separation of powers, civil liberties and civil rights, Congress, the Presidency, the executive branch, the courts, public opinion and voting, parties, interest groups, and economic and foreign policy. The course pairs textbook fundamentals with weekly memos in which students bring their own reactions, experiences, and political views to the course material.\n\n\nIntroduction to Data Analysis in R (Undergraduate)\nEmory University, Instructor of Record (Spring 2024, Spring 2025)\nThe basics of data analysis and how to apply those skills toward research objectives. Topics: the structure of data, R coding using dplyr and ggplot, cleaning data, and producing effective regression tables and visualizations. The course uses R, an open-source coding language widely used by academic researchers. By the end of the class, students have the skills to read and critically analyze academic research and to provide detailed analyses and discussions of their own results.\n\n\nLatinx Politics (Undergraduate)\nEmory University, Instructor (Fall 2023, co-instructed with Professor Bernard Fraga)\nThe past, present, and future of Hispanic and Latina/o/x politics in the United States. Topics: history of conquest, colonization, and immigration; cultural and institutional forces generating and sustaining Latina/o/x identities; differences and similarities across Mexican, Puerto Rican, Cuban, Dominican, Central American, and other origin groups; political preferences, behaviors, and representation; and how the growing Latina/o/x population will shape American politics going forward.\n\n\nThe American Presidency (Undergraduate)\nPrinceton University, Teaching Assistant (Fall 2022, Dr. Lauren Wright)\nPersonal and institutional aspects of the American presidency: origin, nature, uses, and limits of presidential power; the presidential selection process; relationships between the President and other significant political actors — Congress, the press, executive branch agencies, and the public; presidential accountability; and the importance of presidential personality.\n\n\nQualitative Methods (Graduate)\nPrinceton University, Teaching Assistant (Spring 2021, Professor Layna Mosley)\nThe use of qualitative methods in social science research. Topics: research design, elite interviews and interviews with members of the mass public, archival and secondary materials, and the ethics of research involving human participants. The course emphasizes qualitative approaches as part of multi-method research projects, drawing examples from across the political science discipline.\n\n\nIntroduction to American Politics (Undergraduate)\nPrinceton University, Head Teaching Assistant\n\nFall 2020 — Dr. Sarah Staszak\nSpring 2020 — Professor Paul Frymer (received University Teaching Award)\n\nThe institutions and political processes of American government and democracy: the Constitution and American political tradition, federalism, political institutions, elections and representation, interest groups and social movements, civil rights and liberties, and the politics of public policy. The course frequently engages with real-world elections and current examples.\n\n\nJunior Research Workshop (Undergraduate)\nPrinceton University, Teaching Assistant (Fall 2019)\nA workshop for students working on yearlong junior paper projects while learning a variety of methodological approaches. I assisted Professor LaFleur Stephens-Dougan with the seminar on Race and Politics, and Dr. Joanna Wuest with the seminar on Law and Public Affairs."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Download CV (PDF)"
-  },
-  {
-    "objectID": "service.html",
-    "href": "service.html",
-    "title": "Service",
-    "section": "",
-    "text": "2026–present — President, Midwestern Political Science Association Latina/o Politics Caucus\n2025–2026 — Vice President, Midwestern Political Science Association Latina/o Politics Caucus\n2024–2025 — Secretary, Midwestern Political Science Association Latina/o Politics Caucus\n2018–2019 — Student Representative, Princeton University Department of Politics\n2017–2019 — Politics Graduate Representative, Princeton University Office of Inclusion and Diversity"
-  },
-  {
-    "objectID": "service.html#service-positions",
-    "href": "service.html#service-positions",
-    "title": "Service",
-    "section": "",
-    "text": "2026–present — President, Midwestern Political Science Association Latina/o Politics Caucus\n2025–2026 — Vice President, Midwestern Political Science Association Latina/o Politics Caucus\n2024–2025 — Secretary, Midwestern Political Science Association Latina/o Politics Caucus\n2018–2019 — Student Representative, Princeton University Department of Politics\n2017–2019 — Politics Graduate Representative, Princeton University Office of Inclusion and Diversity"
-  },
-  {
-    "objectID": "service.html#students-of-color-and-allies-soca",
-    "href": "service.html#students-of-color-and-allies-soca",
-    "title": "Service",
-    "section": "Students of Color and Allies (SOCA)",
-    "text": "Students of Color and Allies (SOCA)\nIn 2019 at Princeton, I co-founded a social group called Students of Color and Allies with three other graduate students — Sonya Chen, Sonny Kim, and Rikio Inouye. Our main goal was to create a social community and support network for students of color in the Politics Department. We also wanted to create a space for discussing race and ethnic politics and for advocating racial-justice initiatives within and outside the department. The group has since grown, taken on new leadership, and expanded its efforts to include mentorship at local high schools and interdepartmental events."
-  },
-  {
-    "objectID": "service.html#princeton-research-in-experimental-social-science-press",
-    "href": "service.html#princeton-research-in-experimental-social-science-press",
-    "title": "Service",
-    "section": "Princeton Research in Experimental Social Science (PRESS)",
-    "text": "Princeton Research in Experimental Social Science (PRESS)\nIn 2017 I began serving as Graduate Coordinator for PRESS (Princeton Research in Experimental Social Science). I handled event planning and logistics, sought and communicated with speakers, and managed funding and the website. In 2021 I started serving as Graduate Research Consultant — meeting with undergraduate and graduate students working on experimental research and helping them with theory, design, and analysis.\n\nTalks given at PRESS\n\nExperiments 101. Introduction to what experiments are used for, costs and benefits, and how to theorize, design, and analyze them.\nConjoints. Overview of conjoint survey experiments, used to test the effects of multiple treatments that vary independently from one another.\nSurvey Populations. Intermediate session on methods for conducting surveys: online, phone, lab experiments, and field experiments."
-  },
-  {
-    "objectID": "apps.html",
-    "href": "apps.html",
-    "title": "Apps & Games",
-    "section": "",
-    "text": "Seven design directions\n\n\nSeven mockups for the site’s visual style, each named after a piece of the Bobble canon. The shortlist headed for the Style toggle.\n\n\n\n\n\nMay 11, 2026\n\n\n\n\n\n\n\nThe Coffee Shop\n\n\nAn imaginary coffee shop with ~39,500 chairs, every chair a sociologist or political scientist, every conversation a citation. 1950 → 2025.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nWor Gems\n\n\nA WarPips-style auto-battler set 300 years after Gem in Eyes. Three factions, seven units, destructible cover, projectile combat. Pure HTML.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nMind Palace\n\n\nA self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nGem in Eyes — an introduction\n\n\nA small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "writing.html",
-    "href": "writing.html",
-    "title": "Writing",
-    "section": "",
-    "text": "Sinatra et al. 2016 — three-page memo\n\n\nA short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization.\n\n\n\n\n\nMay 12, 2026\n\n\n\n\n\n\n\nIntroduction to Bobbology\n\n\nLecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nThe Bobble Canon\n\n\nFive short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
+    "text": "The field has a problem. The Bobbisms quote Introduction to Bobbology, 3rd ed. often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the 4th edition, restricted to Lecture I: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.\nThe downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
   },
   {
     "objectID": "research.html",
@@ -147,18 +77,88 @@
     "text": "Working Papers\n\n“Bringing Retrospective Voting Back In: Economic Voting and Latino Electoral Volatility”\nWith Tyler Reny, Joshua Dyck, and Bagel Johnson\nRecent Latino electoral behavior has swung significantly — from more GOP support under Bush, to large Democratic margins under Obama, to renewed Republican support under Trump. Theories of group-identity or ideological alignment struggle to explain these patterns. We argue that retrospective economic voting is an under-appreciated driver of this volatility. Given that Latinos have lower SES and weaker partisanship, they are more likely to exhibit economic responsiveness compared to other racial and ethnic groups. We test this argument using three complementary empirical strategies. Compared to White and Black Americans: (1) Latino macropartisanship more closely tracks economic conditions; (2) Latino economic perceptions are more correlated with vote switching toward or away from incumbents; and (3) Latinos are more likely to reward or punish incumbents following changes in local unemployment. We conclude with implications for campaigns, scholars, and American politics.\n\n\n“Who’s Targeting Latinos? How Democrats and Republicans Use Latino Identity Cues in Televised Campaign Ads from 2000–2016”\nWith Ali Valenzuela and Chris Flores\nCo-designed coding scheme to identify Latino identity cues in CMAG TV ad data, 2000–2016. In areas with more Latinos, both parties have over time increased their use of symbolic cues (Spanish messaging, Latino characters). On immigration the parties have diverged: Democrats use pro-immigrant Spanish-language messaging in majority-Latino areas; Republicans use anti-immigrant English-language messaging in low-Latino areas. Both parties are likely to keep pursuing Latino votes through non-immigration identity cues, even as they polarize on immigration itself.\n\n\n“Pa’lante: How the Young Lords Articulated a Radical Latino Political Consciousness”\nThe Young Lords were a radical Puerto Rican group active in New York and Chicago in the 1960s and ’70s. By articulating an anti-establishment Latino political consciousness, they often conflicted with other panethnic groups seeking recognition from the U.S. government, businesses, and media. I examine how they tied community-based engagement and self-sufficiency to progressive politics on race, gender, sexuality, and class. I argue their organizational success came from explicitly emphasizing radical ideology while addressing more immediate community concerns — economic opportunity, education, healthcare. Though the organization fell to factionalism, it offers an alternative conception of Latino panethnicity that diverges from the incorporation-oriented identity that eventually became dominant."
   },
   {
-    "objectID": "posts/2026-05-09-introduction-to-bobbology.html",
-    "href": "posts/2026-05-09-introduction-to-bobbology.html",
-    "title": "Introduction to Bobbology",
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
     "section": "",
-    "text": "The field has a problem. The Bobbisms quote Introduction to Bobbology, 3rd ed. often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the 4th edition, restricted to Lecture I: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.\nThe downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
+    "text": "M-Day\n\n\nA dispatch from the beach during the Micro Soft War — four frames, one morning, one Bobble’s continent.\n\n\n\n\n\nMay 13, 2026\n\n\n\n\n\n\n\nSinatra et al. 2016 — three-page memo\n\n\nA short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization.\n\n\n\n\n\nMay 12, 2026\n\n\n\n\n\n\n\nIntroduction to Bobbology\n\n\nLecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nThe Bobble Canon\n\n\nFive short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/2026-05-09-bobble-canon.html",
-    "href": "posts/2026-05-09-bobble-canon.html",
-    "title": "The Bobble Canon",
+    "objectID": "apps.html",
+    "href": "apps.html",
+    "title": "Apps & Games",
     "section": "",
-    "text": "A small, growing collection of parables and Bobbisms. Each one is short. Each one is true in the way bedtime stories are true.\nFive parables — the Porch Frog, the Hum, the Library Bookmark, the Borrowed Pencil, the Train Whistle — plus twelve Bobbisms, two codas, and a glossary.\nThe downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
+    "text": "Seven design directions\n\n\nSeven mockups for the site’s visual style, each named after a piece of the Bobble canon. The shortlist headed for the Style toggle.\n\n\n\n\n\nMay 11, 2026\n\n\n\n\n\n\n\nThe Coffee Shop\n\n\nAn imaginary coffee shop with ~39,500 chairs, every chair a sociologist or political scientist, every conversation a citation. 1950 → 2025.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nWor Gems\n\n\nA WarPips-style auto-battler set 300 years after Gem in Eyes. Three factions, seven units, destructible cover, projectile combat. Pure HTML.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nMind Palace\n\n\nA self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nGem in Eyes — an introduction\n\n\nA small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "service.html",
+    "href": "service.html",
+    "title": "Service",
+    "section": "",
+    "text": "2026–present — President, Midwestern Political Science Association Latina/o Politics Caucus\n2025–2026 — Vice President, Midwestern Political Science Association Latina/o Politics Caucus\n2024–2025 — Secretary, Midwestern Political Science Association Latina/o Politics Caucus\n2018–2019 — Student Representative, Princeton University Department of Politics\n2017–2019 — Politics Graduate Representative, Princeton University Office of Inclusion and Diversity"
+  },
+  {
+    "objectID": "service.html#service-positions",
+    "href": "service.html#service-positions",
+    "title": "Service",
+    "section": "",
+    "text": "2026–present — President, Midwestern Political Science Association Latina/o Politics Caucus\n2025–2026 — Vice President, Midwestern Political Science Association Latina/o Politics Caucus\n2024–2025 — Secretary, Midwestern Political Science Association Latina/o Politics Caucus\n2018–2019 — Student Representative, Princeton University Department of Politics\n2017–2019 — Politics Graduate Representative, Princeton University Office of Inclusion and Diversity"
+  },
+  {
+    "objectID": "service.html#students-of-color-and-allies-soca",
+    "href": "service.html#students-of-color-and-allies-soca",
+    "title": "Service",
+    "section": "Students of Color and Allies (SOCA)",
+    "text": "Students of Color and Allies (SOCA)\nIn 2019 at Princeton, I co-founded a social group called Students of Color and Allies with three other graduate students — Sonya Chen, Sonny Kim, and Rikio Inouye. Our main goal was to create a social community and support network for students of color in the Politics Department. We also wanted to create a space for discussing race and ethnic politics and for advocating racial-justice initiatives within and outside the department. The group has since grown, taken on new leadership, and expanded its efforts to include mentorship at local high schools and interdepartmental events."
+  },
+  {
+    "objectID": "service.html#princeton-research-in-experimental-social-science-press",
+    "href": "service.html#princeton-research-in-experimental-social-science-press",
+    "title": "Service",
+    "section": "Princeton Research in Experimental Social Science (PRESS)",
+    "text": "Princeton Research in Experimental Social Science (PRESS)\nIn 2017 I began serving as Graduate Coordinator for PRESS (Princeton Research in Experimental Social Science). I handled event planning and logistics, sought and communicated with speakers, and managed funding and the website. In 2021 I started serving as Graduate Research Consultant — meeting with undergraduate and graduate students working on experimental research and helping them with theory, design, and analysis.\n\nTalks given at PRESS\n\nExperiments 101. Introduction to what experiments are used for, costs and benefits, and how to theorize, design, and analyze them.\nConjoints. Overview of conjoint survey experiments, used to test the effects of multiple treatments that vary independently from one another.\nSurvey Populations. Intermediate session on methods for conducting surveys: online, phone, lab experiments, and field experiments."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download CV (PDF)"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "University Teaching Award. Received as Head Teaching Assistant for Introduction to American Politics (Princeton, Spring 2020) under Professor Paul Frymer. The class transitioned from in-person to remote midway through the semester at the start of the COVID pandemic. I maintained the same pedagogy and emphasis on participation, and found that students were hungry for the kind of community and academic discourse the pandemic had cut off.\nBest of Access, Diversity, and Inclusion (BADI) Award. Received in 2021 for co-founding Students of Color and Allies at Princeton in 2019, with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye, and for related advocacy in the Politics Department on issues of access, diversity, and inclusion."
+  },
+  {
+    "objectID": "teaching.html#recognition",
+    "href": "teaching.html#recognition",
+    "title": "Teaching",
+    "section": "",
+    "text": "University Teaching Award. Received as Head Teaching Assistant for Introduction to American Politics (Princeton, Spring 2020) under Professor Paul Frymer. The class transitioned from in-person to remote midway through the semester at the start of the COVID pandemic. I maintained the same pedagogy and emphasis on participation, and found that students were hungry for the kind of community and academic discourse the pandemic had cut off.\nBest of Access, Diversity, and Inclusion (BADI) Award. Received in 2021 for co-founding Students of Color and Allies at Princeton in 2019, with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye, and for related advocacy in the Politics Department on issues of access, diversity, and inclusion."
+  },
+  {
+    "objectID": "teaching.html#courses",
+    "href": "teaching.html#courses",
+    "title": "Teaching",
+    "section": "Courses",
+    "text": "Courses\n\nQuantitative Methods (Undergraduate) — POL 296\nBucknell University, Instructor of Record (Spring 2026)\nFoundations of data analysis for political science research. Students learn R using dplyr and ggplot2 — importing, tidying, transforming, joining, and visualizing data — alongside research design and quantitative methods. Across four problem sets and a semester-long research project, students move from exploratory analysis to producing a literature review, research design, and pre-analysis plan on a topic of their own choosing. By the end of the class, students can read, critique, and produce empirical political science.\n\n\nRace, Ethnicity, and American Politics (Undergraduate) — POLS-246\nBucknell University, Instructor of Record (Fall 2025)\nWhy our identities matter (or don’t) for our politics. The course examines the processes that create, cultivate, politicize, and activate identities across race, ethnicity, gender, sexuality, and religion. Topics span Black, Latino, Asian American, MENA, Indigenous, and LGBTQ+ politics; intersectionality and racial triangulation; racial capitalism; whiteness and white backlash; and constructivist theories of identity. Students complete weekly reading memos, a research paper with peer review, and a group presentation.\n\n\nIntroduction to American Politics (Undergraduate) — POLS-140\nBucknell University, Instructor of Record (Fall 2025)\nAmerican government and politics with a focus on the contemporary United States. Topics: the Constitution, federalism, the separation of powers, civil liberties and civil rights, Congress, the Presidency, the executive branch, the courts, public opinion and voting, parties, interest groups, and economic and foreign policy. The course pairs textbook fundamentals with weekly memos in which students bring their own reactions, experiences, and political views to the course material.\n\n\nIntroduction to Data Analysis in R (Undergraduate)\nEmory University, Instructor of Record (Spring 2024, Spring 2025)\nThe basics of data analysis and how to apply those skills toward research objectives. Topics: the structure of data, R coding using dplyr and ggplot, cleaning data, and producing effective regression tables and visualizations. The course uses R, an open-source coding language widely used by academic researchers. By the end of the class, students have the skills to read and critically analyze academic research and to provide detailed analyses and discussions of their own results.\n\n\nLatinx Politics (Undergraduate)\nEmory University, Instructor (Fall 2023, co-instructed with Professor Bernard Fraga)\nThe past, present, and future of Hispanic and Latina/o/x politics in the United States. Topics: history of conquest, colonization, and immigration; cultural and institutional forces generating and sustaining Latina/o/x identities; differences and similarities across Mexican, Puerto Rican, Cuban, Dominican, Central American, and other origin groups; political preferences, behaviors, and representation; and how the growing Latina/o/x population will shape American politics going forward.\n\n\nThe American Presidency (Undergraduate)\nPrinceton University, Teaching Assistant (Fall 2022, Dr. Lauren Wright)\nPersonal and institutional aspects of the American presidency: origin, nature, uses, and limits of presidential power; the presidential selection process; relationships between the President and other significant political actors — Congress, the press, executive branch agencies, and the public; presidential accountability; and the importance of presidential personality.\n\n\nQualitative Methods (Graduate)\nPrinceton University, Teaching Assistant (Spring 2021, Professor Layna Mosley)\nThe use of qualitative methods in social science research. Topics: research design, elite interviews and interviews with members of the mass public, archival and secondary materials, and the ethics of research involving human participants. The course emphasizes qualitative approaches as part of multi-method research projects, drawing examples from across the political science discipline.\n\n\nIntroduction to American Politics (Undergraduate)\nPrinceton University, Head Teaching Assistant\n\nFall 2020 — Dr. Sarah Staszak\nSpring 2020 — Professor Paul Frymer (received University Teaching Award)\n\nThe institutions and political processes of American government and democracy: the Constitution and American political tradition, federalism, political institutions, elections and representation, interest groups and social movements, civil rights and liberties, and the politics of public policy. The course frequently engages with real-world elections and current examples.\n\n\nJunior Research Workshop (Undergraduate)\nPrinceton University, Teaching Assistant (Fall 2019)\nA workshop for students working on yearlong junior paper projects while learning a variety of methodological approaches. I assisted Professor LaFleur Stephens-Dougan with the seminar on Race and Politics, and Dr. Joanna Wuest with the seminar on Law and Public Affairs."
+  },
+  {
+    "objectID": "posts/2026-05-12-sinatra-2016-memo.html",
+    "href": "posts/2026-05-12-sinatra-2016-memo.html",
+    "title": "Sinatra et al. 2016 — three-page memo",
+    "section": "",
+    "text": "A three-page memo on Sinatra, Wang, Deville, Song, and Barabási’s 2016 Science paper, Quantifying the evolution of individual scientific impact. Covers the Q-model, the random impact rule, and the supplementary-material co-authorship-asymmetry rule that the Coffee Shop project applies to infer mentor → mentee edges.\nOpen in a new tab, print as a PDF, or download for offline reading.\n✦   Read the memo\n\n  \nor download HTML →"
+  },
+  {
+    "objectID": "posts/2026-05-12-sinatra-2016-memo.html#why-this-paper-is-in-the-project-file",
+    "href": "posts/2026-05-12-sinatra-2016-memo.html#why-this-paper-is-in-the-project-file",
+    "title": "Sinatra et al. 2016 — three-page memo",
+    "section": "Why this paper is in the project file",
+    "text": "Why this paper is in the project file\nThe Coffee Shop visualization uses Sinatra et al.’s co-authorship-asymmetry rule to infer mentor → mentee edges from publication data. About 99% of the lines in the live viz trace back to that rule. The memo lays out what the paper actually argues (the Q-model and the random impact rule), where the asymmetry rule lives (the supplementary materials), and where it shows its seams in practice."
   },
   {
     "objectID": "now.html",
