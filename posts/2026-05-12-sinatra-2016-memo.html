@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6fa91e8508e1fd47d943214cfa4b050f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-428bd9602493cdd309990225bd4a24e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -144,14 +144,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#why-this-paper-is-in-the-project-file" id="toc-why-this-paper-is-in-the-project-file" class="nav-link active" data-scroll-target="#why-this-paper-is-in-the-project-file">Why this paper is in the project file</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -191,21 +185,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A three-page memo on Sinatra, Wang, Deville, Song, and Barabási’s 2016 <em>Science</em> paper, <em>Quantifying the evolution of individual scientific impact</em>. Covers the Q-model, the random impact rule, and the supplementary-material co-authorship-asymmetry rule that the Coffee Shop project applies to infer mentor → mentee edges.</p>
-<p>Open in a new tab, print as a PDF, or download for offline reading.</p>
-<p style="margin: 2em 0;">
-<a href="../sinatra-2016-memo.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ✦ &nbsp; Read the memo
-</a>
-&nbsp;&nbsp;
-<a href="../sinatra-2016-memo.html" download="sinatra-2016-memo.html" style="opacity: 0.7;">or download HTML →</a>
-</p>
-<section id="why-this-paper-is-in-the-project-file" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-paper-is-in-the-project-file">Why this paper is in the project file</h2>
-<p>The Coffee Shop visualization uses Sinatra et al.’s co-authorship-asymmetry rule to infer mentor → mentee edges from publication data. About 99% of the lines in the live viz trace back to that rule. The memo lays out what the paper actually argues (the Q-model and the random impact rule), where the asymmetry rule lives (the supplementary materials), and where it shows its seams in practice.</p>
+<p>Redirecting to <a href="../sinatra-2016-memo.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/sinatra-2016-memo.html");</script>
 
 
-</section>
 
 </main> <!-- /main -->
 <!--
@@ -282,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="dw-theme-panel" id="dwThemePanel" role="listbox">
     <!-- items injected by script for compactness -->
     <div class="dw-divider"></div>
-    <a class="dw-what" href="../apps/2026-05-11-design-directions.html">What is this? →</a>
+    <a class="dw-what" href="../design-directions.html">What is this? →</a>
   </div>
 </div>
 
@@ -365,6 +348,44 @@ ul.task-list li input[type="checkbox"] {
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closePanel();
+  });
+})();
+</script>
+
+<!-- derekwakefield.com — open-in-new-tab for standalone HTML artifacts
+     Each of these files is a self-contained page (game, viz, parable, memo)
+     that lives at site root. Listing cards now link directly to them via
+     `path:` in the post frontmatter, but Quarto's link-external-newwindow
+     only fires for cross-origin URLs, so same-site standalone HTMLs would
+     otherwise open in the current tab. This rewrites their <a> tags to
+     target="_blank" so the visitor keeps the listing page they came from. -->
+<script>
+(function () {
+  var STANDALONE = {
+    "gem-in-eyes-intro.html":       1,
+    "bobble-canon.html":            1,
+    "introduction-to-bobbology.html": 1,
+    "mind-palace.html":             1,
+    "wor-gems.html":                1,
+    "design-directions.html":       1,
+    "sinatra-2016-memo.html":       1,
+    "citation_timeline.html":       1,
+    "feedback.html":                1
+  };
+  function isStandalone(href) {
+    if (!href) return false;
+    try {
+      var u = new URL(href, window.location.href);
+      if (u.origin !== window.location.origin) return false;
+      var path = u.pathname.replace(/^\/+/, "");
+      return STANDALONE[path] === 1;
+    } catch (e) { return false; }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("a[href]"), function (a) {
+    if (isStandalone(a.getAttribute("href"))) {
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    }
   });
 })();
 </script>

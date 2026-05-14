@@ -66,21 +66,10 @@
 
 
 
-<p>A three-page memo on Sinatra, Wang, Deville, Song, and Barabási’s 2016 <em>Science</em> paper, <em>Quantifying the evolution of individual scientific impact</em>. Covers the Q-model, the random impact rule, and the supplementary-material co-authorship-asymmetry rule that the Coffee Shop project applies to infer mentor → mentee edges.</p>
-<p>Open in a new tab, print as a PDF, or download for offline reading.</p>
-<p style="margin: 2em 0;">
-<a href="../sinatra-2016-memo.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ✦ &nbsp; Read the memo
-</a>
-&nbsp;&nbsp;
-<a href="../sinatra-2016-memo.html" download="sinatra-2016-memo.html" style="opacity: 0.7;">or download HTML →</a>
-</p>
-<section id="why-this-paper-is-in-the-project-file" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-paper-is-in-the-project-file">Why this paper is in the project file</h2>
-<p>The Coffee Shop visualization uses Sinatra et al.’s co-authorship-asymmetry rule to infer mentor → mentee edges from publication data. About 99% of the lines in the live viz trace back to that rule. The memo lays out what the paper actually argues (the Q-model and the random impact rule), where the asymmetry rule lives (the supplementary materials), and where it shows its seams in practice.</p>
+<p>Redirecting to <a href="../sinatra-2016-memo.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/sinatra-2016-memo.html");</script>
 
 
-</section>
 
  ]]></description>
   <category>reading notes</category>
@@ -90,33 +79,6 @@
   <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>The Bobble Canon</title>
-  <link>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>A small, growing collection of parables and Bobbisms. Each one is short. Each one is true in the way bedtime stories are true.</p>
-<p>Five parables — the <strong>Porch Frog</strong>, the <strong>Hum</strong>, the <strong>Library Bookmark</strong>, the <strong>Borrowed Pencil</strong>, the <strong>Train Whistle</strong> — plus twelve Bobbisms, two codas, and a glossary.</p>
-<p>The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.</p>
-<p style="margin: 2em 0;">
-<a href="../bobble-canon.html" download="bobble-canon.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../bobble-canon.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
-
-
-
- ]]></description>
-  <category>fiction</category>
-  <category>bobble</category>
-  <guid>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</guid>
-  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Introduction to Bobbology</title>
   <link>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</link>
   <description><![CDATA[ 
@@ -124,15 +86,8 @@
 
 
 
-<p>The field has a problem. The Bobbisms quote <em>Introduction to Bobbology, 3rd ed.</em> often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the <strong>4th</strong> edition, restricted to <strong>Lecture I</strong>: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.</p>
-<p>The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.</p>
-<p style="margin: 2em 0;">
-<a href="../introduction-to-bobbology.html" download="introduction-to-bobbology.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../introduction-to-bobbology.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
+<p>Redirecting to <a href="../introduction-to-bobbology.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/introduction-to-bobbology.html");</script>
 
 
 
@@ -141,6 +96,25 @@
   <category>bobbology</category>
   <category>ai</category>
   <guid>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The Bobble Canon</title>
+  <link>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../bobble-canon.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/bobble-canon.html");</script>
+
+
+
+ ]]></description>
+  <category>fiction</category>
+  <category>bobble</category>
+  <guid>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>

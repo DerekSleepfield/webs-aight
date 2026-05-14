@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6fa91e8508e1fd47d943214cfa4b050f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-428bd9602493cdd309990225bd4a24e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -184,16 +184,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A small, growing collection of parables and Bobbisms. Each one is short. Each one is true in the way bedtime stories are true.</p>
-<p>Five parables — the <strong>Porch Frog</strong>, the <strong>Hum</strong>, the <strong>Library Bookmark</strong>, the <strong>Borrowed Pencil</strong>, the <strong>Train Whistle</strong> — plus twelve Bobbisms, two codas, and a glossary.</p>
-<p>The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.</p>
-<p style="margin: 2em 0;">
-<a href="../bobble-canon.html" download="bobble-canon.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../bobble-canon.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
+<p>Redirecting to <a href="../bobble-canon.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/bobble-canon.html");</script>
 
 
 
@@ -272,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="dw-theme-panel" id="dwThemePanel" role="listbox">
     <!-- items injected by script for compactness -->
     <div class="dw-divider"></div>
-    <a class="dw-what" href="../apps/2026-05-11-design-directions.html">What is this? →</a>
+    <a class="dw-what" href="../design-directions.html">What is this? →</a>
   </div>
 </div>
 
@@ -355,6 +347,44 @@ ul.task-list li input[type="checkbox"] {
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closePanel();
+  });
+})();
+</script>
+
+<!-- derekwakefield.com — open-in-new-tab for standalone HTML artifacts
+     Each of these files is a self-contained page (game, viz, parable, memo)
+     that lives at site root. Listing cards now link directly to them via
+     `path:` in the post frontmatter, but Quarto's link-external-newwindow
+     only fires for cross-origin URLs, so same-site standalone HTMLs would
+     otherwise open in the current tab. This rewrites their <a> tags to
+     target="_blank" so the visitor keeps the listing page they came from. -->
+<script>
+(function () {
+  var STANDALONE = {
+    "gem-in-eyes-intro.html":       1,
+    "bobble-canon.html":            1,
+    "introduction-to-bobbology.html": 1,
+    "mind-palace.html":             1,
+    "wor-gems.html":                1,
+    "design-directions.html":       1,
+    "sinatra-2016-memo.html":       1,
+    "citation_timeline.html":       1,
+    "feedback.html":                1
+  };
+  function isStandalone(href) {
+    if (!href) return false;
+    try {
+      var u = new URL(href, window.location.href);
+      if (u.origin !== window.location.origin) return false;
+      var path = u.pathname.replace(/^\/+/, "");
+      return STANDALONE[path] === 1;
+    } catch (e) { return false; }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("a[href]"), function (a) {
+    if (isStandalone(a.getAttribute("href"))) {
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    }
   });
 })();
 </script>

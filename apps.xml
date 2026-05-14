@@ -19,25 +19,8 @@
 
 
 
-<p>Seven visual directions for derekwakefield.com, each anchored to a different parable or piece of the canon. Trimmed from an earlier set of ten — these are the survivors headed for a Style toggle on the live site.</p>
-<p>Open locally — no internet required after the page loads, since each mockup is inlined.</p>
-<p style="margin: 2em 0;">
-<a href="../design-directions.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ✦ &nbsp; Open the comparison board
-</a>
-&nbsp;&nbsp;
-<a href="../design-directions.html" download="design-directions.html" style="opacity: 0.7;">or download HTML →</a>
-</p>
-<p>The seven directions:</p>
-<ul>
-<li><strong>Porch Light</strong> — small voice, on a porch, with one bulb above the door</li>
-<li><strong>Star Chart</strong> — deep night, scholarly astrolabe, nav as constellation</li>
-<li><strong>Bedrock</strong> — heavy slab serif, geological strata, gravity-anchored</li>
-<li><strong>Hum</strong> — soft peach, dusty plum, continuous low-volume wave</li>
-<li><strong>Bobblesphere</strong> — orbital rings, radial nav, sections as planets</li>
-<li><strong>Library Bookmark</strong> — card catalog, dotted dividers, archival quiet</li>
-<li><strong>Mind Palace Map</strong> — antique cartography, compass rose, framed scholarly plate</li>
-</ul>
+<p>Redirecting to <a href="../design-directions.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/design-directions.html");</script>
 
 
 
@@ -68,24 +51,8 @@
 
 
 
-<p>A WarPips-inspired isometric auto-battler. Pick a banner — Tonric Concord, Wildfire Ascension, or Renkindled Mist — and deploy soldiers, miners, snipers, tanks, mechs, helicopters, and airplanes into a destructible battlefield. Anti-air units engage AIR; ground units stay in their lane. Cover blocks 50% of incoming damage, but every prop on the field is destructible. Projectiles track their targets. Each unit type has its own idle animation.</p>
-<p>Built on top of the <em>Gem in Eyes</em> engine canon. Lore-anchored in the bobology.</p>
-<p>Download and open locally — no internet required.</p>
-<p style="margin: 2em 0;">
-<a href="../wor-gems.html" download="wor-gems.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../wor-gems.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
-<p><strong>Controls:</strong> <code>Q W E R T Y U</code> deploy units · click cards to deploy · units auto-engage at range · seek cover when fighting · AA-flagged units engage AIR.</p>
-<p><strong>Factions:</strong></p>
-<ul>
-<li><strong>Tonric Concord</strong> — heavy, durable, arrives. HP +15%, SPD −15%.</li>
-<li><strong>Wildfire Ascension</strong> — glass cannon. ATK +20%, SPD +25%, HP −15%.</li>
-<li><strong>Renkindled Mist</strong> — long-shot, sustain. RNG +10%, COST −5%.</li>
-</ul>
-<p>Balance vetted against 10,000 AI-vs-AI matches; faction winrates landed at 50% / 41% / 59%.</p>
+<p>Redirecting to <a href="../wor-gems.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/wor-gems.html");</script>
 
 
 
@@ -97,33 +64,6 @@
   <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Gem in Eyes — an introduction</title>
-  <link>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>A small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. You hum, and the room hums back. Five gods — <strong>Lik</strong>, <strong>Ton</strong>, <strong>Ren</strong>, <strong>Nif</strong>, <strong>Eye</strong> — keep the corners lit.</p>
-<p>This piece is a self-contained HTML file. Download it and open it locally in any browser.</p>
-<p style="margin: 2em 0;">
-<a href="../gem-in-eyes-intro.html" download="gem-in-eyes-intro.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../gem-in-eyes-intro.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
-
-
-
- ]]></description>
-  <category>game</category>
-  <category>gem-in-eyes</category>
-  <category>bobble</category>
-  <guid>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</guid>
-  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Mind Palace</title>
   <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>
   <description><![CDATA[ 
@@ -131,15 +71,8 @@
 
 
 
-<p>A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.</p>
-<p>Download and open locally — no internet connection required after download.</p>
-<p style="margin: 2em 0;">
-<a href="../mind-palace.html" download="mind-palace.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../mind-palace.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
+<p>Redirecting to <a href="../mind-palace.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/mind-palace.html");</script>
 
 
 
@@ -148,6 +81,26 @@
   <category>visualization</category>
   <category>data</category>
   <guid>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Gem in Eyes — an introduction</title>
+  <link>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../gem-in-eyes-intro.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/gem-in-eyes-intro.html");</script>
+
+
+
+ ]]></description>
+  <category>game</category>
+  <category>gem-in-eyes</category>
+  <category>bobble</category>
+  <guid>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
