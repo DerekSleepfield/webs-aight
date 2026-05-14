@@ -97,33 +97,6 @@
   <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Mind Palace</title>
-  <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.</p>
-<p>Download and open locally — no internet connection required after download.</p>
-<p style="margin: 2em 0;">
-<a href="../mind-palace.html" download="mind-palace.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../mind-palace.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
-
-
-
- ]]></description>
-  <category>project</category>
-  <category>visualization</category>
-  <category>data</category>
-  <guid>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</guid>
-  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Gem in Eyes — an introduction</title>
   <link>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</link>
   <description><![CDATA[ 
@@ -148,6 +121,33 @@
   <category>gem-in-eyes</category>
   <category>bobble</category>
   <guid>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Mind Palace</title>
+  <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A research-grade visualization built around CES (Cooperative Election Study) data, packaged as one self-contained HTML page. The companion Python pipeline shapes the data; the page renders the result.</p>
+<p>Download and open locally — no internet connection required after download.</p>
+<p style="margin: 2em 0;">
+<a href="../mind-palace.html" download="mind-palace.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../mind-palace.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+
+
+
+ ]]></description>
+  <category>project</category>
+  <category>visualization</category>
+  <category>data</category>
+  <guid>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
