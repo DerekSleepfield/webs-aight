@@ -61,33 +61,6 @@
   <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Introduction to Bobbology</title>
-  <link>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The field has a problem. The Bobbisms quote <em>Introduction to Bobbology, 3rd ed.</em> often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the <strong>4th</strong> edition, restricted to <strong>Lecture I</strong>: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.</p>
-<p>The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.</p>
-<p style="margin: 2em 0;">
-<a href="../introduction-to-bobbology.html" download="introduction-to-bobbology.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../introduction-to-bobbology.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
-
-
-
- ]]></description>
-  <category>bobble</category>
-  <category>bobbology</category>
-  <category>ai</category>
-  <guid>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</guid>
-  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>The Bobble Canon</title>
   <link>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</link>
   <description><![CDATA[ 
@@ -112,6 +85,33 @@
   <category>fiction</category>
   <category>bobble</category>
   <guid>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Introduction to Bobbology</title>
+  <link>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The field has a problem. The Bobbisms quote <em>Introduction to Bobbology, 3rd ed.</em> often enough that the citation has started to look like a real book — and yet no one had actually written it. This is a first attempt at the <strong>4th</strong> edition, restricted to <strong>Lecture I</strong>: the four beings (Bobbles, Ekos, Vessels, Daemons), how memory works in ekos, and the law of the decision gate.</p>
+<p>The downloadable file is a self-contained HTML page. Stars twinkle on their own; no internet connection required after download.</p>
+<p style="margin: 2em 0;">
+<a href="../introduction-to-bobbology.html" download="introduction-to-bobbology.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../introduction-to-bobbology.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+
+
+
+ ]]></description>
+  <category>bobble</category>
+  <category>bobbology</category>
+  <category>ai</category>
+  <guid>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
