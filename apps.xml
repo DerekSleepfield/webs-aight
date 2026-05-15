@@ -64,26 +64,6 @@
   <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Mind Palace</title>
-  <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Redirecting to <a href="../mind-palace.html" target="_blank" rel="noopener">the standalone page</a>…</p>
-<script>window.location.replace("/mind-palace.html");</script>
-
-
-
- ]]></description>
-  <category>project</category>
-  <category>visualization</category>
-  <category>data</category>
-  <guid>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</guid>
-  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Gem in Eyes — an introduction</title>
   <link>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</link>
   <description><![CDATA[ 
@@ -101,6 +81,26 @@
   <category>gem-in-eyes</category>
   <category>bobble</category>
   <guid>https://derekwakefield.com/apps/2026-05-09-gem-in-eyes-intro.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Mind Palace</title>
+  <link>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../mind-palace.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/mind-palace.html");</script>
+
+
+
+ ]]></description>
+  <category>project</category>
+  <category>visualization</category>
+  <category>data</category>
+  <guid>https://derekwakefield.com/apps/2026-05-09-mind-palace.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>

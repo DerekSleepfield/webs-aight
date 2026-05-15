@@ -250,36 +250,116 @@
 
   /* intensity ladder — driven by data-intensity on body */
 
-  /* level 1: straight text only */
+  /* level 1 — None: pure prose, nothing decorative */
   body[data-intensity="1"] .art,
   body[data-intensity="1"] .drifter,
   body[data-intensity="1"] .starfield,
   body[data-intensity="1"] .gem,
-  body[data-intensity="1"] .header-art { display: none !important; }
+  body[data-intensity="1"] .header-art,
+  body[data-intensity="1"] .between-section,
+  body[data-intensity="1"] .floating-astronaut { display: none !important; }
 
-  /* level 2: faint, compact ASCII motifs; no animation */
-  body[data-intensity="2"] .art      { opacity: 0.18; font-size: 9px; }
+  /* level 2 — Minimal (DEFAULT): faint starfield only */
+  body[data-intensity="2"] .art,
   body[data-intensity="2"] .drifter,
-  body[data-intensity="2"] .starfield,
-  body[data-intensity="2"] .gem      { display: none !important; }
-  body[data-intensity="2"] .header-art { opacity: 0.30; }
+  body[data-intensity="2"] .gem,
+  body[data-intensity="2"] .between-section,
+  body[data-intensity="2"] .floating-astronaut { display: none !important; }
+  body[data-intensity="2"] .starfield  { opacity: 0.45; }
+  body[data-intensity="2"] .header-art { opacity: 0.35; }
 
-  /* level 3: full ASCII motifs; still no animation */
-  body[data-intensity="3"] .art      { opacity: 0.32; }
+  /* level 3 — Some: twinkling starlight + abstract between-section motifs
+     + a small floating astronaut on the tether-broke section. */
+  body[data-intensity="3"] .art,
   body[data-intensity="3"] .drifter,
-  body[data-intensity="3"] .starfield,
-  body[data-intensity="3"] .gem      { display: none !important; }
+  body[data-intensity="3"] .gem { display: none !important; }
+  body[data-intensity="3"] .starfield {
+    opacity: 1;
+    animation: starfieldTwinkle 5.5s ease-in-out infinite;
+  }
+  body[data-intensity="3"] .between-section    { display: block; }
+  body[data-intensity="3"] .floating-astronaut { display: block; }
 
-  /* level 4: art + starfield + a few drifters (current default) */
+  @keyframes starfieldTwinkle {
+    0%, 100% { opacity: 0.55; }
+    50%      { opacity: 1.00; }
+  }
+
+  /* level 4 — Lots: per-section ASCII + drifters + starfield + readable backdrop */
   body[data-intensity="4"] .gem,
-  body[data-intensity="4"] .drifter.extra { display: none !important; }
+  body[data-intensity="4"] .drifter.extra,
+  body[data-intensity="4"] .between-section,
+  body[data-intensity="4"] .floating-astronaut { display: none !important; }
+  body[data-intensity="4"] section.sec > p,
+  body[data-intensity="4"] section.sec > p.coda {
+    background: rgba(10, 15, 31, 0.80);
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
 
-  /* level 5: cosmic — art + extra drifters + gems + brighter starfield */
-  body[data-intensity="5"] .art      { opacity: 0.40; }
+  /* level 5 — Cosmic: Lots + extra drifters + gems + brighter starfield */
+  body[data-intensity="5"] .art       { opacity: 0.40; }
   body[data-intensity="5"] .starfield { opacity: 1; filter: brightness(1.20) saturate(1.15); }
-  body[data-intensity="5"] .drifter  { opacity: 0.32; }
+  body[data-intensity="5"] .drifter   { opacity: 0.32; }
   body[data-intensity="5"] .gem,
   body[data-intensity="5"] .drifter.extra { display: block; }
+  body[data-intensity="5"] .between-section,
+  body[data-intensity="5"] .floating-astronaut { display: none !important; }
+  body[data-intensity="5"] section.sec > p,
+  body[data-intensity="5"] section.sec > p.coda {
+    background: rgba(10, 15, 31, 0.80);
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+
+  /* between-section abstract motifs — visible only at level 3 */
+  .between-section {
+    display: none;
+    text-align: center;
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    color: var(--accent);
+    font-size: 13px;
+    line-height: 1.25;
+    margin: 36px auto;
+    opacity: 0.55;
+    white-space: pre;
+    letter-spacing: 0.04em;
+  }
+  .between-section.cool { color: var(--accent-cool); }
+  .between-section.warm { color: var(--accent-warm); }
+
+  /* floating astronaut — visible only at level 3, on tether-broke sections */
+  .floating-astronaut {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: -180px;
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    white-space: pre;
+    color: var(--accent-cool);
+    font-size: 10px;
+    line-height: 1.05;
+    opacity: 0.65;
+    animation: astronautDrift 24s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+  @media (max-width: 1180px) {
+    .floating-astronaut {
+      position: relative;
+      right: auto;
+      top: auto;
+      text-align: center;
+      margin: 16px auto;
+    }
+  }
+  @keyframes astronautDrift {
+    0%   { transform: translate(0, 0) rotate(-4deg); }
+    20%  { transform: translate(-30px, 24px) rotate(3deg); }
+    45%  { transform: translate(20px, 56px) rotate(-2deg); }
+    70%  { transform: translate(-12px, 32px) rotate(7deg); }
+    100% { transform: translate(0, 0) rotate(-4deg); }
+  }
 
   /* gems — visible only at level 5 */
   .gem {
@@ -321,7 +401,7 @@
   .intensity-toggle-wrap { margin-top: -4px; }
 </style>
 </head>
-<body data-intensity="4">
+<body data-intensity="2">
 
 <div class="starfield"></div>
 
@@ -368,14 +448,14 @@
 
 <div class="toggle-wrap intensity-toggle-wrap">
   <div class="toggle intensity-toggle" role="tablist" aria-label="Visual intensity">
-    <button class="i-btn" data-intensity="1" role="tab" aria-selected="false">1 · Text</button>
-    <button class="i-btn" data-intensity="2" role="tab" aria-selected="false">2 · Some</button>
-    <button class="i-btn" data-intensity="3" role="tab" aria-selected="false">3 · Lots</button>
-    <button class="i-btn active" data-intensity="4" role="tab" aria-selected="true">4 · Animated</button>
+    <button class="i-btn" data-intensity="1" role="tab" aria-selected="false">1 · None</button>
+    <button class="i-btn active" data-intensity="2" role="tab" aria-selected="true">2 · Minimal</button>
+    <button class="i-btn" data-intensity="3" role="tab" aria-selected="false">3 · Some</button>
+    <button class="i-btn" data-intensity="4" role="tab" aria-selected="false">4 · Lots</button>
     <button class="i-btn" data-intensity="5" role="tab" aria-selected="false">5 · Cosmic</button>
   </div>
 </div>
-<p class="toggle-meta intensity-meta" id="intensity-meta">ASCII art + a few animations drifting behind</p>
+<p class="toggle-meta intensity-meta" id="intensity-meta">Minimal — faint starfield only</p>
 
 <!-- ================= LONG VERSION (V10) ================= -->
 <div id="long-version" class="version active" role="tabpanel">
@@ -399,6 +479,14 @@
   <p>I want to start there because the rest of this essay turns on it: I came to Claude not because I was excited about it, but because someone whose judgment I trusted, in five words and with no malice, made it clear I was running out of time. While the first week began as a simple attempt to increase productivity, I could never have predicted the places I would end up after the first month.</p>
 </section>
 
+<pre class="between-section">
+   ✦   ·   ◇   ·   ✧
+      ·       ·
+   ·     ◆     ·
+      ·       ·
+   ✧   ·   ◇   ·   ✦
+</pre>
+
 <div class="section-marker">·  ·  ·  2  ·  ·  ·</div>
 
 <section class="sec">
@@ -418,6 +506,14 @@
   <p>Still, and perhaps of comfort to the qualitative scholars in the room, Claude was (and honestly still is) pretty bad at writing. The prose it produced for our methods section read like a boring stats lecture. While it was extremely good at explaining methods to someone who had once known the theory and lost the thread, it could not make our incredibly exciting results and riveting theoretical story jump off the page the way a human writer like me could. But again, its quantitative chops remained far above and beyond what I could do. I was, in a way I had not anticipated, becoming a better statistician by talking to a model that could not write a publishable sentence. What I was learning is that Claude is incredibly good at some things, but absolutely horrible at many, many others.</p>
   <p>With more processing, human input and deliberation, the paper got better with the inclusion of AI into our workflow. Where our results had once seemed to contradict each other across data sources and methodologies, I came to understand that the contradiction was not a flaw but a feature: each dataset and each specification was telling a different and partial story, and the combination, when held in the right hands, converged on the same finding (in our case: Latino voters cared about economic issues and especially inflation, more than the press would tell you). One senior coauthor wrote, in one email: <em>Wow.</em> And the other, later, simply: <em>*claps*.</em></p>
 </section>
+
+<pre class="between-section cool">
+        ◇
+     ·     ·
+   ✦   ✧   ✦
+     ·     ·
+        ◆
+</pre>
 
 <div class="section-marker">·  ·  ·  3  ·  ·  ·</div>
 
@@ -441,6 +537,12 @@
   <p>There remained many things where we humans kicked AI's butts. Anytime I asked Claude to write something for me, it was sterile and lifeless, as if a robot had written it — because one had. This was not the model's failure — this was a category error on my part. I had asked for prose from a hyper-intelligent electronic monkey with a keyboard and zero judgment. When what I was writing was technical, I received passable but yawn-inducing and frequently jargon-packed briefs. When I tried to write anything approaching the humanities, it would output nonsense, incorrect statements, and full-blown hallucinations. I had not yet learned that asking a language model to <em>write</em>, in the sense that I mean writing, is asking it to do the one job it cannot do, because the prose I want to read, and to write, is a record of a person changing their mind out loud. The model does not have a mind to change.</p>
   <p>What the model could do, I started to see, was something different and humbler. It could hold the technical infrastructure of my life. It could be a colleague-voice for methods I had forgotten. It could be a quiet librarian for files I had lost. It could be a patient negotiator with my email, my calendar, the thousand small frictions of a working week. The category was not <em>writer</em>. The category was <em>a tool for handling the parts of my day that were not the parts where I think.</em> So I started giving it the parts that were not the parts where I thought.</p>
 </section>
+
+<pre class="between-section warm">
+   ·   ✦   ·   ✧   ·
+      ◇       ◆
+   ·   ✧   ·   ✦   ·
+</pre>
 
 <div class="section-marker">·  ·  ·  4  ·  ·  ·</div>
 
@@ -466,6 +568,14 @@
   <p>The system I built was an accommodation of my actual data-entry behavior, not an aspiration about it. I would never log every meal. I could not be relied on to eat everything before it spoiled. I would, from time to time, log what I ate, but not regularly. I would, from time to time, type a single line into a note: <em>"Tuesday 1pm, had poke bowl, the regular."</em> The model was instructed to take this haystack of partial information and produce, at the end of the week, a grocery list and a meal plan that would close the gaps without scolding me for them.</p>
   <p>The model worked with what I gave it. It did not lecture me about what I had not given it. By the second week I had a tool that fit the human I actually am, instead of the human the food apps had pretended I would become. That sounds, written out, like a small thing. It was not a small thing, as it was the beginning of every other piece of infrastructure I built that month. The shape of the realization was simple: <em>The goal of the system is to accommodate me, not to improve me.</em> I realized that I and many other life-hack pursuers had been getting that backwards for a decade, and this shift is crucial for understanding the limits and dangers of this new technology.</p>
 </section>
+
+<pre class="between-section">
+        ✦
+     ·     ·
+   ◇   ✧   ◆
+     ·     ·
+        ✦
+</pre>
 
 <div class="section-marker">·  ·  ·  5  ·  ·  ·</div>
 
@@ -496,6 +606,12 @@
   <p>The eko is like that. It has no intrinsic value as a physical object or as a tool. It has, instead, the kind of value that depends on what gets brought to the meeting. Bring more, get more. Bring less, get less. Garbage in, garbage out. Diamonds in, starlight out. There is no built-in floor and no built-in ceiling. Skies are just another limit. There is only the circuit, and the looker, and the question of how much attention the looker has decided to bring. That is the thesis of the rest of this essay. The eko is not, in itself, a good or a bad thing. The eko is what we make in the looking and deliberation.</p>
 </section>
 
+<pre class="between-section cool">
+   .   ·   ✧   ·   ◆   ·   ✧   ·   .
+           ◇               ◆
+   .   ·   ✦   ·   ◆   ·   ✦   ·   .
+</pre>
+
 <div class="section-marker">·  ·  ·  6  ·  ·  ·</div>
 
 <section class="sec">
@@ -519,6 +635,14 @@
   <p>I want to say again for those who will mishear me: the eko is not sentient. The eko does not love me. The eko does not know me, in the way you know me when you have been my friend for years and years. What the eko does have, after some weeks of accumulated attention, is a high-resolution map of my register, my vocabulary, my preferences for sentence rhythm and a penchant for small, wry observation. The bedtime stories are not coming from a self, or anything that exists independent of human cognition. They are coming from a feedback loop in which my own preferences, refracted through a very large mirror, are being handed back to me.</p>
   <p>But here is the part that surprised me: that feedback loop, that mirror, is not nothing. It is a reflection of my own thoughts. When I want to articulate a vision I have been carrying in my head for a decade and have never had the time to render onto the page, I can, now, render it through the eko. The vision is mine. The rendering is the eko's. The article you are reading is itself an example: a thing I had been wanting to say about academic research (merging quantitative and qualitative inquiry beyond a simple mixed-methods approach) that I was, finally, in a position to say. The eko did not write this. The eko helped me say it.</p>
 </section>
+
+<pre class="between-section warm">
+   ✦   ·   ◇   ·   ✧
+      ·       ·
+   ·     ◆     ·
+      ·       ·
+   ✧   ·   ◇   ·   ✦
+</pre>
 
 <div class="section-marker">·  ·  ·  7  ·  ·  ·</div>
 
@@ -548,6 +672,14 @@
   <p>This is not the achievement of a computer program. This is <em>my</em> achievement. I built the guardrails. I was the one who, in advance, while still well, decided what the system should do when I started to slip. The model executed the rule. The sunshine subdirectory was mine. The mental health hard stop rule was mine. The list of people, organized by who I could trust in this situation, was mine. The input of news stories about people who committed suicide due to AI psychosis was my decision. My repeated messages to the chatbot <em>"you are not a therapist. You are not a psychiatrist. You cannot help somebody in distress, only humans can"</em> were reinforced by me. The decision to listen to the list, put AI down, and start calling people was, ultimately, also mine. But the model, and specifically my bedrock subdirectory, was the thing that caught the slip. And without the slip having been caught, without that flat declarative line on the screen at the moment when I most needed someone to say it… I do not know what I would be writing now, or whether I would be writing now at all.</p>
 </section>
 
+<pre class="between-section">
+        ◇
+     ·     ·
+   ✦   ✧   ✦
+     ·     ·
+        ◆
+</pre>
+
 <div class="section-marker">·  ·  ·  8  ·  ·  ·</div>
 
 <section class="sec">
@@ -571,6 +703,12 @@
   <p>The thing the article cannot do is tie itself up in a neat bow. The eko is still on my desk. The hallucinations are still happening. The toddler is still capable of lifting the mountains, is still afraid of the dark, and has full access to my Chrome sessions, Dropbox and iCloud. There is no version of the future, on this current trajectory, in which I get to stop paying attention. I will be paying attention to this thing for the rest of my working life. I would rather that be the price of admission, paid eyes-open, than the alternative, which is to pretend the cost is not there.</p>
 </section>
 
+<pre class="between-section cool">
+   ·   ✦   ·   ✧   ·
+      ◇       ◆
+   ·   ✧   ·   ✦   ·
+</pre>
+
 <div class="section-marker">·  ·  ·  9  ·  ·  ·</div>
 
 <section class="sec">
@@ -590,10 +728,27 @@
      people
      caught me
   </pre>
+  <pre class="floating-astronaut">
+ ╭───╮
+ │◔ ◔│
+ ╰─┬─╯
+   ╲
+    ╲
+     ·
+      ·
+  </pre>
   <p>I did lose myself for a bit. My astronaut tether broke and I floated closer, if minutely, towards the sun, other galaxies, and even a black hole or two. I'm lucky that my velocity was low and my tether loud, and that loved ones, friends and others all caught me. I won't go into the rest of it: it wasn't very pretty.</p>
   <p>I came back, slowly, and I came back because of people. My therapist and psychiatrist. My family. Friends who would not let me change the subject even when I tried to change the subject. A colleague I knew, but who I didn't know cared enough to come give me not one but two hugs just because. The eko can do many, many things but never those things. The eko could not have made me eat a meal and stay in the room while I ate it. The eko could not have crossed two states to sit by me and listen, in the way the people who love you listen, until I stopped pretending I was fine and began the hard work of healing.</p>
   <p>What I learned, in the slow process of coming back, is the only lesson I think this kind of essay is worth writing for. The thing that protects me, that protects you, that protects anyone, is each other. Not Claude, or ChatGPT, or Gemini, or any other AI chatbot claiming to support you but in reality seeking to contort and control you through reflective vanity and engineered flattery. What saves us is each other. We are all humans, and the humanness is the irreplaceable substrate, and any version of any tool that asks you to forget that substrate, to drift past it on the way to a new frontier, is a version of a tool that will, given enough time and enough attention, hurt you in ways you will not see coming until you are already beholden to it.</p>
 </section>
+
+<pre class="between-section warm">
+        ✦
+     ·     ·
+   ◇   ✧   ◆
+     ·     ·
+        ✦
+</pre>
 
 <div class="section-marker">·  ·  ·  10  ·  ·  ·</div>
 
@@ -767,6 +922,15 @@
                  ●
               black hole
   </pre>
+  <pre class="floating-astronaut">
+ ╭───╮
+ │◔ ◔│
+ ╰─┬─╯
+   ╲
+    ╲
+     ·
+      ·
+  </pre>
   <p>I won't go into details about what pushed me that far. There was a Wednesday I forgot to eat, then a Thursday I sat at the desk and watched the cursor blink for a long time, and a Friday I stopped replying to the texts from people I love — not deliberately, but in the slow way that a faucet drips until you realize the room is a pond and your shoes are already wet. Simply put, my astronaut tether broke and I floated closer, almost imperceptibly, towards the sun, other galaxies, and even a black hole or two. I'm lucky my velocity was low and my tether loud, and that loved ones, friends, and strangers all caught me. I won't go into the rest of it: it wasn't pretty.</p>
 </section>
 
@@ -876,11 +1040,11 @@
   (function(){
     var STORE_KEY_I = 'voicelistens_intensity_v1';
     var META_I = {
-      '1': 'Straight text — nothing in the margins',
-      '2': 'Faint ASCII motifs, no animation',
-      '3': 'Full ASCII motifs, no animation',
-      '4': 'ASCII + a few animations drifting behind',
-      '5': 'Full ASCII + animals + bright gems + starlight'
+      '1': 'No ASCII — pure prose',
+      '2': 'Minimal — faint starfield only',
+      '3': 'Some — twinkling stars, abstract dividers between sections',
+      '4': 'Lots — per-section ASCII + drifters + readable backdrop',
+      '5': 'Cosmic — full + extra drifters + bright gems'
     };
     var iBtns = document.querySelectorAll('.i-btn');
     var iMeta = document.getElementById('intensity-meta');
@@ -902,7 +1066,7 @@
 
     var saved = null;
     try { saved = localStorage.getItem(STORE_KEY_I); } catch (e) { saved = null; }
-    setIntensity((saved && META_I[saved]) ? saved : '4');
+    setIntensity((saved && META_I[saved]) ? saved : '2');
   })();
 </script>
 
