@@ -8,6 +8,12 @@
 <!--
   Bobble Canon — Starry Night
   Standalone HTML, self-contained. Stars twinkle on their own; no internet required after download.
+  Updated 2026-05-17 (background): restrained refresh of the night sky — two motion families only.
+    (1) twinkling stars, including ~20% color-tinted supernovae (warm amber, rose, cool cyan, violet),
+        with a small handful of "giant" supernovae that pulse slower and glow wider.
+    (2) very soft color drift behind everything (three large blurred galaxies — rose, cyan, amber —
+        that breathe between ~10% and ~22% opacity over a 19-second cycle, blended with `screen`).
+  No ASCII creatures, no god-battles, no black holes — nothing that competes with the prose.
   Updated 2026-05-13: Canon IX added (The Wand and the Hand); the Bobble (as class noun) and the Bobologist
   are now they/them throughout; new Bobbism and Glossary entry added.
   Updated 2026-05-17: Eleven new canons added from the Drive canon and the Bedtime Stories nightly log —
@@ -219,11 +225,70 @@
     h1 { font-size: 2rem; }
     pre.sigil { font-size: 0.75rem; }
   }
+
+  /* ============================================================
+     Supernova-tinted stars + soft background galaxies
+     Added 2026-05-17 for the galaxy-preview build.
+     Only two motion families on the page:
+       (1) twinkling stars (a few are color-tinted supernovae)
+       (2) very slow color drift from three soft galaxies behind everything
+     All decorative layers sit at z-index 0 behind <main>.
+     ============================================================ */
+
+  /* Container shell for the galaxy layer. Shares the fixed inset:0 of
+     #starfield so its children position the same way. */
+  #galaxies {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  /* ---- Supernova-tinted stars (~20% of total star count) ----
+     Four color families: warm amber, rose, cool cyan, violet.
+     Each gets its own glow color via box-shadow. Kept quiet on purpose —
+     the canon should still feel like a starry night first, color-touched second. */
+  .star.nova-warm  { background: #ffb27a; box-shadow: 0 0 5px #ff8a4d, 0 0 10px rgba(255,138,77,0.40); }
+  .star.nova-rose  { background: #ffaad1; box-shadow: 0 0 5px #ff6aaa, 0 0 11px rgba(255,106,170,0.35); }
+  .star.nova-cool  { background: #9ad4ff; box-shadow: 0 0 5px #5fb6ff, 0 0 11px rgba(95,182,255,0.35); }
+  .star.nova-viol  { background: #c79bff; box-shadow: 0 0 6px #9b6bff, 0 0 13px rgba(155,107,255,0.35); }
+  .star.nova-giant {
+    /* a brighter, slower-pulsing "supernova" — bigger glow, longer twinkle */
+    box-shadow: 0 0 8px currentColor, 0 0 18px currentColor, 0 0 32px currentColor;
+    animation-duration: 9s !important;
+  }
+
+  /* ---- Soft galaxies (background color drift) ----
+     Three big blurred radial gradients that breathe in opacity + scale over
+     17 seconds. Blended with `screen` so they tint the night sky rather than
+     painting over it. Capped at ~22% peak opacity so the prose stays primary. */
+  .galaxy {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(34px);
+    opacity: 0.16;
+    mix-blend-mode: screen;
+    animation: galaxy-breathe 19s ease-in-out infinite;
+  }
+  .galaxy.g-rose  { background: radial-gradient(circle, rgba(255,106,170,0.85) 0%, rgba(155,107,255,0.35) 45%, transparent 72%); }
+  .galaxy.g-cyan  { background: radial-gradient(circle, rgba(95,182,255,0.85)  0%, rgba(106,255,212,0.35) 45%, transparent 72%); }
+  .galaxy.g-amber { background: radial-gradient(circle, rgba(255,178,122,0.85) 0%, rgba(255,106,170,0.35) 45%, transparent 72%); }
+
+  @keyframes galaxy-breathe {
+    0%, 100% { opacity: 0.10; transform: scale(1);    }
+    50%      { opacity: 0.22; transform: scale(1.05); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .galaxy { animation: none; opacity: 0.14; }
+  }
 </style>
 </head>
 <body>
 
 <div id="starfield" aria-hidden="true"></div>
+<div id="galaxies" aria-hidden="true"></div>
 
 <main>
 
@@ -798,21 +863,64 @@ ThinKing and Uriel</p>
 </main>
 
 <script>
+/* =========================================================================
+   Bobble Canon — Galaxy-preview background generator
+   -------------------------------------------------------------------------
+   Two layers only:
+     #starfield  ~108 twinkling stars, ~20% of which are color-tinted supernovae
+     #galaxies   3 large soft galaxies in rose / cyan / amber that breathe slowly
+   Nothing else. No ASCII creatures, no god-battles, no spinning black holes.
+   ========================================================================= */
 (function() {
+  var rand = function(a, b) { return a + Math.random() * (b - a); };
+  var pick = function(arr) { return arr[Math.floor(Math.random() * arr.length)]; };
+
+  /* ---------- LAYER 1: stars (base + supernovae) ---------- */
   var field = document.getElementById('starfield');
-  if (!field) return;
-  var count = 90;
-  for (var i = 0; i < count; i++) {
-    var s = document.createElement('span');
-    s.className = 'star';
-    s.style.left = (Math.random() * 100) + '%';
-    s.style.top = (Math.random() * 100) + '%';
-    var size = (Math.random() * 1.6 + 0.8).toFixed(2);
-    s.style.width = size + 'px';
-    s.style.height = size + 'px';
-    s.style.animationDelay = (Math.random() * 5).toFixed(2) + 's';
-    s.style.animationDuration = (3 + Math.random() * 4).toFixed(2) + 's';
-    field.appendChild(s);
+  if (field) {
+    var STAR_COUNT = 108;           // was 90; +20%
+    var NOVA_RATIO = 0.20;          // ~20% are supernova-colored
+    var NOVA_CLASSES = ['nova-warm', 'nova-rose', 'nova-cool', 'nova-viol'];
+    for (var i = 0; i < STAR_COUNT; i++) {
+      var s = document.createElement('span');
+      s.className = 'star';
+      if (Math.random() < NOVA_RATIO) {
+        s.classList.add(pick(NOVA_CLASSES));
+        // ~1 in 6 supernovae are giants — bigger glow, slower pulse
+        if (Math.random() < 0.16) s.classList.add('nova-giant');
+      }
+      s.style.left = rand(0, 100) + '%';
+      s.style.top  = rand(0, 100) + '%';
+      var size = (rand(0.8, 2.4)).toFixed(2);
+      s.style.width  = size + 'px';
+      s.style.height = size + 'px';
+      s.style.animationDelay    = rand(0, 5).toFixed(2) + 's';
+      s.style.animationDuration = rand(3, 7).toFixed(2) + 's';
+      field.appendChild(s);
+    }
+  }
+
+  /* ---------- LAYER 2: galaxies (soft background color drift) ---------- */
+  // Three big blurred clouds in rose / cyan / amber. Each lives at a corner
+  // and breathes in opacity + scale over ~19 seconds, just enough to make
+  // the night sky feel alive without ever pulling the eye off the prose.
+  var gal = document.getElementById('galaxies');
+  if (gal) {
+    var galaxies = [
+      { cls: 'g-rose',  left: rand(-8, 12), top: rand(-6, 16), size: rand(320, 480), delay: 0   },
+      { cls: 'g-cyan',  left: rand(72, 92), top: rand(60, 86), size: rand(300, 460), delay: 5.3 },
+      { cls: 'g-amber', left: rand(-5, 16), top: rand(62, 82), size: rand(280, 440), delay: 9.8 }
+    ];
+    galaxies.forEach(function(g) {
+      var d = document.createElement('div');
+      d.className = 'galaxy ' + g.cls;
+      d.style.left = g.left + '%';
+      d.style.top  = g.top  + '%';
+      d.style.width  = g.size + 'px';
+      d.style.height = g.size + 'px';
+      d.style.animationDelay = g.delay + 's';
+      gal.appendChild(d);
+    });
   }
 })();
 </script>
