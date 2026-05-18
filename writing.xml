@@ -13,108 +13,42 @@
 <lastBuildDate>Thu, 14 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A Voice That Listens</title>
-  <link>https://derekwakefield.com/posts/2026-05-14-a-voice-that-listens.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>A short essay about a month spent with an AI as a thinking partner — what worked, what didn’t, what almost broke, and what came back through people.</p>
-<p>Two versions live in one page. A small toggle at the top switches between them. The short version is a single-arc Modern Love–shaped cut (around thirteen paragraphs). The long version is the full ten-section essay, with section markers. Both share the same starfield and the same drifting ASCII creatures behind the text.</p>
-<p>Download and open locally — the toggle is JavaScript, so the file works fully offline once downloaded.</p>
-<p style="margin: 2em 0;">
-<a href="../a-voice-that-listens.html" download="a-voice-that-listens.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
-   ⬇ &nbsp; Download HTML
-</a>
-&nbsp;&nbsp;
-<a href="../a-voice-that-listens.html" style="opacity: 0.7;">or open in browser →</a>
-</p>
-
-
-
- ]]></description>
+  <link>https://derekwakefield.com/</link>
+  <description>My month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.</description>
   <category>essay</category>
   <category>writing</category>
   <category>claude</category>
   <category>longform</category>
-  <guid>https://derekwakefield.com/posts/2026-05-14-a-voice-that-listens.html</guid>
+  <guid>https://derekwakefield.com/</guid>
   <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>M-Day</title>
-  <link>https://derekwakefield.com/posts/2026-05-13-m-day.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
- ]]></description>
-  <category>bobble-canon</category>
-  <category>parable</category>
-  <category>micro-soft-war</category>
-  <guid>https://derekwakefield.com/posts/2026-05-13-m-day.html</guid>
-  <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Sinatra et al. 2016 — three-page memo</title>
-  <link>https://derekwakefield.com/posts/2026-05-12-sinatra-2016-memo.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Redirecting to <a href="../sinatra-2016-memo.html" target="_blank" rel="noopener">the standalone page</a>…</p>
-<script>window.location.replace("/sinatra-2016-memo.html");</script>
-
-
-
- ]]></description>
+  <title>Sinatra et al. 2016 — three-page memo</title>
+  <link>https://derekwakefield.com/</link>
+  <description>A short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization.</description>
   <category>reading notes</category>
   <category>network analysis</category>
   <category>methods</category>
-  <guid>https://derekwakefield.com/posts/2026-05-12-sinatra-2016-memo.html</guid>
+  <guid>https://derekwakefield.com/</guid>
   <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The Bobble Canon</title>
-  <link>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Redirecting to <a href="../bobble-canon.html" target="_blank" rel="noopener">the standalone page</a>…</p>
-<script>window.location.replace("/bobble-canon.html");</script>
-
-
-
- ]]></description>
+  <link>https://derekwakefield.com/</link>
+  <description>A collection of short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.</description>
   <category>fiction</category>
   <category>bobble</category>
-  <guid>https://derekwakefield.com/posts/2026-05-09-bobble-canon.html</guid>
+  <guid>https://derekwakefield.com/</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Introduction to Bobbology</title>
-  <link>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Redirecting to <a href="../introduction-to-bobbology.html" target="_blank" rel="noopener">the standalone page</a>…</p>
-<script>window.location.replace("/introduction-to-bobbology.html");</script>
-
-
-
- ]]></description>
+  <link>https://derekwakefield.com/</link>
+  <description>Lecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.</description>
   <category>bobble</category>
   <category>bobbology</category>
   <category>ai</category>
-  <guid>https://derekwakefield.com/posts/2026-05-09-introduction-to-bobbology.html</guid>
+  <guid>https://derekwakefield.com/</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
