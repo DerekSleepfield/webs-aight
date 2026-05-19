@@ -17,6 +17,7 @@ project:
     - theme-switcher.html
     - themes.css
     - sinatra-2016-memo.html
+    - war-gems-faction-lore.html
 
 website:
   title: "Derek Wakefield"
