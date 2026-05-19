@@ -2,6 +2,11 @@
 title: "Writing"
 listing:
   contents:
+    - title: "The Friends We Find Along the Way"
+      path: /friends-we-find.html
+      date: 2026-05-19
+      description: "An essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles."
+      categories: [essay, writing, claude, bobbology, longform]
     - title: "A Voice That Listens"
       path: /a-voice-that-listens.html
       date: 2026-05-14
