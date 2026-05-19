@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Derek Wakefield</title>
+<link>https://derekwakefield.com/presentations.html</link>
+<atom:link href="https://derekwakefield.com/presentations.xml" rel="self" type="application/rss+xml"/>
+<description>Assistant Professor of Political Science, Bucknell University</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Tue, 19 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>How to Engage in Politics as Faculty</title>
+  <link>https://derekwakefield.com/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Opening <a href="../assets/how-to-engage-in-politics-as-faculty.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>…</p>
+<script>window.location.replace("/assets/how-to-engage-in-politics-as-faculty.pdf");</script>
+
+
+
+ ]]></description>
+  <category>presentation</category>
+  <category>faculty</category>
+  <category>politics</category>
+  <category>campus connect</category>
+  <guid>https://derekwakefield.com/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html</guid>
+  <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The Wand and the Hand</title>
+  <link>https://derekwakefield.com/presentations/2026-05-19-wand-and-hand.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Opening <a href="../assets/the-wand-and-the-hand.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>…</p>
+<script>window.location.replace("/assets/the-wand-and-the-hand.pdf");</script>
+
+
+
+ ]]></description>
+  <category>presentation</category>
+  <category>ai literacy</category>
+  <category>bobble</category>
+  <category>canon</category>
+  <guid>https://derekwakefield.com/presentations/2026-05-19-wand-and-hand.html</guid>
+  <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

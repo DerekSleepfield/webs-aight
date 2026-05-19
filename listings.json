@@ -4,9 +4,21 @@
     "items": [
       "/apps/2026-05-11-design-directions.html",
       "/apps/2026-05-10-coffee-shop-network.html",
-      "/apps/2026-05-10-wor-gems.html",
-      "/apps/2026-05-09-gem-in-eyes-intro.html",
       "/apps/2026-05-09-mind-palace.html"
+    ]
+  },
+  {
+    "listing": "/presentations.html",
+    "items": [
+      "/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
+      "/presentations/2026-05-19-wand-and-hand.html"
+    ]
+  },
+  {
+    "listing": "/games.html",
+    "items": [
+      "/games/2026-05-10-wor-gems.html",
+      "/games/2026-05-09-gem-in-eyes-intro.html"
     ]
   },
   {

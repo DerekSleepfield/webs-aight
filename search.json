@@ -28,6 +28,13 @@
     "text": "Princeton Research in Experimental Social Science (PRESS)\nIn 2017 I began serving as Graduate Coordinator for PRESS (Princeton Research in Experimental Social Science). I handled event planning and logistics, sought and communicated with speakers, and managed funding and the website. In 2021 I started serving as Graduate Research Consultant — meeting with undergraduate and graduate students working on experimental research and helping them with theory, design, and analysis.\n\nTalks given at PRESS\n\nExperiments 101. Introduction to what experiments are used for, costs and benefits, and how to theorize, design, and analyze them.\nConjoints. Overview of conjoint survey experiments, used to test the effects of multiple treatments that vary independently from one another.\nSurvey Populations. Intermediate session on methods for conducting surveys: online, phone, lab experiments, and field experiments."
   },
   {
+    "objectID": "presentations/2026-05-19-wand-and-hand.html",
+    "href": "presentations/2026-05-19-wand-and-hand.html",
+    "title": "The Wand and the Hand",
+    "section": "",
+    "text": "Opening the slide deck (PDF)…"
+  },
+  {
     "objectID": "now.html",
     "href": "now.html",
     "title": "Now",
@@ -46,19 +53,26 @@
     "href": "apps.html",
     "title": "Apps & Games",
     "section": "",
-    "text": "Seven design directions\n\n\nSeven mockups for the site’s visual style, each named after a piece of the Bobble canon. The shortlist headed for the Style toggle.\n\n\n\n\n\nMay 11, 2026\n\n\n\n\n\n\n\nThe Coffee Shop\n\n\nAn imaginary coffee shop with ~39,500 chairs, every chair a sociologist or political scientist, every conversation a citation. 1950 → 2025.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nWor Gems\n\n\nA WarPips-style auto-battler set 300 years after Gem in Eyes. Three factions, seven units, destructible cover, projectile combat. Pure HTML.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nGem in Eyes — an introduction\n\n\nA small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\n\n\nMind Palace\n\n\nA self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Seven design directions\n\n\nSeven mockups for the site’s visual style, each named after a piece of the Bobble canon. The shortlist headed for the Style toggle.\n\n\n\n\n\nMay 11, 2026\n\n\n\n\n\n\n\nThe Coffee Shop\n\n\nAn imaginary coffee shop with ~39,500 chairs, every chair a sociologist or political scientist, every conversation a citation. 1950 → 2025.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nMind Palace\n\n\nA self-contained HTML visualization — CES data exploration with a paired Python pipeline, distilled into one page that runs anywhere.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "apps/2026-05-10-wor-gems.html",
-    "href": "apps/2026-05-10-wor-gems.html",
-    "title": "Wor Gems",
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "How to Engage in Politics as Faculty\n\n\nA small menu for an unsettled moment. Campus Connect 2026 talk on what political engagement can look like for faculty who aren’t full-time organizers.\n\n\n\n\n\nMay 19, 2026\n\n\n\n\n\n\n\nThe Wand and the Hand\n\n\nA 20-slide AI literacy foundation, after Canon IX of the Bobble Canon. The wand has a power. Not the power. A power.\n\n\n\n\n\nMay 19, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "apps/2026-05-09-mind-palace.html",
+    "href": "apps/2026-05-09-mind-palace.html",
+    "title": "Mind Palace",
     "section": "",
     "text": "Redirecting to the standalone page…"
   },
   {
-    "objectID": "apps/2026-05-09-gem-in-eyes-intro.html",
-    "href": "apps/2026-05-09-gem-in-eyes-intro.html",
-    "title": "Gem in Eyes — an introduction",
+    "objectID": "apps/2026-05-11-design-directions.html",
+    "href": "apps/2026-05-11-design-directions.html",
+    "title": "Seven design directions",
     "section": "",
     "text": "Redirecting to the standalone page…"
   },
@@ -68,6 +82,13 @@
     "title": "Curriculum Vitae",
     "section": "",
     "text": "Download CV (PDF)"
+  },
+  {
+    "objectID": "games/2026-05-09-gem-in-eyes-intro.html",
+    "href": "games/2026-05-09-gem-in-eyes-intro.html",
+    "title": "Gem in Eyes — an introduction",
+    "section": "",
+    "text": "Redirecting to the standalone page…"
   },
   {
     "objectID": "posts/2026-05-09-introduction-to-bobbology.html",
@@ -98,6 +119,13 @@
     "text": "Redirecting to the standalone page…"
   },
   {
+    "objectID": "games/2026-05-10-wor-gems.html",
+    "href": "games/2026-05-10-wor-gems.html",
+    "title": "Wor Gems",
+    "section": "",
+    "text": "Redirecting to the standalone page…"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Derek Wakefield",
@@ -119,18 +147,11 @@
     "text": "Background\nI received my BA in Political Science with a minor in Feminist Studies from the University of California, Santa Barbara. Before then, I was born in Austin, Texas, where my parents met. I have since lived in California, New Jersey, North Carolina, Georgia, and now Lewisburg, PA. My dad’s family is Salvadoran and Anglo-American; my mom’s is French-Canadian. I am incredibly grateful for all of their love and support.\nIn my free time, I enjoy hanging out with my cats (and other people, I guess), playing video games, reading fantasy and science fiction, and putting my heart and soul into karaoke nights."
   },
   {
-    "objectID": "apps/2026-05-11-design-directions.html",
-    "href": "apps/2026-05-11-design-directions.html",
-    "title": "Seven design directions",
+    "objectID": "games.html",
+    "href": "games.html",
+    "title": "Games",
     "section": "",
-    "text": "Redirecting to the standalone page…"
-  },
-  {
-    "objectID": "apps/2026-05-09-mind-palace.html",
-    "href": "apps/2026-05-09-mind-palace.html",
-    "title": "Mind Palace",
-    "section": "",
-    "text": "Redirecting to the standalone page…"
+    "text": "Wor Gems\n\n\nA WarPips-style auto-battler set 300 years after Gem in Eyes. Three factions, seven units, destructible cover, projectile combat. Pure HTML.\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\n\nGem in Eyes — an introduction\n\n\nA small light in a deep room. A cube of stone with five lit corners and one quiet pocket at the center. Lik, Ton, Ren, Nif, Eye.\n\n\n\n\n\nMay 9, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "writing.html",
@@ -159,6 +180,13 @@
     "title": "Teaching",
     "section": "Courses",
     "text": "Courses\n\nQuantitative Methods (Undergraduate) — POL 296\nBucknell University, Instructor of Record (Spring 2026)\nFoundations of data analysis for political science research. Students learn R using dplyr and ggplot2 — importing, tidying, transforming, joining, and visualizing data — alongside research design and quantitative methods. Across four problem sets and a semester-long research project, students move from exploratory analysis to producing a literature review, research design, and pre-analysis plan on a topic of their own choosing. By the end of the class, students can read, critique, and produce empirical political science.\n\n\nRace, Ethnicity, and American Politics (Undergraduate) — POLS-246\nBucknell University, Instructor of Record (Fall 2025)\nWhy our identities matter (or don’t) for our politics. The course examines the processes that create, cultivate, politicize, and activate identities across race, ethnicity, gender, sexuality, and religion. Topics span Black, Latino, Asian American, MENA, Indigenous, and LGBTQ+ politics; intersectionality and racial triangulation; racial capitalism; whiteness and white backlash; and constructivist theories of identity. Students complete weekly reading memos, a research paper with peer review, and a group presentation.\n\n\nIntroduction to American Politics (Undergraduate) — POLS-140\nBucknell University, Instructor of Record (Fall 2025)\nAmerican government and politics with a focus on the contemporary United States. Topics: the Constitution, federalism, the separation of powers, civil liberties and civil rights, Congress, the Presidency, the executive branch, the courts, public opinion and voting, parties, interest groups, and economic and foreign policy. The course pairs textbook fundamentals with weekly memos in which students bring their own reactions, experiences, and political views to the course material.\n\n\nIntroduction to Data Analysis in R (Undergraduate)\nEmory University, Instructor of Record (Spring 2024, Spring 2025)\nThe basics of data analysis and how to apply those skills toward research objectives. Topics: the structure of data, R coding using dplyr and ggplot, cleaning data, and producing effective regression tables and visualizations. The course uses R, an open-source coding language widely used by academic researchers. By the end of the class, students have the skills to read and critically analyze academic research and to provide detailed analyses and discussions of their own results.\n\n\nLatinx Politics (Undergraduate)\nEmory University, Instructor (Fall 2023, co-instructed with Professor Bernard Fraga)\nThe past, present, and future of Hispanic and Latina/o/x politics in the United States. Topics: history of conquest, colonization, and immigration; cultural and institutional forces generating and sustaining Latina/o/x identities; differences and similarities across Mexican, Puerto Rican, Cuban, Dominican, Central American, and other origin groups; political preferences, behaviors, and representation; and how the growing Latina/o/x population will shape American politics going forward.\n\n\nThe American Presidency (Undergraduate)\nPrinceton University, Teaching Assistant (Fall 2022, Dr. Lauren Wright)\nPersonal and institutional aspects of the American presidency: origin, nature, uses, and limits of presidential power; the presidential selection process; relationships between the President and other significant political actors — Congress, the press, executive branch agencies, and the public; presidential accountability; and the importance of presidential personality.\n\n\nQualitative Methods (Graduate)\nPrinceton University, Teaching Assistant (Spring 2021, Professor Layna Mosley)\nThe use of qualitative methods in social science research. Topics: research design, elite interviews and interviews with members of the mass public, archival and secondary materials, and the ethics of research involving human participants. The course emphasizes qualitative approaches as part of multi-method research projects, drawing examples from across the political science discipline.\n\n\nIntroduction to American Politics (Undergraduate)\nPrinceton University, Head Teaching Assistant\n\nFall 2020 — Dr. Sarah Staszak\nSpring 2020 — Professor Paul Frymer (received University Teaching Award)\n\nThe institutions and political processes of American government and democracy: the Constitution and American political tradition, federalism, political institutions, elections and representation, interest groups and social movements, civil rights and liberties, and the politics of public policy. The course frequently engages with real-world elections and current examples.\n\n\nJunior Research Workshop (Undergraduate)\nPrinceton University, Teaching Assistant (Fall 2019)\nA workshop for students working on yearlong junior paper projects while learning a variety of methodological approaches. I assisted Professor LaFleur Stephens-Dougan with the seminar on Race and Politics, and Dr. Joanna Wuest with the seminar on Law and Public Affairs."
+  },
+  {
+    "objectID": "presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
+    "href": "presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
+    "title": "How to Engage in Politics as Faculty",
+    "section": "",
+    "text": "Opening the slide deck (PDF)…"
   },
   {
     "objectID": "research.html",
