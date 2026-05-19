@@ -41,8 +41,12 @@ website:
         href: now.qmd
       - text: "Writing"
         href: writing.qmd
-      - text: "Apps & Games"
+      - text: "Presentations"
+        href: presentations.qmd
+      - text: "Apps"
         href: apps.qmd
+      - text: "Games"
+        href: games.qmd
   page-footer:
     left: "© 2026 Derek Wakefield"
     right:

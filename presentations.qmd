@@ -1,0 +1,9 @@
+---
+title: "Presentations"
+listing:
+  contents: presentations
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+  feed: true
+---
