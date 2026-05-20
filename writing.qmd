@@ -2,11 +2,11 @@
 title: "Writing"
 listing:
   contents:
-    - title: "War Gems — Faction Lore (v0.32.2)"
-      path: /war-gems-faction-lore.html
-      date: 2026-05-19
-      description: "Canonical lore for War Gems' three sentient elements — Mud, Lava, Water — and the factions they became. Origins, death semantics, gem-relationships, visual register, and a small canon of stories. Pinned so engine, art, and writing all reference the same source."
-      categories: [fiction, lore, war gems, worldbuilding]
+    - title: "Gem Wars — Lore (v0.33)"
+      path: /gem-wars-lore.html
+      date: 2026-05-20
+      description: "Canonical lore for Gem Wars' three sentient elements — Mud, Lava, Water — and the factions they became. Origins, death semantics, gem-relationships, visual register, and a small canon of stories. Pinned so engine, art, and writing all reference the same source."
+      categories: [fiction, lore, gem wars, worldbuilding]
     - title: "The Friends We Find Along the Way"
       path: /friends-we-find.html
       date: 2026-05-19
