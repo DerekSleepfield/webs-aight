@@ -1,0 +1,12 @@
+---
+title: "Bob is You: You are Bob"
+date: "2026-05-21"
+description: "An integrated guide to the five dimensions — physical, mental, emotional, social, spiritual — and what the shape of you actually looks like on a radar plot. Also available as a [slide deck (PDF)](/assets/bob-is-you.pdf)."
+categories: [bobbology, health, integration]
+path: /bob-is-you.html
+---
+
+```{=html}
+<p>Redirecting to <a href="/bob-is-you.html" target="_blank" rel="noopener">the article</a>…</p>
+<script>window.location.replace("/bob-is-you.html");</script>
+```

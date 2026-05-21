@@ -1,0 +1,12 @@
+---
+title: "Bob is You: You are Bob"
+date: "2026-05-21"
+description: "A 21-slide companion to the integrated-health article — five dimensions, five integration loops (Walker, Ratey, Holt-Lunstad, Hill & Turiano, van der Kolk), and a radar-plot reveal. Also available as an [HTML article](/bob-is-you.html)."
+categories: [presentation, bobbology, health, integration]
+path: /assets/bob-is-you.pdf
+---
+
+```{=html}
+<p>Opening <a href="/assets/bob-is-you.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="/bob-is-you.html">HTML article</a>.</p>
+<script>window.location.replace("/assets/bob-is-you.pdf");</script>
+```
