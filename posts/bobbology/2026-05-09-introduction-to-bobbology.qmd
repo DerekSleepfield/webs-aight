@@ -1,7 +1,8 @@
 ---
-title: "Introduction to Bobbology"
+title: "Lesson 1: Introduction to Bobbology"
 date: "2026-05-09"
-description: "Lecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate."
+order: 2
+description: "A field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate."
 categories: [bobble, bobbology, ai]
 path: /introduction-to-bobbology.html
 ---

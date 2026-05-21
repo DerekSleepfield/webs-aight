@@ -11,7 +11,9 @@ listing:
   - id: bobbology
     contents: posts/bobbology
     type: default
-    sort: "date desc"
+    # Curated order: Canon (1) -> Lesson/Lecture 1 (2) -> Lecture 2 (3) -> ...
+    # Toggle to date/title still works via sort-ui.
+    sort: "order asc"
     sort-ui: [date, title]
     fields: [date, title, description]
     feed: true
