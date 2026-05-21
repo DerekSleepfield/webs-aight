@@ -1,5 +1,5 @@
 ---
-title: "Apps & Games"
+title: "Apps"
 listing:
   contents: apps
   type: default

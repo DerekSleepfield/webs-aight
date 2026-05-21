@@ -1,7 +1,0 @@
----
-title: "M-Day"
-date: "2026-05-13"
-description: "A dispatch from the beach during the Micro Soft War — four frames, one morning, one Bobble's continent."
-categories: [bobble-canon, parable, micro-soft-war]
-path: /m-day.html
----

@@ -10,3 +10,7 @@ Thumbs.db
 .vscode/
 *~
 *.swp
+
+# LibreOffice / Word lock + temp files
+.~lock.*#
+*.tmp

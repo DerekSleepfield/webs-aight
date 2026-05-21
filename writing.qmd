@@ -1,39 +1,40 @@
 ---
 title: "Writing"
 listing:
-  contents:
-    - title: "Gem Wars — Lore (v0.33)"
-      path: /gem-wars-lore.html
-      date: 2026-05-20
-      description: "Canonical lore for Gem Wars' three sentient elements — Mud, Lava, Water — and the factions they became. Origins, death semantics, gem-relationships, visual register, and a small canon of stories. Pinned so engine, art, and writing all reference the same source."
-      categories: [fiction, lore, gem wars, worldbuilding]
-    - title: "The Friends We Find Along the Way"
-      path: /friends-we-find.html
-      date: 2026-05-19
-      description: "An essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles."
-      categories: [essay, writing, claude, bobbology, longform]
-    - title: "A Voice That Listens"
-      path: /a-voice-that-listens.html
-      date: 2026-05-14
-      description: "My month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions."
-      categories: [essay, writing, claude, longform]
-    - title: "Sinatra et al. 2016 — three-page memo"
-      path: /sinatra-2016-memo.html
-      date: 2026-05-12
-      description: "A short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization."
-      categories: [reading notes, network analysis, methods]
-    - title: "The Bobble Canon"
-      path: /bobble-canon.html
-      date: 2026-05-09
-      description: "Numerous short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly."
-      categories: [fiction, bobble]
-    - title: "Introduction to Bobbology"
-      path: /introduction-to-bobbology.html
-      date: 2026-05-09
-      description: "Lecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate."
-      categories: [bobble, bobbology, ai]
-  type: default
-  sort: "date desc"
-  fields: [date, title, description]
-  feed: true
+  - id: personal
+    contents: posts/personal
+    type: default
+    sort: "date desc"
+    sort-ui: [date, title]
+    fields: [date, title, description]
+    feed: true
+  - id: bobbology
+    contents: posts/bobbology
+    type: default
+    sort: "date desc"
+    sort-ui: [date, title]
+    fields: [date, title, description]
+    feed: true
+  - id: notes
+    contents: posts/notes
+    type: default
+    sort: "date desc"
+    sort-ui: [date, title]
+    fields: [date, title, description]
+    feed: true
 ---
+
+## Personal
+
+::: {#personal}
+:::
+
+## Bobbology
+
+::: {#bobbology}
+:::
+
+## Notes & Misc
+
+::: {#notes}
+:::

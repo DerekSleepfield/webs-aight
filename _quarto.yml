@@ -3,21 +3,11 @@ project:
   output-dir: _site
   resources:
     - CNAME
-    - gem-in-eyes-intro.html
-    - bobble-canon.html
-    - introduction-to-bobbology.html
-    - a-voice-that-listens.html
-    - friends-we-find.html
-    - mind-palace.html
-    - wor-gems.html
-    - feedback.html
-    - feedback-bubble.html
-    - citation_timeline.html
-    - design-directions.html
-    - theme-switcher.html
+    # Ship every standalone HTML at the root automatically.
+    # Convention: prefix scratch/draft files with `_` to exclude them
+    # (Quarto treats `_*` as ignored in resources).
+    - "*.html"
     - themes.css
-    - sinatra-2016-memo.html
-    - gem-wars-lore.html
 
 website:
   title: "Derek Wakefield"
