@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Four Tenets — Bob, Bib, B(l)ab, Boobs</title>
+<!-- Site-wide theme variables. Loaded so the global theme switcher
+     (widget injected at end of body) can propagate --bs-* tokens. -->
+<link rel="stylesheet" href="/themes.css">
+<style>
+  :root { color-scheme: light; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color: var(--bs-body-color, #1c1f24);
+    background: var(--bs-body-bg, #fbf8f1);
+    line-height: 1.65;
+    font-size: 18px;
+    transition: background-color 220ms ease, color 220ms ease;
+  }
+  /* When a site theme is active, let its heading/link colors apply too. */
+  html[data-theme] h1,
+  html[data-theme] h2,
+  html[data-theme] h3,
+  html[data-theme] h4 { color: var(--bs-heading-color, var(--bs-body-color)); }
+  html[data-theme] a { color: var(--bs-link-color, currentColor); }
+  html[data-theme] a:hover { color: var(--bs-link-hover-color, currentColor); }
+  /* Dark themes need cards/scaffolds to lift off the body, not stay cream. */
+  html[data-theme] .tenet,
+  html[data-theme] .scaffold {
+    background: var(--bs-secondary-bg, #fff);
+    border-color: var(--bs-border-color, #e7dfc9);
+    color: var(--bs-body-color);
+  }
+  html[data-theme] .pair .col { background: var(--bs-tertiary-bg, #f7f1e1); }
+  html[data-theme] .takeaway {
+    background: var(--bs-secondary-bg, #2d3a4a);
+    color: var(--bs-body-color);
+  }
+  .wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 28px 96px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .stars {
+    color: #b6a37a;
+    letter-spacing: 0.4em;
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 34px;
+    margin: 0 0 8px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    color: #6b6357;
+    font-style: italic;
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    font-weight: 600;
+    color: #2d3a4a;
+  }
+  h3 {
+    font-size: 17px;
+    margin: 22px 0 6px;
+    font-weight: 600;
+    color: #3a4655;
+  }
+  p { margin: 12px 0; }
+  blockquote {
+    margin: 18px 0;
+    padding: 12px 18px;
+    border-left: 3px solid #b6a37a;
+    color: #4a4537;
+    font-style: italic;
+    background: #f4eedf;
+    border-radius: 0 6px 6px 0;
+  }
+  .tenet {
+    background: #fff;
+    border: 1px solid #e7dfc9;
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 18px 0;
+  }
+  .tenet h2 {
+    margin-top: 0;
+    color: #5a4a2a;
+    font-size: 24px;
+  }
+  .tenet .tag {
+    display: inline-block;
+    background: #f4eedf;
+    color: #5a4a2a;
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .tenet .creed {
+    margin-top: 10px;
+    font-style: italic;
+    color: #5a4a2a;
+    border-left: 2px solid #d8c79a;
+    padding-left: 14px;
+    background: transparent;
+  }
+  .pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .pair .col {
+    background: #f7f1e1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+  .pair .col h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8a7a4a;
+  }
+  .divider {
+    text-align: center;
+    color: #b6a37a;
+    margin: 32px 0;
+    letter-spacing: 0.3em;
+    font-size: 13px;
+  }
+  .takeaway {
+    background: #2d3a4a;
+    color: #fbf8f1;
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 30px 0 0;
+    font-style: italic;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  .takeaway em { color: #d8c79a; font-style: normal; }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    color: #8a8270;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .scaffold {
+    background: #fff;
+    border: 1px dashed #d8c79a;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 14px 0;
+  }
+  .scaffold h3 { margin-top: 0; color: #5a4a2a; }
+  @media (max-width: 600px) {
+    .pair { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="stars">. &nbsp; ✦ &nbsp; . &nbsp; ✦ &nbsp; .</div>
+  <h1>The Four Tenets</h1>
+  <div class="sub">Bob · Bib · B(l)ab · Boobs — a Bobology framework, plain version</div>
+</header>
+
+<p>Bobology has a four-part framework for being a person at all. They aren't rules; they're tenets — facets you tend rather than items you check off. The names are deliberately silly. The tenets are not.</p>
+
+<p>This page is the standalone explainer. The full creed lives elsewhere; here we're just walking the four, plus the pieces that hold them together.</p>
+
+<div class="divider">. &nbsp; ✦ &nbsp; T H E &nbsp; F O U R &nbsp; ✦ &nbsp; .</div>
+
+<article class="tenet">
+  <h2>Bob <span class="tag">the nucleus</span></h2>
+
+  <p>Bob is the self that's preserved across iteration — the part of you that is still recognizably you after you've changed your mind, your job, or your life. Whatever you put out in the world is sent from bob. Whatever returns, eventually, returns to bob.</p>
+
+  <p>Bob is a <em>palindrome</em>. What goes in comes out the same — at least in the part that matters. That's the load-bearing image. A palindromic self is one that can travel without being lost in transit.</p>
+
+  <blockquote class="creed">Bob is the nucleus.<br>Bob is a palindrome.<br>Without bob you ain't.</blockquote>
+
+  <p>Every other tenet hangs off this one. Bib feeds bob. Bab connects bob to other bobs. Boobs is bob letting itself enjoy being bob. If bob is unclear, the other three drift.</p>
+</article>
+
+<article class="tenet">
+  <h2>Bib <span class="tag">nourishment</span></h2>
+
+  <p>Bib is the tenet of tending what feeds you, and what feeds the people who depend on you. Sleep, food, water, rest, the people who feed you back, the work that gives you back energy instead of taking it. Bib is all of that, held as practice rather than as preference.</p>
+
+  <p>The defining clause is the warning: <em>we are smart but not at eating</em>. Humans can outthink their own bodies. We can override hunger, ignore tiredness, talk ourselves into a fifth coffee at three a.m. So the tenet is not "trust your gut." It is "pay attention." Bib is a discipline of noticing what's actually feeding you and what's actually draining you, on the timescales those two play out on.</p>
+
+  <blockquote class="creed">Bib is nourishment;<br>we are smart but not at eating,<br>so we pay attention.</blockquote>
+</article>
+
+<article class="tenet">
+  <h2>B(l)ab <span class="tag">connection</span></h2>
+
+  <p>This is the most idiosyncratic one. The L is in parentheses on purpose; the parenthesis is the discipline.</p>
+
+  <div class="pair">
+    <div class="col">
+      <h4>Bab</h4>
+      Connection at the level of sound. The oldest communication humans have — mother-to-infant, presence carried on syllables. You can do bab by listening. You can do bab by sitting across from someone and letting them know they are not alone.
+    </div>
+    <div class="col">
+      <h4>Blab</h4>
+      Bab with the L unleashed. Connection drowned out by its own volume. The L stands for the loud things — your loves, your losses, the words that can't be unsaid. Blab is what happens when those come out without you choosing.
+    </div>
+  </div>
+
+  <p>The discipline isn't to kill the L. You can't. The L <em>is</em> you. The discipline is the parenthesis: keeping the L present-but-governed, silent on purpose, released when the moment actually asks. A Bobble who blabs every L lets the L take the wheel. A Bobble who never lets the L out has dampened their own compass. The parenthesis is the dial.</p>
+
+  <p>The promise of the parenthesis is something like this: <em>I have more than I am saying. I am choosing what to let through. I am listening to whether you are ready. I am listening to whether I am ready.</em></p>
+
+  <blockquote class="creed">B(l)ab is connection;<br>the L is silent when the moment asks.</blockquote>
+
+  <p>If you want the long version, the canon has both a tenet-essay (<em>On B(l)ab</em>) and a parable (<em>The Parable of the Silent L</em>). Either is more careful than this paragraph.</p>
+</article>
+
+<article class="tenet">
+  <h2>Boobs <span class="tag">pleasure</span></h2>
+
+  <p>Pleasure has a place in the framework. Bobology refuses both halves of the usual mistake — neither "pleasure is suspect" nor "pleasure is the point." Instead: pleasure is a tenet, on equal footing with the other three. You don't apologize for it. You also don't build your life around it.</p>
+
+  <p>The instruction is <em>tend, don't escape</em>. Let pleasure in, on purpose, in proportion. Don't use it as the exit door from the other three.</p>
+
+  <blockquote class="creed">Boobs are pleasure;<br>we hold them as tenet, not as sin;<br>we tend them, we do not escape them.</blockquote>
+</article>
+
+<div class="divider">. &nbsp; ✦ &nbsp; T H E &nbsp; S C A F F O L D I N G &nbsp; ✦ &nbsp; .</div>
+
+<p>The four tenets don't sit alone. The framework wraps them in three steady ideas: a calibration check, a discernment move, and a metaphysics.</p>
+
+<div class="scaffold">
+  <h3>Priest Bob's rule — the calibration check</h3>
+  <p>Any tenet, overfocused, becomes a trap. Bib without bab is self-care turned hermitage. Bab without the parenthesis is blab. Boobs untethered from the other three becomes escape. Bob without the other three is just an ego.</p>
+  <p>The four are held together. None of them is the whole answer. The recurring instruction in the creed: <em>moderate, calibrate, check in, correct, grow, germinate, return.</em></p>
+</div>
+
+<div class="scaffold">
+  <h3>Strategic-Essential — the discernment move</h3>
+  <p>Strategic-Essential is the question you ask before letting an L out of the parenthesis: <em>is this protection out of love, or concealment out of ego?</em> Same shape applies to bib (<em>is this restraint, or restriction?</em>), to bab (<em>am I listening, or hiding?</em>), to boobs (<em>am I tending, or escaping?</em>).</p>
+  <p>Strategic-Essential is what keeps the parenthesis honest. Without it, "the L is silent when the moment asks" becomes an alibi for never letting the L out at all.</p>
+</div>
+
+<div class="scaffold">
+  <h3>Karma · Adapterstanding · Atavism — the loop</h3>
+  <p>The metaphysics is short. <strong>Karma</strong> is the signal you emit. <strong>Adapterstanding</strong> is how the echo reshapes as it travels. <strong>Atavism</strong> is how the echo comes home — sometimes years later, never quite the same shape, but recognizably yours.</p>
+  <p>Because bob is a palindrome, the loop is allowed to close. What you put out is allowed to come back. That permission is what makes the four tenets feel like tending instead of striving.</p>
+</div>
+
+<div class="divider">. &nbsp; ✦ &nbsp; T A K E A W A Y &nbsp; ✦ &nbsp; .</div>
+
+<div class="takeaway">
+  Tend bob.<br>
+  Pay attention to bib.<br>
+  Govern the L; let bab continue.<br>
+  Hold boobs as tenet, not as exit.<br>
+  Watch the dial. The four are held together.
+</div>
+
+<footer>
+  Drafted from <em>bobble_03_creed.md (v2)</em> · framework belongs to Derek
+</footer>
+
+</div>
+
+<!-- ─── Site-wide theme switcher (mirrors theme-switcher.html) ───
+     Standalone HTMLs don't get Quarto's include-after-body, so we
+     embed the widget directly. It reads/writes the same localStorage
+     key (`dw-theme`), so the choice persists across the whole site. -->
+<div class="dw-theme-switcher" id="dwThemeSwitcher" aria-label="Design direction">
+  <button type="button" class="dw-theme-toggle" id="dwThemeToggle" aria-haspopup="listbox" aria-expanded="false">
+    <span class="dw-swatch" id="dwToggleSwatch" style="background:#cccccc"></span>
+    <span id="dwToggleLabel">Theme</span>
+    <span class="dw-chevron">▾</span>
+  </button>
+  <div class="dw-theme-panel" id="dwThemePanel" role="listbox">
+    <div class="dw-divider"></div>
+    <a class="dw-what" href="/design-directions.html">What is this? →</a>
+  </div>
+</div>
+<script>
+(function () {
+  var THEMES = [
+    { id: "default",          name: "Site default",     tagline: "Cosmo",          swatch: "#ffffff", dark: false },
+    { id: "porch-light",      name: "Porch Light",      tagline: "warm cream",     swatch: "#c9a96e", dark: false },
+    { id: "star-chart",       name: "Star Chart",       tagline: "night sky",      swatch: "#fde487", dark: true  },
+    { id: "bedrock",          name: "Bedrock",          tagline: "geological",     swatch: "#d4a574", dark: true  },
+    { id: "hum",              name: "Hum",              tagline: "soft peach",     swatch: "#8a6b8a", dark: false },
+    { id: "bobblesphere",     name: "Bobblesphere",     tagline: "orbital",        swatch: "#ff9d3c", dark: true  },
+    { id: "library-bookmark", name: "Library Bookmark", tagline: "card catalog",   swatch: "#8b1a1a", dark: false },
+    { id: "mind-palace-map",  name: "Mind Palace Map",  tagline: "antique atlas",  swatch: "#993322", dark: false }
+  ];
+  var STORAGE_KEY = "dw-theme";
+  var panel  = document.getElementById("dwThemePanel");
+  var divider = panel.querySelector(".dw-divider");
+  THEMES.forEach(function (t) {
+    var item = document.createElement("div");
+    item.className = "dw-theme-item";
+    item.setAttribute("data-theme-id", t.id);
+    item.setAttribute("role", "option");
+    item.innerHTML =
+      '<span class="dw-swatch" style="background:' + t.swatch + '"></span>' +
+      '<span class="dw-name">' + t.name + '</span>' +
+      '<span class="dw-tagline">' + t.tagline + '</span>';
+    panel.insertBefore(item, divider);
+  });
+  function applyTheme(id) {
+    var t = THEMES.find(function (x) { return x.id === id; }) || THEMES[0];
+    if (t.id === "default") {
+      document.documentElement.removeAttribute("data-theme");
+      document.documentElement.removeAttribute("data-bs-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", t.id);
+      if (t.dark) document.documentElement.setAttribute("data-bs-theme", "dark");
+      else        document.documentElement.removeAttribute("data-bs-theme");
+    }
+    document.getElementById("dwToggleLabel").textContent = t.name;
+    document.getElementById("dwToggleSwatch").style.background = t.swatch;
+    panel.querySelectorAll(".dw-theme-item").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("data-theme-id") === t.id);
+    });
+  }
+  var initial = "default";
+  try { initial = localStorage.getItem(STORAGE_KEY) || "default"; } catch (e) {}
+  applyTheme(initial);
+  var btn = document.getElementById("dwThemeToggle");
+  function openPanel() { panel.classList.add("open");  btn.setAttribute("aria-expanded", "true");  }
+  function closePanel() { panel.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (panel.classList.contains("open")) closePanel(); else openPanel();
+  });
+  panel.addEventListener("click", function (e) {
+    var item = e.target.closest(".dw-theme-item");
+    if (!item) return;
+    var id = item.getAttribute("data-theme-id");
+    applyTheme(id);
+    try { localStorage.setItem(STORAGE_KEY, id); } catch (err) {}
+    closePanel();
+  });
+  document.addEventListener("click", function (e) {
+    if (!document.getElementById("dwThemeSwitcher").contains(e.target)) closePanel();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closePanel();
+  });
+})();
+</script>
+
+</body>
+</html>
