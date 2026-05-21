@@ -33,3 +33,46 @@ a {
 .quarto-about-trestles .about-contents h2 {
   margin-top: 1.5em;
 }
+
+/* ────────── Listing sort/filter controls — theme-aware ──────────
+ * Quarto renders the sort-ui dropdown as a Bootstrap <select class="form-select">.
+ * Bootstrap's defaults don't automatically pick up the --bs-* overrides Derek's
+ * themes set, so on dark themes the dropdown stays white-on-white and disappears.
+ * These rules pin the form controls to the active theme's body/border tokens.
+ */
+.quarto-listing .form-select,
+.quarto-listing .form-control,
+.quarto-listing select,
+.quarto-listing input[type="text"],
+.quarto-listing input[type="search"] {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border-color: var(--bs-border-color);
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.quarto-listing .form-select:focus,
+.quarto-listing .form-control:focus,
+.quarto-listing select:focus,
+.quarto-listing input:focus {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border-color: var(--bs-primary, currentColor);
+  box-shadow: none;
+}
+
+/* The <option> elements inside <select> render as native OS widgets,
+ * but most browsers honor inline background/color when set explicitly. */
+.quarto-listing .form-select option,
+.quarto-listing select option {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* The "Order By" / "Filter" label text inside the listing actions group */
+.quarto-listing .listing-actions-group,
+.quarto-listing .input-group-text {
+  color: var(--bs-body-color);
+  background-color: transparent;
+  border-color: var(--bs-border-color);
+}
