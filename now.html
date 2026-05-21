@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="may-2026" class="level2">
 <h2 class="anchored" data-anchor-id="may-2026">May 2026</h2>
 <p><strong>Currently writing.</strong> Co-authored work on <em>retrospective economic voting and Latino electoral volatility</em> — the argument that the swings in Latino vote share over the past two decades are partially predictable from a group whose partisan attachments are structurally weaker, making the economy–vote link bigger than for White or Black voters. Three empirical strategies (macropartisanship time series, CES vote-switching, county-level unemployment) are starting to converge. Also continuing to refine the <a href="./research.html">dissertation work</a> on Latino independents and economic messaging.</p>
-<p><strong>Currently building.</strong> <em>Bobology</em> — a slowly-accumulating philosophy of small steady voices. The <a href="./posts/2026-05-09-bobble-canon.html">Bobble Canon’s inaugural post</a> went up this month: numerous parables, Bobbisms, codas, and a glossary. New canon entries will get appended as they arrive. The project is meant to grow slowly. <em>(“A Bobble could, in principle, work fast. In practice, the hum interferes.”)</em></p>
+<p><strong>Currently building.</strong> <em>Bobology</em> — a slowly-accumulating philosophy of small steady voices. The <a href="posts/2026-05-09-bobble-canon.qmd">Bobble Canon’s inaugural post</a> went up this month: numerous parables, Bobbisms, codas, and a glossary. New canon entries will get appended as they arrive. The project is meant to grow slowly. <em>(“A Bobble could, in principle, work fast. In practice, the hum interferes.”)</em></p>
 <p><strong>Currently obsessing over.</strong> How AI agents fit into the working stack of a research-active social scientist without flattening the parts that need not to be flattened. Concretely, that means: triaging student final-project submissions into structured forward-memos, drafting per-student feedback at scale, pulling CMAG ad-data analyses through narrow conversation windows, and shoving small writing tasks across the line from “I’ll do that someday” to “done by Friday.” The honest answer to <em>where humans should still hold the pen</em> keeps changing, which is itself the interesting thing.</p>
 <p><strong>Currently teaching.</strong> Bucknell, spring 2026 wrap-up. Reflecting on what to carry forward and what to reshape for the fall.</p>
 <p><strong>Currently outside the academy.</strong> Making video games and apps. Some out soon.</p>
@@ -367,36 +367,45 @@ ul.task-list li input[type="checkbox"] {
 </script>
 
 <!-- derekwakefield.com — open-in-new-tab for standalone HTML artifacts
-     Each of these files is a self-contained page (game, viz, parable, memo)
-     that lives at site root. Listing cards now link directly to them via
-     `path:` in the post frontmatter, but Quarto's link-external-newwindow
-     only fires for cross-origin URLs, so same-site standalone HTMLs would
-     otherwise open in the current tab. This rewrites their <a> tags to
-     target="_blank" so the visitor keeps the listing page they came from. -->
+     Each standalone is a self-contained page (game, viz, parable, memo) that
+     lives at site root. Listing cards link directly to them via `path:` in
+     post frontmatter, but Quarto's link-external-newwindow only fires for
+     cross-origin URLs, so same-site standalones would otherwise open in the
+     current tab. This rewrites their <a> tags to target="_blank".
+
+     Resilient version: instead of hand-maintaining a whitelist of standalones,
+     we derive the *primary* page set (Quarto-generated .qmd pages) from the
+     navbar at runtime. Everything else at root ending in .html is standalone. -->
 <script>
 (function () {
-  var STANDALONE = {
-    "gem-in-eyes-intro.html":       1,
-    "bobble-canon.html":            1,
-    "introduction-to-bobbology.html": 1,
-    "friends-we-find.html":         1,
-    "a-voice-that-listens.html":    1,
-    "mind-palace.html":             1,
-    "wor-gems.html":                1,
-    "design-directions.html":       1,
-    "sinatra-2016-memo.html":       1,
-    "citation_timeline.html":       1,
-    "feedback.html":                1
-  };
+  // Build the primary-page set from the navbar.
+  var PRIMARY = new Set();
+  document.querySelectorAll('.navbar a.nav-link[href], .navbar a.navbar-brand[href]').forEach(function (a) {
+    try {
+      var u = new URL(a.getAttribute('href'), window.location.href);
+      if (u.origin !== window.location.origin) return;
+      var p = u.pathname.replace(/^\/+/, '').replace(/\/$/, '');
+      PRIMARY.add(p);                          // e.g. "research.html"
+      PRIMARY.add(p.replace(/\.html$/, ''));   // e.g. "research"
+    } catch (e) {}
+  });
+  // Defense in depth: bail if the navbar isn't found, so we don't false-positive
+  // primary pages as standalones.
+  if (PRIMARY.size === 0) return;
+
   function isStandalone(href) {
     if (!href) return false;
     try {
       var u = new URL(href, window.location.href);
       if (u.origin !== window.location.origin) return false;
       var path = u.pathname.replace(/^\/+/, "");
-      return STANDALONE[path] === 1;
+      // Must be a single root-level .html file (no subfolders).
+      if (!/^[^/]+\.html$/.test(path)) return false;
+      if (PRIMARY.has(path) || PRIMARY.has(path.replace(/\.html$/, ""))) return false;
+      return true;
     } catch (e) { return false; }
   }
+
   Array.prototype.forEach.call(document.querySelectorAll("a[href]"), function (a) {
     if (isStandalone(a.getAttribute("href"))) {
       a.setAttribute("target", "_blank");

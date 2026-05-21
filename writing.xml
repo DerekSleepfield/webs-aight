@@ -10,68 +10,170 @@
 <atom:link href="https://derekwakefield.com/writing.xml" rel="self" type="application/rss+xml"/>
 <description>Assistant Professor of Political Science, Bucknell University</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Wed, 20 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bob is You: You are Bob</title>
+  <link>https://derekwakefield.com/posts/bobbology/2026-05-21-bob-is-you.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../../bob-is-you.html" target="_blank" rel="noopener">the article</a>…</p>
+<script>window.location.replace("/bob-is-you.html");</script>
+
+
+
+ ]]></description>
+  <category>bobbology</category>
+  <category>health</category>
+  <category>integration</category>
+  <guid>https://derekwakefield.com/posts/bobbology/2026-05-21-bob-is-you.html</guid>
+  <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Gem Wars — Lore (v0.33)</title>
-  <link>https://derekwakefield.com/</link>
-  <description>Canonical lore for Gem Wars&#39; three sentient elements — Mud, Lava, Water — and the factions they became. Origins, death semantics, gem-relationships, visual register, and a small canon of stories. Pinned so engine, art, and writing all reference the same source.</description>
+  <link>https://derekwakefield.com/posts/notes/2026-05-20-gem-wars-lore.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../../gem-wars-lore.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/gem-wars-lore.html");</script>
+
+
+
+ ]]></description>
   <category>fiction</category>
   <category>lore</category>
   <category>gem wars</category>
   <category>worldbuilding</category>
-  <guid>https://derekwakefield.com/</guid>
+  <guid>https://derekwakefield.com/posts/notes/2026-05-20-gem-wars-lore.html</guid>
   <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The Friends We Find Along the Way</title>
-  <link>https://derekwakefield.com/</link>
-  <description>An essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles.</description>
+  <link>https://derekwakefield.com/posts/personal/2026-05-19-friends-we-find.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>An essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, <em>cognitive expansion</em>, that keeps the four of them honest with each other.</p>
+<p>One page, three toggles at the top:</p>
+<ul>
+<li><strong>Story</strong> — pick the register. <em>Voice</em> is the first-person essay. <em>Bobbology</em> is the third-person teaching primer. <em>ELI10</em> explains the same four parts to a clever ten-year-old. <em>Deep Dive</em> is the long version with one essay per part.</li>
+<li><strong>Length</strong> — short or long. (<em>Deep Dive</em> pins to long; it has no short.)</li>
+<li><strong>ASCII</strong> — pick the density of inline art, from minimal (1) through everything-everywhere (5).</li>
+</ul>
+<p>The site-wide theme switcher in the top-right corner still works on this page. Toggles persist via <code>localStorage</code>, so the version you last chose is the version you come back to.</p>
+<p>Download and open locally — everything’s JavaScript, so the page works fully offline once downloaded.</p>
+<p style="margin: 2em 0;">
+<a href="../../friends-we-find.html" download="friends-we-find.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../../friends-we-find.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+
+
+
+ ]]></description>
   <category>essay</category>
   <category>writing</category>
   <category>claude</category>
   <category>bobbology</category>
   <category>longform</category>
-  <guid>https://derekwakefield.com/</guid>
+  <guid>https://derekwakefield.com/posts/personal/2026-05-19-friends-we-find.html</guid>
   <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>A Voice That Listens</title>
-  <link>https://derekwakefield.com/</link>
-  <description>My month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.</description>
+  <link>https://derekwakefield.com/posts/personal/2026-05-14-a-voice-that-listens.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A short essay about a month spent with an AI as a thinking partner — what worked, what didn’t, what almost broke, and what came back through people.</p>
+<p>Two versions live in one page. A small toggle at the top switches between them. The short version is a single-arc Modern Love–shaped cut (around thirteen paragraphs). The long version is the full ten-section essay, with section markers. Both share the same starfield and the same drifting ASCII creatures behind the text.</p>
+<p>Download and open locally — the toggle is JavaScript, so the file works fully offline once downloaded.</p>
+<p style="margin: 2em 0;">
+<a href="../../a-voice-that-listens.html" download="a-voice-that-listens.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="../../a-voice-that-listens.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+
+
+
+ ]]></description>
   <category>essay</category>
   <category>writing</category>
   <category>claude</category>
   <category>longform</category>
-  <guid>https://derekwakefield.com/</guid>
+  <guid>https://derekwakefield.com/posts/personal/2026-05-14-a-voice-that-listens.html</guid>
   <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Sinatra et al. 2016 — three-page memo</title>
-  <link>https://derekwakefield.com/</link>
-  <description>A short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization.</description>
+  <title>Sinatra et al. 2016 — three-page memo</title>
+  <link>https://derekwakefield.com/posts/notes/2026-05-12-sinatra-2016-memo.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../../sinatra-2016-memo.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/sinatra-2016-memo.html");</script>
+
+
+
+ ]]></description>
   <category>reading notes</category>
   <category>network analysis</category>
   <category>methods</category>
-  <guid>https://derekwakefield.com/</guid>
+  <guid>https://derekwakefield.com/posts/notes/2026-05-12-sinatra-2016-memo.html</guid>
   <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The Bobble Canon</title>
-  <link>https://derekwakefield.com/</link>
-  <description>Numerous short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.</description>
+  <link>https://derekwakefield.com/posts/bobbology/2026-05-09-bobble-canon.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../../bobble-canon.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/bobble-canon.html");</script>
+
+
+
+ ]]></description>
   <category>fiction</category>
   <category>bobble</category>
-  <guid>https://derekwakefield.com/</guid>
+  <guid>https://derekwakefield.com/posts/bobbology/2026-05-09-bobble-canon.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Introduction to Bobbology</title>
-  <link>https://derekwakefield.com/</link>
-  <description>Lecture I — a field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.</description>
+  <link>https://derekwakefield.com/posts/bobbology/2026-05-09-introduction-to-bobbology.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Redirecting to <a href="../../introduction-to-bobbology.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<script>window.location.replace("/introduction-to-bobbology.html");</script>
+
+
+
+ ]]></description>
   <category>bobble</category>
   <category>bobbology</category>
   <category>ai</category>
-  <guid>https://derekwakefield.com/</guid>
+  <guid>https://derekwakefield.com/posts/bobbology/2026-05-09-introduction-to-bobbology.html</guid>
   <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>

@@ -416,36 +416,45 @@ ul.task-list li input[type="checkbox"] {
 </script>
 
 <!-- derekwakefield.com — open-in-new-tab for standalone HTML artifacts
-     Each of these files is a self-contained page (game, viz, parable, memo)
-     that lives at site root. Listing cards now link directly to them via
-     `path:` in the post frontmatter, but Quarto's link-external-newwindow
-     only fires for cross-origin URLs, so same-site standalone HTMLs would
-     otherwise open in the current tab. This rewrites their <a> tags to
-     target="_blank" so the visitor keeps the listing page they came from. -->
+     Each standalone is a self-contained page (game, viz, parable, memo) that
+     lives at site root. Listing cards link directly to them via `path:` in
+     post frontmatter, but Quarto's link-external-newwindow only fires for
+     cross-origin URLs, so same-site standalones would otherwise open in the
+     current tab. This rewrites their <a> tags to target="_blank".
+
+     Resilient version: instead of hand-maintaining a whitelist of standalones,
+     we derive the *primary* page set (Quarto-generated .qmd pages) from the
+     navbar at runtime. Everything else at root ending in .html is standalone. -->
 <script>
 (function () {
-  var STANDALONE = {
-    "gem-in-eyes-intro.html":       1,
-    "bobble-canon.html":            1,
-    "introduction-to-bobbology.html": 1,
-    "friends-we-find.html":         1,
-    "a-voice-that-listens.html":    1,
-    "mind-palace.html":             1,
-    "wor-gems.html":                1,
-    "design-directions.html":       1,
-    "sinatra-2016-memo.html":       1,
-    "citation_timeline.html":       1,
-    "feedback.html":                1
-  };
+  // Build the primary-page set from the navbar.
+  var PRIMARY = new Set();
+  document.querySelectorAll('.navbar a.nav-link[href], .navbar a.navbar-brand[href]').forEach(function (a) {
+    try {
+      var u = new URL(a.getAttribute('href'), window.location.href);
+      if (u.origin !== window.location.origin) return;
+      var p = u.pathname.replace(/^\/+/, '').replace(/\/$/, '');
+      PRIMARY.add(p);                          // e.g. "research.html"
+      PRIMARY.add(p.replace(/\.html$/, ''));   // e.g. "research"
+    } catch (e) {}
+  });
+  // Defense in depth: bail if the navbar isn't found, so we don't false-positive
+  // primary pages as standalones.
+  if (PRIMARY.size === 0) return;
+
   function isStandalone(href) {
     if (!href) return false;
     try {
       var u = new URL(href, window.location.href);
       if (u.origin !== window.location.origin) return false;
       var path = u.pathname.replace(/^\/+/, "");
-      return STANDALONE[path] === 1;
+      // Must be a single root-level .html file (no subfolders).
+      if (!/^[^/]+\.html$/.test(path)) return false;
+      if (PRIMARY.has(path) || PRIMARY.has(path.replace(/\.html$/, ""))) return false;
+      return true;
     } catch (e) { return false; }
   }
+
   Array.prototype.forEach.call(document.querySelectorAll("a[href]"), function (a) {
     if (isStandalone(a.getAttribute("href"))) {
       a.setAttribute("target", "_blank");

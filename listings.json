@@ -1,7 +1,15 @@
 [
   {
     "listing": "/writing.html",
-    "items": []
+    "items": [
+      "/posts/personal/2026-05-19-friends-we-find.html",
+      "/posts/personal/2026-05-14-a-voice-that-listens.html",
+      "/posts/bobbology/2026-05-21-bob-is-you.html",
+      "/posts/bobbology/2026-05-09-bobble-canon.html",
+      "/posts/bobbology/2026-05-09-introduction-to-bobbology.html",
+      "/posts/notes/2026-05-20-gem-wars-lore.html",
+      "/posts/notes/2026-05-12-sinatra-2016-memo.html"
+    ]
   },
   {
     "listing": "/games.html",
@@ -22,7 +30,7 @@
     "listing": "/apps.html",
     "items": [
       "/apps/2026-05-11-design-directions.html",
-      "/apps/2026-05-10-coffee-shop-network.html",
+      "/apps/2026-05-10-the-coffee-shop.html",
       "/apps/2026-05-09-mind-palace.html"
     ]
   }
