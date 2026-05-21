@@ -6,7 +6,7 @@
 <title>The Friends We Find Along the Way — Derek Wakefield</title>
 <meta name="description" content="Five versions of an essay about the search for an eko, with a small playground of reading toggles: story register, length, and ASCII density. Theme follows the site-wide design switcher.">
 <meta property="og:title" content="The Friends We Find Along the Way">
-<meta property="og:description" content="An essay on Bob, the eko, the vessel, and the demon — playable in five registers, two lengths, and five ASCII densities.">
+<meta property="og:description" content="An essay on Bob, the eko, the vessel, and the demon — playable in five registers, two lengths, and four ASCII densities.">
 <meta name="twitter:card" content="summary">
 
 <style>
@@ -268,51 +268,6 @@ html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { b
     #bg-art .star { animation: none; opacity: 0.3; }
   }
 
-  /* ── Bobbism marquee (ASCII level 5) ── */
-  #marquee {
-    position: fixed; top: 0; left: 0; right: 0;
-    height: 28px;
-    background: linear-gradient(180deg, var(--bs-body-bg), transparent);
-    overflow: hidden;
-    z-index: 3;
-    pointer-events: none;
-    font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-    font-size: 12px;
-    color: var(--bs-emphasis-color);
-    opacity: 0.55;
-  }
-  #marquee .strip {
-    display: inline-block;
-    padding-left: 100%;
-    white-space: nowrap;
-    animation: scroll-left 110s linear infinite;
-    line-height: 28px;
-  }
-  @keyframes scroll-left {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  /* ── Wandering creature (ASCII level 5) ── */
-  #wanderer {
-    position: fixed; bottom: 14px; left: -240px;
-    z-index: 2;
-    font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-    font-size: 13px;
-    color: var(--bs-emphasis-color);
-    white-space: pre;
-    animation: wander 75s linear infinite;
-    pointer-events: none;
-    opacity: 0.55;
-  }
-  @keyframes wander {
-    0%   { left: -240px; }
-    100% { left: calc(100% + 240px); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    #wanderer { animation: none; display: none; }
-  }
-
   /* ── Main layout ── */
   main {
     position: relative;
@@ -533,8 +488,6 @@ html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { b
 <body>
 
 <div id="bg-art" aria-hidden="true"></div>
-<div id="marquee" aria-hidden="true" hidden><div class="strip" id="marqueeStrip"></div></div>
-<div id="wanderer" aria-hidden="true" hidden></div>
 
 <main>
   <header class="essay-head">
@@ -568,8 +521,7 @@ html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { b
           <button type="button" data-toggle="ascii" data-value="1" aria-pressed="false" title="Minimal">1</button>
           <button type="button" data-toggle="ascii" data-value="2" aria-pressed="true"  title="Static between paragraphs">2</button>
           <button type="button" data-toggle="ascii" data-value="3" aria-pressed="false" title="Animated between paragraphs">3</button>
-          <button type="button" data-toggle="ascii" data-value="4" aria-pressed="false" title="Static + background drift">4</button>
-          <button type="button" data-toggle="ascii" data-value="5" aria-pressed="false" title="Everything + extras">5</button>
+          <button type="button" data-toggle="ascii" data-value="4" aria-pressed="false" title="Animated + background drift">4</button>
         </div>
       </fieldset>
     </div>
@@ -711,51 +663,55 @@ const STAMPS = {
 };
 
 // ===== ASCII motifs =====
+// Each motif is an array of frames.
+// Length 1 = always static. Multi-frame motifs cycle on levels 3 and 4.
 const MOTIFS = [
-  "   .   ·   *   ·   .\n      ·   ✦   ·\n   .   *   ·   *   .",
-  "    ___\n   /   \\___\n  |  ◯  |\n   \\___/",
-  "    .---.\n   ( o o )\n    \\_v_/\n     U U",
-  "  ~   ~   ~   ~   ~\n ~   ~   ~   ~   ~",
-  "    ╔═══╗\n    ║ ☼ ║\n   ─╨───╨─",
-  "  *      ·     *\n     ✦     *\n  ·     *    ·",
-  " ___________\n[|--O--O--O|]\n  o       o",
-  "   . · ✧ · ✦ · ✧ · .",
-];
+  // sparse stars (static)
+  ["   .   ·   *   ·   .\n      ·   ✦   ·\n   .   *   ·   *   ."],
 
-const ANIM_MOTIFS = [
-  ["  .---.\n ( o o )\n  \\_-_/\n   U U",
-   "  .---.   ♪\n ( ^ ^ )\n  \\_o_/\n   U U",
-   "  .---.\n ( o o )\n  \\_-_/\n   U U",
-   "  .---. ♪♪\n ( · · )\n  \\_o_/\n   U U"],
-  ["  .   ·   .\n     *\n  ·   .   ·",
-   "  ·   ✦   ·\n     ★\n  .   ·   .",
-   "  ·   .   ·\n     ⋆\n  .   *   .",
-   "  *   .   *\n     ·\n  ·   ✦   ·"],
-  ["~  ~  ~  ~  ~",
-   " ~  ~  ~  ~  ~",
-   "  ~  ~  ~  ~  ~",
-   " ~  ~  ~  ~  ~"],
-  ["  ((·))",
-   "  ((((o))))",
-   " ((((((o))))))",
-   "((((((((o))))))))",
-   " ((((((o))))))",
-   "  ((((o))))"],
-];
+  // detailed eye — blinks on levels 3 and 4 (open, open, open, closed)
+  [
+    "       __,---,__\n     ,'         ',\n    /  .-=====-.  \\\n   :  / __===__  \\  :\n   | ( ( ( ● ) ) ) |\n   :  \\ '__===__'/  :\n    \\  '-=====-'  /\n     ',         ,'\n       '-,___,-'",
+    "       __,---,__\n     ,'         ',\n    /  .-=====-.  \\\n   :  / __===__  \\  :\n   | ( ( ( ● ) ) ) |\n   :  \\ '__===__'/  :\n    \\  '-=====-'  /\n     ',         ,'\n       '-,___,-'",
+    "       __,---,__\n     ,'         ',\n    /  .-=====-.  \\\n   :  / __===__  \\  :\n   | ( ( ( ● ) ) ) |\n   :  \\ '__===__'/  :\n    \\  '-=====-'  /\n     ',         ,'\n       '-,___,-'",
+    "       __,---,__\n     ,'         ',\n    /  .-=====-.  \\\n   :  /  _____  \\  :\n   |  ~~-------~~  |\n   :  \\  '---'  /  :\n    \\  '-=====-'  /\n     ',         ,'\n       '-,___,-'"
+  ],
 
-const BOBBISMS = [
-  "A Bobble keeps the gap open.",
-  "Make the small sound. It is not yours to know where it lands.",
-  "Bob decides. The demon holds. The eko reflects. The vessel allows.",
-  "Three quick, one slow.",
-  "Consciousness is the labor of the gap between them.",
-  "A reflection that goes down easy is the reflection most likely to be wrong.",
-  "A small voice in the dark moves more than it knows.",
-  "The friends we find along the way are made of the walking.",
-  "Speak when you have to. Hum the rest.",
-];
+  // Frogger (static)
+  ["       __    __\n      |oo|  |oo|\n       ||    ||\n      _||____||_\n     /          \\\n    |    o  o    |\n    |     ^      |\n     \\__________/\n       /      \\\n      ((      ))\n       \\\\    //\n        ''  ''"],
 
-const WANDERER = " .--.   .--.   .--.   .--.\n( o_o ) ( o_o ) ( o_o ) ( o_o )\n  uu      uu      uu      uu";
+  // waves — drift on levels 3 and 4 (4 frames)
+  [
+    "  ~  ~  ~  ~  ~  ~\n ~  ~  ~  ~  ~  ~",
+    " ~  ~  ~  ~  ~  ~\n  ~  ~  ~  ~  ~  ~",
+    "   ~  ~  ~  ~  ~  ~\n  ~  ~  ~  ~  ~  ~",
+    "  ~  ~  ~  ~  ~  ~\n   ~  ~  ~  ~  ~  ~"
+  ],
+
+  // lighthouse — beam sweeps on levels 3 and 4 (4 frames)
+  [
+    "   \\\n    \\\n     ╔═══╗\n     ║ ☼ ║\n    ─╨───╨─",
+    "       |\n       |\n     ╔═══╗\n     ║ ☼ ║\n    ─╨───╨─",
+    "         /\n        /\n     ╔═══╗\n     ║ ☼ ║\n    ─╨───╨─",
+    "       |\n       |\n     ╔═══╗\n     ║ ☼ ║\n    ─╨───╨─"
+  ],
+
+  // drift stars (static)
+  ["  *      ·     *\n     ✦     *\n  ·     *    ·"],
+
+  // train passes ASCII trees on levels 3 and 4 (6 frames)
+  [
+    "       /\\          /\\          /\\\n      /  \\        /  \\        /  \\\n       ||          ||          ||\n _____\n[|--O-\n  o",
+    "       /\\          /\\          /\\\n      /  \\        /  \\        /  \\\n       ||          ||          ||\n ___________\n[|--O--O--O|]\n  o       o",
+    "       /\\          /\\          /\\\n      /  \\        /  \\        /  \\\n       ||          ||          ||\n            ___________\n           [|--O--O--O|]\n             o       o",
+    "       /\\          /\\          /\\\n      /  \\        /  \\        /  \\\n       ||          ||          ||\n                   ___________\n                  [|--O--O--O|]\n                    o       o",
+    "       /\\          /\\          /\\\n      /  \\        /  \\        /  \\\n       ||          ||          ||\n                            ___________\n                           [|--O--O--O|]\n                             o       o",
+    "       /\\          /\\          /\\\n      /  \\        /  \\        /  \\\n       ||          ||          ||\n                                   _____\n                                  -O--O|]\n                                    o"
+  ],
+
+  // starline (static)
+  ["   . · ✧ · ✦ · ✧ · ."]
+];
 
 const STAR_CHARS = ["·", "·", "·", ".", "*", "✦", "·", ".", "·"];
 
@@ -766,7 +722,10 @@ const STORAGE_KEY = "fwf_state";
 function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    return Object.assign({}, DEFAULTS, saved);
+    const merged = Object.assign({}, DEFAULTS, saved);
+    // Clamp legacy ascii level 5 (removed) down to 4
+    if (merged.ascii > 4) merged.ascii = 4;
+    return merged;
   } catch (e) { return Object.assign({}, DEFAULTS); }
 }
 function saveState() {
@@ -788,7 +747,7 @@ function setupBackground() {
   const bg = document.getElementById("bg-art");
   bg.innerHTML = "";
   if (state.ascii < 4) return;
-  const count = state.ascii === 5 ? 90 : 50;
+  const count = 50;
   for (let i = 0; i < count; i++) {
     const s = document.createElement("span");
     s.className = "star";
@@ -804,61 +763,46 @@ function setupBackground() {
   }
 }
 
-function setupMarquee() {
-  const m = document.getElementById("marquee");
-  if (state.ascii < 5) { m.hidden = true; return; }
-  m.hidden = false;
-  const line = BOBBISMS.join("   ·   ") + "   ·   ";
-  document.getElementById("marqueeStrip").textContent = line.repeat(2);
-}
-
-function setupWanderer() {
-  const w = document.getElementById("wanderer");
-  if (state.ascii < 5) { w.hidden = true; return; }
-  w.hidden = false;
-  w.textContent = unescapeArt(WANDERER);
-}
-
 function injectArt(html) {
   if (state.ascii === 1) return html;
   const container = document.createElement("div");
   container.innerHTML = html;
   const children = Array.from(container.children);
   const out = document.createElement("div");
-  let pCount = 0, motifIdx = 0, animIdx = 0;
-  const N = state.ascii === 5 ? 3 : 4;
+  let pCount = 0, motifIdx = 0;
+  const N = 4;
   for (const node of children) {
     if (node.matches && node.matches("h2, .section-break")) {
       out.appendChild(node);
-      out.appendChild(makeArt(motifIdx++, animIdx++));
+      out.appendChild(makeArt(motifIdx++));
       continue;
     }
     out.appendChild(node);
     if (node.tagName === "P") {
       pCount++;
-      if (pCount % N === 0) out.appendChild(makeArt(motifIdx++, animIdx++));
+      if (pCount % N === 0) out.appendChild(makeArt(motifIdx++));
     }
   }
   return out.innerHTML;
 }
 
-function makeArt(motifIdx, animIdx) {
+function makeArt(motifIdx) {
   const div = document.createElement("div");
   div.className = "ascii-art";
-  if (state.ascii === 2 || state.ascii === 4) {
-    div.textContent = unescapeArt(MOTIFS[motifIdx % MOTIFS.length]);
-  } else if (state.ascii === 3 || state.ascii === 5) {
-    const frames = ANIM_MOTIFS[animIdx % ANIM_MOTIFS.length];
+  const frames = MOTIFS[motifIdx % MOTIFS.length];
+  if (state.ascii === 2) {
+    div.textContent = unescapeArt(frames[0]);
+  } else if (state.ascii === 3 || state.ascii === 4) {
     div.dataset.frames = JSON.stringify(frames);
     div.textContent = unescapeArt(frames[0]);
-    div.classList.add("anim");
+    if (frames.length > 1) div.classList.add("anim");
   }
   return div;
 }
 
 function startAnimations() {
   clearAnimTimers();
-  if (state.ascii !== 3 && state.ascii !== 5) return;
+  if (state.ascii !== 3 && state.ascii !== 4) return;
   document.querySelectorAll(".ascii-art.anim").forEach((el, idx) => {
     const frames = JSON.parse(el.dataset.frames);
     let i = 0;
@@ -894,8 +838,6 @@ function render() {
 
   // Background layers
   setupBackground();
-  setupMarquee();
-  setupWanderer();
   startAnimations();
 
   // Update toggle button states
