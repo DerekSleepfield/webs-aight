@@ -1,5 +1,5 @@
 ---
-title: "Bob is You: You are Bob"
+title: "Lecture 2: Bob is You"
 date: "2026-05-21"
 description: "A 21-slide companion to the integrated-health article — five dimensions, five integration loops (Walker, Ratey, Holt-Lunstad, Hill & Turiano, van der Kolk), and a radar-plot reveal. Also available as an [HTML article](/bob-is-you.html)."
 categories: [presentation, bobbology, health, integration]
