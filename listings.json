@@ -1,18 +1,7 @@
 [
   {
-    "listing": "/apps.html",
-    "items": [
-      "/apps/2026-05-11-design-directions.html",
-      "/apps/2026-05-10-coffee-shop-network.html",
-      "/apps/2026-05-09-mind-palace.html"
-    ]
-  },
-  {
-    "listing": "/presentations.html",
-    "items": [
-      "/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
-      "/presentations/2026-05-19-wand-and-hand.html"
-    ]
+    "listing": "/writing.html",
+    "items": []
   },
   {
     "listing": "/games.html",
@@ -22,7 +11,19 @@
     ]
   },
   {
-    "listing": "/writing.html",
-    "items": []
+    "listing": "/presentations.html",
+    "items": [
+      "/presentations/2026-05-21-bob-is-you.html",
+      "/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
+      "/presentations/2026-05-19-wand-and-hand.html"
+    ]
+  },
+  {
+    "listing": "/apps.html",
+    "items": [
+      "/apps/2026-05-11-design-directions.html",
+      "/apps/2026-05-10-coffee-shop-network.html",
+      "/apps/2026-05-09-mind-palace.html"
+    ]
   }
 ]

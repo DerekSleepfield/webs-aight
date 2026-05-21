@@ -10,7 +10,28 @@
 <atom:link href="https://derekwakefield.com/presentations.xml" rel="self" type="application/rss+xml"/>
 <description>Assistant Professor of Political Science, Bucknell University</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Tue, 19 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bob is You: You are Bob</title>
+  <link>https://derekwakefield.com/presentations/2026-05-21-bob-is-you.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Opening <a href="../assets/bob-is-you.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="../bob-is-you.html">HTML article</a>.</p>
+<script>window.location.replace("/assets/bob-is-you.pdf");</script>
+
+
+
+ ]]></description>
+  <category>presentation</category>
+  <category>bobbology</category>
+  <category>health</category>
+  <category>integration</category>
+  <guid>https://derekwakefield.com/presentations/2026-05-21-bob-is-you.html</guid>
+  <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How to Engage in Politics as Faculty</title>
   <link>https://derekwakefield.com/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html</link>
