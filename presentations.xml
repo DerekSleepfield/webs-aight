@@ -12,7 +12,7 @@
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Bob is You: You are Bob</title>
+  <title>Lecture 2: Bob is You</title>
   <link>https://derekwakefield.com/presentations/2026-05-21-bob-is-you.html</link>
   <description><![CDATA[ 
 
@@ -30,6 +30,27 @@
   <category>health</category>
   <category>integration</category>
   <guid>https://derekwakefield.com/presentations/2026-05-21-bob-is-you.html</guid>
+  <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Lecture 3: The 4B Framework</title>
+  <link>https://derekwakefield.com/presentations/2026-05-21-the-4b-framework.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Opening <a href="../assets/the-4b-framework.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="../the-4b-framework.html">long-form lecture</a>.</p>
+<script>window.location.replace("/assets/the-4b-framework.pdf");</script>
+
+
+
+ ]]></description>
+  <category>presentation</category>
+  <category>bobble</category>
+  <category>bobbology</category>
+  <category>framework</category>
+  <guid>https://derekwakefield.com/presentations/2026-05-21-the-4b-framework.html</guid>
   <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -94,6 +115,26 @@
   <category>canon</category>
   <guid>https://derekwakefield.com/presentations/2026-05-19-wand-and-hand.html</guid>
   <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Lecture 1: Introduction to Bobbology</title>
+  <link>https://derekwakefield.com/presentations/2026-05-09-introduction-to-bobbology.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Opening <a href="../assets/introduction-to-bobbology.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="../introduction-to-bobbology.html">long-form lecture</a>.</p>
+<script>window.location.replace("/assets/introduction-to-bobbology.pdf");</script>
+
+
+
+ ]]></description>
+  <category>presentation</category>
+  <category>bobble</category>
+  <category>bobbology</category>
+  <guid>https://derekwakefield.com/presentations/2026-05-09-introduction-to-bobbology.html</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
