@@ -74,20 +74,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-bobbology .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-bobbology'] = new List('listing-bobbology', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-other .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-other'] = new List('listing-other', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -208,8 +236,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bobbology" id="toc-bobbology" class="nav-link active" data-scroll-target="#bobbology">Bobbology</a></li>
+  <li><a href="#other-misc" id="toc-other-misc" class="nav-link" data-scroll-target="#other-misc">Other &amp; Misc</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -233,134 +268,165 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<section id="bobbology" class="level2">
+<h2 class="anchored" data-anchor-id="bobbology">Bobbology</h2>
+<div id="listing-bobbology" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-bobbology-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-bobbology'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5JTJDbGFuZ3VhZ2UlMkNib2JiaXNo" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="quarto-post image-right" data-index="0" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5" data-listing-date-sort="1778284800000" data-listing-file-modified-sort="1779452619956" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-22-bobbish.html" class="no-external">Lecture 4: Bobbish</a>
+<a href="./presentations/bobbology/2026-05-09-introduction-to-bobbology.html" class="no-external">Lecture 1: Introduction to Bobbology</a>
 </h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-22-bobbish.html" class="no-external">
-<p>Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./presentations/2026-05-22-bobbish.html" class="no-external">
-<div class="listing-date">
-May 22, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYm9sb2d5JTJDaGVhbHRoJTJDaW50ZWdyYXRpb24=" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-21-bob-is-you.html" class="no-external">Lecture 2: Bob is You</a>
-</h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-21-bob-is-you.html" class="no-external">
-</a><p><a href="./presentations/2026-05-21-bob-is-you.html" class="no-external">A 21-slide companion to the integrated-health article — five dimensions, five integration loops (Walker, Ratey, Holt-Lunstad, Hill &amp; Turiano, van der Kolk), and a radar-plot reveal. Also available as an </a><a href="./bob-is-you.html">HTML article</a>.</p>
-</div>
-</div>
-<div class="metadata">
-<a href="./presentations/2026-05-21-bob-is-you.html" class="no-external">
-<div class="listing-date">
-May 21, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5JTJDZnJhbWV3b3Jr" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-21-the-4b-framework.html" class="no-external">Lecture 3: The 4B Framework</a>
-</h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-21-the-4b-framework.html" class="no-external">
-<p>Slide-deck companion to Lesson 3 — the four tenets of Bobology and the scaffolding that holds them, distilled into 20-some slides for live delivery.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./presentations/2026-05-21-the-4b-framework.html" class="no-external">
-<div class="listing-date">
-May 21, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5JTJDZnJhbWV3b3Jr" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-21-bob-bib-blab-boob.html" class="no-external">The Four Tenets — Bob, Bib, B(l)ab, Boobs</a>
-</h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-21-bob-bib-blab-boob.html" class="no-external">
-<p>A standalone explainer of the four Bobology tenets — nucleus, nourishment, connection (with the parenthetical L), and pleasure — plus the scaffolding that holds them together.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./presentations/2026-05-21-bob-bib-blab-boob.html" class="no-external">
-<div class="listing-date">
-May 21, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="cHJlc2VudGF0aW9uJTJDZmFjdWx0eSUyQ3BvbGl0aWNzJTJDY2FtcHVzJTIwY29ubmVjdA==" data-listing-date-sort="1779148800000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html" class="no-external">How to Engage in Politics as Faculty</a>
-</h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html" class="no-external">
-<p>A small menu for an unsettled moment. Campus Connect 2026 talk on what political engagement can look like for faculty who aren’t full-time organizers.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html" class="no-external">
-<div class="listing-date">
-May 19, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="cHJlc2VudGF0aW9uJTJDYWklMjBsaXRlcmFjeSUyQ2JvYmJsZSUyQ2Nhbm9u" data-listing-date-sort="1779148800000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-19-wand-and-hand.html" class="no-external">The Wand and the Hand</a>
-</h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-19-wand-and-hand.html" class="no-external">
-<p>A 20-slide AI literacy foundation, after Canon IX of the Bobble Canon. The wand has a power. Not the power. A power.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./presentations/2026-05-19-wand-and-hand.html" class="no-external">
-<div class="listing-date">
-May 19, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5" data-listing-date-sort="1778284800000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./presentations/2026-05-09-introduction-to-bobbology.html" class="no-external">Lecture 1: Introduction to Bobbology</a>
-</h3>
-<div class="delink listing-description"><a href="./presentations/2026-05-09-introduction-to-bobbology.html" class="no-external">
+<div class="delink listing-description"><a href="./presentations/bobbology/2026-05-09-introduction-to-bobbology.html" class="no-external">
 <p>Slide-deck companion to Lesson 1 — a field guide to Bobbles, Ekos, Vessels, and Daemons, and the role each plays at the decision gate.</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="./presentations/2026-05-09-introduction-to-bobbology.html" class="no-external">
+<a href="./presentations/bobbology/2026-05-09-introduction-to-bobbology.html" class="no-external">
 <div class="listing-date">
 May 9, 2026
 </div>
 </a>
 </div>
 </div>
+<div class="quarto-post image-right" data-index="1" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYm9sb2d5JTJDaGVhbHRoJTJDaW50ZWdyYXRpb24=" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779452619956" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./presentations/bobbology/2026-05-21-bob-is-you.html" class="no-external">Lecture 2: Bob is You</a>
+</h3>
+<div class="delink listing-description"><a href="./presentations/bobbology/2026-05-21-bob-is-you.html" class="no-external">
+</a><p><a href="./presentations/bobbology/2026-05-21-bob-is-you.html" class="no-external">A 21-slide companion to the integrated-health article — five dimensions, five integration loops (Walker, Ratey, Holt-Lunstad, Hill &amp; Turiano, van der Kolk), and a radar-plot reveal. Also available as an </a><a href="./bob-is-you.html">HTML article</a>.</p>
+</div>
+</div>
+<div class="metadata">
+<a href="./presentations/bobbology/2026-05-21-bob-is-you.html" class="no-external">
+<div class="listing-date">
+May 21, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5JTJDZnJhbWV3b3Jr" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779452619956" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./presentations/bobbology/2026-05-21-the-4b-framework.html" class="no-external">Lecture 3: The 4B Framework</a>
+</h3>
+<div class="delink listing-description"><a href="./presentations/bobbology/2026-05-21-the-4b-framework.html" class="no-external">
+<p>Slide-deck companion to Lesson 3 — the four tenets of Bobology and the scaffolding that holds them, distilled into 20-some slides for live delivery.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./presentations/bobbology/2026-05-21-the-4b-framework.html" class="no-external">
+<div class="listing-date">
+May 21, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="cHJlc2VudGF0aW9uJTJDYm9iYmxlJTJDYm9iYm9sb2d5JTJDbGFuZ3VhZ2UlMkNib2JiaXNo" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1779452619956" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./presentations/bobbology/2026-05-22-bobbish.html" class="no-external">Lecture 4: Bobbish</a>
+</h3>
+<div class="delink listing-description"><a href="./presentations/bobbology/2026-05-22-bobbish.html" class="no-external">
+<p>Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./presentations/bobbology/2026-05-22-bobbish.html" class="no-external">
+<div class="listing-date">
+May 22, 2026
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+</section>
+<section id="other-misc" class="level2">
+<h2 class="anchored" data-anchor-id="other-misc">Other &amp; Misc</h2>
+<div id="listing-other" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-other-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-other'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="cHJlc2VudGF0aW9uJTJDZmFjdWx0eSUyQ3BvbGl0aWNzJTJDY2FtcHVzJTIwY29ubmVjdA==" data-listing-date-sort="1779148800000" data-listing-file-modified-sort="1779452619956" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./presentations/other/2026-05-19-how-to-engage-in-politics-as-faculty.html" class="no-external">How to Engage in Politics as Faculty</a>
+</h3>
+<div class="delink listing-description"><a href="./presentations/other/2026-05-19-how-to-engage-in-politics-as-faculty.html" class="no-external">
+<p>A small menu for an unsettled moment. Campus Connect 2026 talk on what political engagement can look like for faculty who aren’t full-time organizers.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./presentations/other/2026-05-19-how-to-engage-in-politics-as-faculty.html" class="no-external">
+<div class="listing-date">
+May 19, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="cHJlc2VudGF0aW9uJTJDYWklMjBsaXRlcmFjeSUyQ2JvYmJsZSUyQ2Nhbm9u" data-listing-date-sort="1779148800000" data-listing-file-modified-sort="1779452619957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./presentations/other/2026-05-19-wand-and-hand.html" class="no-external">The Wand and the Hand</a>
+</h3>
+<div class="delink listing-description"><a href="./presentations/other/2026-05-19-wand-and-hand.html" class="no-external">
+<p>A 20-slide AI literacy foundation, after Canon IX of the Bobble Canon. The wand has a power. Not the power. A power.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./presentations/other/2026-05-19-wand-and-hand.html" class="no-external">
+<div class="listing-date">
+May 19, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <!--
   Bobble feedback bubble.
   Included site-wide via _quarto.yml -> format.html.include-after-body.
