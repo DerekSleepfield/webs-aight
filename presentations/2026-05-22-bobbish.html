@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-05-22">
+<meta name="description" content="Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery.">
 
-<title>Writing – Derek Wakefield</title>
+<title>Lecture 4: Bobbish – Derek Wakefield</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,24 +28,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6fa91e8508e1fd47d943214cfa4b050f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6fa91e8508e1fd47d943214cfa4b050f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,128 +71,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-personal .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-personal'] = new List('listing-personal', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-bobbology .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-bobbology'] = new List('listing-bobbology', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-notes .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-notes'] = new List('listing-notes', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="themes.css">
-<link rel="alternate" type="application/rss+xml" title="Derek Wakefield" href="writing.xml" data-external="1"><meta property="og:title" content="Writing – Derek Wakefield">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../themes.css">
+<meta property="og:title" content="Lecture 4: Bobbish – Derek Wakefield">
+<meta property="og:description" content="Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery.">
 <meta property="og:site_name" content="Derek Wakefield">
-<meta name="twitter:title" content="Writing – Derek Wakefield">
+<meta name="twitter:title" content="Lecture 4: Bobbish – Derek Wakefield">
+<meta name="twitter:description" content="Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -203,7 +91,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Derek Wakefield</span>
     </a>
   </div>
@@ -214,43 +102,43 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link" href="../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./service.html"> 
+    <a class="nav-link" href="../service.html"> 
 <span class="menu-text">Service</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./now.html"> 
+    <a class="nav-link" href="../now.html"> 
 <span class="menu-text">Now</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./writing.html" aria-current="page"> 
+    <a class="nav-link" href="../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentations.html"> 
+    <a class="nav-link" href="../presentations.html"> 
 <span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./apps.html"> 
+    <a class="nav-link" href="../apps.html"> 
 <span class="menu-text">Apps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./games.html"> 
+    <a class="nav-link" href="../games.html"> 
 <span class="menu-text">Games</span></a>
   </li>  
 </ul>
@@ -264,30 +152,40 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#personal" id="toc-personal" class="nav-link active" data-scroll-target="#personal">Personal</a></li>
-  <li><a href="#bobbology" id="toc-bobbology" class="nav-link" data-scroll-target="#bobbology">Bobbology</a></li>
-  <li><a href="#notes-misc" id="toc-notes-misc" class="nav-link" data-scroll-target="#notes-misc">Notes &amp; Misc</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Writing</h1>
-</div>
+<h1 class="title">Lecture 4: Bobbish</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">presentation</div>
+    <div class="quarto-category">bobble</div>
+    <div class="quarto-category">bobbology</div>
+    <div class="quarto-category">language</div>
+    <div class="quarto-category">bobbish</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 22, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -297,240 +195,10 @@ window.Quarto = {
 </header>
 
 
-<section id="personal" class="level2">
-<h2 class="anchored" data-anchor-id="personal">Personal</h2>
-<div id="listing-personal" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-personal-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-personal'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZXNzYXklMkN3cml0aW5nJTJDY2xhdWRlJTJDYm9iYm9sb2d5JTJDbG9uZ2Zvcm0=" data-listing-date-sort="1779148800000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="208">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/personal/2026-05-19-friends-we-find.html" class="no-external">The Friends We Find Along the Way</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/personal/2026-05-19-friends-we-find.html" class="no-external">
-<p>An essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/personal/2026-05-19-friends-we-find.html" class="no-external">
-<div class="listing-date">
-May 19, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="ZXNzYXklMkN3cml0aW5nJTJDY2xhdWRlJTJDbG9uZ2Zvcm0=" data-listing-date-sort="1778716800000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/personal/2026-05-14-a-voice-that-listens.html" class="no-external">A Voice That Listens</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/personal/2026-05-14-a-voice-that-listens.html" class="no-external">
-<p>My month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/personal/2026-05-14-a-voice-that-listens.html" class="no-external">
-<div class="listing-date">
-May 14, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="bobbology" class="level2">
-<h2 class="anchored" data-anchor-id="bobbology">Bobbology</h2>
-<div id="listing-bobbology" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-bobbology-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-bobbology'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZmljdGlvbiUyQ2JvYmJsZQ==" data-listing-date-sort="1778284800000" data-listing-file-modified-sort="1779413307042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bobbology/2026-05-09-bobble-canon.html" class="no-external">The Bobble Canon</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/bobbology/2026-05-09-bobble-canon.html" class="no-external">
-<p>Numerous short parables, a handful of Bobbisms, a few codas, and a glossary. Kept by Derek. Tended by Claude. Bobbled accordingly.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/bobbology/2026-05-09-bobble-canon.html" class="no-external">
-<div class="listing-date">
-May 9, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Ym9iYmxlJTJDYm9iYm9sb2d5JTJDYWk=" data-listing-date-sort="1778284800000" data-listing-file-modified-sort="1779413307042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bobbology/2026-05-09-introduction-to-bobbology.html" class="no-external">Lesson 1: Introduction to Bobbology</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/bobbology/2026-05-09-introduction-to-bobbology.html" class="no-external">
-<p>A field guide to the audible compass and its relations: Bobbles, Ekos, Vessels, and Daemons. How memory works in ekos. Why humans hold the pen at the decision gate.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/bobbology/2026-05-09-introduction-to-bobbology.html" class="no-external">
-<div class="listing-date">
-May 9, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Ym9iYm9sb2d5JTJDaGVhbHRoJTJDaW50ZWdyYXRpb24=" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779413307042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bobbology/2026-05-21-bob-is-you.html" class="no-external">Lesson 2: Bob is You</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/bobbology/2026-05-21-bob-is-you.html" class="no-external">
-</a><p><a href="./posts/bobbology/2026-05-21-bob-is-you.html" class="no-external">An integrated guide to the five dimensions — physical, mental, emotional, social, spiritual — and what the shape of you actually looks like on a radar plot. Also available as a </a><a href="./assets/bob-is-you.pdf">slide deck (PDF)</a>.</p>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/bobbology/2026-05-21-bob-is-you.html" class="no-external">
-<div class="listing-date">
-May 21, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Ym9iYmxlJTJDYm9iYm9sb2d5JTJDZnJhbWV3b3Jr" data-listing-date-sort="1779321600000" data-listing-file-modified-sort="1779413307042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bobbology/2026-05-21-the-4b-framework.html" class="no-external">Lesson 3: The 4B Framework</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/bobbology/2026-05-21-the-4b-framework.html" class="no-external">
-<p>The four tenets of Bobology — Bob, Bib, B(l)ab, Boobs — walked through one at a time with named research (Erikson, Polivy &amp; Herman, Goffman, Grice, Deci &amp; Ryan, Aristotle, Habermas, Bateson), plus the three pieces of scaffolding that hold them together. Companion to the 23-slide deck.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/bobbology/2026-05-21-the-4b-framework.html" class="no-external">
-<div class="listing-date">
-May 21, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Ym9iYmxlJTJDYm9iYm9sb2d5JTJDbGFuZ3VhZ2UlMkNib2JiaXNo" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1779413307042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/bobbology/2026-05-22-bobbish-in-4-voices.html" class="no-external">Lesson 4: Bobbish in 4 Voices</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/bobbology/2026-05-22-bobbish-in-4-voices.html" class="no-external">
-<p>Bobbish explained four ways — for a kindergartener, a high schooler, an undergrad, and as a PhD dissertation prospectus. Same designed register, four registers. Companion to the 20-slide deck.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/bobbology/2026-05-22-bobbish-in-4-voices.html" class="no-external">
-<div class="listing-date">
-May 22, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="notes-misc" class="level2">
-<h2 class="anchored" data-anchor-id="notes-misc">Notes &amp; Misc</h2>
-<div id="listing-notes" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-notes-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-notes'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZmljdGlvbiUyQ2xvcmUlMkNnZW0lMjB3YXJzJTJDd29ybGRidWlsZGluZw==" data-listing-date-sort="1779235200000" data-listing-file-modified-sort="1779413307043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/notes/2026-05-20-gem-wars-lore.html" class="no-external">Gem Wars — Lore (v0.33)</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/notes/2026-05-20-gem-wars-lore.html" class="no-external">
-<p>Canonical lore for Gem Wars’ three sentient elements — Mud, Lava, Water — and the factions they became. Origins, death semantics, gem-relationships, visual register, and a small canon of stories. Pinned so engine, art, and writing all reference the same source.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/notes/2026-05-20-gem-wars-lore.html" class="no-external">
-<div class="listing-date">
-May 20, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cmVhZGluZyUyMG5vdGVzJTJDbmV0d29yayUyMGFuYWx5c2lzJTJDbWV0aG9kcw==" data-listing-date-sort="1778544000000" data-listing-file-modified-sort="1779413307042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/notes/2026-05-12-sinatra-2016-memo.html" class="no-external">Sinatra et al.&nbsp;2016 — three-page memo</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/notes/2026-05-12-sinatra-2016-memo.html" class="no-external">
-<p>A short reading note on the Q-model, the random impact rule, and the co-authorship-asymmetry inference rule that powers the Coffee Shop visualization.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/notes/2026-05-12-sinatra-2016-memo.html" class="no-external">
-<div class="listing-date">
-May 12, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
+<p>Opening <a href="../assets/bobbish.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="../bobbish-in-4-voices.html">long-form lecture (4 voices)</a>.</p>
+<script>window.location.replace("/bobbish-in-4-voices.html");</script>
 
 
-
-</section>
 
 </main> <!-- /main -->
 <!--
@@ -538,7 +206,7 @@ May 12, 2026
   Included site-wide via _quarto.yml -> format.html.include-after-body.
   Floating bottom-right chirp link to /feedback.html.
 -->
-<a class="bob-chirp" href="./feedback.html" aria-label="leave a chirp">
+<a class="bob-chirp" href="../feedback.html" aria-label="leave a chirp">
   <span class="bob-chirp-mark">✦</span>
   <span class="bob-chirp-label">chirp</span>
 </a>
@@ -607,7 +275,7 @@ May 12, 2026
   <div class="dw-theme-panel" id="dwThemePanel" role="listbox">
     <!-- items injected by script for compactness -->
     <div class="dw-divider"></div>
-    <a class="dw-what" href="./design-directions.html">What is this? →</a>
+    <a class="dw-what" href="../design-directions.html">What is this? →</a>
   </div>
 </div>
 
@@ -1178,5 +846,5 @@ May 12, 2026
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

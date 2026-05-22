@@ -1,21 +1,16 @@
 [
   {
-    "listing": "/apps.html",
+    "listing": "/writing.html",
     "items": [
-      "/apps/2026-05-11-design-directions.html",
-      "/apps/2026-05-10-the-coffee-shop.html",
-      "/apps/2026-05-09-mind-palace.html"
-    ]
-  },
-  {
-    "listing": "/presentations.html",
-    "items": [
-      "/presentations/2026-05-21-bob-is-you.html",
-      "/presentations/2026-05-21-the-4b-framework.html",
-      "/presentations/2026-05-21-bob-bib-blab-boob.html",
-      "/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
-      "/presentations/2026-05-19-wand-and-hand.html",
-      "/presentations/2026-05-09-introduction-to-bobbology.html"
+      "/posts/personal/2026-05-19-friends-we-find.html",
+      "/posts/personal/2026-05-14-a-voice-that-listens.html",
+      "/posts/bobbology/2026-05-09-bobble-canon.html",
+      "/posts/bobbology/2026-05-09-introduction-to-bobbology.html",
+      "/posts/bobbology/2026-05-21-bob-is-you.html",
+      "/posts/bobbology/2026-05-21-the-4b-framework.html",
+      "/posts/bobbology/2026-05-22-bobbish-in-4-voices.html",
+      "/posts/notes/2026-05-20-gem-wars-lore.html",
+      "/posts/notes/2026-05-12-sinatra-2016-memo.html"
     ]
   },
   {
@@ -26,16 +21,23 @@
     ]
   },
   {
-    "listing": "/writing.html",
+    "listing": "/presentations.html",
     "items": [
-      "/posts/personal/2026-05-19-friends-we-find.html",
-      "/posts/personal/2026-05-14-a-voice-that-listens.html",
-      "/posts/bobbology/2026-05-09-bobble-canon.html",
-      "/posts/bobbology/2026-05-09-introduction-to-bobbology.html",
-      "/posts/bobbology/2026-05-21-bob-is-you.html",
-      "/posts/bobbology/2026-05-21-the-4b-framework.html",
-      "/posts/notes/2026-05-20-gem-wars-lore.html",
-      "/posts/notes/2026-05-12-sinatra-2016-memo.html"
+      "/presentations/2026-05-22-bobbish.html",
+      "/presentations/2026-05-21-bob-is-you.html",
+      "/presentations/2026-05-21-the-4b-framework.html",
+      "/presentations/2026-05-21-bob-bib-blab-boob.html",
+      "/presentations/2026-05-19-how-to-engage-in-politics-as-faculty.html",
+      "/presentations/2026-05-19-wand-and-hand.html",
+      "/presentations/2026-05-09-introduction-to-bobbology.html"
+    ]
+  },
+  {
+    "listing": "/apps.html",
+    "items": [
+      "/apps/2026-05-11-design-directions.html",
+      "/apps/2026-05-10-the-coffee-shop.html",
+      "/apps/2026-05-09-mind-palace.html"
     ]
   }
 ]

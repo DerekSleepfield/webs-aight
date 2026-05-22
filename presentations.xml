@@ -10,7 +10,29 @@
 <atom:link href="https://derekwakefield.com/presentations.xml" rel="self" type="application/rss+xml"/>
 <description>Assistant Professor of Political Science, Bucknell University</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 22 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Lecture 4: Bobbish</title>
+  <link>https://derekwakefield.com/presentations/2026-05-22-bobbish.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Opening <a href="../assets/bobbish.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="../bobbish-in-4-voices.html">long-form lecture (4 voices)</a>.</p>
+<script>window.location.replace("/bobbish-in-4-voices.html");</script>
+
+
+
+ ]]></description>
+  <category>presentation</category>
+  <category>bobble</category>
+  <category>bobbology</category>
+  <category>language</category>
+  <category>bobbish</category>
+  <guid>https://derekwakefield.com/presentations/2026-05-22-bobbish.html</guid>
+  <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Lecture 2: Bob is You</title>
   <link>https://derekwakefield.com/presentations/2026-05-21-bob-is-you.html</link>
