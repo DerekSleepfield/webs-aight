@@ -8,6 +8,6 @@ path: /bobble-canon.html
 ---
 
 ```{=html}
-<p>Redirecting to <a href="/bobble-canon.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<p>Redirecting to <a href="/bobble-canon.html">the standalone page</a>…</p>
 <script>window.location.replace("/bobble-canon.html");</script>
 ```

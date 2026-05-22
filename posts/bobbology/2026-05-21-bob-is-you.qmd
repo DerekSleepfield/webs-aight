@@ -8,6 +8,6 @@ path: /bob-is-you.html
 ---
 
 ```{=html}
-<p>Redirecting to <a href="/bob-is-you.html" target="_blank" rel="noopener">the article</a>…</p>
+<p>Redirecting to <a href="/bob-is-you.html">the article</a>…</p>
 <script>window.location.replace("/bob-is-you.html");</script>
 ```

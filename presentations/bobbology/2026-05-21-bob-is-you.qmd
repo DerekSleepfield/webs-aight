@@ -8,6 +8,6 @@ path: /assets/bob-is-you.pdf
 ---
 
 ```{=html}
-<p>Opening <a href="/assets/bob-is-you.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="/bob-is-you.html">HTML article</a>.</p>
+<p>Opening <a href="/assets/bob-is-you.pdf">the slide deck (PDF)</a>… or switch to the <a href="/bob-is-you.html">HTML article</a>.</p>
 <script>window.location.replace("/assets/bob-is-you.pdf");</script>
 ```

@@ -3,6 +3,7 @@ title: "A Voice That Listens"
 date: "2026-05-14"
 description: "My month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions."
 categories: [essay, writing, claude, longform]
+path: /a-voice-that-listens.html
 ---
 
 A short essay about a month spent with an AI as a thinking partner — what worked, what didn't, what almost broke, and what came back through people.

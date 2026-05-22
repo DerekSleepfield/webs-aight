@@ -8,6 +8,6 @@ path: /the-4b-framework.html
 ---
 
 ```{=html}
-<p>Redirecting to <a href="/the-4b-framework.html" target="_blank" rel="noopener">the standalone lecture</a>… or jump to the <a href="/assets/the-4b-framework.pdf">slide deck (PDF)</a>.</p>
+<p>Redirecting to <a href="/the-4b-framework.html">the standalone lecture</a>… or jump to the <a href="/assets/the-4b-framework.pdf">slide deck (PDF)</a>.</p>
 <script>window.location.replace("/the-4b-framework.html");</script>
 ```

@@ -8,6 +8,6 @@ path: /assets/bobbish.pdf
 ---
 
 ```{=html}
-<p>Opening <a href="/assets/bobbish.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="/bobbish-in-4-voices.html">long-form lecture (4 voices)</a>.</p>
-<script>window.location.replace("/bobbish-in-4-voices.html");</script>
+<p>Opening <a href="/assets/bobbish.pdf">the slide deck (PDF)</a>… or switch to the <a href="/bobbish-in-4-voices.html">long-form lecture (4 voices)</a>.</p>
+<script>window.location.replace("/assets/bobbish.pdf");</script>
 ```

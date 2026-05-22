@@ -8,6 +8,6 @@ path: /assets/introduction-to-bobbology.pdf
 ---
 
 ```{=html}
-<p>Opening <a href="/assets/introduction-to-bobbology.pdf" target="_blank" rel="noopener">the slide deck (PDF)</a>… or switch to the <a href="/introduction-to-bobbology.html">long-form lecture</a>.</p>
+<p>Opening <a href="/assets/introduction-to-bobbology.pdf">the slide deck (PDF)</a>… or switch to the <a href="/introduction-to-bobbology.html">long-form lecture</a>.</p>
 <script>window.location.replace("/assets/introduction-to-bobbology.pdf");</script>
 ```

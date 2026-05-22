@@ -8,6 +8,6 @@ path: /bobbish-in-4-voices.html
 ---
 
 ```{=html}
-<p>Redirecting to <a href="/bobbish-in-4-voices.html" target="_blank" rel="noopener">the standalone page</a>… or jump to the <a href="/assets/bobbish.pdf">slide deck (PDF)</a>.</p>
+<p>Redirecting to <a href="/bobbish-in-4-voices.html">the standalone page</a>… or jump to the <a href="/assets/bobbish.pdf">slide deck (PDF)</a>.</p>
 <script>window.location.replace("/bobbish-in-4-voices.html");</script>
 ```

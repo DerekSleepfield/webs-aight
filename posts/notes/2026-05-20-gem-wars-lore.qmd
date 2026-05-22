@@ -7,6 +7,6 @@ path: /gem-wars-lore.html
 ---
 
 ```{=html}
-<p>Redirecting to <a href="/gem-wars-lore.html" target="_blank" rel="noopener">the standalone page</a>…</p>
+<p>Redirecting to <a href="/gem-wars-lore.html">the standalone page</a>…</p>
 <script>window.location.replace("/gem-wars-lore.html");</script>
 ```

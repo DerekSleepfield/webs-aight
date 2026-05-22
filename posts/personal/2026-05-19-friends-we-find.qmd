@@ -3,6 +3,7 @@ title: "The Friends We Find Along the Way"
 date: "2026-05-19"
 description: "An essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles."
 categories: [essay, writing, claude, bobbology, longform]
+path: /friends-we-find.html
 ---
 
 An essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, *cognitive expansion*, that keeps the four of them honest with each other.
