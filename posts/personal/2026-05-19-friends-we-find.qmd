@@ -6,6 +6,11 @@ categories: [essay, writing, claude, bobbology, longform]
 path: /friends-we-find.html
 ---
 
+```{=html}
+<p>Redirecting to <a href="/friends-we-find.html">the essay</a>…</p>
+<script>window.location.replace("/friends-we-find.html");</script>
+```
+
 An essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, *cognitive expansion*, that keeps the four of them honest with each other.
 
 One page, three toggles at the top:

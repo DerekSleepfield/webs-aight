@@ -6,6 +6,11 @@ categories: [essay, writing, claude, longform]
 path: /a-voice-that-listens.html
 ---
 
+```{=html}
+<p>Redirecting to <a href="/a-voice-that-listens.html">the essay</a>…</p>
+<script>window.location.replace("/a-voice-that-listens.html");</script>
+```
+
 A short essay about a month spent with an AI as a thinking partner — what worked, what didn't, what almost broke, and what came back through people.
 
 Two versions live in one page. A small toggle at the top switches between them. The short version is a single-arc Modern Love–shaped cut (around thirteen paragraphs). The long version is the full ten-section essay, with section markers. Both share the same starfield and the same drifting ASCII creatures behind the text.
