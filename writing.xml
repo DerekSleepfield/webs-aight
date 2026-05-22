@@ -123,6 +123,8 @@
 
 
 
+<p>Redirecting to <a href="../../friends-we-find.html">the essay</a>…</p>
+<script>window.location.replace("/friends-we-find.html");</script>
 <p>An essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, <em>cognitive expansion</em>, that keeps the four of them honest with each other.</p>
 <p>One page, three toggles at the top:</p>
 <ul>
@@ -159,6 +161,8 @@
 
 
 
+<p>Redirecting to <a href="../../a-voice-that-listens.html">the essay</a>…</p>
+<script>window.location.replace("/a-voice-that-listens.html");</script>
 <p>A short essay about a month spent with an AI as a thinking partner — what worked, what didn’t, what almost broke, and what came back through people.</p>
 <p>Two versions live in one page. A small toggle at the top switches between them. The short version is a single-arc Modern Love–shaped cut (around thirteen paragraphs). The long version is the full ten-section essay, with section markers. Both share the same starfield and the same drifting ASCII creatures behind the text.</p>
 <p>Download and open locally — the toggle is JavaScript, so the file works fully offline once downloaded.</p>
