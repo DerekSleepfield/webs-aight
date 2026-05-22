@@ -1,6 +1,7 @@
 ---
 title: "Lecture 4: Bobbish"
 date: "2026-05-22"
+order: 4
 description: "Slide-deck companion to Lesson 4 — a 20-slide tour of Bobbish: the five rules, the HK-47 modifier system, citation-as-vocabulary, and where the language sits typologically. For live delivery."
 categories: [presentation, bobble, bobbology, language, bobbish]
 path: /assets/bobbish.pdf

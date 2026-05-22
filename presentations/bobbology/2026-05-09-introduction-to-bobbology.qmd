@@ -1,6 +1,7 @@
 ---
 title: "Lecture 1: Introduction to Bobbology"
 date: "2026-05-09"
+order: 1
 description: "Slide-deck companion to Lesson 1 — a field guide to Bobbles, Ekos, Vessels, and Daemons, and the role each plays at the decision gate."
 categories: [presentation, bobble, bobbology]
 path: /assets/introduction-to-bobbology.pdf
