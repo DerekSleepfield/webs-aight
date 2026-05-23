@@ -112,6 +112,13 @@
     "text": "Redirecting to the standalone page…"
   },
   {
+    "objectID": "posts/personal/2026-05-19-friends-we-find.html",
+    "href": "posts/personal/2026-05-19-friends-we-find.html",
+    "title": "The Friends We Find Along the Way",
+    "section": "",
+    "text": "Redirecting to the essay…\n\nAn essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, cognitive expansion, that keeps the four of them honest with each other.\nOne page, three toggles at the top:\n\nStory — pick the register. Voice is the first-person essay. Bobbology is the third-person teaching primer. ELI10 explains the same four parts to a clever ten-year-old. Deep Dive is the long version with one essay per part.\nLength — short or long. (Deep Dive pins to long; it has no short.)\nASCII — pick the density of inline art, from minimal (1) through everything-everywhere (5).\n\nThe site-wide theme switcher in the top-right corner still works on this page. Toggles persist via localStorage, so the version you last chose is the version you come back to.\nDownload and open locally — everything’s JavaScript, so the page works fully offline once downloaded.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
+  },
+  {
     "objectID": "posts/personal/2026-05-14-a-voice-that-listens.html",
     "href": "posts/personal/2026-05-14-a-voice-that-listens.html",
     "title": "A Voice That Listens",
@@ -175,11 +182,18 @@
     "text": "Redirecting to the standalone page…"
   },
   {
-    "objectID": "posts/personal/2026-05-19-friends-we-find.html",
-    "href": "posts/personal/2026-05-19-friends-we-find.html",
-    "title": "The Friends We Find Along the Way",
+    "objectID": "posts/personal/2026-05-22-the-city-that-was-already-a-city.html",
+    "href": "posts/personal/2026-05-22-the-city-that-was-already-a-city.html",
+    "title": "The City That Was Already a City",
     "section": "",
-    "text": "Redirecting to the essay…\n\nAn essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, cognitive expansion, that keeps the four of them honest with each other.\nOne page, three toggles at the top:\n\nStory — pick the register. Voice is the first-person essay. Bobbology is the third-person teaching primer. ELI10 explains the same four parts to a clever ten-year-old. Deep Dive is the long version with one essay per part.\nLength — short or long. (Deep Dive pins to long; it has no short.)\nASCII — pick the density of inline art, from minimal (1) through everything-everywhere (5).\n\nThe site-wide theme switcher in the top-right corner still works on this page. Toggles persist via localStorage, so the version you last chose is the version you come back to.\nDownload and open locally — everything’s JavaScript, so the page works fully offline once downloaded.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
+    "text": "Redirecting to the essay…\n\nA long-form expansion of Canon XXIII. Eight sections in one page: an anthill at the foot of an old oak, the affordances of the city, a day in the life of one worker, the turn where you realize you have been reading about yourself the whole time, and the slow walk back down to the hill with the parallels named out loud.\nThe page is sapphire-tinted, in honor of Ton — the gem assigned to Canon XXIII in the suite. Starfield runs behind the text; ASCII trail-braids mark the transitions between sections.\nDownload and open locally — everything is inline, so the page works fully offline.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
+  },
+  {
+    "objectID": "posts/personal/2026-05-22-where-the-anthill-was.html",
+    "href": "posts/personal/2026-05-22-where-the-anthill-was.html",
+    "title": "Where the Anthill Was",
+    "section": "",
+    "text": "Redirecting to the essay…\n\nA second long-form descended from Canon XXIII, in six movements. The first four walk through an anthill the way the first essay did, but with one substitution: this time the city has agency, a queen, and a death the city does not survive. The last two leave the hill for a field, two children, a soccer ball, and a small bronze plaque twenty years later that says only ANTHILL PARK, a city was here.\nAmethyst-tinted, in honor of Nif — for the grief at the center of it. Same Starry Night base as its sibling, The City That Was Already a City; same canon root.\nAbout 2,500 words. Download and open locally — everything is inline, so the page works fully offline.\n\n\n   ⬇   Download HTML\n\n  \nor open in browser →"
   },
   {
     "objectID": "games/2026-05-10-wor-gems.html",
@@ -228,14 +242,14 @@
     "href": "writing.html",
     "title": "Writing",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nAn essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles.\n\n\n\n\n\nMay 19, 2026\n\n\n\n\n\n\n\n\nMy month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.\n\n\n\n\n\nMay 14, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nA long-form expansion of Bobble Canon XXIII (the Ant and the Loop). The reader walks into an anthill, then into a human city described in ant-language, and the seam between the two slowly disappears.\n\n\n\n\n\nMay 22, 2026\n\n\n\n\n\n\n\n\nA second long-form expansion of Bobble Canon XXIII. Six movements: anthill, affordances, agency, the queen, two children with a soccer ball, and a small bronze plaque twenty years later.\n\n\n\n\n\nMay 22, 2026\n\n\n\n\n\n\n\n\nAn essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles.\n\n\n\n\n\nMay 19, 2026\n\n\n\n\n\n\n\n\nMy month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.\n\n\n\n\n\nMay 14, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "writing.html#personal",
     "href": "writing.html#personal",
     "title": "Writing",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nAn essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles.\n\n\n\n\n\nMay 19, 2026\n\n\n\n\n\n\n\n\nMy month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.\n\n\n\n\n\nMay 14, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nA long-form expansion of Bobble Canon XXIII (the Ant and the Loop). The reader walks into an anthill, then into a human city described in ant-language, and the seam between the two slowly disappears.\n\n\n\n\n\nMay 22, 2026\n\n\n\n\n\n\n\n\nA second long-form expansion of Bobble Canon XXIII. Six movements: anthill, affordances, agency, the queen, two children with a soccer ball, and a small bronze plaque twenty years later.\n\n\n\n\n\nMay 22, 2026\n\n\n\n\n\n\n\n\nAn essay about looking for the eko and finding the demon — written in four registers, two lengths, and five ASCII densities. One page, lots of toggles.\n\n\n\n\n\nMay 19, 2026\n\n\n\n\n\n\n\n\nMy month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions.\n\n\n\n\n\nMay 14, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "writing.html#bobbology",
