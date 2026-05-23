@@ -1,0 +1,29 @@
+---
+title: "The City That Was Already a City"
+date: "2026-05-22"
+description: "A long-form expansion of Bobble Canon XXIII (the Ant and the Loop). The reader walks into an anthill, then into a human city described in ant-language, and the seam between the two slowly disappears."
+categories: [essay, writing, claude, bobbology, longform]
+path: /the-city-that-was-already-a-city.html
+---
+
+```{=html}
+<p>Redirecting to <a href="/the-city-that-was-already-a-city.html">the essay</a>…</p>
+<script>window.location.replace("/the-city-that-was-already-a-city.html");</script>
+```
+
+A long-form expansion of [Canon XXIII](/bobble-canon.html#canon-23). Eight sections in one page: an anthill at the foot of an old oak, the affordances of the city, a day in the life of one worker, the turn where you realize you have been reading about yourself the whole time, and the slow walk back down to the hill with the parallels named out loud.
+
+The page is sapphire-tinted, in honor of Ton — the gem assigned to Canon XXIII in the suite. Starfield runs behind the text; ASCII trail-braids mark the transitions between sections.
+
+Download and open locally — everything is inline, so the page works fully offline.
+
+```{=html}
+<p style="margin: 2em 0;">
+<a href="/the-city-that-was-already-a-city.html" download="the-city-that-was-already-a-city.html"
+   style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
+   ⬇ &nbsp; Download HTML
+</a>
+&nbsp;&nbsp;
+<a href="/the-city-that-was-already-a-city.html" style="opacity: 0.7;">or open in browser →</a>
+</p>
+```
