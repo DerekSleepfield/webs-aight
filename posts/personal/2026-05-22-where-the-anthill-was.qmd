@@ -15,7 +15,7 @@ A second long-form descended from [Canon XXIII](/bobble-canon.html#canon-23), in
 
 Amethyst-tinted, in honor of Nif — for the grief at the center of it. Same Starry Night base as its sibling, [The City That Was Already a City](/the-city-that-was-already-a-city.html); same canon root.
 
-About 2,500 words. Download and open locally — everything is inline, so the page works fully offline.
+About 2,300 words. Download and open locally — everything is inline, so the page works fully offline.
 
 ```{=html}
 <p style="margin: 2em 0;">
