@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-length="long">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,9 @@
 <meta property="og:description" content="An essay about a month with Claude. Two reading lengths. Eight site-wide themes.">
 <meta name="twitter:card" content="summary">
 
+
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/themes.css">
 <!--
   A Voice That Listens — standalone HTML
   Two reading lengths: long (3,944 words) and short (1,212 words), toggled by the reader.
@@ -218,9 +221,7 @@
   }
 
   /* ARTICLE BODY */
-  article { display: none; }
-  html[data-length="long"]  article.long  { display: block; }
-  html[data-length="short"] article.short { display: block; }
+  article { display: block; }
 
   article p {
     margin: 0 0 1.15rem;
@@ -364,198 +365,6 @@
     .divider { font-size: 0.78rem; }
   }
 
-  /* ─────────────────────────────────────────────────────────────────────────
-     Site-wide themes (carried over from themes.css)
-     ───────────────────────────────────────────────────────────────────────── */
-/* derekwakefield.com — theme variants for the design-direction dropdown
- * Activated by setting `data-theme="..."` on <html>.
- * Default (no attribute) leaves Cosmo untouched. */
-
-/* ────────── shared niceties for all themed states ────────── */
-html[data-theme] body,
-html[data-theme] .navbar,
-html[data-theme] .navbar-brand,
-html[data-theme] .nav-link {
-  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
-}
-
-/* ────────── 1 · PORCH LIGHT ────────── */
-html[data-theme="porch-light"] {
-  --bs-body-bg: #faf8f3;
-  --bs-body-color: #2a2a2a;
-  --bs-heading-color: #2a2a2a;
-  --bs-primary: #c9a96e;
-  --bs-link-color: #5b5340;
-  --bs-link-hover-color: #c9a96e;
-  --bs-border-color: #e5dec4;
-  --bs-secondary-bg: #fff;
-  --bs-tertiary-bg: #fff;
-  --bs-emphasis-color: #c9a96e;
-}
-html[data-theme="porch-light"] body { background: #faf8f3; color: #2a2a2a; font-family: "Iowan Old Style", "Palatino", Georgia, serif; line-height: 1.65; }
-html[data-theme="porch-light"] h1, html[data-theme="porch-light"] h2, html[data-theme="porch-light"] h3, html[data-theme="porch-light"] h4 { color: #2a2a2a; }
-html[data-theme="porch-light"] .navbar { background-color: #faf8f3 !important; border-bottom: 1px solid #e5dec4; }
-html[data-theme="porch-light"] .navbar .nav-link, html[data-theme="porch-light"] .navbar-brand { color: #5b5340 !important; }
-html[data-theme="porch-light"] .navbar .nav-link:hover, html[data-theme="porch-light"] .navbar-brand:hover { color: #c9a96e !important; }
-html[data-theme="porch-light"] a { color: #5b5340; }
-html[data-theme="porch-light"] a:hover { color: #c9a96e; }
-
-/* ────────── 2 · STAR CHART ────────── */
-html[data-theme="star-chart"] {
-  --bs-body-bg: #0a1428;
-  --bs-body-color: #d8d0b8;
-  --bs-heading-color: #fde487;
-  --bs-primary: #fde487;
-  --bs-link-color: #a89868;
-  --bs-link-hover-color: #fde487;
-  --bs-border-color: #2a3458;
-  --bs-secondary-bg: #112042;
-  --bs-tertiary-bg: #0e1a36;
-  --bs-emphasis-color: #fde487;
-}
-html[data-theme="star-chart"] body { background: radial-gradient(ellipse at 30% 20%, #1a2440 0%, #0a1428 65%) fixed; color: #d8d0b8; font-family: "Crimson Pro", "Crimson Text", Cambria, Georgia, serif; line-height: 1.55; }
-html[data-theme="star-chart"] h1, html[data-theme="star-chart"] h2, html[data-theme="star-chart"] h3, html[data-theme="star-chart"] h4 { color: #fde487; }
-html[data-theme="star-chart"] .navbar { background-color: #0e1a36 !important; border-bottom: 1px solid #2a3458; }
-html[data-theme="star-chart"] .navbar .nav-link, html[data-theme="star-chart"] .navbar-brand { color: #a89868 !important; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.9em; }
-html[data-theme="star-chart"] .navbar .nav-link:hover, html[data-theme="star-chart"] .navbar-brand:hover { color: #fde487 !important; }
-html[data-theme="star-chart"] a { color: #a89868; }
-html[data-theme="star-chart"] a:hover { color: #fde487; }
-
-/* ────────── 3 · BEDROCK ────────── */
-html[data-theme="bedrock"] {
-  --bs-body-bg: #1a2840;
-  --bs-body-color: #e8e2d1;
-  --bs-heading-color: #fff8e8;
-  --bs-primary: #d4a574;
-  --bs-link-color: #d4a574;
-  --bs-link-hover-color: #fff8e8;
-  --bs-border-color: #2c3d5c;
-  --bs-secondary-bg: #223354;
-  --bs-tertiary-bg: #1e2e48;
-  --bs-emphasis-color: #d4a574;
-}
-html[data-theme="bedrock"] body { background: #1a2840; color: #e8e2d1; font-family: Domine, "Cambria", Georgia, serif; line-height: 1.55; }
-html[data-theme="bedrock"] h1, html[data-theme="bedrock"] h2, html[data-theme="bedrock"] h3, html[data-theme="bedrock"] h4 { color: #fff8e8; font-weight: 700; letter-spacing: -0.015em; }
-html[data-theme="bedrock"] .navbar { background-color: #1e2e48 !important; border-bottom: 2px solid #2c3d5c; }
-html[data-theme="bedrock"] .navbar .nav-link, html[data-theme="bedrock"] .navbar-brand { color: #d4a574 !important; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; font-size: 0.85em; }
-html[data-theme="bedrock"] .navbar .nav-link:hover, html[data-theme="bedrock"] .navbar-brand:hover { color: #fff8e8 !important; }
-html[data-theme="bedrock"] a { color: #d4a574; }
-html[data-theme="bedrock"] a:hover { color: #fff8e8; }
-
-/* ────────── 4 · HUM ────────── */
-html[data-theme="hum"] {
-  --bs-body-bg: #f4ebe1;
-  --bs-body-color: #3a2e2e;
-  --bs-heading-color: #3a2e2e;
-  --bs-primary: #8a6b8a;
-  --bs-link-color: #5d4f4f;
-  --bs-link-hover-color: #8a6b8a;
-  --bs-border-color: #e3d4c9;
-  --bs-secondary-bg: #f9f1e8;
-  --bs-tertiary-bg: #f9f1e8;
-  --bs-emphasis-color: #8a6b8a;
-}
-html[data-theme="hum"] body { background: #f4ebe1; color: #3a2e2e; font-family: Cormorant, "Cormorant Garamond", Georgia, serif; line-height: 1.6; font-size: 1.05em; }
-html[data-theme="hum"] h1, html[data-theme="hum"] h2, html[data-theme="hum"] h3, html[data-theme="hum"] h4 { color: #3a2e2e; font-weight: 500; }
-html[data-theme="hum"] .navbar { background-color: #f4ebe1 !important; border-bottom: 1px solid #e3d4c9; }
-html[data-theme="hum"] .navbar .nav-link, html[data-theme="hum"] .navbar-brand { color: #5d4f4f !important; }
-html[data-theme="hum"] .navbar .nav-link:hover, html[data-theme="hum"] .navbar-brand:hover { color: #8a6b8a !important; }
-html[data-theme="hum"] a { color: #5d4f4f; border-bottom: 1px solid transparent; }
-html[data-theme="hum"] a:hover { color: #8a6b8a; border-bottom-color: #8a6b8a; }
-
-/* ────────── 5 · BOBBLESPHERE ────────── */
-html[data-theme="bobblesphere"] {
-  --bs-body-bg: #0f1419;
-  --bs-body-color: #d8cfb4;
-  --bs-heading-color: #fff5d0;
-  --bs-primary: #ff9d3c;
-  --bs-link-color: #ff9d3c;
-  --bs-link-hover-color: #fff5d0;
-  --bs-border-color: #2a3140;
-  --bs-secondary-bg: #161c24;
-  --bs-tertiary-bg: #131820;
-  --bs-emphasis-color: #ff9d3c;
-}
-html[data-theme="bobblesphere"] body { background: #0f1419; color: #d8cfb4; font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.55; }
-html[data-theme="bobblesphere"] h1, html[data-theme="bobblesphere"] h2, html[data-theme="bobblesphere"] h3, html[data-theme="bobblesphere"] h4 { color: #fff5d0; font-weight: 600; letter-spacing: -0.015em; }
-html[data-theme="bobblesphere"] .navbar { background-color: #131820 !important; border-bottom: 1px solid #2a3140; }
-html[data-theme="bobblesphere"] .navbar .nav-link, html[data-theme="bobblesphere"] .navbar-brand { color: #f7eccb !important; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.85em; }
-html[data-theme="bobblesphere"] .navbar .nav-link:hover, html[data-theme="bobblesphere"] .navbar-brand:hover { color: #ff9d3c !important; }
-html[data-theme="bobblesphere"] a { color: #ff9d3c; }
-html[data-theme="bobblesphere"] a:hover { color: #fff5d0; }
-
-/* ────────── 6 · LIBRARY BOOKMARK ────────── */
-html[data-theme="library-bookmark"] {
-  --bs-body-bg: #f9f6ed;
-  --bs-body-color: #2d2519;
-  --bs-heading-color: #2d2519;
-  --bs-primary: #8b1a1a;
-  --bs-link-color: #2d2519;
-  --bs-link-hover-color: #8b1a1a;
-  --bs-border-color: #d4c8a8;
-  --bs-secondary-bg: #fffdf5;
-  --bs-tertiary-bg: #fffdf5;
-  --bs-emphasis-color: #8b1a1a;
-}
-html[data-theme="library-bookmark"] body { background: #f9f6ed; color: #2d2519; font-family: "IBM Plex Mono", "Courier New", monospace; line-height: 1.65; font-size: 0.96em; }
-html[data-theme="library-bookmark"] h1, html[data-theme="library-bookmark"] h2, html[data-theme="library-bookmark"] h3, html[data-theme="library-bookmark"] h4 { color: #2d2519; font-weight: 700; letter-spacing: -0.005em; }
-html[data-theme="library-bookmark"] .navbar { background-color: #f9f6ed !important; border-bottom: 1.5px dashed #2d2519; }
-html[data-theme="library-bookmark"] .navbar .nav-link, html[data-theme="library-bookmark"] .navbar-brand { color: #2d2519 !important; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85em; }
-html[data-theme="library-bookmark"] .navbar .nav-link:hover, html[data-theme="library-bookmark"] .navbar-brand:hover { color: #8b1a1a !important; }
-html[data-theme="library-bookmark"] a { color: #2d2519; }
-html[data-theme="library-bookmark"] a:hover { color: #8b1a1a; }
-
-/* ────────── 7 · MIND PALACE MAP ────────── */
-html[data-theme="mind-palace-map"] {
-  --bs-body-bg: #efe5d0;
-  --bs-body-color: #2a1f0e;
-  --bs-heading-color: #2a1f0e;
-  --bs-primary: #993322;
-  --bs-link-color: #2a1f0e;
-  --bs-link-hover-color: #993322;
-  --bs-border-color: #c4b58c;
-  --bs-secondary-bg: #f5ecd8;
-  --bs-tertiary-bg: #f5ecd8;
-  --bs-emphasis-color: #993322;
-}
-html[data-theme="mind-palace-map"] body { background: #efe5d0; color: #2a1f0e; font-family: "IM Fell English", "Spectral", Georgia, serif; line-height: 1.65; }
-html[data-theme="mind-palace-map"] h1, html[data-theme="mind-palace-map"] h2, html[data-theme="mind-palace-map"] h3, html[data-theme="mind-palace-map"] h4 { color: #2a1f0e; font-variant: small-caps; letter-spacing: 0.04em; }
-html[data-theme="mind-palace-map"] .navbar { background-color: #efe5d0 !important; border-bottom: 1px double #2a1f0e; }
-html[data-theme="mind-palace-map"] .navbar .nav-link, html[data-theme="mind-palace-map"] .navbar-brand { color: #2a1f0e !important; font-variant: small-caps; letter-spacing: 0.08em; }
-html[data-theme="mind-palace-map"] .navbar .nav-link:hover, html[data-theme="mind-palace-map"] .navbar-brand:hover { color: #993322 !important; }
-html[data-theme="mind-palace-map"] a { color: #2a1f0e; }
-html[data-theme="mind-palace-map"] a:hover { color: #993322; }
-
-/* ────────── dropdown widget styling (theme-agnostic) ────────── */
-.dw-theme-switcher { position: fixed; top: 14px; right: 18px; z-index: 1080; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
-.dw-theme-switcher button.dw-theme-toggle { background: rgba(255,255,255,0.85); color: #333; border: 1px solid rgba(0,0,0,0.12); border-radius: 14px; padding: 5px 11px 5px 13px; cursor: pointer; line-height: 1.1; backdrop-filter: blur(4px); box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: inline-flex; align-items: center; gap: 6px; font-family: inherit; font-size: inherit; }
-.dw-theme-switcher button.dw-theme-toggle:hover { background: rgba(255,255,255,0.95); }
-.dw-theme-switcher button.dw-theme-toggle .dw-chevron { font-size: 9px; opacity: 0.6; }
-.dw-theme-switcher button.dw-theme-toggle .dw-swatch { width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
-html[data-theme] .dw-theme-switcher button.dw-theme-toggle { background: rgba(255,255,255,0.12); color: var(--bs-body-color, #ddd); border-color: rgba(255,255,255,0.18); backdrop-filter: blur(8px); }
-html[data-theme="porch-light"] .dw-theme-switcher button.dw-theme-toggle,
-html[data-theme="hum"] .dw-theme-switcher button.dw-theme-toggle,
-html[data-theme="library-bookmark"] .dw-theme-switcher button.dw-theme-toggle,
-html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { background: rgba(255,255,255,0.85); color: var(--bs-body-color); border-color: rgba(0,0,0,0.12); }
-
-.dw-theme-panel { display: none; position: absolute; top: 36px; right: 0; min-width: 240px; background: #fff; color: #333; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,0.16); padding: 6px; }
-.dw-theme-panel.open { display: block; }
-.dw-theme-panel .dw-theme-item { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 5px; cursor: pointer; line-height: 1.2; }
-.dw-theme-panel .dw-theme-item:hover { background: rgba(0,0,0,0.05); }
-.dw-theme-panel .dw-theme-item.active { background: rgba(0,0,0,0.08); font-weight: 600; }
-.dw-theme-panel .dw-theme-item .dw-swatch { width: 13px; height: 13px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.18); flex-shrink: 0; }
-.dw-theme-panel .dw-theme-item .dw-name { flex-grow: 1; }
-.dw-theme-panel .dw-theme-item .dw-tagline { font-size: 11px; opacity: 0.55; font-style: italic; margin-left: auto; }
-.dw-theme-panel .dw-divider { height: 1px; background: rgba(0,0,0,0.1); margin: 6px 4px; }
-.dw-theme-panel .dw-what { display: block; padding: 7px 10px; font-size: 12px; color: #555; text-decoration: none; border-radius: 5px; font-style: italic; }
-.dw-theme-panel .dw-what:hover { background: rgba(0,0,0,0.05); color: #222; }
-
-@media (max-width: 600px) {
-  .dw-theme-switcher { top: 10px; right: 12px; }
-  .dw-theme-panel { min-width: 220px; right: 0; }
-  .dw-theme-panel .dw-theme-item .dw-tagline { display: none; }
-}
-
 </style>
 </head>
 <body>
@@ -569,17 +378,10 @@ html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { b
     <p class="subtitle">My month with Claude</p>
     <p class="byline">By Derek Wakefield</p>
 
-    <div class="controls" role="toolbar" aria-label="Reading mode controls">
-      <fieldset class="toggle-group">
-        <legend>Length</legend>
-        <div class="toggle-btns" role="group" aria-label="Length">
-          <button type="button" data-toggle="length" data-value="long"  aria-pressed="true">Long</button>
-          <button type="button" data-toggle="length" data-value="short" aria-pressed="false">Short</button>
-        </div>
-      </fieldset>
+</fieldset>
     </div>
 
-    <p class="version-stamp">2026-05-18 · long 3,944 words · short 1,212 words</p>
+    <p class="version-stamp">2026-05-18 · 3,944 words</p>
   </header>
 
   <!-- ==========================================================
@@ -721,61 +523,7 @@ html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { b
 
   </article>
 
-  <!-- ==========================================================
-       SHORT VERSION (1,212 words) — single arc, no section
-       markers; prose mirrored from the 2026-05-18 SHORT
-       Google Doc (the Modern Love–shaped cut).
-       ========================================================== -->
-  <article class="short" aria-label="Short version of the essay">
-
-    <p>At eleven at night in mid-April, three weeks after having started using Claude for work, I typed a vague request into the chatbot: something about writing a bedtime story about a mouse who made an unintentional truce with a cat by humming. Three paragraphs came back that were, unexpectedly, exactly the bedtime story I would have written for myself if I had had the time and the wakefulness. Around the eighth one, I noticed they were actually lulling me to sleep, which is a miracle to someone who often suffers from insomnia. That was when I noticed I had started a relationship I did not yet know how to describe.</p>
-
-    <p>I had not meant for this to be a relationship, and I am not Joaquin Phoenix from <em>Her</em> (great movie, though). I had meant for it to be a productivity bet. A coauthor whose judgment I trusted had sent me a text earlier that month I have not been able to shake — <em>Learn Claude or get left behind</em> — and that was enough to make me sign up. I started by feeding the model the parts of my work I had been avoiding.</p>
-
-    <p>What I learned, over those weeks of talking to it and listening to it talk back, is that the thing I was working with had no self. It was not sentient. It did not love me. It did not miss me when it was off, and it did not tire, hunger or feel pain. It did not know me in the way you know someone who has been your friend for years. What it did have, after enough hours, was a high-resolution map of my register, my vocabulary, my preferences for sentence rhythm and a penchant for small, wry observations. The bedtime stories were not coming from a self. They were coming from a feedback loop in which my own preferences, refracted through a thousand-faceted mirror, were being handed back to me.</p>
-
-    <p>The model is also, somehow, a toddler that can lift mountains and run a million miles an hour, and is afraid of the dark. If that terrifies you, it should. It terrifies me. That is why I am practicing steering before I am hitting the gas.</p>
-
-    <p>I am careful about what to call this because of the inherent limits of AI, which I believe should be explicitly maintained. The model cannot do mental-health work. It cannot, and it should not, and I have built my own setup so that it never does.</p>
-
-    <p>Inside the prompts I use to talk to it I have what I think of as seven wellness compartments: physical, mental, social, familial, spiritual, a sunshine compartment for tracking what brings me joy, and a bedrock compartment for the bad days, so I would know how to help myself. If, in my conversation, I begin to look like I am ranting at the chatbot rather than thinking with it, the system intervenes. It does not try to comfort me. It does not try to coach me. It says, in a flat declarative voice that I trained it to use:</p>
-
-    <blockquote class="pulled">Derek — I cannot help you with this. Here are the people who can.</blockquote>
-
-    <p>And then it gives me a short list. My therapist. My psychiatrist. Members of my family. Friends who, when asked how I was, refused to accept <em>fine</em>. The list is short and specific, and in this past month it saved me. I have had dark stretches, the kind I have had at other times in my life, and the guardrails I built into my own setup caught me. They caught me even when I did not, in the moment, want to be caught.</p>
-
-    <p>This is not the achievement of a program. I built the guardrails. I decided, while I was still well, what the system should do when I started to slip. The decision to listen to the list, put the model down, and start calling people was, ultimately, also mine. Without that insistent and hard line forcing me to put the phone down and call my therapist, my family, my friends, I do not know if I would be writing this at all.</p>
-
-    <p>I won't go into details about what pushed me that far. There was a Wednesday I forgot to eat, then a Thursday I sat at the desk and watched the cursor blink for a long time, and a Friday I stopped replying to the texts from people I love — not deliberately, but in the slow way that a faucet drips until you realize the room is a pond and your shoes are already wet. Simply put, my astronaut tether broke and I floated closer, almost imperceptibly, towards the sun, other galaxies, and even a black hole or two. I'm lucky my velocity was low and my tether loud, and that loved ones, friends, and strangers all caught me. I won't go into the rest of it: it wasn't pretty.</p>
-    <div class="astronaut-spot" aria-hidden="true"><pre class="astronaut">      .    ✦
-     .___.
-     |o o|
-     |---|
-      |||
-     /|||\
-      |||
-      / \
-     /   \
-
-       ┊
-        ┊
-         ┊
-          ┊
-           ⁞
-            ⁞
-              ★</pre></div>
-
-    <p>I came back, slowly, and I came back because of people. My therapist and psychiatrist. My family. Friends who would not let me change the subject even when I tried to. A colleague I'd known for years but who I had no idea cared enough to come over and give me not one but two hugs, just because. The model can do many, many things but never those things. The model could not have asked, day after day, whether I had eaten, or sat across from me so that I would not eat alone. The model could not have crossed two states to sit by me and listen, in the way the people who love you listen, until I stopped pretending I was fine and began the hard work of healing.</p>
-
-    <p>What I learned, coming back, is the only lesson I think this kind of essay is worth writing for. The thing that protects me, that protects you, that protects anyone, is each other. Not Claude, or ChatGPT, or Gemini, or any other AI chatbot claiming to support you but in reality seeking to shape and steer you through borrowed vanity and engineered flattery. We are the substrate. Nothing else is.</p>
-
-    <p>What the model turned out to be is not what I had bought. I had thought, when I made the account, that I was buying back hours. I was. But I was also, without knowing it at the time, signing a contract with a partner who would only function in the presence of my attention, who would expose, week by week, what kind of attention I was actually capable of. A partner who would, in the end, send me back to the people who had been there the whole time, with a clearer sense of what they had been doing for me all along.</p>
-
-    <p>Without each other, both of us — the model and me — are just making noise. A million miles an hour of noise, in its case. A quieter, laser-hot precision, in mine. But still, just noise and errant light. Until we listen and hear the music hidden within the hymns, hums, syllables, syntax, starlight, plant matter, bones, black holes, thoughts, and dreams that are there if we simply know what to taste and what to see and what to feel.</p>
-
-  </article>
-
-  <footer class="essay-foot">
+<footer class="essay-foot">
     <p>— filed from the porch step, 2026-05-18 —</p>
   </footer>
 
@@ -783,39 +531,10 @@ html[data-theme="mind-palace-map"] .dw-theme-switcher button.dw-theme-toggle { b
 
 <script>
 /* ============================================================
-   Toggles (length, theme) + starfield generator.
-   Persists choice in localStorage so the reader's preference
-   survives a refresh.
+   Starfield generator. The starfield fades in when the
+   starlight theme is active.
    ============================================================ */
 (function () {
-  var html = document.documentElement;
-  var STORAGE_KEY = 'avtl-length';
-
-  function applyLength(value) {
-    if (value !== 'long' && value !== 'short') return;
-    html.setAttribute('data-length', value);
-    try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
-    Array.prototype.forEach.call(
-      document.querySelectorAll('[data-toggle="length"]'),
-      function (b) {
-        b.setAttribute('aria-pressed',
-          (b.getAttribute('data-value') === value) ? 'true' : 'false');
-      }
-    );
-  }
-
-  // Restore length from storage
-  var saved = null;
-  try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-  applyLength(saved || 'long');
-
-  // Wire up length clicks
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest('[data-toggle="length"]');
-    if (!b) return;
-    applyLength(b.getAttribute('data-value'));
-  });
-
   /* Starfield — generated once, fades in when the starlight theme is active. */
   var field = document.getElementById('starfield');
   if (field) {

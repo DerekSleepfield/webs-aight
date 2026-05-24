@@ -1,7 +1,7 @@
 ---
 title: "A Voice That Listens"
 date: "2026-05-14"
-description: "My month with Claude. One page; a toggle at the top switches between the short (Modern Love–shaped) and long (ten-section) versions."
+description: "My month with Claude. The full ten-section essay, ~3,900 words."
 categories: [essay, writing, claude, longform]
 path: /a-voice-that-listens.html
 ---
@@ -11,11 +11,9 @@ path: /a-voice-that-listens.html
 <script>window.location.replace("/a-voice-that-listens.html");</script>
 ```
 
-A short essay about a month spent with an AI as a thinking partner — what worked, what didn't, what almost broke, and what came back through people.
+An essay about a month spent with an AI as a thinking partner — what worked, what didn't, what almost broke, and what came back through people. Ten sections, ~3,900 words. Drifting ASCII creatures behind the text; site-wide theme switcher in the top-right.
 
-Two versions live in one page. A small toggle at the top switches between them. The short version is a single-arc Modern Love–shaped cut (around thirteen paragraphs). The long version is the full ten-section essay, with section markers. Both share the same starfield and the same drifting ASCII creatures behind the text.
-
-Download and open locally — the toggle is JavaScript, so the file works fully offline once downloaded.
+Download and open locally — everything is inline (besides the site's stylesheets), so the file works fully offline once downloaded.
 
 ```{=html}
 <p style="margin: 2em 0;">
