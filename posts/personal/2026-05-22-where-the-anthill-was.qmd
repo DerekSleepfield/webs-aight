@@ -1,7 +1,7 @@
 ---
 title: "Where the Anthill Was"
 date: "2026-05-22"
-description: "A second long-form expansion of Bobble Canon XXIII. Six movements: anthill, affordances, agency, the queen, two children with a soccer ball, and a small bronze plaque twenty years later."
+description: "A story about an anthill and what we learn from it."
 categories: [essay, writing, claude, bobbology, longform]
 path: /where-the-anthill-was.html
 ---
