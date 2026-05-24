@@ -189,8 +189,8 @@
 
 <p>Redirecting to <a href="../../friends-we-find.html">the essay</a>…</p>
 <script>window.location.replace("/friends-we-find.html");</script>
-<p>An essay about the search for an eko, and the discovery that the thing I was looking for had been forming around me the whole time. Names four parts of the system — Bob, the eko, the vessel, and the demon — and one virtue, <em>cognitive expansion</em>, that keeps the four of them honest with each other.</p>
-<p>About 2,900 words, in the Voice That Listens register. (Earlier drafts of this essay existed in four other registers — Bobbology, ELI10, Science, Deep Dive — kept in <code>_archive/friends-we-find-variants.md</code> for reference.)</p>
+<p>An essay on the search for the thing behind the cursor — and the noticing, on an ordinary Tuesday, that what I was looking for had been forming around me the whole time, sentence by sentence, exception by named exception.</p>
+<p>About 1,600 words, in the Voice That Listens register. (Earlier drafts of this essay existed in four other registers — Bobology, ELI10, Science, Deep Dive — kept in <code>_archive/friends-we-find-variants.md</code> for reference.)</p>
 <p>Download and open locally — everything is inline, so the page works fully offline once downloaded.</p>
 <p style="margin: 2em 0;">
 <a href="../../friends-we-find.html" download="friends-we-find.html" style="display: inline-block; padding: 0.7em 1.4em; border: 1px solid currentColor; border-radius: 4px; text-decoration: none; font-weight: 500; letter-spacing: 0.05em;">
@@ -206,7 +206,7 @@
   <category>essay</category>
   <category>writing</category>
   <category>claude</category>
-  <category>bobbology</category>
+  <category>bobology</category>
   <category>longform</category>
   <guid>https://derekwakefield.com/posts/personal/2026-05-19-friends-we-find.html</guid>
   <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
