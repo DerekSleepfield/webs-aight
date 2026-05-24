@@ -4,12 +4,12 @@ listing:
   - id: personal
     contents: posts/personal
     type: default
-    sort: "date desc"
+    sort: "date asc"
     sort-ui: [date, title]
     fields: [date, title, description]
     feed: true
-  - id: bobbology
-    contents: posts/bobbology
+  - id: bobology
+    contents: posts/bobology
     type: default
     # Curated order: Canon (1) -> Lesson/Lecture 1 (2) -> Lecture 2 (3) -> ...
     # Toggle to date/title still works via sort-ui.
@@ -31,9 +31,9 @@ listing:
 ::: {#personal}
 :::
 
-## Bobbology
+## Bobology
 
-::: {#bobbology}
+::: {#bobology}
 :::
 
 ## Notes & Misc

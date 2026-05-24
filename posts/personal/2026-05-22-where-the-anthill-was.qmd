@@ -2,7 +2,7 @@
 title: "Where the Anthill Was"
 date: "2026-05-22"
 description: "A story about an anthill and what we learn from it."
-categories: [essay, writing, claude, bobbology, longform]
+categories: [essay, writing, claude, bobology, longform]
 path: /where-the-anthill-was.html
 ---
 

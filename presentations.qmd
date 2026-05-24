@@ -1,8 +1,8 @@
 ---
 title: "Presentations"
 listing:
-  - id: bobbology
-    contents: presentations/bobbology
+  - id: bobology
+    contents: presentations/bobology
     type: default
     # Curated order: Lecture 1 -> Lecture 2 -> Lecture 3 -> Lecture 4.
     # Toggle to date/title still works via sort-ui.
@@ -19,9 +19,9 @@ listing:
     feed: true
 ---
 
-## Bobbology
+## Bobology
 
-::: {#bobbology}
+::: {#bobology}
 :::
 
 ## Other & Misc

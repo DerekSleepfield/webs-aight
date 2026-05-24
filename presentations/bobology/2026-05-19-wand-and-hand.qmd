@@ -3,7 +3,7 @@ title: "Lecture 5: The Wand and the Hand"
 date: "2026-05-19"
 order: 5
 description: "A 20-slide AI literacy foundation, after Canon IX of the Bobble Canon. The wand has a power. Not the power. A power. Also available as a [written article](/the-wand-and-the-hand.html)."
-categories: [presentation, bobble, bobbology, ai literacy, canon]
+categories: [presentation, bobble, bobology, ai literacy, canon]
 path: /assets/the-wand-and-the-hand.pdf
 ---
 

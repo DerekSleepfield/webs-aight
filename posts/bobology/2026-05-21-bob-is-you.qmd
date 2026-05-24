@@ -3,7 +3,7 @@ title: "Lesson 2: Bob is You"
 date: "2026-05-21"
 order: 3
 description: "An integrated guide to the five dimensions — physical, mental, emotional, social, spiritual — and what the shape of you actually looks like on a radar plot. Also available as a [slide deck (PDF)](/assets/bob-is-you.pdf)."
-categories: [bobbology, health, integration]
+categories: [bobble, bobology, health, integration]
 path: /bob-is-you.html
 ---
 

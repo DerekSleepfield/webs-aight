@@ -3,7 +3,7 @@ title: "Lesson 3: The 4B Framework"
 date: "2026-05-21"
 order: 4
 description: "The four tenets of Bobology — Bob, Bib, B(l)ab, Boobs — walked through one at a time with named research (Erikson, Polivy & Herman, Goffman, Grice, Deci & Ryan, Aristotle, Habermas, Bateson), plus the three pieces of scaffolding that hold them together. Companion to the 23-slide deck."
-categories: [bobble, bobbology, framework]
+categories: [bobble, bobology, framework]
 path: /the-4b-framework.html
 ---
 

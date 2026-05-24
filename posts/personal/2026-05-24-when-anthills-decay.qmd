@@ -2,7 +2,7 @@
 title: "When Anthills Decay"
 date: "2026-05-24"
 description: "A story about how systems thrive, break, and rebuild themselves."
-categories: [essay, writing, claude, bobbology, longform]
+categories: [essay, writing, claude, bobology, longform]
 path: /when-anthills-decay.html
 ---
 

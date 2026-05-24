@@ -2,7 +2,7 @@
 title: "Seven design directions"
 date: "2026-05-11"
 description: "Seven mockups for the site's visual style, each named after a piece of the Bobble canon. The shortlist headed for the Style toggle."
-categories: [design, mockups, bobbology]
+categories: [design, mockups, bobology]
 path: /design-directions.html
 ---
 
