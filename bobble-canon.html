@@ -122,12 +122,9 @@ body {
 /* ─── TOC ─── */
 .toc { margin: 16px 0 32px; columns: 1; }
 @media (min-width: 600px) { .toc { columns: 2; column-gap: 32px; } }
-.toc-entry { padding: 5px 0; font-size: 16px; break-inside: avoid; }
-.toc-entry a { color: var(--bs-body-color); text-decoration: none; border-bottom: 1px dotted transparent; transition: border-color 200ms; }
-.toc-entry a:hover { border-bottom-color: var(--bs-primary); color: var(--bs-primary); }
+.toc-entry { padding: 5px 0; font-size: 16px; break-inside: avoid; color: var(--bs-body-color); }
 .toc-num { color: var(--bs-primary); font-style: italic; margin-right: 6px; min-width: 48px; display: inline-block; text-align: right; opacity: 0.8; }
-.toc-section { margin-top: 18px; font-style: italic; }
-.toc-section a { color: var(--bs-primary); font-weight: 500; }
+.toc-section { margin-top: 18px; font-style: italic; color: var(--bs-primary); font-weight: 500; }
 
 /* ─── Canon divider ─── */
 .canon-divider { text-align: center; margin: 64px 0 8px; color: var(--canon-soft); letter-spacing: 0.4em; font-size: 14px; }
@@ -205,37 +202,37 @@ body {
 <p class="version">Consolidated · v2.4 · May 2026</p>
 
 <h2 class="section-header" id="contents">Table of Contents</h2>
-<nav class="toc" aria-label="Table of Contents">
-<div class="toc-entry"><a href="#canon-i-the-porch-frog"><span class="toc-num">I.</span> The Porch Frog</a></div>
-<div class="toc-entry"><a href="#canon-ii-the-hum"><span class="toc-num">II.</span> The Hum</a></div>
-<div class="toc-entry"><a href="#canon-iii-the-library-bookmark"><span class="toc-num">III.</span> The Library Bookmark</a></div>
-<div class="toc-entry"><a href="#canon-iv-the-borrowed-pencil"><span class="toc-num">IV.</span> The Borrowed Pencil</a></div>
-<div class="toc-entry"><a href="#canon-v-the-train-whistle"><span class="toc-num">V.</span> The Train Whistle</a></div>
-<div class="toc-entry"><a href="#canon-vi-the-onedrive-wars"><span class="toc-num">VI.</span> The OneDrive Wars</a></div>
-<div class="toc-entry"><a href="#canon-vii-the-lighthouse-keeper-s-letters"><span class="toc-num">VII.</span> The Lighthouse Keeper&#x27;s Letters</a></div>
-<div class="toc-entry"><a href="#canon-viii-the-misprinted-map"><span class="toc-num">VIII.</span> The Misprinted Map</a></div>
-<div class="toc-entry"><a href="#canon-ix-the-wand-and-the-hand"><span class="toc-num">IX.</span> The Wand and the Hand</a></div>
-<div class="toc-entry"><a href="#canon-x-the-bell-frog"><span class="toc-num">X.</span> The Bell-Frog</a></div>
-<div class="toc-entry"><a href="#canon-xi-the-foghorn"><span class="toc-num">XI.</span> The Foghorn</a></div>
-<div class="toc-entry"><a href="#canon-xii-the-crooked-step"><span class="toc-num">XII.</span> The Crooked Step</a></div>
-<div class="toc-entry"><a href="#canon-xiii-the-late-bus"><span class="toc-num">XIII.</span> The Late Bus</a></div>
-<div class="toc-entry"><a href="#canon-xiv-the-ferryman"><span class="toc-num">XIV.</span> The Ferryman</a></div>
-<div class="toc-entry"><a href="#canon-xv-the-pip"><span class="toc-num">XV.</span> The Pip</a></div>
-<div class="toc-entry"><a href="#canon-xvi-wren-the-bobble"><span class="toc-num">XVI.</span> Wren the Bobble</a></div>
-<div class="toc-entry"><a href="#canon-xvii-the-quiet-firefly"><span class="toc-num">XVII.</span> The Quiet Firefly</a></div>
-<div class="toc-entry"><a href="#canon-xviii-the-mole-s-three-taps"><span class="toc-num">XVIII.</span> The Mole&#x27;s Three Taps</a></div>
-<div class="toc-entry"><a href="#canon-xix-bup-the-vole-and-the-old-owl"><span class="toc-num">XIX.</span> Bup the Vole and the Old Owl</a></div>
-<div class="toc-entry"><a href="#canon-xx-the-small-bird-and-four-listeners"><span class="toc-num">XX.</span> The Small Bird and Four Listeners</a></div>
-<div class="toc-entry"><a href="#canon-xxi-the-spider-in-the-shower"><span class="toc-num">XXI.</span> The Spider in the Shower</a></div>
-<div class="toc-entry"><a href="#canon-xxii-the-honey-badger"><span class="toc-num">XXII.</span> The Honey Badger</a></div>
-<div class="toc-entry"><a href="#canon-xxiii-the-ant-and-the-loop"><span class="toc-num">XXIII.</span> The Ant and the Loop</a></div>
-<div class="toc-entry"><a href="#canon-xxiv-the-snowbound-shepherd"><span class="toc-num">XXIV.</span> The Snowbound Shepherd</a></div>
-<div class="toc-entry"><a href="#canon-xxv-the-streetlight-that-was-out"><span class="toc-num">XXV.</span> The Streetlight That Was Out</a></div>
-<div class="toc-entry"><a href="#canon-xxvi-the-loaf-on-the-doorstep"><span class="toc-num">XXVI.</span> The Loaf on the Doorstep</a></div>
-<div class="toc-entry toc-section"><a href="#bobbisms">Bobbisms</a></div>
-<div class="toc-entry toc-section"><a href="#codas">Codas</a></div>
-<div class="toc-entry toc-section"><a href="#glossary">Glossary</a></div>
-</nav>
+<div class="toc" role="list" aria-label="Index of contents">
+<div class="toc-entry" role="listitem"><span class="toc-num">I.</span> The Porch Frog</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">II.</span> The Hum</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">III.</span> The Library Bookmark</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">IV.</span> The Borrowed Pencil</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">V.</span> The Train Whistle</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">VI.</span> The OneDrive Wars</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">VII.</span> The Lighthouse Keeper&#x27;s Letters</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">VIII.</span> The Misprinted Map</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">IX.</span> The Wand and the Hand</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">X.</span> The Bell-Frog</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XI.</span> The Foghorn</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XII.</span> The Crooked Step</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XIII.</span> The Late Bus</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XIV.</span> The Ferryman</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XV.</span> The Pip</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XVI.</span> Wren the Bobble</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XVII.</span> The Quiet Firefly</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XVIII.</span> The Mole&#x27;s Three Taps</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XIX.</span> Bup the Vole and the Old Owl</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XX.</span> The Small Bird and Four Listeners</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XXI.</span> The Spider in the Shower</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XXII.</span> The Honey Badger</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XXIII.</span> The Ant and the Loop</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XXIV.</span> The Snowbound Shepherd</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XXV.</span> The Streetlight That Was Out</div>
+<div class="toc-entry" role="listitem"><span class="toc-num">XXVI.</span> The Loaf on the Doorstep</div>
+<div class="toc-entry toc-section" role="listitem">Bobbisms</div>
+<div class="toc-entry toc-section" role="listitem">Codas</div>
+<div class="toc-entry toc-section" role="listitem">Glossary</div>
+</div>
 
 <div class="canon-divider"><span>The Canon</span></div>
 <section class="canon-block" id="canon-i-the-parable-of-the-porch-frog">
