@@ -24,6 +24,13 @@ listing:
     sort-ui: [date, title]
     fields: [date, title, description]
     feed: true
+  - id: short-stories
+    contents: posts/short-stories
+    type: default
+    sort: "date desc"
+    sort-ui: [date, title]
+    fields: [date, title, description]
+    feed: true
 ---
 
 ## Personal
@@ -34,6 +41,11 @@ listing:
 ## Bobology
 
 ::: {#bobology}
+:::
+
+## Short Stories
+
+::: {#short-stories}
 :::
 
 ## Notes & Misc
