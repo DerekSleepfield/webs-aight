@@ -1,8 +1,8 @@
 ---
 title: "A Voice That Listens"
 date: "2026-05-14"
-description: "My month with Claude. The full ten-section essay, ~3,900 words."
-categories: [essay, writing, claude, longform]
+description: "My month with Claude. Modern Love fork — ten sections, ~1,211 words."
+categories: [essay, writing, claude]
 path: /a-voice-that-listens.html
 ---
 
@@ -11,7 +11,7 @@ path: /a-voice-that-listens.html
 <script>window.location.replace("/a-voice-that-listens.html");</script>
 ```
 
-An essay about a month spent with an AI as a thinking partner — what worked, what didn't, what almost broke, and what came back through people. Ten sections, ~3,900 words. Drifting ASCII creatures behind the text; site-wide theme switcher in the top-right.
+An essay about a month spent with an AI as a thinking partner — what worked, what didn't, what almost broke, and what came back through people. Ten sections, ~1,211 words. Site-wide theme switcher in the top-right.
 
 Download and open locally — everything is inline (besides the site's stylesheets), so the file works fully offline once downloaded.
 
