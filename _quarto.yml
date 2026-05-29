@@ -47,6 +47,7 @@ format:
     include-after-body:
       - feedback-bubble.html
       - theme-switcher.html
+      - analytics.html
     theme: cosmo
     css:
       - styles.css
