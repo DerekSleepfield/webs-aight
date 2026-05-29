@@ -398,6 +398,17 @@ ul.task-list li input[type="checkbox"] {
   });
 })();
 </script>
+<!--
+  Cloudflare Web Analytics, included site-wide via _quarto.yml -> format.html.include-after-body.
+  Free, unlimited, cookieless, no DNS change required.
+  Dashboard: https://dash.cloudflare.com/?to=/:account/web-analytics
+
+  Each domain on CF Web Analytics needs its own token (unlike GoatCounter,
+  which let one site track multiple hostnames). If derekwakefield.com and
+  dereksleepfield.com are both added under the same CF account, add the
+  second token in a sibling <script> tag below.
+-->
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;4f581786b4914b709d7b1610a1aa2781&quot;}"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
