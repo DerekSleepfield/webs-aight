@@ -31,9 +31,6 @@ website:
         href: cv.qmd
       - text: "Now"
         href: now.qmd
-    right:
-      - text: "The shelf →"
-        href: https://dereksleepfield.com
   page-footer:
     left: "© 2026 Derek Wakefield"
     right:
