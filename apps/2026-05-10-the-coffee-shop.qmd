@@ -155,7 +155,7 @@ format:
 
   <div class="cs-viz-wrap">
     <iframe class="cs-viz"
-            src="/citation-timeline.html"
+            src="/citation_timeline.html"
             title="Coffee-shop network: sociology & political science genealogy, 1950–2025"
             loading="lazy"></iframe>
   </div>
