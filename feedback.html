@@ -208,11 +208,11 @@
           </div>
         </label>
         <label class="cat-false">
-          <input type="radio" name="category" value="hallucination">
+          <input type="radio" name="category" value="feedback">
           <div class="cat-body">
-            <span class="cat-mark">! false-note</span>
-            <div class="cat-title">Hallucination</div>
-            <div class="cat-hint">a fact that wasn't</div>
+            <span class="cat-mark">! note</span>
+            <div class="cat-title">Feedback</div>
+            <div class="cat-hint">anything else</div>
           </div>
         </label>
       </div>
@@ -234,16 +234,16 @@
       <label class="field">
         <span class="lbl">Context URL (optional)</span>
         <input type="url" name="context_url" maxlength="500"
-               placeholder="claude.ai session, dropbox path, anything">
+               placeholder="dropbox path, a link, anything">
       </label>
       <label class="field severity-only">
-        <span class="lbl">Severity (hallucinations)</span>
+        <span class="lbl">Severity (optional)</span>
         <select name="severity">
           <option value="">—</option>
           <option value="trivial">trivial — typo-level</option>
-          <option value="moderate">moderate — wrong but recoverable</option>
-          <option value="severe">severe — confident & wrong</option>
-          <option value="critical">critical — acted on it</option>
+          <option value="moderate">moderate — off but recoverable</option>
+          <option value="severe">severe — clearly wrong</option>
+          <option value="critical">critical — caused a problem</option>
         </select>
       </label>
     </div>
@@ -261,8 +261,8 @@
     </div>
 
     <div class="footnote">
-      Submissions land in Derek's <code>/Bobble/feedback/</code> Clauwd folder.
-      Future Claude sessions can read the accumulated hum to remember
+      Submissions land in Derek's <code>/Bobble/feedback/</code> folder,
+      where the accumulated hum gets read back later to remember
       what didn't land last time.
     </div>
   </form>
@@ -276,10 +276,10 @@
   const status = document.getElementById("status");
   const btn = document.getElementById("btn");
 
-  // Toggle severity field when hallucination is selected
+  // Toggle severity field when Feedback is selected
   form.addEventListener("change", (e) => {
     if (e.target.name === "category") {
-      document.body.classList.toggle("is-false", e.target.value === "hallucination");
+      document.body.classList.toggle("is-false", e.target.value === "feedback");
     }
   });
 
