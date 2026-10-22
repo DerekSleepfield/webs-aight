@@ -6,38 +6,38 @@ title: "Teaching"
 
 **University Teaching Award (Princeton, 2020).** Received as Head Teaching Assistant for *American Politics* (POL 220) with Paul Frymer. The class transitioned from in-person to remote midway through the semester as COVID hit. I held the same pedagogy and emphasis on participation, and found students were hungry for the kind of community and academic discourse the pandemic had cut off.
 
-**Best of Access, Diversity, and Inclusion (BADI) Award (Princeton, 2021).** For co-founding Students of Color and Allies in 2019 — with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye — and for related advocacy in the Politics Department on access, diversity, and inclusion.
+**Best of Access, Diversity, and Inclusion (BADI) Award (Princeton, 2022).** For co-founding Students of Color and Allies in 2019 — with fellow graduate students Sonya Chen, Sonny Kim, and Rikio Inouye — and for related advocacy in the Politics Department on access, diversity, and inclusion.
 
 ## Instructor of Record
 
-### Quantitative Methods *(Undergraduate, POLS 296)*
+### Quantitative Analysis *(Undergraduate, POL 296)*
 **Bucknell University (Spring 2026)**
 
 Foundations of data analysis for political science research. Students learn R using `dplyr` and `ggplot2` — importing, tidying, transforming, joining, and visualizing data — alongside research design and quantitative methods. Across four problem sets and a semester-long research project, students move from exploratory analysis to producing a literature review, research design, and pre-analysis plan on a topic of their own choosing. By the end of the class, students can read, critique, and produce empirical political science.
 
-### Race, Ethnicity, and American Politics *(Undergraduate, POLS 246)*
+### Race and Ethnic Politics in the US *(Undergraduate, POL 246)*
 **Bucknell University (Fall 2025)**
 
 Why our identities matter (or don't) for our politics. The course examines the processes that create, cultivate, politicize, and activate identities across race, ethnicity, gender, sexuality, and religion. Topics span Black, Latino, Asian American, MENA, Indigenous, and LGBTQ+ politics; intersectionality and racial triangulation; racial capitalism; whiteness and white backlash; and constructivist theories of identity. Students complete weekly reading memos, a research paper with peer review, and a group presentation.
 
-### Introduction to American Politics *(Undergraduate, POLS 140)*
-**Bucknell University (Fall 2025)**
+### Introduction to American Politics *(Undergraduate, POL 140)*
+**Bucknell University (Fall 2025, Spring 2026, Fall 2026)**
 
 American government and politics, with a focus on the contemporary United States. Topics: the Constitution, federalism, the separation of powers, civil liberties and civil rights, Congress, the Presidency, the executive branch, the courts, public opinion and voting, parties, interest groups, and economic and foreign policy. The course pairs textbook fundamentals with weekly memos in which students bring their own reactions, experiences, and political views to the course material.
 
-### Introduction to Data Analysis in R *(Undergraduate)*
+### Introduction to Data Analysis using R *(Undergraduate and graduate, POL 394/585)*
 **Emory University (Spring 2024, Spring 2025)**
 
 The basics of data analysis and how to apply those skills toward research objectives. Topics: the structure of data, R coding using `dplyr` and `ggplot`, cleaning data, and producing effective regression tables and visualizations. By the end of the class, students have the skills to read and critically analyze academic research and to present detailed analyses of their own results.
 
-### Latinx Politics *(Undergraduate, POLS 347)*
+### Latinx Politics *(Undergraduate, POL 347)*
 **Emory University (Fall 2023, co-instructed with Bernard Fraga)**
 
 The past, present, and future of Hispanic and Latina/o/x politics in the United States. Topics: history of conquest, colonization, and immigration; cultural and institutional forces generating and sustaining Latina/o/x identities; differences and similarities across Mexican, Puerto Rican, Cuban, Dominican, Central American, and other origin groups; political preferences, behaviors, and representation; and how the growing Latina/o/x population will shape American politics going forward.
 
 ## Teaching Assistant
 
-### The American Presidency *(Undergraduate, POL 325)*
+### The Presidency and the Executive *(POL 325)*
 **Princeton University (Fall 2022, with Lauren Wright)**
 
 Personal and institutional aspects of the American presidency: origin, nature, uses, and limits of presidential power; the presidential selection process; relationships between the President and other political actors — Congress, the press, executive-branch agencies, and the public; presidential accountability; and the importance of presidential personality.
@@ -55,7 +55,7 @@ The use of qualitative methods in social science research. Topics: research desi
 
 The institutions and political processes of American government and democracy: the Constitution and American political tradition, federalism, political institutions, elections and representation, interest groups and social movements, civil rights and liberties, and the politics of public policy. The course frequently engages with real-world elections and current examples.
 
-### Junior Research Workshop *(Undergraduate, POL 300)*
+### Junior Paper Workshops *(Undergraduate, POL 300)*
 **Princeton University (Fall 2019)**
 
-A workshop for students working on yearlong junior paper projects while learning a variety of methodological approaches. I assisted LaFleur Stephens-Dougan with the seminar on Race and Politics, and Joanna Wuest with the seminar on Law and Public Affairs.
+A workshop for students working on yearlong junior paper projects while learning a variety of methodological approaches. I assisted LaFleur Stephens-Dougan with the workshop on race and ethnic politics, and Joanna Wuest with the workshop on law and civil rights.

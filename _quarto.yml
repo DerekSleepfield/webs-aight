@@ -27,6 +27,8 @@ website:
         href: teaching.qmd
       - text: "Service"
         href: service.qmd
+      - text: "Media"
+        href: media.qmd
       - text: "CV"
         href: cv.qmd
       - text: "Now"
